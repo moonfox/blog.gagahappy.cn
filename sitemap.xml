@@ -3,22 +3,22 @@
 
 
     <sitemap>
-        <loc>http://gagahappy.cn/post-sitemap.xml</loc>
+        <loc>https://blog.gagahappy.cn/post-sitemap.xml</loc>
         <lastmod>2021-06-20T16:27:58.483Z</lastmod>
     </sitemap>
 
     <sitemap>
-        <loc>http://gagahappy.cn/page-sitemap.xml</loc>
-        <lastmod>2021-06-21T06:37:54.180Z</lastmod>
+        <loc>https://blog.gagahappy.cn/page-sitemap.xml</loc>
+        <lastmod>2021-06-01T06:33:17.838Z</lastmod>
     </sitemap>
 
     <sitemap>
-        <loc>http://gagahappy.cn/category-sitemap.xml</loc>
+        <loc>https://blog.gagahappy.cn/category-sitemap.xml</loc>
         <lastmod>2021-06-20T16:27:58.483Z</lastmod>
     </sitemap>
 
     <sitemap>
-        <loc>http://gagahappy.cn/tag-sitemap.xml</loc>
+        <loc>https://blog.gagahappy.cn/tag-sitemap.xml</loc>
         <lastmod>2021-06-20T16:27:58.483Z</lastmod>
     </sitemap>
 
