@@ -90,9 +90,9 @@
         <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li>
         <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a></li>
         <li class="menu-item menu-item-coding"><a href="https://www.gagahappy.com/" rel="noopener" target="_blank"><i class="fa fa-keyboard fa-fw"></i>coding</a></li>
-        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">39</span></a></li>
-        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories<span class="badge">3</span></a></li>
-        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">471</span></a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">86</span></a></li>
+        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories<span class="badge">7</span></a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">870</span></a></li>
         <li class="menu-item menu-item-sitemap"><a href="/sitemap.xml" rel="section"><i class="fa fa-sitemap fa-fw"></i>Sitemap</a></li>
         <li class="menu-item menu-item-commonweal"><a href="/404/" rel="section"><i class="fa fa-heartbeat fa-fw"></i>Commonweal 404</a></li>
       <li class="menu-item menu-item-search">
@@ -209,7 +209,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/ssh-auto-login/">
+    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/second-key-not-save-primary-add/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/apple-touch-icon.png">
@@ -222,7 +222,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/ssh-auto-login/" class="post-title-link" itemprop="url">ssh断线自动登录</a>
+          <a href="/second-key-not-save-primary-add/" class="post-title-link" itemprop="url">辅助索引为何不直接保存主键地址</a>
         </h2>
 
         <div class="post-meta-container">
@@ -233,7 +233,7 @@
       </span>
       <span class="post-meta-item-text">Posted on</span>
 
-      <time title="Created: 2010-11-06 23:53:37" itemprop="dateCreated datePublished" datetime="2010-11-06T23:53:37+08:00">2010-11-06</time>
+      <time title="Created: 2015-03-09 15:48:02" itemprop="dateCreated datePublished" datetime="2015-03-09T15:48:02+08:00">2015-03-09</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -241,7 +241,7 @@
       </span>
       <span class="post-meta-item-text">In</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/journal/" itemprop="url" rel="index"><span itemprop="name">日志</span></a>
+          <a href="/categories/database/" itemprop="url" rel="index"><span itemprop="name">数据库</span></a>
         </span>
     </span>
 
@@ -255,8 +255,8 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>ssh出于安全考虑，设置了闲置后自动断开功能，这给长时间进行远程操作及利用ssh穿qiang的同学带来了极大的不便，参考了网上的N种方法，实现如下</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/usr/bin/expect</span></span><br><span class="line"><span class="comment"># Auto login ssh</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">set</span> user <span class="string">&quot;username&quot;</span>;</span><br><span class="line"><span class="built_in">set</span> passwd <span class="string">&quot;password&quot;</span>;</span><br><span class="line"><span class="built_in">set</span> host <span class="string">&quot;ip&quot;</span>;</span><br><span class="line"><span class="built_in">set</span> id1 1;</span><br><span class="line"></span><br><span class="line"><span class="keyword">while</span> (1) &#123;</span><br><span class="line">        <span class="built_in">set</span> isconnected 0;</span><br><span class="line">        spawn /usr/bin/ssh -D7070 <span class="variable">$user</span>@<span class="variable">$host</span>;</span><br><span class="line">        <span class="built_in">set</span> id1 <span class="variable">$spawn_id</span></span><br><span class="line">        match_max 100000;</span><br><span class="line">        <span class="built_in">set</span> timeout 60;</span><br><span class="line">        expect &#123;</span><br><span class="line">                <span class="string">&quot;password:&quot;</span> &#123;</span><br><span class="line">                        send <span class="string">&quot;<span class="variable">$passwd</span>\r&quot;</span>;</span><br><span class="line">                        expect <span class="string">&quot;jailshell&quot;</span> &#123;</span><br><span class="line">                                <span class="built_in">set</span> isconnected 1;</span><br><span class="line">                                puts <span class="string">&quot;connected to <span class="variable">$host</span> succeed&quot;</span>;</span><br><span class="line">                                puts <span class="variable">$spawn_id</span>;</span><br><span class="line">                        &#125;</span><br><span class="line">                 &#125;</span><br><span class="line"></span><br><span class="line">                <span class="string">&quot;closed&quot;</span> &#123;</span><br><span class="line">                        <span class="built_in">set</span> isconnected 0;</span><br><span class="line">                        <span class="comment">#puts &quot;connected to $host fail&quot;</span></span><br><span class="line"></span><br><span class="line">                &#125;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> &#123; <span class="variable">$isconnected</span> == 0 &#125; &#123;</span><br><span class="line">                close;</span><br><span class="line">                puts <span class="string">&quot;SSH server connect fail,retrying...&quot;</span>;</span><br><span class="line">                <span class="built_in">continue</span>;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">while</span> (1) &#123;</span><br><span class="line">                <span class="built_in">set</span> isconnected 0;</span><br><span class="line">                interact &#123;</span><br><span class="line">                        timeout 22 &#123;</span><br><span class="line">                                <span class="built_in">set</span> timeout 10;</span><br><span class="line">                                send <span class="string">&quot;echo im active\r&quot;</span>;</span><br><span class="line">                                expect <span class="string">&quot;*im active*&quot;</span> &#123; <span class="built_in">set</span> isconnected 1 &#125;</span><br><span class="line">                                <span class="keyword">if</span> &#123; <span class="variable">$isconnected</span> == 1 &#125; &#123;</span><br><span class="line">                                        puts <span class="string">&quot;on line\r&quot;</span>;</span><br><span class="line">                                        <span class="built_in">continue</span>;</span><br><span class="line">                                &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                                        puts <span class="string">&quot;off line\r&quot;</span></span><br><span class="line">                                        <span class="built_in">break</span>;</span><br><span class="line">                                &#125;</span><br><span class="line">                        &#125;</span><br><span class="line">        close;</span><br><span class="line">        puts <span class="string">&quot;SSH server connect fails,retrying...&quot;</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+          <p>辅助索引为何不直接保存主键地址，如果保存了主键的地址，就可以不很快的找到记录，而不用再进行二次查找。被这个问题困扰了一阵。答案来了</p>
+<p>辅助索引使用主键作为”指针” 而不是使用地址值作为指针的好处是，减少了当出现行移动或者数据页分裂时辅助索引的维护工作，使用主键值当作指针会让辅助索引占用更多的空间，换来的好处是InnoDB在移动行时无须更新辅助索引中的这个”指针”。也就是说行的位置（实现中通过16K的Page来定位，后面会涉及）会随着数据库里数据的修改而发生变化（前面的B+树节点分裂以及Page的分裂），使用聚簇索引就可以保证不管这个主键B+树的节点如何变化，辅助索引树都不受影响。</p>
 
       
     </div>
@@ -283,7 +283,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/laberinto-del-fauno/">
+    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/innodb-page-heap-allocation/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/apple-touch-icon.png">
@@ -296,7 +296,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/laberinto-del-fauno/" class="post-title-link" itemprop="url">潘神的迷宫</a>
+          <a href="/innodb-page-heap-allocation/" class="post-title-link" itemprop="url">innodb使用记录数据空间分配</a>
         </h2>
 
         <div class="post-meta-container">
@@ -307,7 +307,7 @@
       </span>
       <span class="post-meta-item-text">Posted on</span>
 
-      <time title="Created: 2010-10-30 23:38:07" itemprop="dateCreated datePublished" datetime="2010-10-30T23:38:07+08:00">2010-10-30</time>
+      <time title="Created: 2015-03-08 18:12:48" itemprop="dateCreated datePublished" datetime="2015-03-08T18:12:48+08:00">2015-03-08</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -315,7 +315,7 @@
       </span>
       <span class="post-meta-item-text">In</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/relax/" itemprop="url" rel="index"><span itemprop="name">资娱</span></a>
+          <a href="/categories/database/" itemprop="url" rel="index"><span itemprop="name">数据库</span></a>
         </span>
     </span>
 
@@ -329,88 +329,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p><a target="_blank" rel="noopener" href="//img.gagahappy.cn/blog/2010/10/moviepic_a7071c13e0445c996f59174f4ae34c43.jpg"><img src="//img.gagahappy.cn/blog/2010/10/moviepic_a7071c13e0445c996f59174f4ae34c43.jpg" title="潘神的迷宫"></a></p>
-<p>片名：     潘神的迷宫<br>英文片名：     Laberinto del Fauno, El<br>导演：     吉勒莫·德尔托罗<br>制片：     阿方索·卡隆 Alfonso Cuaró<br>编剧：     吉尔莫·德尔·托罗 Guillermo<br>主演：     伊万娜·巴克罗 Ivana Baquer<br>类型：     剧情,惊悚,恐怖<br>级别：     USA:R<br>地域：     欧美<br>国家：     美国<br>片长：     112分钟<br>发行公司：     华纳兄弟<br>出品年份：     2006<br>上映日期：     2006-12-29 美国</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/laberinto-del-fauno/#more" rel="contents">
-                Read more &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/google-adsense-show-my-blog/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/apple-touch-icon.png">
-      <meta itemprop="name" content="戛戛Happy">
-      <meta itemprop="description" content="后端, 操作系统, 互联网, 程序开发, Linux, 数据库, MySql, Golang, Ruby">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="睡月花儿">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/google-adsense-show-my-blog/" class="post-title-link" itemprop="url">投放google adsense 啦</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2010-10-25 20:58:17" itemprop="dateCreated datePublished" datetime="2010-10-25T20:58:17+08:00">2010-10-25</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/journal/" itemprop="url" rel="index"><span itemprop="name">日志</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>本博终于在 2010年10月25日 下午1:44 通过google adsense审核，成功投放广告啦！</p>
+          <p>innodb使用记录数据空间分配，根据文件结构，在插入新数据时，heap是由上而下分配空间的，即向记录尾部追加数据，而对slot分配，是由下向上分配的。</p>
 
       
     </div>
@@ -437,7 +356,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/history-of-mac-os-x/">
+    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/innodb-page-header-page-n-heap/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/apple-touch-icon.png">
@@ -450,7 +369,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/history-of-mac-os-x/" class="post-title-link" itemprop="url">苹果系统版本普及</a>
+          <a href="/innodb-page-header-page-n-heap/" class="post-title-link" itemprop="url">innodb-page-header 结构</a>
         </h2>
 
         <div class="post-meta-container">
@@ -461,7 +380,7 @@
       </span>
       <span class="post-meta-item-text">Posted on</span>
 
-      <time title="Created: 2010-10-22 23:24:55" itemprop="dateCreated datePublished" datetime="2010-10-22T23:24:55+08:00">2010-10-22</time>
+      <time title="Created: 2015-03-07 21:21:31" itemprop="dateCreated datePublished" datetime="2015-03-07T21:21:31+08:00">2015-03-07</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -469,7 +388,7 @@
       </span>
       <span class="post-meta-item-text">In</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/journal/" itemprop="url" rel="index"><span itemprop="name">日志</span></a>
+          <a href="/categories/database/" itemprop="url" rel="index"><span itemprop="name">数据库</span></a>
         </span>
     </span>
 
@@ -483,92 +402,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>了解Mac OS</p>
-<blockquote>
-<p>对于苹果的操作系统，我们可以将其统称为Mac OS，Mac OS的首个版本于1984年发布，不过当时并不叫做Mac OS，而是叫做System software，比如System 1.0、System 1.1等。直到1994年推出System 7.5版本的时候，才引入了Mac OS这个名字，逐渐弃用了System，到8.0时代就完全改为Mac OS 8.0。后来又推出了8.1、8.5、8.6甚至9.x等多个版本。</p>
-</blockquote>
-<p><a target="_blank" rel="noopener" href="//img.gagahappy.cn/blog/2010/10/001494676.jpg"><img src="//img.gagahappy.cn/blog/2010/10/001494676.jpg" title="MAC OS X"></a></p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/history-of-mac-os-x/#more" rel="contents">
-                Read more &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/think-about-blog/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/apple-touch-icon.png">
-      <meta itemprop="name" content="戛戛Happy">
-      <meta itemprop="description" content="后端, 操作系统, 互联网, 程序开发, Linux, 数据库, MySql, Golang, Ruby">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="睡月花儿">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/think-about-blog/" class="post-title-link" itemprop="url">整理博客而感</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2010-10-20 23:07:26" itemprop="dateCreated datePublished" datetime="2010-10-20T23:07:26+08:00">2010-10-20</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/journal/" itemprop="url" rel="index"><span itemprop="name">日志</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>这几天把时间主要花在了博客上，如主题的更换，文章分享功能的添加，整理博客内容。经统计、归纳、汇总后发现博客的信息量比较少，欠丰富，反应出来的问题是本博接触的东西太有限了，也就那么几样，现在人都应该了解哪些方面的信息呢？</p>
-<p>PS：博客自动生成链接的功能怎么失效了？</p>
+          <p>page-header 结构中<br>page-n-heap:表示页面中记录数，包括已经删除的记录，,page-n-heap的初始为x8002，那么<br>page-n-heap=x8031，那么页中的记录数为x8031-x8002=x2f，即47，页中有47条记录。</p>
 
       
     </div>
@@ -595,7 +429,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/think-about-hun-yin-bao-wei-zhan-an-mo/">
+    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/the-supremum-record-in-index-page/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/apple-touch-icon.png">
@@ -608,7 +442,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/think-about-hun-yin-bao-wei-zhan-an-mo/" class="post-title-link" itemprop="url">婚姻保卫战–感悟按摩</a>
+          <a href="/the-supremum-record-in-index-page/" class="post-title-link" itemprop="url">The supremum record in index page</a>
         </h2>
 
         <div class="post-meta-container">
@@ -619,7 +453,7 @@
       </span>
       <span class="post-meta-item-text">Posted on</span>
 
-      <time title="Created: 2010-10-12 22:00:43" itemprop="dateCreated datePublished" datetime="2010-10-12T22:00:43+08:00">2010-10-12</time>
+      <time title="Created: 2015-03-06 23:25:20" itemprop="dateCreated datePublished" datetime="2015-03-06T23:25:20+08:00">2015-03-06</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -627,7 +461,7 @@
       </span>
       <span class="post-meta-item-text">In</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/journal/" itemprop="url" rel="index"><span itemprop="name">日志</span></a>
+          <a href="/categories/database/" itemprop="url" rel="index"><span itemprop="name">数据库</span></a>
         </span>
     </span>
 
@@ -641,7 +475,8 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>在重温婚姻保卫战，又得出一条：丈夫还要会一项技能，按摩，给老婆按摩，啊啊啊！</p>
+          <p>The supremum record represents a key higher than any possible key in the page. Its “next record” pointer is always zero (which represents NULL, and is always an invalid position for an actual record, due to the page headers). The “next record” pointer of the user record with the highest key on the page always points to supremum.</p>
+<p>PS:在index page中，最大key值的next record总是指向supermum.</p>
 
       
     </div>
@@ -668,7 +503,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/buy-seagate-freeagent-goflex-500g/">
+    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/the-infimum-record-in-index-page/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/apple-touch-icon.png">
@@ -681,7 +516,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/buy-seagate-freeagent-goflex-500g/" class="post-title-link" itemprop="url">购得500G移动硬盘一块</a>
+          <a href="/the-infimum-record-in-index-page/" class="post-title-link" itemprop="url">The infimum record in index page</a>
         </h2>
 
         <div class="post-meta-container">
@@ -692,7 +527,7 @@
       </span>
       <span class="post-meta-item-text">Posted on</span>
 
-      <time title="Created: 2010-10-11 20:30:30" itemprop="dateCreated datePublished" datetime="2010-10-11T20:30:30+08:00">2010-10-11</time>
+      <time title="Created: 2015-03-05 23:11:08" itemprop="dateCreated datePublished" datetime="2015-03-05T23:11:08+08:00">2015-03-05</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -700,7 +535,7 @@
       </span>
       <span class="post-meta-item-text">In</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/journal/" itemprop="url" rel="index"><span itemprop="name">日志</span></a>
+          <a href="/categories/database/" itemprop="url" rel="index"><span itemprop="name">数据库</span></a>
         </span>
     </span>
 
@@ -714,7 +549,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>买了希捷 freeagent goflex-500G的移动硬盘，现在这东西做的真轻啊，才150g，感觉包装盒里没有东西一样，哇卡卡！</p>
+          <p>The infimum record represents a value lower than any possible key in the page. Its “next record” pointer points to the user record with the lowest key in the page. Infimum serves as a fixed entry point for sequentially scanning user records.</p>
 
       
     </div>
@@ -741,7 +576,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/history-of-100-greatest-britons-part-2/">
+    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/transaction-acid-rule/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/apple-touch-icon.png">
@@ -754,7 +589,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/history-of-100-greatest-britons-part-2/" class="post-title-link" itemprop="url">历史上100位最伟大的英国人 part 2</a>
+          <a href="/transaction-acid-rule/" class="post-title-link" itemprop="url">ACID原则</a>
         </h2>
 
         <div class="post-meta-container">
@@ -765,7 +600,7 @@
       </span>
       <span class="post-meta-item-text">Posted on</span>
 
-      <time title="Created: 2010-10-10 22:34:04" itemprop="dateCreated datePublished" datetime="2010-10-10T22:34:04+08:00">2010-10-10</time>
+      <time title="Created: 2015-03-04 11:06:33" itemprop="dateCreated datePublished" datetime="2015-03-04T11:06:33+08:00">2015-03-04</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -773,7 +608,7 @@
       </span>
       <span class="post-meta-item-text">In</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/relax/" itemprop="url" rel="index"><span itemprop="name">资娱</span></a>
+          <a href="/categories/database/" itemprop="url" rel="index"><span itemprop="name">数据库</span></a>
         </span>
     </span>
 
@@ -787,16 +622,14 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>51. 亚瑟王（King Arthur）：传说中的凯尔特人首领。<br><img src="//img.gagahappy.cn/blog/2010/10/King-Arthur.jpg" title="King Arthur"><br>52. 弗洛伦丝·南丁格尔（Florence Nightingale，1820－1910）：著名护士，慈善家。</p>
-<p>53. T·E·劳伦斯（T. E. Lawrence，1888－1935）：军人，即“阿拉伯的劳伦斯”。</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/history-of-100-greatest-britons-part-2/#more" rel="contents">
-                Read more &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
+          <p>ACID原则</p>
+<ul>
+<li>原子性(Atomicity): 要进行的操作一般为一系列的操作，这些操作要么都被完成，要么都不被完成。这些操作是不可被分割的。<br>如果事务是是执行一系列的操作，其中的一条sql执行失败，那么其它那些执行成功的sql要进行撤消操作。</li>
+<li>一致性(consistency):数据库从一种一致的状态变成下一种一致的状态。</li>
+<li>隔离性(isolation):这个事务中操作的对象，在这个事务提交前，对其它事物都不可见。</li>
+<li>持久性(durability):数据被写入磁盘</li>
+</ul>
+
       
     </div>
 
@@ -822,7 +655,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/history-of-100-greatest-britons-part-1/">
+    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/innodb-new-record-use-old-record-space/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/apple-touch-icon.png">
@@ -835,7 +668,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/history-of-100-greatest-britons-part-1/" class="post-title-link" itemprop="url">历史上100位最伟大的英国人 part 1</a>
+          <a href="/innodb-new-record-use-old-record-space/" class="post-title-link" itemprop="url">innodb 新增数据使用已删除数据空间</a>
         </h2>
 
         <div class="post-meta-container">
@@ -846,7 +679,7 @@
       </span>
       <span class="post-meta-item-text">Posted on</span>
 
-      <time title="Created: 2010-10-08 23:48:38" itemprop="dateCreated datePublished" datetime="2010-10-08T23:48:38+08:00">2010-10-08</time>
+      <time title="Created: 2015-03-03 23:37:57" itemprop="dateCreated datePublished" datetime="2015-03-03T23:37:57+08:00">2015-03-03</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -854,7 +687,7 @@
       </span>
       <span class="post-meta-item-text">In</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/relax/" itemprop="url" rel="index"><span itemprop="name">资娱</span></a>
+          <a href="/categories/database/" itemprop="url" rel="index"><span itemprop="name">数据库</span></a>
         </span>
     </span>
 
@@ -868,18 +701,8 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>1. 温斯顿·邱吉尔爵士（Sir Winston Churchill，1874－1965）：政治家，曾担任联合王国首相（1940－1945、1951－1955），二战“三巨头”之一。</p>
-<p>2. 伊赞巴德·金顿·布鲁内尔（Isambard Kingdom Brunel，1806–1859）：工程师，英国铁路体系的奠基人。</p>
-<p>3.戴安娜王妃（ Princess Diana，1961－1997）：王室，威尔士王妃（1981－1996）</p>
-<p><img src="//img.gagahappy.cn/blog/2010/10/2246451789128890769.jpg" title="戴安娜王妃"></p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/history-of-100-greatest-britons-part-1/#more" rel="contents">
-                Read more &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
+          <p>如果被删除的数据的空间可以被新数据使用，则新数据占用这个空间，而不是从heap_top中申请空间（其实就是追加数据）。如果新数据不能使用已删除数据的空间，则追加数据（从heap_top中申请空间）。注意：这时数据的排序不再按PK key的顺序存放。</p>
+
       
     </div>
 
@@ -905,7 +728,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/zhuangxiu-order-efang-furniture/">
+    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/explain-using-where-should-be/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/apple-touch-icon.png">
@@ -918,7 +741,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/zhuangxiu-order-efang-furniture/" class="post-title-link" itemprop="url">装修笔记——第60天，订购意风家具</a>
+          <a href="/explain-using-where-should-be/" class="post-title-link" itemprop="url">explain using where 含意</a>
         </h2>
 
         <div class="post-meta-container">
@@ -929,7 +752,7 @@
       </span>
       <span class="post-meta-item-text">Posted on</span>
 
-      <time title="Created: 2010-10-07 20:53:41" itemprop="dateCreated datePublished" datetime="2010-10-07T20:53:41+08:00">2010-10-07</time>
+      <time title="Created: 2015-03-02 17:59:31" itemprop="dateCreated datePublished" datetime="2015-03-02T17:59:31+08:00">2015-03-02</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -937,7 +760,7 @@
       </span>
       <span class="post-meta-item-text">In</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/journal/" itemprop="url" rel="index"><span itemprop="name">日志</span></a>
+          <a href="/categories/database/" itemprop="url" rel="index"><span itemprop="name">数据库</span></a>
         </span>
     </span>
 
@@ -951,7 +774,153 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>利用十一的最后一个节假日，把家具订了下来，意风的家具，十一期间7,5折，还是不错的。客厅和卧室由于地面颜色的不同，对应的选择了不同颜色的家具，也不知道效果会怎么样，期待中。</p>
+          <p>using where：这说明服务器在存储引擎收到行后将进行过滤,效率不是最高的。</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/mysql-innodb-ft-cache-size/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/apple-touch-icon.png">
+      <meta itemprop="name" content="戛戛Happy">
+      <meta itemprop="description" content="后端, 操作系统, 互联网, 程序开发, Linux, 数据库, MySql, Golang, Ruby">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="睡月花儿">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/mysql-innodb-ft-cache-size/" class="post-title-link" itemprop="url">参数innodb_ft_cache_size</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2015-02-28 16:22:47" itemprop="dateCreated datePublished" datetime="2015-02-28T16:22:47+08:00">2015-02-28</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/database/" itemprop="url" rel="index"><span itemprop="name">数据库</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>参数innodb_ft_cache_size用来控制FTS index Cache的大小，默认为32M，当缓存满时，会将其中的(word,ilist)分词信息同步到磁盘的Auxiliary table中。增大此参数可以提高全文索引的性能，但在宕机时可能需要更长的时间进行恢复。</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/multi-range-read-optimize/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/apple-touch-icon.png">
+      <meta itemprop="name" content="戛戛Happy">
+      <meta itemprop="description" content="后端, 操作系统, 互联网, 程序开发, Linux, 数据库, MySql, Golang, Ruby">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="睡月花儿">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/multi-range-read-optimize/" class="post-title-link" itemprop="url">Multi-Range-Read优化的好处</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2015-02-27 10:39:15" itemprop="dateCreated datePublished" datetime="2015-02-27T10:39:15+08:00">2015-02-27</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/database/" itemprop="url" rel="index"><span itemprop="name">数据库</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>Multi-Range-Read优化的好处,简称MRR，目的是减少磁盘的随机访问，把随机访问转化为比较顺序的访问，对于IO-bound类型的SQL有很大的性能提升。Multi-Range-Read优化适用于range/ref/eq_ref类型的查询。</p>
 
       
     </div>
@@ -971,7 +940,7 @@
 
 
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/22/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/22/">22</a><span class="page-number current">23</span><a class="page-number" href="/page/24/">24</a><span class="space">&hellip;</span><a class="page-number" href="/page/48/">48</a><a class="extend next" rel="next" href="/page/24/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
+    <a class="extend prev" rel="prev" href="/page/22/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/22/">22</a><span class="page-number current">23</span><a class="page-number" href="/page/24/">24</a><span class="space">&hellip;</span><a class="page-number" href="/page/87/">87</a><a class="extend next" rel="next" href="/page/24/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
   </nav>
 
 </div>

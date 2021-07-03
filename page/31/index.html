@@ -90,9 +90,9 @@
         <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li>
         <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a></li>
         <li class="menu-item menu-item-coding"><a href="https://www.gagahappy.com/" rel="noopener" target="_blank"><i class="fa fa-keyboard fa-fw"></i>coding</a></li>
-        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">39</span></a></li>
-        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories<span class="badge">3</span></a></li>
-        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">471</span></a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">86</span></a></li>
+        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories<span class="badge">7</span></a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">870</span></a></li>
         <li class="menu-item menu-item-sitemap"><a href="/sitemap.xml" rel="section"><i class="fa fa-sitemap fa-fw"></i>Sitemap</a></li>
         <li class="menu-item menu-item-commonweal"><a href="/404/" rel="section"><i class="fa fa-heartbeat fa-fw"></i>Commonweal 404</a></li>
       <li class="menu-item menu-item-search">
@@ -209,7 +209,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/you-men-xia-02/">
+    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/nginx-proxy-configration/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/apple-touch-icon.png">
@@ -222,7 +222,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/you-men-xia-02/" class="post-title-link" itemprop="url">油焖大虾</a>
+          <a href="/nginx-proxy-configration/" class="post-title-link" itemprop="url">nginx proxy configration</a>
         </h2>
 
         <div class="post-meta-container">
@@ -233,7 +233,7 @@
       </span>
       <span class="post-meta-item-text">Posted on</span>
 
-      <time title="Created: 2010-07-03 00:02:35" itemprop="dateCreated datePublished" datetime="2010-07-03T00:02:35+08:00">2010-07-03</time>
+      <time title="Created: 2012-04-14 16:36:25" itemprop="dateCreated datePublished" datetime="2012-04-14T16:36:25+08:00">2012-04-14</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -241,7 +241,7 @@
       </span>
       <span class="post-meta-item-text">In</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/food/" itemprop="url" rel="index"><span itemprop="name">做菜</span></a>
+          <a href="/categories/development/" itemprop="url" rel="index"><span itemprop="name">后端</span></a>
         </span>
     </span>
 
@@ -255,24 +255,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>材料、</p>
-<blockquote>
-<p>大明虾、豆苗、小番茄</p>
-</blockquote>
-<p>制作、</p>
-<blockquote>
-<p>要注意的是去虾的沙袋，要不虾头的时候会觉得砑碜</p>
-</blockquote>
-<blockquote>
-<ol>
-<li>番茄汁（可以用小西红柿打碎）</li>
-<li>葱姜切片，放入油，炸出香味，倒出炸好的油（葱香油，自制）</li>
-<li>120度火炸，两面炸出发白为好。</li>
-<li>放入番茄汁</li>
-<li>放入盐，白糖，料酒</li>
-<li>焖3-4分钟即可</li>
-</ol>
-</blockquote>
+          <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">proxy_set_header Host <span class="variable">$http_host</span>;</span><br><span class="line">proxy_redirect <span class="literal">false</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> (-f <span class="variable">$request_filename</span>/index.html) &#123;</span><br><span class="line">rewrite (.*) <span class="variable">$1</span>/index.html <span class="built_in">break</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> (-f <span class="variable">$request_filename</span>.html) &#123;</span><br><span class="line">rewrite (.*) <span class="variable">$1</span>.html <span class="built_in">break</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">if</span> (!-f <span class="variable">$request_filename</span>) &#123;</span><br><span class="line">proxy_pass http://thin_cluster;</span><br><span class="line"><span class="built_in">break</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -299,7 +282,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/renovation-budget-1/">
+    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/resque-priorities-and-queue-lists/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/apple-touch-icon.png">
@@ -312,7 +295,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/renovation-budget-1/" class="post-title-link" itemprop="url">装修——决定预算报价高低的几大因素</a>
+          <a href="/resque-priorities-and-queue-lists/" class="post-title-link" itemprop="url">resque Priorities and Queue Lists</a>
         </h2>
 
         <div class="post-meta-container">
@@ -323,7 +306,7 @@
       </span>
       <span class="post-meta-item-text">Posted on</span>
 
-      <time title="Created: 2010-07-02 23:41:04" itemprop="dateCreated datePublished" datetime="2010-07-02T23:41:04+08:00">2010-07-02</time>
+      <time title="Created: 2012-02-21 23:26:20" itemprop="dateCreated datePublished" datetime="2012-02-21T23:26:20+08:00">2012-02-21</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -331,7 +314,7 @@
       </span>
       <span class="post-meta-item-text">In</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/journal/" itemprop="url" rel="index"><span itemprop="name">日志</span></a>
+          <a href="/categories/development/" itemprop="url" rel="index"><span itemprop="name">后端</span></a>
         </span>
     </span>
 
@@ -345,18 +328,13 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <ol>
-<li><p>材料的规格、档次；</p>
-</li>
-<li><p>房间设计功能；</p>
-</li>
-<li><p>施工队伍的选择，施工队伍的资质的高低；</p>
-</li>
-<li><p>施工条件的好坏远近；</p>
-</li>
-<li><p>施工工艺的难易程度。</p>
-</li>
-</ol>
+          <p>Priorities and Queue Lists</p>
+<p>Resque doesn’t support numeric priorities but instead uses the order of queues you give it. We call this list of queues the “queue list.”</p>
+<p>Let’s say we add a warm_cache queue in addition to our file_serve queue. We’d now start a worker like so:</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>QUEUES=file_serve,warm_cache rake <span class="symbol">resque:</span>work</span><br></pre></td></tr></table></figure>
+
+<p>When the worker looks for new jobs, it will first check file_serve. If it finds a job, it’ll process it then check file_serve again. It will keep checking file_serve until no more jobs are available. At that point, it will check warm_cache. If it finds a job it’ll process it then check file_serve (repeating the whole process).</p>
+<p>Resque doesn’t support numeric priorities but instead uses the order of queues you give it. We call this list of queues the “queue list.”</p>
 
       
     </div>
@@ -383,7 +361,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/layer-parquet-four-things/">
+    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/ruby-regular-expression-in-sub-gsub/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/apple-touch-icon.png">
@@ -396,7 +374,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/layer-parquet-four-things/" class="post-title-link" itemprop="url">装修——三层实木复合地板选购要“四看” (转)</a>
+          <a href="/ruby-regular-expression-in-sub-gsub/" class="post-title-link" itemprop="url">ruby 正则表达式中的全局变量</a>
         </h2>
 
         <div class="post-meta-container">
@@ -407,7 +385,7 @@
       </span>
       <span class="post-meta-item-text">Posted on</span>
 
-      <time title="Created: 2010-07-01 10:01:49" itemprop="dateCreated datePublished" datetime="2010-07-01T10:01:49+08:00">2010-07-01</time>
+      <time title="Created: 2012-02-20 22:19:38" itemprop="dateCreated datePublished" datetime="2012-02-20T22:19:38+08:00">2012-02-20</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -415,7 +393,7 @@
       </span>
       <span class="post-meta-item-text">In</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/journal/" itemprop="url" rel="index"><span itemprop="name">日志</span></a>
+          <a href="/categories/development/" itemprop="url" rel="index"><span itemprop="name">后端</span></a>
         </span>
     </span>
 
@@ -429,16 +407,386 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <blockquote>
-<p>在日常家居装修中，越来越多的消费者选择购买三层实木复合地板。当你在准备购买三层实木复合地板前，有必要以对其作一了解，以便决策选购。</p>
-</blockquote>
-<p>三层实木复合地板分表、芯、底三层。表层为耐磨层，同时也是视觉审美层，材质应选择质地坚硬、纹理美观的木材，目前市场上以柚木、胡桃木、绿柄桑、枫木、柞木较为常见。三层实木复合地板表层厚度决定其使用寿命，表层板材越厚，耐磨损的时间越长。三层实木复合地板表层厚度一般要求达到3.5毫米以上，这样既能增加地板的脚感，也使得实木复合地板可以多次翻新。芯层和底层为平衡缓冲层，厚实的芯层是地板脚感的主要来源，应选用质地软、弹性好的木材，常用的有橡胶木、松木等等木材。特别是橡胶木，不仅踩踏舒适，连接也更加牢固。三层实木复合地板的芯层厚度应该在7毫米以上，低于这一指标的三层实木复合地板，脚感明显较差。</p>
-<p>在制造工艺方面，表层板木材的裁切方式也不可忽视。旋切表层板容易造成地板表层纹理失真，还可能导致表层板出现裂纹，优质的实木复合地板应采用径切材作为表板。</p>
-<p>在表面涂饰方面，高档实木复合地板都采用UV亚光漆，这种油漆是经过紫外光固化的，耐磨性能非常好，不会产生类似PV漆的脱落现象，家庭使用也不用打蜡维护。UV漆的一项重要指标是亚光度。优质的UV亚光漆对强光线应无明显反射现象，光泽柔和高雅，对视觉无刺激。</p>
-<p>在价格方面，三层实木复合地板因材质差异，价格相差悬殊，每平方米从250元到600元不等。其中尤以东南亚、南美产的柚木、胡桃木、绿柄桑、孪叶苏等材质的三层实木复合地板价格最高；而枫木、柞木等常规材质三层实木复合地板价格可低至250元左右。</p>
+          <p>在使用sub,gsub 时，正则表达式不中不能使用全局变量</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">str = <span class="string">&quot;a123b456c789&quot;</span></span><br><span class="line">str.sub(<span class="regexp">/(a\d+)(b\d+)(c\d+)/</span>,<span class="string">&quot;a=<span class="subst">#&#123;<span class="variable">$1</span>&#125;</span>, b=<span class="subst">#&#123;<span class="variable">$2</span>&#125;</span>, c=<span class="subst">#&#123;<span class="variable">$3</span>&#125;</span>&quot;</span>)</span><br><span class="line">=&gt;</span><br><span class="line"><span class="string">&quot;a=, b=, c=&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>可以使用</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">str = <span class="string">&quot;a123b456c789&quot;</span></span><br><span class="line">str.sub(<span class="regexp">/(a\d+)(b\d+)(c\d+)/</span>,<span class="string">&#x27;a=\1, b=\2, c=\3&#x27;</span>)</span><br><span class="line">=&gt;</span><br><span class="line"><span class="string">&quot;a=123, b=456, c=789&quot;</span></span><br></pre></td></tr></table></figure>
+<p>或</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">str = <span class="string">&quot;a123b456c789&quot;</span></span><br><span class="line">str.sub(<span class="regexp">/(a\d+)(b\d+)(c\d+)/</span>) &#123;<span class="string">&quot;a=<span class="subst">#&#123;<span class="variable">$1</span>&#125;</span>, b=<span class="subst">#&#123;<span class="variable">$2</span>&#125;</span>, c=<span class="subst">#&#123;<span class="variable">$3</span>&#125;</span>&quot;</span>&#125;</span><br><span class="line">=&gt;</span><br><span class="line"><span class="string">&quot;a=123, b=456, c=789&quot;</span></span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/rvm-gemset-pic/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/apple-touch-icon.png">
+      <meta itemprop="name" content="戛戛Happy">
+      <meta itemprop="description" content="后端, 操作系统, 互联网, 程序开发, Linux, 数据库, MySql, Golang, Ruby">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="睡月花儿">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/rvm-gemset-pic/" class="post-title-link" itemprop="url">rvm gemset </a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2012-02-16 22:30:17" itemprop="dateCreated datePublished" datetime="2012-02-16T22:30:17+08:00">2012-02-16</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/development/" itemprop="url" rel="index"><span itemprop="name">后端</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p><code>rvm gemset</code></p>
+<p><a target="_blank" rel="noopener" href="//img.gagahappy.cn/blog/2012/02/Screenshot-at-2012-02-20-222952.png"><img src="//img.gagahappy.cn/blog/2012/02/Screenshot-at-2012-02-20-222952.png" title="Screenshot at 2012-02-20 22:29:52"></a></p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/ruby-character-class-up/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/apple-touch-icon.png">
+      <meta itemprop="name" content="戛戛Happy">
+      <meta itemprop="description" content="后端, 操作系统, 互联网, 程序开发, Linux, 数据库, MySql, Golang, Ruby">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="睡月花儿">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/ruby-character-class-up/" class="post-title-link" itemprop="url">ruby 正则表达式脱字符</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2012-02-15 22:49:27" itemprop="dateCreated datePublished" datetime="2012-02-15T22:49:27+08:00">2012-02-15</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/development/" itemprop="url" rel="index"><span itemprop="name">后端</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">re = <span class="regexp">/[^aeiou]/</span></span><br><span class="line"><span class="comment"># Match any character except a, e, i, o, u</span></span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/ruby-match-pre-post-match/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/apple-touch-icon.png">
+      <meta itemprop="name" content="戛戛Happy">
+      <meta itemprop="description" content="后端, 操作系统, 互联网, 程序开发, Linux, 数据库, MySql, Golang, Ruby">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="睡月花儿">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/ruby-match-pre-post-match/" class="post-title-link" itemprop="url">ruby 正则表达式获取匹配字符串前后部分</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2012-02-13 22:41:11" itemprop="dateCreated datePublished" datetime="2012-02-13T22:41:11+08:00">2012-02-13</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/development/" itemprop="url" rel="index"><span itemprop="name">后端</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>ruby 正则表达式获取匹配字符串前后部分</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">a = <span class="string">&quot;Hello gagahappy Hi&quot;</span></span><br><span class="line">refs = a.match(<span class="regexp">/gagahappy/</span>)</span><br><span class="line">refs.pre_match  <span class="comment"># =&gt; &quot;Hello &quot;</span></span><br><span class="line">refs.post_match <span class="comment"># =&gt; &quot; Hi&quot;</span></span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/ubuntu-11-10-rvm-ruby-openssl/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/apple-touch-icon.png">
+      <meta itemprop="name" content="戛戛Happy">
+      <meta itemprop="description" content="后端, 操作系统, 互联网, 程序开发, Linux, 数据库, MySql, Golang, Ruby">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="睡月花儿">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/ubuntu-11-10-rvm-ruby-openssl/" class="post-title-link" itemprop="url">ubuntu 11.10 rvm 安装版ruby openssl解决</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2012-02-12 13:54:28" itemprop="dateCreated datePublished" datetime="2012-02-12T13:54:28+08:00">2012-02-12</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/development/" itemprop="url" rel="index"><span itemprop="name">后端</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>用rvm 安装ruby1.9.1时，需要openssl的版本为0.98，而系统自带为1.0，造成RUNERR,解决方法如下</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">rvm pkg install openssl</span><br><span class="line">rvm remove 1.9.2</span><br><span class="line">rvm install 1.9.2 --with-openssl-dir=<span class="variable">$rvm_path</span>/usr</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/error-loading-gem-paths-on-load-path-in-gem-prelude/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/apple-touch-icon.png">
+      <meta itemprop="name" content="戛戛Happy">
+      <meta itemprop="description" content="后端, 操作系统, 互联网, 程序开发, Linux, 数据库, MySql, Golang, Ruby">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="睡月花儿">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/error-loading-gem-paths-on-load-path-in-gem-prelude/" class="post-title-link" itemprop="url">Error loading gem paths on load path in gem_prelude</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2012-02-11 17:03:16" itemprop="dateCreated datePublished" datetime="2012-02-11T17:03:16+08:00">2012-02-11</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/development/" itemprop="url" rel="index"><span itemprop="name">后端</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>在用rvm安装ruby后运行gem，出现</p>
 <blockquote>
-<p>原文出处：<a target="_blank" rel="noopener" href="http://jiaju.sina.com.cn/news/095551223.html">http://jiaju.sina.com.cn/news/095551223.html</a></p>
+<p>Error loading gem paths on load path in gem_prelude<br>can’t modify frozen string<br><a href="internal:gem_prelude">internal:gem_prelude</a>:69:in <code>force_encoding&#39; &lt;internal:gem_prelude&gt;:69:in </code>set_home’<br><a href="internal:gem_prelude">internal:gem_prelude</a>:38:in <code>dir&#39; &lt;internal:gem_prelude&gt;:76:in </code>set_paths’<br><a href="internal:gem_prelude">internal:gem_prelude</a>:47:in <code>path&#39; &lt;internal:gem_prelude&gt;:286:in </code>push_all_highest_version_gems_on_load_path’<br><a href="internal:gem_prelude">internal:gem_prelude</a>:355:in `<compiled>‘</p>
 </blockquote>
+<p>解决方法：找到 your/home/.rvm/src/ruby-your-version/gem_prelude.rb文件 编辑</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">def <span class="keyword">self</span>.set_home(home)</span><br><span class="line"> home = home.gsub File::ALT_SEPARATOR, File::SEPARATOR <span class="keyword">if</span> File::ALT_SEPARATOR</span><br><span class="line">- <span class="variable">@gem_home</span> = home.force_encoding(Encoding.find(<span class="string">&#x27;filesystem&#x27;</span>))</span><br><span class="line">+ <span class="variable">@gem_home</span> = home.dup.force_encoding(Encoding.find(<span class="string">&#x27;filesystem&#x27;</span>)</span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -465,7 +813,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/geothermal-heating-for-the-floor-and-notes/">
+    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/rackbuilder-rackup/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/apple-touch-icon.png">
@@ -478,7 +826,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/geothermal-heating-for-the-floor-and-notes/" class="post-title-link" itemprop="url">装修——适合地热采暖的地板及注意事项</a>
+          <a href="/rackbuilder-rackup/" class="post-title-link" itemprop="url">Rack::Builder  rackup</a>
         </h2>
 
         <div class="post-meta-container">
@@ -489,7 +837,7 @@
       </span>
       <span class="post-meta-item-text">Posted on</span>
 
-      <time title="Created: 2010-06-30 00:43:32" itemprop="dateCreated datePublished" datetime="2010-06-30T00:43:32+08:00">2010-06-30</time>
+      <time title="Created: 2012-02-09 17:29:27" itemprop="dateCreated datePublished" datetime="2012-02-09T17:29:27+08:00">2012-02-09</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -497,7 +845,7 @@
       </span>
       <span class="post-meta-item-text">In</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/journal/" itemprop="url" rel="index"><span itemprop="name">日志</span></a>
+          <a href="/categories/development/" itemprop="url" rel="index"><span itemprop="name">后端</span></a>
         </span>
     </span>
 
@@ -511,20 +859,14 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <ol>
-<li>膨胀率要小于等于2.5%</li>
-<li>选择甲醛含量低</li>
-<li>地板质量到欧洲Enpr13329标准，国产地板质量达到国家GB/T1802-2000标准</li>
-<li>复合地板的厚度大多为6～9mm，其中强化复合地板多为6～8mm，三层实木复合地板为8～9mm，传热性能更好</li>
-</ol>
-<p>锁扣地板的设计更利于传热</p>
-<blockquote>
-<p>尽量选用小尺寸产品，最好是200×40×10拼成的方形或人字形<br>地热地板要负责传导热量</p>
-</blockquote>
-<p>安装前地面处理要细致</p>
-<blockquote>
-<p>地面在以2米为半径的范围内必须水平，高低差不得超过3mm。地面要完全干燥，铺设地板之前，必须进行地热加温试验，进水温度至少达50℃，以确保采暖系统运行正常。并要保温24小时以上，使地面干透，确保含水率符合标准。</p>
-</blockquote>
+          <p>rackup converts the supplied rack config file to an instance of Rack::Builder. This is how is happens under the hood ( just so you get an idea ) :</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">config_file = File.read(config)</span><br><span class="line">rack_application = eval(<span class="string">&quot;Rack::Builder.new &#123; <span class="subst">#&#123;config_file&#125;</span> &#125;&quot;</span>)</span><br></pre></td></tr></table></figure>
+<p>And then rackup supplies rack_application to the respective webserver :</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">server.run rack_application, options</span><br></pre></td></tr></table></figure>
+<p>Very straight forward! In short, rack config files are evaluated within the context of a Rack::Builder object. So if we convert infinity to a rack config file which rackup can understand :</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># infinity.ru</span></span><br><span class="line"></span><br><span class="line">infinity = Proc.new &#123;<span class="params">|env|</span> [<span class="number">200</span>, &#123;<span class="string">&quot;Content-Type&quot;</span> =&gt; <span class="string">&quot;text/html&quot;</span>&#125;, env.inspect]&#125;</span><br><span class="line"></span><br><span class="line">use Rack::CommonLogger</span><br><span class="line"></span><br><span class="line">map <span class="string">&#x27;/&#x27;</span> <span class="keyword">do</span></span><br><span class="line">  run infinity</span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"></span><br><span class="line">map <span class="string">&#x27;/version&#x27;</span> <span class="keyword">do</span></span><br><span class="line">  map <span class="string">&#x27;/&#x27;</span> <span class="keyword">do</span></span><br><span class="line">    run Proc.new &#123;<span class="params">|env|</span> [<span class="number">200</span>, &#123;<span class="string">&quot;Content-Type&quot;</span> =&gt; <span class="string">&quot;text/html&quot;</span>&#125;, <span class="string">&quot;infinity 0.1&quot;</span>] &#125;</span><br><span class="line">  <span class="keyword">end</span></span><br><span class="line"></span><br><span class="line">  map <span class="string">&#x27;/last&#x27;</span> <span class="keyword">do</span></span><br><span class="line">    run Proc.new &#123;<span class="params">|env|</span> [<span class="number">200</span>, &#123;<span class="string">&quot;Content-Type&quot;</span> =&gt; <span class="string">&quot;text/html&quot;</span>&#125;, <span class="string">&quot;infinity beta 0.0&quot;</span>] &#125;</span><br><span class="line">  <span class="keyword">end</span></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+
+<p>And now run it :<br><code>rackup infinity.ru</code></p>
 
       
     </div>
@@ -551,7 +893,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/farewell-to-cgzx/">
+    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/eager-load-application-classes/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/apple-touch-icon.png">
@@ -564,7 +906,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/farewell-to-cgzx/" class="post-title-link" itemprop="url">farewell to cgzx</a>
+          <a href="/eager-load-application-classes/" class="post-title-link" itemprop="url">Eager load application classes</a>
         </h2>
 
         <div class="post-meta-container">
@@ -575,7 +917,7 @@
       </span>
       <span class="post-meta-item-text">Posted on</span>
 
-      <time title="Created: 2010-06-29 23:56:37" itemprop="dateCreated datePublished" datetime="2010-06-29T23:56:37+08:00">2010-06-29</time>
+      <time title="Created: 2012-02-08 11:22:28" itemprop="dateCreated datePublished" datetime="2012-02-08T11:22:28+08:00">2012-02-08</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -583,7 +925,7 @@
       </span>
       <span class="post-meta-item-text">In</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/journal/" itemprop="url" rel="index"><span itemprop="name">日志</span></a>
+          <a href="/categories/development/" itemprop="url" rel="index"><span itemprop="name">后端</span></a>
         </span>
     </span>
 
@@ -597,403 +939,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>farewell to cgzx</p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/home-cost-home-money/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/apple-touch-icon.png">
-      <meta itemprop="name" content="戛戛Happy">
-      <meta itemprop="description" content="后端, 操作系统, 互联网, 程序开发, Linux, 数据库, MySql, Golang, Ruby">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="睡月花儿">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/home-cost-home-money/" class="post-title-link" itemprop="url">装修——帮您算算装修前要准备多少钱？（转）</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2010-06-25 23:48:34" itemprop="dateCreated datePublished" datetime="2010-06-25T23:48:34+08:00">2010-06-25</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/journal/" itemprop="url" rel="index"><span itemprop="name">日志</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p><strong>装修前想好自己要花多少钱、能承受多少钱，非常重要！极其重要！重要重要！</strong></p>
-<p>一套房子的装修基金大致用于以下17个部分：</p>
-<blockquote>
-<ul>
-<li>分别是<br>1. 水电线路改造；<br>2. 家具、天花(包括买、做)；<br>3. 橱卫墙、地面防水、；<br>4. 油漆、涂料；<br>5. 橱柜；<br>6. 卫生间洁具(马桶、浴盆、洗脸台)；<br>7. 地板、地砖；<br>8. 五金材料；<br>9. 门槛石(阳台石)；<br>10. 橱卫、阳台瓷砖；<br>11. 灯具；<br>12. 窗帘及其配件；<br>13. 电器(热水器、空调、抽烟机、燃气灶、排风扇等)；<br>14. 防盗门；<br>15. 橱卫吊顶；<br>16. 灯具、洁具等的安装费；<br>17. 大小装饰品。</li>
-</ul>
-</blockquote>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/home-cost-home-money/#more" rel="contents">
-                Read more &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/jiaju-zhuangxiu-methods/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/apple-touch-icon.png">
-      <meta itemprop="name" content="戛戛Happy">
-      <meta itemprop="description" content="后端, 操作系统, 互联网, 程序开发, Linux, 数据库, MySql, Golang, Ruby">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="睡月花儿">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/jiaju-zhuangxiu-methods/" class="post-title-link" itemprop="url">装修——目前市场上四种主流家装方式(转)</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2010-06-25 23:30:47" itemprop="dateCreated datePublished" datetime="2010-06-25T23:30:47+08:00">2010-06-25</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/journal/" itemprop="url" rel="index"><span itemprop="name">日志</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>一、清包：<br>也叫清包工，是指业主自行购买所有材料，找装饰公司或装修队伍来施工的一种工程承包方式。</p>
-<blockquote>
-<p>采取这种方式的优点是：自由度和控制力大，自己选材料，可以充分体现自己的意愿,自由度和控制力大，自己选材料，可以充分体现自己的意愿。</p>
-</blockquote>
-<blockquote>
-<p>清包也有不足之处：清包需要投入的时间和精力较多。逛市场、了解行情、选材，这需要大量的时间；还得联系车辆，拉运材料；工期相对会较长。</p>
-</blockquote>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/jiaju-zhuangxiu-methods/#more" rel="contents">
-                Read more &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/xfdmhsd-duibai-01/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/apple-touch-icon.png">
-      <meta itemprop="name" content="戛戛Happy">
-      <meta itemprop="description" content="后端, 操作系统, 互联网, 程序开发, Linux, 数据库, MySql, Golang, Ruby">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="睡月花儿">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/xfdmhsd-duibai-01/" class="post-title-link" itemprop="url">媳妇的美好时代-经典对白</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2010-06-20 01:22:59" itemprop="dateCreated datePublished" datetime="2010-06-20T01:22:59+08:00">2010-06-20</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/journal/" itemprop="url" rel="index"><span itemprop="name">日志</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>毛豆豆我想你<br>好的</p>
-<p>明天穿漂亮点<br>好的</p>
-<p>最好再穿性感点<br>好的 好的</p>
-<p>最好什么都别穿<br>好的</p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/starbucks-coffee-and-rubik/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/apple-touch-icon.png">
-      <meta itemprop="name" content="戛戛Happy">
-      <meta itemprop="description" content="后端, 操作系统, 互联网, 程序开发, Linux, 数据库, MySql, Golang, Ruby">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="睡月花儿">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/starbucks-coffee-and-rubik/" class="post-title-link" itemprop="url">魔方再次发挥作用</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2010-06-04 23:03:59" itemprop="dateCreated datePublished" datetime="2010-06-04T23:03:59+08:00">2010-06-04</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/journal/" itemprop="url" rel="index"><span itemprop="name">日志</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>魔方再次发挥作用，和光亮去星巴克买杯子，遇到还原魔方送优惠券活动，我两轻松赢得免费任意一款星巴克12盎咖啡券两枚！</p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/something-10-06-03/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/apple-touch-icon.png">
-      <meta itemprop="name" content="戛戛Happy">
-      <meta itemprop="description" content="后端, 操作系统, 互联网, 程序开发, Linux, 数据库, MySql, Golang, Ruby">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="睡月花儿">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/something-10-06-03/" class="post-title-link" itemprop="url">something</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2010-06-03 22:11:24" itemprop="dateCreated datePublished" datetime="2010-06-03T22:11:24+08:00">2010-06-03</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/journal/" itemprop="url" rel="index"><span itemprop="name">日志</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>在物价飞涨的年代，只有工资以不变应万变！</p>
-<p>疯狂工作的男人背后是一个幸福的女人，疯狂工作的女人背后是一个伤了她的男人！</p>
-<p>薪水的压力来自于：前同事，老同学，前女友的现男友，现女友的前男友，现女友的闺蜜的男友，以及父母朋友们的子女们！</p>
+          <figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Eager load application classes</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">load_application_classes</span></span></span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">if</span> <span class="variable">$rails_rake</span>_task</span><br><span class="line">  <span class="keyword">if</span> configuration.cache_classes</span><br><span class="line">    configuration.eager_load_paths.each <span class="keyword">do</span> <span class="params">|load_path|</span></span><br><span class="line">      matcher = <span class="regexp">/\A<span class="subst">#&#123;Regexp.escape(load_path)&#125;</span>(.*)\.rb\Z/</span></span><br><span class="line">      Dir.glob(<span class="string">&quot;<span class="subst">#&#123;load_path&#125;</span>/**/*.rb&quot;</span>).sort.each <span class="keyword">do</span> <span class="params">|file|</span></span><br><span class="line">        require_dependency file.sub(matcher, <span class="string">&#x27;\1&#x27;</span>)</span><br><span class="line">      <span class="keyword">end</span></span><br><span class="line">    <span class="keyword">end</span></span><br><span class="line">  <span class="keyword">end</span></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -1013,7 +959,7 @@
 
 
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/30/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/30/">30</a><span class="page-number current">31</span><a class="page-number" href="/page/32/">32</a><span class="space">&hellip;</span><a class="page-number" href="/page/48/">48</a><a class="extend next" rel="next" href="/page/32/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
+    <a class="extend prev" rel="prev" href="/page/30/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/30/">30</a><span class="page-number current">31</span><a class="page-number" href="/page/32/">32</a><span class="space">&hellip;</span><a class="page-number" href="/page/87/">87</a><a class="extend next" rel="next" href="/page/32/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
   </nav>
 
 </div>

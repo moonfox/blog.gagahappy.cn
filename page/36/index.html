@@ -90,9 +90,9 @@
         <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li>
         <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a></li>
         <li class="menu-item menu-item-coding"><a href="https://www.gagahappy.com/" rel="noopener" target="_blank"><i class="fa fa-keyboard fa-fw"></i>coding</a></li>
-        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">39</span></a></li>
-        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories<span class="badge">3</span></a></li>
-        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">471</span></a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">86</span></a></li>
+        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories<span class="badge">7</span></a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">870</span></a></li>
         <li class="menu-item menu-item-sitemap"><a href="/sitemap.xml" rel="section"><i class="fa fa-sitemap fa-fw"></i>Sitemap</a></li>
         <li class="menu-item menu-item-commonweal"><a href="/404/" rel="section"><i class="fa fa-heartbeat fa-fw"></i>Commonweal 404</a></li>
       <li class="menu-item menu-item-search">
@@ -209,7 +209,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/immature-man/">
+    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/mysql-manager-of-pid-file-quit-without-updating-file/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/apple-touch-icon.png">
@@ -222,7 +222,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/immature-man/" class="post-title-link" itemprop="url">不成熟男人的十个标志</a>
+          <a href="/mysql-manager-of-pid-file-quit-without-updating-file/" class="post-title-link" itemprop="url">mysql不能启动 Manager of pid-file quit without updating file.</a>
         </h2>
 
         <div class="post-meta-container">
@@ -233,7 +233,7 @@
       </span>
       <span class="post-meta-item-text">Posted on</span>
 
-      <time title="Created: 2010-02-22 22:07:41" itemprop="dateCreated datePublished" datetime="2010-02-22T22:07:41+08:00">2010-02-22</time>
+      <time title="Created: 2011-08-01 12:34:10" itemprop="dateCreated datePublished" datetime="2011-08-01T12:34:10+08:00">2011-08-01</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -241,7 +241,7 @@
       </span>
       <span class="post-meta-item-text">In</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/journal/" itemprop="url" rel="index"><span itemprop="name">日志</span></a>
+          <a href="/categories/database/" itemprop="url" rel="index"><span itemprop="name">数据库</span></a>
         </span>
     </span>
 
@@ -255,8 +255,11 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>不成熟男人的十个标志</p>
-<p>1.与知己上床<br>2.跟网友见面<br>3.和情人结婚<br>4.把爱好当职业<br>5.把同事当朋友<br>6.上司面前知无不言<br>7.轻信上司的许诺<br>8.喜怒哀乐挂在脸上<br>9.相信仅靠努力会成功<br>10.不会艺术地恭维</p>
+          <p>启动mysql失败，提示Manager of pid-file quit without updating file.错误。从网上直接搜索错误信息，感觉出错原因及解决方案都不适用于本机的情况。</p>
+<p>本着出错要查出其原因的原则，查看了mysql的出错日志（出错日志所在路径，请根据您自己机子的实际情况查找），发现错误信息：File ‘./mysql-bin.index’ not found (Errcode: 13)，查看数据库文件，mysql-bin.index确实存在。</p>
+<p>查看数据库文件的权限，发现全都变成了 drwx—— 2  1001 1001。突然想起之前重建过mysql用户，造成数据库文件的权限用户信息丢失。重新授权即可。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo chown -R  mysql var/</span><br><span class="line">sudo chgrp -R  mysql var/</span><br></pre></td></tr></table></figure>
+<p>再次启动mysql，成功！</p>
 
       
     </div>
@@ -283,7 +286,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/immature-woman/">
+    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/rspec-it-describe-same-and-run/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/apple-touch-icon.png">
@@ -296,7 +299,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/immature-woman/" class="post-title-link" itemprop="url">不成熟女人标志</a>
+          <a href="/rspec-it-describe-same-and-run/" class="post-title-link" itemprop="url">rspec it 描述相同也可以正常执行测试</a>
         </h2>
 
         <div class="post-meta-container">
@@ -307,7 +310,7 @@
       </span>
       <span class="post-meta-item-text">Posted on</span>
 
-      <time title="Created: 2010-02-21 22:03:23" itemprop="dateCreated datePublished" datetime="2010-02-21T22:03:23+08:00">2010-02-21</time>
+      <time title="Created: 2011-07-30 01:17:17" itemprop="dateCreated datePublished" datetime="2011-07-30T01:17:17+08:00">2011-07-30</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -315,7 +318,7 @@
       </span>
       <span class="post-meta-item-text">In</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/journal/" itemprop="url" rel="index"><span itemprop="name">日志</span></a>
+          <a href="/categories/development/" itemprop="url" rel="index"><span itemprop="name">后端</span></a>
         </span>
     </span>
 
@@ -329,8 +332,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>不成熟女人标志：</p>
-<p>1.相信自己吸引力;<br>2.与上司恋爱;<br>3.和穷人结婚;<br>4.把秘密告诉丈夫;<br>5.把同事当朋友;<br>6.不尊重父母的劝告;<br>7.两次以上的人流;<br>8.不化妆去应聘;<br>9.不卸妆就睡觉;<br>10.不会伪高潮</p>
+          <p>目前实践的环境是:同样的it描述在不同的context分组中可以执行各自的测试。如果换成是rails自带的test_开头的方法测试，如果同名肯定会异常。通过这一点又证明了rspec比test更好用的另一个方面。</p>
 
       
     </div>
@@ -357,7 +359,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/memory-is-getting-worse-and-worse-in/">
+    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/tdd-and-bdd/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/apple-touch-icon.png">
@@ -370,7 +372,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/memory-is-getting-worse-and-worse-in/" class="post-title-link" itemprop="url">记性越来越差了</a>
+          <a href="/tdd-and-bdd/" class="post-title-link" itemprop="url">TDD 和 BDD</a>
         </h2>
 
         <div class="post-meta-container">
@@ -381,7 +383,7 @@
       </span>
       <span class="post-meta-item-text">Posted on</span>
 
-      <time title="Created: 2010-02-19 22:17:34" itemprop="dateCreated datePublished" datetime="2010-02-19T22:17:34+08:00">2010-02-19</time>
+      <time title="Created: 2011-07-29 00:27:39" itemprop="dateCreated datePublished" datetime="2011-07-29T00:27:39+08:00">2011-07-29</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -389,7 +391,7 @@
       </span>
       <span class="post-meta-item-text">In</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/journal/" itemprop="url" rel="index"><span itemprop="name">日志</span></a>
+          <a href="/categories/development/" itemprop="url" rel="index"><span itemprop="name">后端</span></a>
         </span>
     </span>
 
@@ -403,7 +405,10 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>发现最近总是爱忘记事情，脑子实在记不住了，决定像许多大名人那样，给自己写个日程表，就用google calendar了</p>
+          <ul>
+<li>TDD 用 test 思維,測試程式的結果</li>
+<li>BDD 用 spec 思維,描述程式應該有什麼行為</li>
+</ul>
 
       
     </div>
@@ -430,7 +435,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/food-2010-02-16/">
+    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/rspec-check-kind-of-and-method/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/apple-touch-icon.png">
@@ -443,7 +448,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/food-2010-02-16/" class="post-title-link" itemprop="url">酱蒸排骨(转载)</a>
+          <a href="/rspec-check-kind-of-and-method/" class="post-title-link" itemprop="url">rspec  检查类别方法</a>
         </h2>
 
         <div class="post-meta-container">
@@ -454,7 +459,7 @@
       </span>
       <span class="post-meta-item-text">Posted on</span>
 
-      <time title="Created: 2010-02-16 16:16:34" itemprop="dateCreated datePublished" datetime="2010-02-16T16:16:34+08:00">2010-02-16</time>
+      <time title="Created: 2011-07-28 17:07:54" itemprop="dateCreated datePublished" datetime="2011-07-28T17:07:54+08:00">2011-07-28</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -462,7 +467,7 @@
       </span>
       <span class="post-meta-item-text">In</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/food/" itemprop="url" rel="index"><span itemprop="name">做菜</span></a>
+          <a href="/categories/development/" itemprop="url" rel="index"><span itemprop="name">后端</span></a>
         </span>
     </span>
 
@@ -476,11 +481,315 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p><img src="//img.gagahappy.cn/blog/2010/02/405f58e8g7b44f5c12b25690.jpg" alt="酱蒸排骨" title="酱蒸排骨"></p>
-<p>做法：</p>
+          <p>rspec  检查类别方法</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">target.should be_a_kind_of(Array)</span><br><span class="line"><span class="comment"># target.class.should == Array</span></span><br><span class="line"></span><br><span class="line">target.should be_an_instance_of(Array)</span><br><span class="line"><span class="comment"># target.class.should == Array</span></span><br><span class="line"></span><br><span class="line">target.should response_to(<span class="symbol">:foo</span>)</span><br><span class="line"><span class="comment"># target.response_to?(:foo).should == true</span></span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/rspec-controller-erro/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/apple-touch-icon.png">
+      <meta itemprop="name" content="戛戛Happy">
+      <meta itemprop="description" content="后端, 操作系统, 互联网, 程序开发, Linux, 数据库, MySql, Golang, Ruby">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="睡月花儿">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/rspec-controller-erro/" class="post-title-link" itemprop="url">rspec controller 出错</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2011-07-25 23:39:12" itemprop="dateCreated datePublished" datetime="2011-07-25T23:39:12+08:00">2011-07-25</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/os/" itemprop="url" rel="index"><span itemprop="name">操作系统</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>运行 spec/controller下的测试时，如果进入到spec/controller 目录下运行相关的spec，会出现undefined method <code>get for #&lt;ActiveSupport::TestCase::Subclass_1::Subclass_1:0xb6ec8cd4&gt;</code>这样类似的错误，解决方法居然是从项目的根目录运行，即<code>spec spec/controller/action_controller_spec.rb</code>。然后everything is ok.</p>
+<p>解决方法是从一个老外的网站上找到，这里引用一下他的原话，看着这英文真是解气啊！</p>
+<blockquote>
+<p>The problem was exactly in the path. I run my tests from spec/controllers folder where they didn’t work. From root folder everything goes right.</p>
+<p>I found the solution, but i still don’t understand why, especially that my models tests works fine from user@user:~/application_folder/spec/models$ path</p>
+</blockquote>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/rspec-in-controller-integration-with-views/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/apple-touch-icon.png">
+      <meta itemprop="name" content="戛戛Happy">
+      <meta itemprop="description" content="后端, 操作系统, 互联网, 程序开发, Linux, 数据库, MySql, Golang, Ruby">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="睡月花儿">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/rspec-in-controller-integration-with-views/" class="post-title-link" itemprop="url">rspec in controller integration with views</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2011-07-25 21:37:52" itemprop="dateCreated datePublished" datetime="2011-07-25T21:37:52+08:00">2011-07-25</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/development/" itemprop="url" rel="index"><span itemprop="name">后端</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>If you prefer to integrate views (a la rails functional testing) you can by including<br>the keyword/commmand “integrate_views”.</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">describe ArticlesController <span class="keyword">do</span></span><br><span class="line">  integrate_views</span><br><span class="line">  ...</span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/rspec-expect-to-change-value-or-raise-error/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/apple-touch-icon.png">
+      <meta itemprop="name" content="戛戛Happy">
+      <meta itemprop="description" content="后端, 操作系统, 互联网, 程序开发, Linux, 数据库, MySql, Golang, Ruby">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="睡月花儿">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/rspec-expect-to-change-value-or-raise-error/" class="post-title-link" itemprop="url">rspec expect to </a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2011-07-19 17:16:58" itemprop="dateCreated datePublished" datetime="2011-07-19T17:16:58+08:00">2011-07-19</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/development/" itemprop="url" rel="index"><span itemprop="name">后端</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>期望改变值或抛出异常</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">expect &#123;&#125;.to change &#123;&#125;.from().to()</span><br><span class="line"></span><br><span class="line">expect &#123;&#125;.to raise_error(YourMenthodError)</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/the-different-between-include-and-extend-in-ruby/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/apple-touch-icon.png">
+      <meta itemprop="name" content="戛戛Happy">
+      <meta itemprop="description" content="后端, 操作系统, 互联网, 程序开发, Linux, 数据库, MySql, Golang, Ruby">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="睡月花儿">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/the-different-between-include-and-extend-in-ruby/" class="post-title-link" itemprop="url">ruby 中 include 与 extend 区别</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2011-07-18 23:36:38" itemprop="dateCreated datePublished" datetime="2011-07-18T23:36:38+08:00">2011-07-18</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/development/" itemprop="url" rel="index"><span itemprop="name">后端</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>那么include和extend究竟有什么区别的？</p>
+<p>引用如下</p>
+<blockquote>
+<p>include : mixes in specified module methods as instance methods in the target class<br>extend : mixes in specified module methods as class methods in the target class</p>
+</blockquote>
+<p>记得有看过的，被用到的时候居然忘记了。杯具啊！</p>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/food-2010-02-16/#more" rel="contents">
+              <a class="btn" href="/the-different-between-include-and-extend-in-ruby/#more" rel="contents">
                 Read more &raquo;
               </a>
             </div>
@@ -511,7 +820,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/four-software/">
+    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/install-openssh/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/apple-touch-icon.png">
@@ -524,7 +833,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/four-software/" class="post-title-link" itemprop="url">四大软件</a>
+          <a href="/install-openssh/" class="post-title-link" itemprop="url">安装OpenSSH</a>
         </h2>
 
         <div class="post-meta-container">
@@ -535,7 +844,7 @@
       </span>
       <span class="post-meta-item-text">Posted on</span>
 
-      <time title="Created: 2010-02-10 22:00:14" itemprop="dateCreated datePublished" datetime="2010-02-10T22:00:14+08:00">2010-02-10</time>
+      <time title="Created: 2011-07-15 20:22:45" itemprop="dateCreated datePublished" datetime="2011-07-15T20:22:45+08:00">2011-07-15</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -543,7 +852,7 @@
       </span>
       <span class="post-meta-item-text">In</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/relax/" itemprop="url" rel="index"><span itemprop="name">资娱</span></a>
+          <a href="/categories/os/" itemprop="url" rel="index"><span itemprop="name">操作系统</span></a>
         </span>
     </span>
 
@@ -557,7 +866,8 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>四大软件<br><img src="//img.gagahappy.cn/blog/2010/02/4topappsincn.jpg" alt="4topappsincn" title="4topappsincn"></p>
+          <p>安装OpenSSH<br>Ubuntu缺省没有安装SSH Server，使用以下命令安装：</p>
+<p>sudo apt-get install openssh-server openssh-client</p>
 
       
     </div>
@@ -584,7 +894,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/beginning-spring/">
+    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/rmagick-install/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/apple-touch-icon.png">
@@ -597,7 +907,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/beginning-spring/" class="post-title-link" itemprop="url">立春啦</a>
+          <a href="/rmagick-install/" class="post-title-link" itemprop="url">安装Rmagick</a>
         </h2>
 
         <div class="post-meta-container">
@@ -608,7 +918,7 @@
       </span>
       <span class="post-meta-item-text">Posted on</span>
 
-      <time title="Created: 2010-02-04 09:17:52" itemprop="dateCreated datePublished" datetime="2010-02-04T09:17:52+08:00">2010-02-04</time>
+      <time title="Created: 2011-07-14 20:21:21" itemprop="dateCreated datePublished" datetime="2011-07-14T20:21:21+08:00">2011-07-14</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -616,7 +926,7 @@
       </span>
       <span class="post-meta-item-text">In</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/journal/" itemprop="url" rel="index"><span itemprop="name">日志</span></a>
+          <a href="/categories/os/" itemprop="url" rel="index"><span itemprop="name">操作系统</span></a>
         </span>
     </span>
 
@@ -630,299 +940,14 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>立春啦，春天就要来啦，吼吼！</p>
+          <p>首先下载imagemagick， 进入安装目录</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> imagemagick</span><br><span class="line">./configure --prefix=/opt/imagemagick</span><br><span class="line">make</span><br><span class="line">sudo make install</span><br></pre></td></tr></table></figure>
 
-      
-    </div>
+<p>如果出现</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/usr/bin/ld: cannot find -lperl</span><br></pre></td></tr></table></figure>
 
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/mobile-phone-battery/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/apple-touch-icon.png">
-      <meta itemprop="name" content="戛戛Happy">
-      <meta itemprop="description" content="后端, 操作系统, 互联网, 程序开发, Linux, 数据库, MySql, Golang, Ruby">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="睡月花儿">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/mobile-phone-battery/" class="post-title-link" itemprop="url">手机电池</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2010-02-02 21:37:15" itemprop="dateCreated datePublished" datetime="2010-02-02T21:37:15+08:00">2010-02-02</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/journal/" itemprop="url" rel="index"><span itemprop="name">日志</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>手机的电池经过长时间的使用，鼓了起来，难怪手机后盖盖不上了。打算换一个原装的电池，如果可以的话，打算把手机后盖也换了。由于摔在了地上，它也变得不好用了。</p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/360buy-buy-1second/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/apple-touch-icon.png">
-      <meta itemprop="name" content="戛戛Happy">
-      <meta itemprop="description" content="后端, 操作系统, 互联网, 程序开发, Linux, 数据库, MySql, Golang, Ruby">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="睡月花儿">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/360buy-buy-1second/" class="post-title-link" itemprop="url">京东网-秒杀</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2010-02-01 22:13:21" itemprop="dateCreated datePublished" datetime="2010-02-01T22:13:21+08:00">2010-02-01</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/journal/" itemprop="url" rel="index"><span itemprop="name">日志</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>京东也出秒杀了，刚刚体验了把，结果页面显示 “server is too busy”。哎，这就是和淘宝网的差距啊!</p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/win7-adsl/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/apple-touch-icon.png">
-      <meta itemprop="name" content="戛戛Happy">
-      <meta itemprop="description" content="后端, 操作系统, 互联网, 程序开发, Linux, 数据库, MySql, Golang, Ruby">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="睡月花儿">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/win7-adsl/" class="post-title-link" itemprop="url">win7 ADSL 频繁掉线</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2010-01-28 23:27:00" itemprop="dateCreated datePublished" datetime="2010-01-28T23:27:00+08:00">2010-01-28</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/journal/" itemprop="url" rel="index"><span itemprop="name">日志</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>发现win 7使用ADSL上网的时候总是频繁掉线，google了一把后找到答案，需要把win7为网卡设置的“关闭此设备以节约电源”的选项去掉后，掉线问题解决。<br><img src="//img.gagahappy.cn/blog/2010/01/1.jpg" alt="win7 ADSL" title="win7 ADSL"></p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/trial-win7/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/apple-touch-icon.png">
-      <meta itemprop="name" content="戛戛Happy">
-      <meta itemprop="description" content="后端, 操作系统, 互联网, 程序开发, Linux, 数据库, MySql, Golang, Ruby">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="睡月花儿">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/trial-win7/" class="post-title-link" itemprop="url">试用win7中</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2010-01-27 23:39:36" itemprop="dateCreated datePublished" datetime="2010-01-27T23:39:36+08:00">2010-01-27</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/journal/" itemprop="url" rel="index"><span itemprop="name">日志</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>刚刚安上了心仪已久的win7，目前正在试用中，感觉win7宣传的亮点之一“工具栏”还是比较有意思的，不过其它卖点还没有感觉到！</p>
+<p>请安装</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install libperl-dev</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -942,7 +967,7 @@
 
 
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/35/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/35/">35</a><span class="page-number current">36</span><a class="page-number" href="/page/37/">37</a><span class="space">&hellip;</span><a class="page-number" href="/page/48/">48</a><a class="extend next" rel="next" href="/page/37/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
+    <a class="extend prev" rel="prev" href="/page/35/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/35/">35</a><span class="page-number current">36</span><a class="page-number" href="/page/37/">37</a><span class="space">&hellip;</span><a class="page-number" href="/page/87/">87</a><a class="extend next" rel="next" href="/page/37/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
   </nav>
 
 </div>

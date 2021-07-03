@@ -90,9 +90,9 @@
         <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li>
         <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a></li>
         <li class="menu-item menu-item-coding"><a href="https://www.gagahappy.com/" rel="noopener" target="_blank"><i class="fa fa-keyboard fa-fw"></i>coding</a></li>
-        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">39</span></a></li>
-        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories<span class="badge">3</span></a></li>
-        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">471</span></a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">86</span></a></li>
+        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories<span class="badge">7</span></a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">870</span></a></li>
         <li class="menu-item menu-item-sitemap"><a href="/sitemap.xml" rel="section"><i class="fa fa-sitemap fa-fw"></i>Sitemap</a></li>
         <li class="menu-item menu-item-commonweal"><a href="/404/" rel="section"><i class="fa fa-heartbeat fa-fw"></i>Commonweal 404</a></li>
       <li class="menu-item menu-item-search">
@@ -209,7 +209,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/zhuangxiu-day-gai-dian-finish/">
+    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/create-and-regist-sigactioner/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/apple-touch-icon.png">
@@ -222,7 +222,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/zhuangxiu-day-gai-dian-finish/" class="post-title-link" itemprop="url">装修笔记——第7天，改电完成</a>
+          <a href="/create-and-regist-sigactioner/" class="post-title-link" itemprop="url">创建注册信号处理器</a>
         </h2>
 
         <div class="post-meta-container">
@@ -233,7 +233,7 @@
       </span>
       <span class="post-meta-item-text">Posted on</span>
 
-      <time title="Created: 2010-08-15 21:14:34" itemprop="dateCreated datePublished" datetime="2010-08-15T21:14:34+08:00">2010-08-15</time>
+      <time title="Created: 2014-12-03 20:39:15" itemprop="dateCreated datePublished" datetime="2014-12-03T20:39:15+08:00">2014-12-03</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -241,7 +241,7 @@
       </span>
       <span class="post-meta-item-text">In</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/journal/" itemprop="url" rel="index"><span itemprop="name">日志</span></a>
+          <a href="/categories/development/" itemprop="url" rel="index"><span itemprop="name">后端</span></a>
         </span>
     </span>
 
@@ -255,7 +255,8 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>装修改电改水完成了，用了6天的时间！总共花了4053，其中包括25个插座盒。在这期间又对改电的位置做了不少调整。</p>
+          <p>创建注册信号处理器</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;signal.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">catch_signal</span><span class="params">(<span class="keyword">int</span> sig, <span class="keyword">void</span> (*handler) (<span class="keyword">int</span>))</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  <span class="class"><span class="keyword">struct</span> <span class="title">sigaction</span> <span class="title">action</span>;</span></span><br><span class="line">  action.sa_handler = handler;</span><br><span class="line">  sigemptyset(&amp;action.sa_mask);</span><br><span class="line">  action.sa_flags = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">return</span> sigaction (sig, &amp;action, <span class="literal">NULL</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -282,7 +283,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/sina-change-index-color-to-gray/">
+    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/redirect-file-to-strerr/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/apple-touch-icon.png">
@@ -295,7 +296,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/sina-change-index-color-to-gray/" class="post-title-link" itemprop="url">新浪已经提前把首页变成灰色的了</a>
+          <a href="/redirect-file-to-strerr/" class="post-title-link" itemprop="url">重定向文件内容到标准错误</a>
         </h2>
 
         <div class="post-meta-container">
@@ -306,7 +307,7 @@
       </span>
       <span class="post-meta-item-text">Posted on</span>
 
-      <time title="Created: 2010-08-14 23:43:37" itemprop="dateCreated datePublished" datetime="2010-08-14T23:43:37+08:00">2010-08-14</time>
+      <time title="Created: 2014-12-02 23:11:33" itemprop="dateCreated datePublished" datetime="2014-12-02T23:11:33+08:00">2014-12-02</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -314,7 +315,7 @@
       </span>
       <span class="post-meta-item-text">In</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/journal/" itemprop="url" rel="index"><span itemprop="name">日志</span></a>
+          <a href="/categories/development/" itemprop="url" rel="index"><span itemprop="name">后端</span></a>
         </span>
     </span>
 
@@ -328,7 +329,10 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>新浪已经提前把首页变成灰色的了</p>
+          <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">redirect_file_to_strerr</span><span class="params">(<span class="keyword">void</span>)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> <span class="keyword">const</span> *argv[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  redirect_file_to_strerr();</span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">redirect_file_to_strerr</span><span class="params">(<span class="keyword">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  FILE *f;</span><br><span class="line">  f = fopen(<span class="string">&quot;redirect_file_to_strerr.txt&quot;</span>, <span class="string">&quot;w&quot;</span>);</span><br><span class="line">  dup2(<span class="number">2</span>, fileno(f));</span><br><span class="line">  <span class="built_in">fprintf</span>(f, <span class="string">&quot;%s\n&quot;</span>, <span class="string">&quot;hello world&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>假设 f的文件描述符为10;<br>dup2(2, fileno(f))将把流向f的数据重定向到strerr，所以写入f的内容不会被保存在文件中，而是显示在了屏幕上(sterr默认流向屏幕),redirect_out_to_file.txt文件内容为空。</p>
+<p>1 =&gt; screen<br>2 =&gt; screen<br><del>10 =&gt; redirect_file_to_strerr.txt”</del><br>10 =&gt; 2</p>
 
       
     </div>
@@ -355,7 +359,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/pc-change-graphics-card/">
+    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/linux-pipeline/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/apple-touch-icon.png">
@@ -368,7 +372,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/pc-change-graphics-card/" class="post-title-link" itemprop="url">是不是应该换个显卡了呢</a>
+          <a href="/linux-pipeline/" class="post-title-link" itemprop="url">linux 管道</a>
         </h2>
 
         <div class="post-meta-container">
@@ -379,7 +383,7 @@
       </span>
       <span class="post-meta-item-text">Posted on</span>
 
-      <time title="Created: 2010-08-14 23:31:40" itemprop="dateCreated datePublished" datetime="2010-08-14T23:31:40+08:00">2010-08-14</time>
+      <time title="Created: 2014-11-30 22:29:21" itemprop="dateCreated datePublished" datetime="2014-11-30T22:29:21+08:00">2014-11-30</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -387,7 +391,7 @@
       </span>
       <span class="post-meta-item-text">In</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/journal/" itemprop="url" rel="index"><span itemprop="name">日志</span></a>
+          <a href="/categories/development/" itemprop="url" rel="index"><span itemprop="name">后端</span></a>
         </span>
     </span>
 
@@ -401,7 +405,8 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>电脑的风扇总是时不时的就噪音大作，是不是显卡的问题呢，换个好点的？</p>
+          <p>用管理链接两个程序,第一个程序只要有输出，就会把内容传递给第二个程序，程序2就会马上对程序1的输出进行处理，而不是等到程序1的输出全都完成后，才对其输出进行处理。即，程序2实时处理程序1的输出。</p>
+<p>proc1 | proc2</p>
 
       
     </div>
@@ -428,7 +433,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/sina-weibo-vip-reply/">
+    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/use-man-to-help-c-library/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/apple-touch-icon.png">
@@ -441,7 +446,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/sina-weibo-vip-reply/" class="post-title-link" itemprop="url">新浪微博--得到vip回复</a>
+          <a href="/use-man-to-help-c-library/" class="post-title-link" itemprop="url">查询C标准库函数</a>
         </h2>
 
         <div class="post-meta-container">
@@ -452,7 +457,7 @@
       </span>
       <span class="post-meta-item-text">Posted on</span>
 
-      <time title="Created: 2010-08-13 23:27:32" itemprop="dateCreated datePublished" datetime="2010-08-13T23:27:32+08:00">2010-08-13</time>
+      <time title="Created: 2014-11-28 23:04:53" itemprop="dateCreated datePublished" datetime="2014-11-28T23:04:53+08:00">2014-11-28</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -460,7 +465,7 @@
       </span>
       <span class="post-meta-item-text">In</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/relax/" itemprop="url" rel="index"><span itemprop="name">资娱</span></a>
+          <a href="/categories/development/" itemprop="url" rel="index"><span itemprop="name">后端</span></a>
         </span>
     </span>
 
@@ -474,8 +479,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p><img src="//img.gagahappy.cn/blog/2010/08/11.jpg" alt="新浪微博--得到vip回复" title="新浪微博--得到vip回复"></p>
-<p>新浪微博，得到vip回复，哈哈，真是意外啊!</p>
+          <p>原来可以用man 查询C标准库函数的用法</p>
 
       
     </div>
@@ -502,7 +506,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/zhuangxiu-2010-dilou-top10/">
+    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/dynamic-library-name-on-different-os/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/apple-touch-icon.png">
@@ -515,7 +519,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/zhuangxiu-2010-dilou-top10/" class="post-title-link" itemprop="url">装修——地漏十大品牌</a>
+          <a href="/dynamic-library-name-on-different-os/" class="post-title-link" itemprop="url">动态库在不同平台命名</a>
         </h2>
 
         <div class="post-meta-container">
@@ -526,7 +530,7 @@
       </span>
       <span class="post-meta-item-text">Posted on</span>
 
-      <time title="Created: 2010-08-11 00:46:47" itemprop="dateCreated datePublished" datetime="2010-08-11T00:46:47+08:00">2010-08-11</time>
+      <time title="Created: 2014-11-27 23:34:16" itemprop="dateCreated datePublished" datetime="2014-11-27T23:34:16+08:00">2014-11-27</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -534,7 +538,7 @@
       </span>
       <span class="post-meta-item-text">In</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/journal/" itemprop="url" rel="index"><span itemprop="name">日志</span></a>
+          <a href="/categories/development/" itemprop="url" rel="index"><span itemprop="name">后端</span></a>
         </span>
     </span>
 
@@ -548,20 +552,13 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>真正专业的防臭地漏有以下十大品牌：</p>
-<p>新润爽（硅胶芯、磁铁芯、偏心深水封芯） ——下水最快、芯最全</p>
-<p>邦哥（硅胶芯）——配件最多</p>
-<p>潜水艇（磁铁芯、偏心深水封芯） ——牌子最响、样式最多</p>
-<p>六防（深水封芯） ——样子最漂亮</p>
-<p>佳家安-施耐博（深水封芯）</p>
-<p>含香（偏心深水封芯）</p>
-<p>居味净（深水封芯）</p>
-<p>四防-非常芯（齿轮机械芯）</p>
-<p>英格玛（齿轮机械芯）</p>
-<p>安泽达达（齿轮机械芯）</p>
-<p>还有其他的：</p>
-<p>安必净（深水封芯）</p>
-<p>呼唤-洁净（深水封芯）</p>
+          <p>动态库在不同平台的扩展名不同</p>
+<ul>
+<li>windows: dll</li>
+<li>linux: so</li>
+<li>mac: dylib</li>
+</ul>
+<p>外部驱动就是很好的例子，如显卡驱动（更新驱动），只要正确编译了驱动程序，显示器程序就能正确显示，不用再管显示器的程序了（厂商已经编译好了）。</p>
 
       
     </div>
@@ -588,7 +585,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/zhuangxiu-day-gai-dian/">
+    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/linux-redirect-stdout-stderr/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/apple-touch-icon.png">
@@ -601,7 +598,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/zhuangxiu-day-gai-dian/" class="post-title-link" itemprop="url">装修笔记——第2天，改电改水开始</a>
+          <a href="/linux-redirect-stdout-stderr/" class="post-title-link" itemprop="url">linux 重定向标准输出标准输入到文件</a>
         </h2>
 
         <div class="post-meta-container">
@@ -612,7 +609,7 @@
       </span>
       <span class="post-meta-item-text">Posted on</span>
 
-      <time title="Created: 2010-08-10 23:38:08" itemprop="dateCreated datePublished" datetime="2010-08-10T23:38:08+08:00">2010-08-10</time>
+      <time title="Created: 2014-11-25 00:01:26" itemprop="dateCreated datePublished" datetime="2014-11-25T00:01:26+08:00">2014-11-25</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -620,7 +617,7 @@
       </span>
       <span class="post-meta-item-text">In</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/journal/" itemprop="url" rel="index"><span itemprop="name">日志</span></a>
+          <a href="/categories/development/" itemprop="url" rel="index"><span itemprop="name">后端</span></a>
         </span>
     </span>
 
@@ -634,14 +631,13 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>装修改电开始了。和工长确定所有要添加的和要改动的电源和开关的位置，在这期间，工长也会向你意见他的改动意见，当然也不能完全听取，毕竟他们是要在这上面赚钱的。改电改水一般用时3天即可完成</p>
-<p>改电情况：添加电源插座和开关<br>客厅：</p>
-<blockquote>
-<p>饮水机插座1个<br>火锅手插座1个，哈哈尽想着吃了<br>电话线1条（电话线默认被安到次卧了），打算买一个集成电话线和网线的面板，这样不但省了一条线路，以后在客厅里也可以上网<br>灯的开关移至门的边上，方便进门后就可以开灯（真正的原因是原来的开关位置在鞋柜的上方，不方便做鞋柜）<br>备用电话插座1个</p>
-</blockquote>
+          <p>linux 重定向 标准输出 标准输入到文件，测试程序用C语言，执行程序名为test_out</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> <span class="keyword">const</span> *argv[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  <span class="built_in">fprintf</span>(<span class="built_in">stderr</span>, <span class="string">&quot;%s\n&quot;</span>, <span class="string">&quot;this is stderr&quot;</span>);</span><br><span class="line">  <span class="built_in">fprintf</span>(<span class="built_in">stdout</span>, <span class="string">&quot;%s\n&quot;</span>, <span class="string">&quot;this is stdout&quot;</span>);</span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>测试1</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$&gt; test_out</span><br><span class="line">=&gt; <span class="built_in">stderr</span></span><br><span class="line">=&gt; <span class="built_in">stdout</span></span><br></pre></td></tr></table></figure>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/zhuangxiu-day-gai-dian/#more" rel="contents">
+              <a class="btn" href="/linux-redirect-stdout-stderr/#more" rel="contents">
                 Read more &raquo;
               </a>
             </div>
@@ -672,7 +668,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/zhuangxiu-begin/">
+    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/say-goodbye-to-spam/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/apple-touch-icon.png">
@@ -685,7 +681,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/zhuangxiu-begin/" class="post-title-link" itemprop="url">装修笔记——第1天，装修开始，材料进场</a>
+          <a href="/say-goodbye-to-spam/" class="post-title-link" itemprop="url">垃圾评论终于不扫了</a>
         </h2>
 
         <div class="post-meta-container">
@@ -696,7 +692,7 @@
       </span>
       <span class="post-meta-item-text">Posted on</span>
 
-      <time title="Created: 2010-08-09 23:40:14" itemprop="dateCreated datePublished" datetime="2010-08-09T23:40:14+08:00">2010-08-09</time>
+      <time title="Created: 2014-11-24 22:12:24" itemprop="dateCreated datePublished" datetime="2014-11-24T22:12:24+08:00">2014-11-24</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -704,7 +700,7 @@
       </span>
       <span class="post-meta-item-text">In</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/journal/" itemprop="url" rel="index"><span itemprop="name">日志</span></a>
+          <a href="/categories/software/" itemprop="url" rel="index"><span itemprop="name">软件</span></a>
         </span>
     </span>
 
@@ -718,8 +714,11 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>装修开始，真正的挑战来了</p>
-<p>签定合同的第二天，材料进场了，有水泥，腻子，快干粉，石膏线，ppr管，pvc管，客厅，主卧，次卧摆放了一推。</p>
+          <p>垃圾评论终于不扫了</p>
+<blockquote>
+<p>192.187.126.42</p>
+</blockquote>
+<p>这个ip终于停手了。</p>
 
       
     </div>
@@ -746,7 +745,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/test-sina-weibo/">
+    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/wp-super-cache-manuall-uninstall/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/apple-touch-icon.png">
@@ -759,7 +758,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/test-sina-weibo/" class="post-title-link" itemprop="url">测试新浪微博</a>
+          <a href="/wp-super-cache-manuall-uninstall/" class="post-title-link" itemprop="url">手动删除WP Super Cache</a>
         </h2>
 
         <div class="post-meta-container">
@@ -770,7 +769,7 @@
       </span>
       <span class="post-meta-item-text">Posted on</span>
 
-      <time title="Created: 2010-08-08 21:41:37" itemprop="dateCreated datePublished" datetime="2010-08-08T21:41:37+08:00">2010-08-08</time>
+      <time title="Created: 2014-11-23 00:17:31" itemprop="dateCreated datePublished" datetime="2014-11-23T00:17:31+08:00">2014-11-23</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -778,7 +777,7 @@
       </span>
       <span class="post-meta-item-text">In</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/relax/" itemprop="url" rel="index"><span itemprop="name">资娱</span></a>
+          <a href="/categories/software/" itemprop="url" rel="index"><span itemprop="name">软件</span></a>
         </span>
     </span>
 
@@ -792,7 +791,96 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>为了把新浪微博登录名改成英文的，不得不重新注册了一个账号，又重新把所有的follow都添加了一遍，累死我也！</p>
+          <p>手动删除 Wordpress插件 WP Super Cache<br>To manually uninstall:</p>
+<ol>
+<li> Turn off caching on the plugin settings page and clear the cache.</li>
+<li> Deactivate the plugin on the plugins page.</li>
+<li> Remove the WP_CACHE define from wp-config.php. It looks like <code>define( &#39;WP_CACHE&#39;, true );</code></li>
+<li> Remove the Super Cache mod_rewrite rules from your .htaccess file.</li>
+<li> Remove the files wp-content/advanced-cache.php and wp-content/wp-cache-config.php</li>
+<li> Remove the directory wp-content/cache/</li>
+<li> Remove the directory wp-super-cache from your plugins directory.
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/wp-super-cache-manuall-uninstall/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/ftp-command-mdelete/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/apple-touch-icon.png">
+      <meta itemprop="name" content="戛戛Happy">
+      <meta itemprop="description" content="后端, 操作系统, 互联网, 程序开发, Linux, 数据库, MySql, Golang, Ruby">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="睡月花儿">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/ftp-command-mdelete/" class="post-title-link" itemprop="url">ftp 命令行删除多个文件</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2014-11-21 23:18:49" itemprop="dateCreated datePublished" datetime="2014-11-21T23:18:49+08:00">2014-11-21</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/os/" itemprop="url" rel="index"><span itemprop="name">操作系统</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>使用 ftp 命令行删除多个文件</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mdelete files</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -819,7 +907,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/zhuangxiu-2010-cichuan-top10/">
+    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/auto-email-subtitle-to-kindle/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/apple-touch-icon.png">
@@ -832,7 +920,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/zhuangxiu-2010-cichuan-top10/" class="post-title-link" itemprop="url"> 装修——瓷砖十大品牌</a>
+          <a href="/auto-email-subtitle-to-kindle/" class="post-title-link" itemprop="url">字幕文件可以自动发送到kindle设备</a>
         </h2>
 
         <div class="post-meta-container">
@@ -843,7 +931,7 @@
       </span>
       <span class="post-meta-item-text">Posted on</span>
 
-      <time title="Created: 2010-08-08 01:06:44" itemprop="dateCreated datePublished" datetime="2010-08-08T01:06:44+08:00">2010-08-08</time>
+      <time title="Created: 2014-11-20 00:57:38" itemprop="dateCreated datePublished" datetime="2014-11-20T00:57:38+08:00">2014-11-20</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -851,7 +939,7 @@
       </span>
       <span class="post-meta-item-text">In</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/journal/" itemprop="url" rel="index"><span itemprop="name">日志</span></a>
+          <a href="/categories/development/" itemprop="url" rel="index"><span itemprop="name">后端</span></a>
         </span>
     </span>
 
@@ -865,81 +953,8 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>2010年中国瓷砖业品牌进入十强的名单如下：<br>1、诺贝尔<br>2、马可波罗<br>3、蒙娜丽莎<br>4、东鹏<br>5、新中源<br>6、惠达<br>7、冠珠<br>8、冠军<br>9、亚细亚<br>10、斯米克</p>
-<p>以上内容转自互联网，仅供本博参考。</p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/funny-2010-08-08-01/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/apple-touch-icon.png">
-      <meta itemprop="name" content="戛戛Happy">
-      <meta itemprop="description" content="后端, 操作系统, 互联网, 程序开发, Linux, 数据库, MySql, Golang, Ruby">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="睡月花儿">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/funny-2010-08-08-01/" class="post-title-link" itemprop="url">如此送外卖，太给力了(转)</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2010-08-06 21:57:28" itemprop="dateCreated datePublished" datetime="2010-08-06T21:57:28+08:00">2010-08-06</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/relax/" itemprop="url" rel="index"><span itemprop="name">资娱</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p><img src="//img.gagahappy.cn/blog/2010/08/1.jpg" alt="如此送外卖，太给力了" title="如此送外卖，太给力了"></p>
+          <p>字幕文件可以自动发送到kindle设备啦，目前就是还不能自动下载，因为目标网站上的文件命名还不太有规则。</p>
+<p>一个一个下载还比较好解决，批量下载还待解决。</p>
 
       
     </div>
@@ -959,7 +974,7 @@
 
 
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/27/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/27/">27</a><span class="page-number current">28</span><a class="page-number" href="/page/29/">29</a><span class="space">&hellip;</span><a class="page-number" href="/page/48/">48</a><a class="extend next" rel="next" href="/page/29/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
+    <a class="extend prev" rel="prev" href="/page/27/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/27/">27</a><span class="page-number current">28</span><a class="page-number" href="/page/29/">29</a><span class="space">&hellip;</span><a class="page-number" href="/page/87/">87</a><a class="extend next" rel="next" href="/page/29/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
   </nav>
 
 </div>

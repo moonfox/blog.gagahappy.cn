@@ -90,9 +90,9 @@
         <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li>
         <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a></li>
         <li class="menu-item menu-item-coding"><a href="https://www.gagahappy.com/" rel="noopener" target="_blank"><i class="fa fa-keyboard fa-fw"></i>coding</a></li>
-        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">39</span></a></li>
-        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories<span class="badge">3</span></a></li>
-        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">471</span></a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">86</span></a></li>
+        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories<span class="badge">7</span></a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">870</span></a></li>
         <li class="menu-item menu-item-sitemap"><a href="/sitemap.xml" rel="section"><i class="fa fa-sitemap fa-fw"></i>Sitemap</a></li>
         <li class="menu-item menu-item-commonweal"><a href="/404/" rel="section"><i class="fa fa-heartbeat fa-fw"></i>Commonweal 404</a></li>
       <li class="menu-item menu-item-search">
@@ -209,7 +209,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/happy-birthday-to-leader-2/">
+    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/linux-awk-function-substr/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/apple-touch-icon.png">
@@ -222,7 +222,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/happy-birthday-to-leader-2/" class="post-title-link" itemprop="url">happy birthday to leader</a>
+          <a href="/linux-awk-function-substr/" class="post-title-link" itemprop="url">linux awk 内置字符串函数</a>
         </h2>
 
         <div class="post-meta-container">
@@ -233,7 +233,7 @@
       </span>
       <span class="post-meta-item-text">Posted on</span>
 
-      <time title="Created: 2010-08-04 00:05:04" itemprop="dateCreated datePublished" datetime="2010-08-04T00:05:04+08:00">2010-08-04</time>
+      <time title="Created: 2014-11-17 15:01:20" itemprop="dateCreated datePublished" datetime="2014-11-17T15:01:20+08:00">2014-11-17</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -241,7 +241,7 @@
       </span>
       <span class="post-meta-item-text">In</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/journal/" itemprop="url" rel="index"><span itemprop="name">日志</span></a>
+          <a href="/categories/os/" itemprop="url" rel="index"><span itemprop="name">操作系统</span></a>
         </span>
     </span>
 
@@ -255,7 +255,8 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>祝领导生日快乐！</p>
+          <p>linux awk 内置字符串函数</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">grep -e <span class="string">&#x27;192.187.126.42.*POST&#x27;</span> apache_20141117.log | awk <span class="string">&#x27;&#123;print substr($4,14,2)&#125;&#x27;</span> | sort | uniq -c</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -282,7 +283,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/hua-lian-supper-market/">
+    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/linux-command-statistics-from-log/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/apple-touch-icon.png">
@@ -295,7 +296,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/hua-lian-supper-market/" class="post-title-link" itemprop="url">逛超市</a>
+          <a href="/linux-command-statistics-from-log/" class="post-title-link" itemprop="url">linux 命令行awk sort uniq 统计日志</a>
         </h2>
 
         <div class="post-meta-container">
@@ -306,7 +307,7 @@
       </span>
       <span class="post-meta-item-text">Posted on</span>
 
-      <time title="Created: 2010-08-03 22:22:03" itemprop="dateCreated datePublished" datetime="2010-08-03T22:22:03+08:00">2010-08-03</time>
+      <time title="Created: 2014-11-16 13:47:29" itemprop="dateCreated datePublished" datetime="2014-11-16T13:47:29+08:00">2014-11-16</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -314,7 +315,7 @@
       </span>
       <span class="post-meta-item-text">In</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/food/" itemprop="url" rel="index"><span itemprop="name">做菜</span></a>
+          <a href="/categories/os/" itemprop="url" rel="index"><span itemprop="name">操作系统</span></a>
         </span>
     </span>
 
@@ -328,543 +329,167 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>去了华联超市，使足了劲逛了一把，发现自己是越来越爱逛超市了，感觉比逛商场带劲多了。看着那些五颜六色的蔬菜、新鲜的肉肉、各种调味料、许许多多的小吃，那叫一个开心。喜欢站在大妈后面看她们挑选蔬菜，喜欢听她们给我讲买菜之经验，更喜欢自己是超市里年青的购物者。</p>
+          <p>使用命令行简单统计网站日志，$1为ip地址，统计前20位来访最多的IP</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">awk <span class="string">&#x27;&#123;print $1&#125;&#x27;</span> apache_20141115.log  | sort | uniq -c | sort -k 1 -n -r | head -20</span><br></pre></td></tr></table></figure>
 
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/zhang-bao-gang-in-versiona-story-of-lalas-promotion/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/apple-touch-icon.png">
-      <meta itemprop="name" content="戛戛Happy">
-      <meta itemprop="description" content="后端, 操作系统, 互联网, 程序开发, Linux, 数据库, MySql, Golang, Ruby">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="睡月花儿">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/zhang-bao-gang-in-versiona-story-of-lalas-promotion/" class="post-title-link" itemprop="url">果然没有看错啊</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2010-08-01 22:42:42" itemprop="dateCreated datePublished" datetime="2010-08-01T22:42:42+08:00">2010-08-01</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/relax/" itemprop="url" rel="index"><span itemprop="name">资娱</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>网才重新看了一徐静蕾版的杜拉拉升职记，影片中拉拉以前那个单位的领导果然是赵宝刚导演客串的啊。</p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/zhuangxiu-2010-07-30/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/apple-touch-icon.png">
-      <meta itemprop="name" content="戛戛Happy">
-      <meta itemprop="description" content="后端, 操作系统, 互联网, 程序开发, Linux, 数据库, MySql, Golang, Ruby">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="睡月花儿">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/zhuangxiu-2010-07-30/" class="post-title-link" itemprop="url">装修——瓷砖</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2010-07-30 23:40:30" itemprop="dateCreated datePublished" datetime="2010-07-30T23:40:30+08:00">2010-07-30</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/journal/" itemprop="url" rel="index"><span itemprop="name">日志</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>装修的另一大块瓷砖还没有买，打算地砖从东方家园买，先前看好的一款地砖的价格已经有88涨到111了，突然感觉这款砖的花纹不好看，放弃之。重新挑选的地砖又都不打折，买不起。还有瓷砖（打算从建材市场买了）、门一直没定下来。甚是烦恼啊。</p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/happy-birthday-to-my-great-mother/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/apple-touch-icon.png">
-      <meta itemprop="name" content="戛戛Happy">
-      <meta itemprop="description" content="后端, 操作系统, 互联网, 程序开发, Linux, 数据库, MySql, Golang, Ruby">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="睡月花儿">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/happy-birthday-to-my-great-mother/" class="post-title-link" itemprop="url">happy birthday to my great mother</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2010-07-30 00:51:14" itemprop="dateCreated datePublished" datetime="2010-07-30T00:51:14+08:00">2010-07-30</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/journal/" itemprop="url" rel="index"><span itemprop="name">日志</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>祝老妈生日快乐！</p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/zhuangxiu-2010-07-29/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/apple-touch-icon.png">
-      <meta itemprop="name" content="戛戛Happy">
-      <meta itemprop="description" content="后端, 操作系统, 互联网, 程序开发, Linux, 数据库, MySql, Golang, Ruby">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="睡月花儿">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/zhuangxiu-2010-07-29/" class="post-title-link" itemprop="url">装修——界面剂、墙固与墙腻子，三者之间的关系</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2010-07-29 23:44:08" itemprop="dateCreated datePublished" datetime="2010-07-29T23:44:08+08:00">2010-07-29</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/journal/" itemprop="url" rel="index"><span itemprop="name">日志</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <ol>
-<li>界面剂的全称是混凝土界面处理剂，是一种胶粘剂。</li>
-<li>墙锢是美巢生产的界面剂的商标。</li>
-<li>腻子是用来进行墙面找平的，在界面剂之后刮涂，刮了腻子之后开始刷漆。</li>
-</ol>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/three-versiona-story-of-lalas-promotion/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/apple-touch-icon.png">
-      <meta itemprop="name" content="戛戛Happy">
-      <meta itemprop="description" content="后端, 操作系统, 互联网, 程序开发, Linux, 数据库, MySql, Golang, Ruby">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="睡月花儿">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/three-versiona-story-of-lalas-promotion/" class="post-title-link" itemprop="url">杜拉拉升职记</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2010-07-26 02:26:04" itemprop="dateCreated datePublished" datetime="2010-07-26T02:26:04+08:00">2010-07-26</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/relax/" itemprop="url" rel="index"><span itemprop="name">资娱</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>分别看了《杜拉拉升职记》的小说版（李可著），电影版（徐静蕾饰），电视剧版（王珞丹饰），还有没看过的话剧版（姚晨饰）。同一个人物被不同的演员扮演，最喜欢原著版里的“拉拉”，其次是徐静蕾版的“拉拉”，感觉徐静蕾版的拉拉更接近原著（故事情节除外），王珞丹版的拉拉动不动就哭，不怎么喜欢，她演的其它几个电视剧里的角色还是挺喜欢的。也比较喜欢电影版里的王伟，感觉比电视剧版的王伟强多了，更有男子气概！</p>
-<p>话剧版（姚晨饰）<br><img src="//img.gagahappy.cn/blog/2010/07/hj.jpg" alt="话剧版（姚晨饰）" title="话剧版（姚晨饰）"></p>
-<p>电视剧版（王珞丹饰）<br><img src="//img.gagahappy.cn/blog/2010/07/ds.jpg" alt="电视剧版（王珞丹饰）" title="电视剧版（王珞丹饰）"></p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/zhuangxiu-2010-07-25-01/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/apple-touch-icon.png">
-      <meta itemprop="name" content="戛戛Happy">
-      <meta itemprop="description" content="后端, 操作系统, 互联网, 程序开发, Linux, 数据库, MySql, Golang, Ruby">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="睡月花儿">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/zhuangxiu-2010-07-25-01/" class="post-title-link" itemprop="url">装修——如何选择居室门</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2010-07-25 23:34:55" itemprop="dateCreated datePublished" datetime="2010-07-25T23:34:55+08:00">2010-07-25</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/journal/" itemprop="url" rel="index"><span itemprop="name">日志</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>分类：</p>
-<ol>
-<li><p>模压门:</p>
+<p>注意：</p>
 <blockquote>
-<p>是用一种具有各种凹凸图案及光面的高密度纤维板做门面的门，门面采用木材纤维一次模压成型。<br>此类居室门在加工时，胶水应达到环保要求，否则会影响健康。模压门是工厂一次模压成型的，价格便宜，质感差，隔音效果不好，款式比较单一，属中低档产品。模压门只适宜做混油门，尤其是白色混油。</p>
+<p>使用uniq -c统计重复行数时，一定要先sort，因为uniq -c是统计相邻行的重复数的。</p>
 </blockquote>
-</li>
-<li><p>实木门:</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/ajax-use-get-first/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/apple-touch-icon.png">
+      <meta itemprop="name" content="戛戛Happy">
+      <meta itemprop="description" content="后端, 操作系统, 互联网, 程序开发, Linux, 数据库, MySql, Golang, Ruby">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="睡月花儿">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/ajax-use-get-first/" class="post-title-link" itemprop="url">ajax尽量使用get</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2014-11-15 17:30:34" itemprop="dateCreated datePublished" datetime="2014-11-15T17:30:34+08:00">2014-11-15</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/development/" itemprop="url" rel="index"><span itemprop="name">后端</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <blockquote>
+<p>When using the XMLHttpRequest object, the browser implements POST in two steps: (1) send the headers, and (2) send the data. It is better to use GET instead of POST since GET sends the headers and the data together (unless there are many cookies). IE’s maximum URL length is 2 KB, so if you are sending more than this amount of data you may not be able to use GET.</p>
+</blockquote>
+<p>Post先发送head，再发送data<br>Get是 head/data一起发送</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/wordpress-disable-comment-trackback/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/apple-touch-icon.png">
+      <meta itemprop="name" content="戛戛Happy">
+      <meta itemprop="description" content="后端, 操作系统, 互联网, 程序开发, Linux, 数据库, MySql, Golang, Ruby">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="睡月花儿">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/wordpress-disable-comment-trackback/" class="post-title-link" itemprop="url">WordPress 禁止垃圾评论 trackback</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2014-11-14 14:47:19" itemprop="dateCreated datePublished" datetime="2014-11-14T14:47:19+08:00">2014-11-14</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/software/" itemprop="url" rel="index"><span itemprop="name">软件</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>WordPress后台可以关闭这个功能，方法如下</p>
 <blockquote>
-<p>实木门的说法有两种:由内至外全部为实木或芯材为多层板制作的都叫实木门。实木门采用传统工艺加工而成，以烘干的松木、铁杉木、楸木、水曲柳等为基材，其结构主要为门框榫连接，镶嵌门芯板，在市场上属于中高档产品。全实木门在北方的气候条件下使用存在一定的缺陷，主要表现为门扇变形，榫连接处风干开裂，门芯板收缩露白。</p>
+<p>在Discussion中去掉 Allow link notifications from other blogs (pingbacks and trackbacks) 前面的勾选</p>
 </blockquote>
-</li>
-</ol>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/zhuangxiu-2010-07-25-01/#more" rel="contents">
-                Read more &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/happy-birthday-to-gn/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/apple-touch-icon.png">
-      <meta itemprop="name" content="戛戛Happy">
-      <meta itemprop="description" content="后端, 操作系统, 互联网, 程序开发, Linux, 数据库, MySql, Golang, Ruby">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="睡月花儿">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/happy-birthday-to-gn/" class="post-title-link" itemprop="url">happy birthday to gn</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2010-07-24 01:58:00" itemprop="dateCreated datePublished" datetime="2010-07-24T01:58:00+08:00">2010-07-24</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/journal/" itemprop="url" rel="index"><span itemprop="name">日志</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>祝gn同学生日快乐！</p>
+<p>并在数据库中执行</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">UPDATE wp_posts SET ping_status &#x3D; &#39;closed&#39; WHERE &#39;你要关闭的相关文章的&#39;;</span><br><span class="line"># 注：where部分可以不要，但最好选出有效的文章和附件，把它们的trackback和ping关闭就可以了。</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -891,7 +516,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/zhuangxiu-2010-07-23/">
+    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/photographic-original-and-processor/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/apple-touch-icon.png">
@@ -904,7 +529,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/zhuangxiu-2010-07-23/" class="post-title-link" itemprop="url">装修——外墙和顶棚的抹灰层</a>
+          <a href="/photographic-original-and-processor/" class="post-title-link" itemprop="url">单反相机感光原件与处理器</a>
         </h2>
 
         <div class="post-meta-container">
@@ -915,7 +540,7 @@
       </span>
       <span class="post-meta-item-text">Posted on</span>
 
-      <time title="Created: 2010-07-23 13:47:06" itemprop="dateCreated datePublished" datetime="2010-07-23T13:47:06+08:00">2010-07-23</time>
+      <time title="Created: 2014-11-13 22:02:40" itemprop="dateCreated datePublished" datetime="2014-11-13T22:02:40+08:00">2014-11-13</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -937,7 +562,378 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>经调研发现混凝土（包括预制混凝土）顶棚基体抹灰，由于各种因素的影响，抹灰层脱落的质量事故时有发生，严重危及人身安全，引起了有关部门的重视，如北京市为解决混凝土顶棚基体表面抹灰层脱落的质量问题，要求各建筑施工单位，不得在混凝土顶棚基体表面抹灰，用腻子找平即可，5年来取得了良好的效果。</p>
+          <p>单板相机在感光元件相同的情况下，例如，都是全幅 2400+像素的感光元件，画质表现在ISO6400下其实差不了多少，处理器的强弱对最终画质并无多大影响。</p>
+<p>如果ISO在6400+以上，则性能较强的处理器会在降噪上有明显的提高。</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/mysql-find-per-cent/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/apple-touch-icon.png">
+      <meta itemprop="name" content="戛戛Happy">
+      <meta itemprop="description" content="后端, 操作系统, 互联网, 程序开发, Linux, 数据库, MySql, Golang, Ruby">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="睡月花儿">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/mysql-find-per-cent/" class="post-title-link" itemprop="url">mysql 查找 百分号</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2014-11-13 17:36:44" itemprop="dateCreated datePublished" datetime="2014-11-13T17:36:44+08:00">2014-11-13</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/database/" itemprop="url" rel="index"><span itemprop="name">数据库</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">SELECT * FROM xxx WHERE 内容 LIKE &#39;%\%%&#39;;</span><br><span class="line"></span><br><span class="line">-- 用\%转义</span><br></pre></td></tr></table></figure>
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/use-haccess-limit-ip/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/apple-touch-icon.png">
+      <meta itemprop="name" content="戛戛Happy">
+      <meta itemprop="description" content="后端, 操作系统, 互联网, 程序开发, Linux, 数据库, MySql, Golang, Ruby">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="睡月花儿">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/use-haccess-limit-ip/" class="post-title-link" itemprop="url">使用haccess限制ip访问</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2014-11-10 13:58:23" itemprop="dateCreated datePublished" datetime="2014-11-10T13:58:23+08:00">2014-11-10</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/os/" itemprop="url" rel="index"><span itemprop="name">操作系统</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>使用haccess限制ip访问，可以用于那些进行sql注入或发垃圾评论的ip</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Order Deny,Allow</span><br><span class="line">Deny from 192.187.126.42</span><br></pre></td></tr></table></figure>
+<p>注意:Deny,Allow之间的逗号前后不能有空格，否则配置信息报错。</p>
+<p>使用</p>
+<blockquote>
+<p>192.187.126.<br>可以限制ip段</p>
+</blockquote>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/spam-ip-list/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/apple-touch-icon.png">
+      <meta itemprop="name" content="戛戛Happy">
+      <meta itemprop="description" content="后端, 操作系统, 互联网, 程序开发, Linux, 数据库, MySql, Golang, Ruby">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="睡月花儿">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/spam-ip-list/" class="post-title-link" itemprop="url">垃圾评论ip列表</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2014-11-07 19:48:48" itemprop="dateCreated datePublished" datetime="2014-11-07T19:48:48+08:00">2014-11-07</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/software/" itemprop="url" rel="index"><span itemprop="name">软件</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>192.187.126.42<br>218.93.202.29</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/facebook-permanently-delete-account/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/apple-touch-icon.png">
+      <meta itemprop="name" content="戛戛Happy">
+      <meta itemprop="description" content="后端, 操作系统, 互联网, 程序开发, Linux, 数据库, MySql, Golang, Ruby">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="睡月花儿">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/facebook-permanently-delete-account/" class="post-title-link" itemprop="url">facebook彻底删除账号</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2014-11-07 19:29:38" itemprop="dateCreated datePublished" datetime="2014-11-07T19:29:38+08:00">2014-11-07</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/software/" itemprop="url" rel="index"><span itemprop="name">软件</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>facebook删除账号 <a target="_blank" rel="noopener" href="https://www.facebook.com/help/224562897555674">https://www.facebook.com/help/224562897555674</a></p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/sulfur-miner/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/apple-touch-icon.png">
+      <meta itemprop="name" content="戛戛Happy">
+      <meta itemprop="description" content="后端, 操作系统, 互联网, 程序开发, Linux, 数据库, MySql, Golang, Ruby">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="睡月花儿">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/sulfur-miner/" class="post-title-link" itemprop="url">Sulfur Miner</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2014-08-28 23:49:08" itemprop="dateCreated datePublished" datetime="2014-08-28T23:49:08+08:00">2014-08-28</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/journal/" itemprop="url" rel="index"><span itemprop="name">日志</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>Miners must carry sulphur blocks which are loaded into two baskets ranging from 75 kilograms (165 lb) to 90 kilograms (200 lb), up 300 metres (980 ft) to the crater rim, with a gradient of 45 to 60 degrees and then 3 kilometers (1.86 miles) down the mountain for weighing. Most miners make this journey twice a day. This is the reason why there are callus on both of his shoulders.</p>
 
       
     </div>
@@ -957,7 +953,7 @@
 
 
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/28/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/28/">28</a><span class="page-number current">29</span><a class="page-number" href="/page/30/">30</a><span class="space">&hellip;</span><a class="page-number" href="/page/48/">48</a><a class="extend next" rel="next" href="/page/30/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
+    <a class="extend prev" rel="prev" href="/page/28/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/28/">28</a><span class="page-number current">29</span><a class="page-number" href="/page/30/">30</a><span class="space">&hellip;</span><a class="page-number" href="/page/87/">87</a><a class="extend next" rel="next" href="/page/30/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
   </nav>
 
 </div>

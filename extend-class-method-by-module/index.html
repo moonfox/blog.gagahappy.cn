@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <meta name="google-site-verification" content="mRjQM6azHRnllmCObIorLO1p8dqt92U33mbEzoA2HnU">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/all.min.css" integrity="sha256-2H3fkXt6FEmrReK448mDVGKb3WW2ZZw35gI7vqHOE4Y=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{&quot;hostname&quot;:&quot;blog.gagahappy.cn&quot;,&quot;root&quot;:&quot;&#x2F;&quot;,&quot;images&quot;:&quot;&#x2F;images&quot;,&quot;scheme&quot;:&quot;Gemini&quot;,&quot;version&quot;:&quot;8.5.0&quot;,&quot;exturl&quot;:false,&quot;sidebar&quot;:{&quot;position&quot;:&quot;right&quot;,&quot;display&quot;:&quot;post&quot;,&quot;padding&quot;:18,&quot;offset&quot;:12},&quot;copycode&quot;:true,&quot;bookmark&quot;:{&quot;enable&quot;:false,&quot;color&quot;:&quot;#222&quot;,&quot;save&quot;:&quot;auto&quot;},&quot;fancybox&quot;:false,&quot;mediumzoom&quot;:false,&quot;lazyload&quot;:false,&quot;pangu&quot;:false,&quot;comments&quot;:{&quot;style&quot;:&quot;tabs&quot;,&quot;active&quot;:null,&quot;storage&quot;:true,&quot;lazyload&quot;:false,&quot;nav&quot;:null},&quot;motion&quot;:{&quot;enable&quot;:false,&quot;async&quot;:false,&quot;transition&quot;:{&quot;post_block&quot;:&quot;fadeIn&quot;,&quot;post_header&quot;:&quot;fadeInDown&quot;,&quot;post_body&quot;:&quot;fadeInDown&quot;,&quot;coll_header&quot;:&quot;fadeInLeft&quot;,&quot;sidebar&quot;:&quot;fadeInUp&quot;}},&quot;prism&quot;:false,&quot;i18n&quot;:{&quot;placeholder&quot;:&quot;Searching...&quot;,&quot;empty&quot;:&quot;We didn&#39;t find any results for the search: ${query}&quot;,&quot;hits_time&quot;:&quot;${hits} results found in ${time} ms&quot;,&quot;hits&quot;:&quot;${hits} results found&quot;},&quot;path&quot;:&quot;&#x2F;search.xml&quot;,&quot;localsearch&quot;:{&quot;enable&quot;:true,&quot;trigger&quot;:&quot;auto&quot;,&quot;top_n_per_article&quot;:1,&quot;unescape&quot;:false,&quot;preload&quot;:false}}</script><script src="/js/config.js"></script>
+<meta name="description" content="1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071# &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;# 目标1:# 1、类扩展:使用include,让模块中定义的方法分别插">
+<meta property="og:type" content="article">
+<meta property="og:title" content="使用include,让模块中定义的方法分别插入类方法与实例方法">
+<meta property="og:url" content="https://blog.gagahappy.cn/extend-class-method-by-module/">
+<meta property="og:site_name" content="睡月花儿">
+<meta property="og:description" content="1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071# &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;# 目标1:# 1、类扩展:使用include,让模块中定义的方法分别插">
+<meta property="og:locale">
+<meta property="article:published_time" content="2015-03-31T15:55:43.000Z">
+<meta property="article:modified_time" content="2021-06-05T13:16:53.313Z">
+<meta property="article:author" content="戛戛Happy">
+<meta property="article:tag" content="Ruby">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://blog.gagahappy.cn/extend-class-method-by-module/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{&quot;sidebar&quot;:&quot;&quot;,&quot;isHome&quot;:false,&quot;isPost&quot;:true,&quot;lang&quot;:&quot;zh-Hans&quot;,&quot;comments&quot;:&quot;&quot;,&quot;permalink&quot;:&quot;https:&#x2F;&#x2F;blog.gagahappy.cn&#x2F;extend-class-method-by-module&#x2F;&quot;,&quot;path&quot;:&quot;extend-class-method-by-module&#x2F;&quot;,&quot;title&quot;:&quot;使用include,让模块中定义的方法分别插入类方法与实例方法&quot;}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">&quot;&quot;</script>
+<title>使用include,让模块中定义的方法分别插入类方法与实例方法 | 睡月花儿</title>
+  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-17621945-1"></script>
+  <script class="next-config" data-name="google_analytics" type="application/json">{&quot;tracking_id&quot;:&quot;UA-17621945-1&quot;,&quot;only_pageview&quot;:false}</script>
+  <script src="/js/third-party/analytics/google-analytics.js"></script>
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/rss2.xml" title="睡月花儿" type="application/rss+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">睡月花儿</h1>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li>
+        <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a></li>
+        <li class="menu-item menu-item-coding"><a href="https://www.gagahappy.com/" rel="noopener" target="_blank"><i class="fa fa-keyboard fa-fw"></i>coding</a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">86</span></a></li>
+        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories<span class="badge">7</span></a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">870</span></a></li>
+        <li class="menu-item menu-item-sitemap"><a href="/sitemap.xml" rel="section"><i class="fa fa-sitemap fa-fw"></i>Sitemap</a></li>
+        <li class="menu-item menu-item-commonweal"><a href="/404/" rel="section"><i class="fa fa-heartbeat fa-fw"></i>Commonweal 404</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="Searching..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-overview-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="戛戛Happy"
+      src="/apple-touch-icon.png">
+  <p class="site-author-name" itemprop="name">戛戛Happy</p>
+  <div class="site-description" itemprop="description">后端, 操作系统, 互联网, 程序开发, Linux, 数据库, MySql, Golang, Ruby</div>
+</div>
+  <div class="">
+
+  <div class="">
+
+      <div class="social-item">
+        <a target="_blank" class="social-link" href="/rss2.xml">
+          <span class="icon">
+            <i class="fa fa-rss"></i>
+          </span>
+
+          <span class="label">RSS</span>
+        </a>
+      </div>
+  </div>
+</div>
+
+  <div class="cc-license site-overview-item animated" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" rel="noopener" target="_blank"><img src="https://cdn.jsdelivr.net/npm/@creativecommons/vocabulary@2020.11.3/assets/license_badges/small/by_nc_sa.svg" alt="Creative Commons"></a>
+  </div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-Hans">
+    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/extend-class-method-by-module/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/apple-touch-icon.png">
+      <meta itemprop="name" content="戛戛Happy">
+      <meta itemprop="description" content="后端, 操作系统, 互联网, 程序开发, Linux, 数据库, MySql, Golang, Ruby">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="睡月花儿">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          使用include,让模块中定义的方法分别插入类方法与实例方法
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2015-03-31 23:55:43" itemprop="dateCreated datePublished" datetime="2015-03-31T23:55:43+08:00">2015-03-31</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/development/" itemprop="url" rel="index"><span itemprop="name">后端</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment"># =============================</span></span><br><span class="line"><span class="comment"># 目标1:</span></span><br><span class="line"><span class="comment"># 1、类扩展:使用include,让模块中定义的方法分别插入类方法与实例方法中</span></span><br><span class="line"><span class="comment"># 2、obj实例对象调用extend,则模块中定义的方法为？</span></span><br><span class="line"><span class="comment"># 3、在模块中定义的实例变量能否被包含它的类的实例对象看到</span></span><br><span class="line"><span class="comment"># =============================</span></span><br><span class="line"><span class="comment"># 结论</span></span><br><span class="line"><span class="comment"># 1、通过重定义横块中的self.included方法，并对参数(receiver),使用关键字extend/include,分别向包含它的类中插入了</span></span><br><span class="line"><span class="comment">#    类方法(定义在ClassMethods模块中的方法)和实例方法(定义在InstanceMethod模块中)</span></span><br><span class="line"><span class="comment"># 2、obj实例对象调用extend,则模块中定义的方法为这个obj的单例方法，可以通过把方法定义在module中，让实例对象调用extend</span></span><br><span class="line"><span class="comment">#    来方便快速的增加自身的单例方法</span></span><br><span class="line"><span class="comment"># 3、可以。在模块中定义的实例变量可以被包含它的类的实例对象看到,因为被include的模块相当于当前类的父类，当前对象的</span></span><br><span class="line"><span class="comment">#    实例变量对其所有实例方法可见</span></span><br><span class="line"><span class="comment"># 4、extend方法的实质就是把module中定义的方法插入到对象的单件类中</span></span><br><span class="line"><span class="comment"># 5、调用MyClass.instance_methods(false)可以发现，在它的实例方法中并不包含实例方法instance_method，而MyClass</span></span><br><span class="line"><span class="comment">#    的实例对象可以调用这个方法，这正说明了类中include的模块(被代理类封装)充当这个类的父类。也验证了结论4</span></span><br><span class="line"><span class="comment"># =============================</span></span><br><span class="line"><span class="built_in">lambda</span> &#123;</span><br><span class="line">  <span class="class"><span class="keyword">module</span> <span class="title">M</span></span></span><br><span class="line">    <span class="class"><span class="keyword">module</span> <span class="title">ClassMethods</span></span></span><br><span class="line">      <span class="function"><span class="keyword">def</span> <span class="title">class_method</span></span></span><br><span class="line">        <span class="string">&quot;i am a class method&quot;</span></span><br><span class="line">      <span class="keyword">end</span></span><br><span class="line">    <span class="keyword">end</span></span><br><span class="line"></span><br><span class="line">    <span class="class"><span class="keyword">module</span> <span class="title">InstanceMethods</span></span></span><br><span class="line">      <span class="function"><span class="keyword">def</span> <span class="title">instance_method</span><span class="params">(from)</span></span></span><br><span class="line">        <span class="variable">@instance_variate</span> = <span class="string">&quot;i am a instance variate in M&quot;</span></span><br><span class="line">        <span class="string">&quot;i am a instance method from:<span class="subst">#&#123;from&#125;</span>&quot;</span></span><br><span class="line">      <span class="keyword">end</span></span><br><span class="line">    <span class="keyword">end</span></span><br><span class="line"></span><br><span class="line">    def <span class="keyword">self</span>.included(receiver)</span><br><span class="line">      receiver.extend         ClassMethods</span><br><span class="line">      receiver.send <span class="symbol">:include</span>, InstanceMethods</span><br><span class="line">    <span class="keyword">end</span></span><br><span class="line">  <span class="keyword">end</span></span><br><span class="line"></span><br><span class="line">  #&lt;!-- more --&gt;</span><br><span class="line">  <span class="class"><span class="keyword">class</span> <span class="title">MyClass</span></span></span><br><span class="line">    <span class="keyword">include</span> M</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">get_instance_variate_from_module</span><span class="params">(from)</span></span></span><br><span class="line">      <span class="string">&quot;<span class="subst">#&#123;<span class="variable">@instance_variate</span>&#125;</span> from: <span class="subst">#&#123;from&#125;</span>&quot;</span></span><br><span class="line">    <span class="keyword">end</span></span><br><span class="line">  <span class="keyword">end</span></span><br><span class="line"></span><br><span class="line">  obj = Object.new</span><br><span class="line">  obj.extend M::InstanceMethods</span><br><span class="line">  my = MyClass.new</span><br><span class="line"></span><br><span class="line">  puts <span class="string">&quot;================test1 OUTPUT================&quot;</span></span><br><span class="line">  puts MyClass.class_method</span><br><span class="line">  puts my.instance_method(<span class="string">&quot;MyClass.new obj&quot;</span>)</span><br><span class="line">  puts my.get_instance_variate_from_module(<span class="string">&quot;MyClass.new&quot;</span>)</span><br><span class="line">  puts obj.instance_method(<span class="string">&quot;Object.new&quot;</span>)</span><br><span class="line">  puts obj.instance_eval(<span class="string">&quot;@instance_variate&quot;</span>)</span><br><span class="line">  puts <span class="string">&quot;MyClass.instance_methods:&quot;</span>+MyClass.instance_methods(<span class="literal">false</span>).to_s</span><br><span class="line">  puts <span class="string">&quot;================test1 OUTPUT================&quot;</span></span><br><span class="line"></span><br><span class="line">  <span class="comment"># ================test1 OUTPUT================</span></span><br><span class="line">  <span class="comment"># i am a class method</span></span><br><span class="line">  <span class="comment"># i am a instance method from:MyClass.new obj</span></span><br><span class="line">  <span class="comment"># i am a instance variate in M from: MyClass.new</span></span><br><span class="line">  <span class="comment"># i am a instance method from:Object.new</span></span><br><span class="line">  <span class="comment"># i am a instance variate in M</span></span><br><span class="line">  <span class="comment"># MyClass.instance_methods:[:get_instance_variate_from_module]</span></span><br><span class="line">  <span class="comment"># ================test1 OUTPUT================</span></span><br><span class="line"></span><br><span class="line">&#125;.call</span><br></pre></td></tr></table></figure>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>Post author:  </strong>戛戛Happy
+  </li>
+  <li class="post-copyright-link">
+      <strong>Post link: </strong>
+      <a href="https://blog.gagahappy.cn/extend-class-method-by-module/" title="使用include,让模块中定义的方法分别插入类方法与实例方法">https://blog.gagahappy.cn/extend-class-method-by-module/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> unless stating additionally.
+  </li>
+</ul>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/ruby/" rel="tag"><i class="fa fa-tag"></i> Ruby</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/instance-variate-in-toplevel/" rel="prev" title="测试顶级上下文中定义的实例变量的作用域">
+                  <i class="fa fa-chevron-left"></i> 测试顶级上下文中定义的实例变量的作用域
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/define-method-in-kernel-module/" rel="next" title="测试在kernel中定义的方法的作用对象">
+                  测试在kernel中定义的方法的作用对象 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="beian"><a href="https://beian.miit.gov.cn/" rel="noopener" target="_blank">京ICP备10044755号 </a>
+  </div>
+
+<div class="copyright">
+  &copy; 2009 – 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">戛戛Happy</span>
+  <span class="with-love">
+    <i class="fa fa-chart-bar"></i>
+  </span>
+  <span itemprop="cnzz"><script type="text/javascript" src="//s6.cnzz.com/z_stat.php?id=1665457&web_id=1665457"></script></span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/next-boot.js"></script>
+
+  
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+
+
+
+  
+
+
+
+
+
+</body>
+</html>
