@@ -3231,6 +3231,18 @@ deb-src http://ppa.launchpad.net/network-manager/trunk/ubuntu karmic main
       </tags>
   </entry>
   <entry>
+    <title>又要被感冒再次击到了</title>
+    <url>/catch-a-cold/</url>
+    <content><![CDATA[<p>感觉又要被感冒再次击到了，自从连上19天后就没能好好休息过。貌似又要病倒了，我ri。</p>
+]]></content>
+      <categories>
+        <category>日志</category>
+      </categories>
+      <tags>
+        <tag>微博</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>十月围城－剧透</title>
     <url>/bodyguards-and-assassins/</url>
     <content><![CDATA[<p>《十月围城》讲述了1905年10月15日，孙中山到香港筹募起义捐款，负责接待他的义士商人获悉清政府派来刺客暗杀孙中山，于是花钱请了一批身怀绝技的保镖护送，将孙中山安全送回广州的故事。<br><img src="//img.gagahappy.cn/blog/2009/12/00221917eae80b74731f0e.jpg" alt="00221917eae80b74731f0e" title="00221917eae80b74731f0e"></p>
@@ -3248,18 +3260,6 @@ deb-src http://ppa.launchpad.net/network-manager/trunk/ubuntu karmic main
       </categories>
       <tags>
         <tag>电影</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>又要被感冒再次击到了</title>
-    <url>/catch-a-cold/</url>
-    <content><![CDATA[<p>感觉又要被感冒再次击到了，自从连上19天后就没能好好休息过。貌似又要病倒了，我ri。</p>
-]]></content>
-      <categories>
-        <category>日志</category>
-      </categories>
-      <tags>
-        <tag>微博</tag>
       </tags>
   </entry>
   <entry>
@@ -3473,18 +3473,6 @@ deb-src http://ppa.launchpad.net/network-manager/trunk/ubuntu karmic main
       </tags>
   </entry>
   <entry>
-    <title>终于有PR值了</title>
-    <url>/have-pr-value/</url>
-    <content><![CDATA[<p>刚刚查了一下本博的PR值，在历经了5个月后，终于有PR值了。虽然目前的值仅仅为1，但毕竟是有了啊，兴奋！（某童鞋不许嘲笑俺）</p>
-]]></content>
-      <categories>
-        <category>软件</category>
-      </categories>
-      <tags>
-        <tag>google</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>灰太狼 红太狼</title>
     <url>/huitailang-hongtailang/</url>
     <content><![CDATA[<p>宝妹 and me<br><img src="//img.gagahappy.cn/blog/2009/12/dgfjn2fc_93dhgmwrmj_b.jpg" alt="太太狼 红太狼" title="太太狼 红太狼"></p>
@@ -3494,6 +3482,18 @@ deb-src http://ppa.launchpad.net/network-manager/trunk/ubuntu karmic main
       </categories>
       <tags>
         <tag>微博</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>终于有PR值了</title>
+    <url>/have-pr-value/</url>
+    <content><![CDATA[<p>刚刚查了一下本博的PR值，在历经了5个月后，终于有PR值了。虽然目前的值仅仅为1，但毕竟是有了啊，兴奋！（某童鞋不许嘲笑俺）</p>
+]]></content>
+      <categories>
+        <category>软件</category>
+      </categories>
+      <tags>
+        <tag>google</tag>
       </tags>
   </entry>
   <entry>
@@ -5090,6 +5090,18 @@ grant select,insert,update,delete on *.* to test1@<span class="token string">"%"
       </tags>
   </entry>
   <entry>
+    <title>做了针线活</title>
+    <url>/zhen-xian-huo/</url>
+    <content><![CDATA[<p>做了针线活，给普通鞋垫加了防滑功能，防止鞋垫从鞋子里跑出来。</p>
+]]></content>
+      <categories>
+        <category>日志</category>
+      </categories>
+      <tags>
+        <tag>微博</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>油焖虾</title>
     <url>/you-men-xia/</url>
     <content><![CDATA[<p><img src="//img.gagahappy.cn/blog/2010/04/5919b50et7bef385ca5f7690.jpeg" alt="5919b50et7bef385ca5f7&amp;690" title="5919b50et7bef385ca5f7&amp;690"></p>
@@ -5123,18 +5135,6 @@ grant select,insert,update,delete on *.* to test1@<span class="token string">"%"
       </categories>
       <tags>
         <tag>美食</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>做了针线活</title>
-    <url>/zhen-xian-huo/</url>
-    <content><![CDATA[<p>做了针线活，给普通鞋垫加了防滑功能，防止鞋垫从鞋子里跑出来。</p>
-]]></content>
-      <categories>
-        <category>日志</category>
-      </categories>
-      <tags>
-        <tag>微博</tag>
       </tags>
   </entry>
   <entry>
@@ -6406,18 +6406,6 @@ yum <span class="token function">install</span> gcc-c++<span aria-hidden="true" 
       </tags>
   </entry>
   <entry>
-    <title>创建Berkeley DB数据仓库</title>
-    <url>/svnadmin-create-berkeley-db/</url>
-    <content><![CDATA[<p>创建Berkeley DB 数据仓库，首先确定系统中已经安装了Berkeley DB ，执行<br>svnadmin create –fs-type bdb  repository</p>
-]]></content>
-      <categories>
-        <category>软件</category>
-      </categories>
-      <tags>
-        <tag>svn</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>测试 buzz</title>
     <url>/test-buzz/</url>
     <content><![CDATA[<p>测试 buzz，成功，终于也能和buzz同步了。美！</p>
@@ -6427,6 +6415,18 @@ yum <span class="token function">install</span> gcc-c++<span aria-hidden="true" 
       </categories>
       <tags>
         <tag>google</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>创建Berkeley DB数据仓库</title>
+    <url>/svnadmin-create-berkeley-db/</url>
+    <content><![CDATA[<p>创建Berkeley DB 数据仓库，首先确定系统中已经安装了Berkeley DB ，执行<br>svnadmin create –fs-type bdb  repository</p>
+]]></content>
+      <categories>
+        <category>软件</category>
+      </categories>
+      <tags>
+        <tag>svn</tag>
       </tags>
   </entry>
   <entry>
@@ -6739,6 +6739,18 @@ ldconfig<span aria-hidden="true" class="line-numbers-rows"><span></span><span></
       </tags>
   </entry>
   <entry>
+    <title>装修笔记——第12天，卫生间厨房防水成功</title>
+    <url>/zhuangxiu-weishengji-chufang-fangshui-finish/</url>
+    <content><![CDATA[<p>卫生间厨房防水是否成功，要到楼下去看（这不废话吗），约了楼下的到他家查看是否有漏水情况，谢天谢地，检查结果是没有，主要看的地方是上下楼水管的地方，因为那里有接缝，水容易从那里流下来，是重点检查的对象，检查的时候还可以用手触摸屋顶，如果感到潮湿说明防水也没有做好。</p>
+]]></content>
+      <categories>
+        <category>日志</category>
+      </categories>
+      <tags>
+        <tag>装修</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>装修——人造大理石选购</title>
     <url>/zhuangxiu-select-renzaodalishi-method/</url>
     <content><![CDATA[<p>在人造大理石选购比较：</p>
@@ -6755,18 +6767,6 @@ ldconfig<span aria-hidden="true" class="line-numbers-rows"><span></span><span></
 <li>表面颜色均匀、清纯，无胶质感。</li>
 <li>从侧面也能看到它的内部和气孔情况。</li>
 </ul>
-]]></content>
-      <categories>
-        <category>日志</category>
-      </categories>
-      <tags>
-        <tag>装修</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>装修笔记——第12天，卫生间厨房防水成功</title>
-    <url>/zhuangxiu-weishengji-chufang-fangshui-finish/</url>
-    <content><![CDATA[<p>卫生间厨房防水是否成功，要到楼下去看（这不废话吗），约了楼下的到他家查看是否有漏水情况，谢天谢地，检查结果是没有，主要看的地方是上下楼水管的地方，因为那里有接缝，水容易从那里流下来，是重点检查的对象，检查的时候还可以用手触摸屋顶，如果感到潮湿说明防水也没有做好。</p>
 ]]></content>
       <categories>
         <category>日志</category>
@@ -9095,22 +9095,6 @@ build-essential<span aria-hidden="true" class="line-numbers-rows"><span></span><
       </tags>
   </entry>
   <entry>
-    <title>次卧的吸顶灯坏了。我郁闷</title>
-    <url>/ci-wo-xi-ding-deng-huai-le/</url>
-    <content><![CDATA[<p>次卧的吸顶灯坏了。我郁闷！买的是飞利浦的，都没怎么用呢，居然就坏了，就是下图的这个~~</p>
-<p>打算先自己解决，灯是从丰台区买的，离我家比较远，真不想拿到那么远去换！</p>
-<p><a href="//img.gagahappy.cn/blog/2011/03/001230277.jpg"><img src="//img.gagahappy.cn/blog/2011/03/001230277.jpg" title="飞利浦 吸顶灯"></a></p>
-<p>从网上找了排查故障的方法，记录如下</p>
-<p>第一步：动。御下罩子（不是螺丝就是暗扣，只需推一下就开了）。<br>第二步：看。看灯管是否发黑，发黑是灯管坏了，御下换新的就OK了。<br>第三步：查。灯管没发黑，说明可能是灯脚接触不良，晃两下，或御下再装上。<br>第四步：闻，是否有焦糊味，再看整流器（或电路板）有无发黑（这个机率很小）发黑有糊味，就是元件坏了，就可以重新买一个了（比修划来）。</p>
-]]></content>
-      <categories>
-        <category>日志</category>
-      </categories>
-      <tags>
-        <tag>微博</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>[emerg]: getpwnam(“nginx”) failed</title>
     <url>/emerg-getpwnam-nginx-failed/</url>
     <content><![CDATA[<p>在启动nginx之前还需要添加nginx用户组，否则会提示</p>
@@ -9124,6 +9108,22 @@ build-essential<span aria-hidden="true" class="line-numbers-rows"><span></span><
       </categories>
       <tags>
         <tag>nginx</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>次卧的吸顶灯坏了。我郁闷</title>
+    <url>/ci-wo-xi-ding-deng-huai-le/</url>
+    <content><![CDATA[<p>次卧的吸顶灯坏了。我郁闷！买的是飞利浦的，都没怎么用呢，居然就坏了，就是下图的这个~~</p>
+<p>打算先自己解决，灯是从丰台区买的，离我家比较远，真不想拿到那么远去换！</p>
+<p><a href="//img.gagahappy.cn/blog/2011/03/001230277.jpg"><img src="//img.gagahappy.cn/blog/2011/03/001230277.jpg" title="飞利浦 吸顶灯"></a></p>
+<p>从网上找了排查故障的方法，记录如下</p>
+<p>第一步：动。御下罩子（不是螺丝就是暗扣，只需推一下就开了）。<br>第二步：看。看灯管是否发黑，发黑是灯管坏了，御下换新的就OK了。<br>第三步：查。灯管没发黑，说明可能是灯脚接触不良，晃两下，或御下再装上。<br>第四步：闻，是否有焦糊味，再看整流器（或电路板）有无发黑（这个机率很小）发黑有糊味，就是元件坏了，就可以重新买一个了（比修划来）。</p>
+]]></content>
+      <categories>
+        <category>日志</category>
+      </categories>
+      <tags>
+        <tag>微博</tag>
       </tags>
   </entry>
   <entry>
@@ -9835,6 +9835,15 @@ expect <span class="token punctuation">&#123;</span><span class="token punctuati
       </tags>
   </entry>
   <entry>
+    <title>happy birthday to leader</title>
+    <url>/happy-birthday-to-leader-2011/</url>
+    <content><![CDATA[<p>领导生日，祝生日快乐~！</p>
+]]></content>
+      <categories>
+        <category>日志</category>
+      </categories>
+  </entry>
+  <entry>
     <title>ruby 中 include 与 extend 区别</title>
     <url>/the-different-between-include-and-extend-in-ruby/</url>
     <content><![CDATA[<p>那么include和extend究竟有什么区别的？</p>
@@ -9880,15 +9889,6 @@ expect <span class="token punctuation">&#123;</span><span class="token punctuati
         <tag>Rails</tag>
         <tag>Ruby</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>happy birthday to leader</title>
-    <url>/happy-birthday-to-leader-2011/</url>
-    <content><![CDATA[<p>领导生日，祝生日快乐~！</p>
-]]></content>
-      <categories>
-        <category>日志</category>
-      </categories>
   </entry>
   <entry>
     <title>rails 页面缓存路径</title>
@@ -10673,45 +10673,6 @@ results<span class="token punctuation">.</span><span class="token keyword">each<
       </tags>
   </entry>
   <entry>
-    <title>Rack::Builder  rackup</title>
-    <url>/rackbuilder-rackup/</url>
-    <content><![CDATA[<p>rackup converts the supplied rack config file to an instance of Rack::Builder. This is how is happens under the hood ( just so you get an idea ) :</p>
-<pre class="line-numbers language-ruby" data-language="ruby"><code class="language-ruby">config_file <span class="token operator">=</span> <span class="token builtin">File</span><span class="token punctuation">.</span>read<span class="token punctuation">(</span>config<span class="token punctuation">)</span>
-rack_application <span class="token operator">=</span> eval<span class="token punctuation">(</span><span class="token string">"Rack::Builder.new &#123; <span class="token interpolation"><span class="token delimiter tag">#&#123;</span>config_file<span class="token delimiter tag">&#125;</span></span> &#125;"</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-<p>And then rackup supplies rack_application to the respective webserver :</p>
-<pre class="line-numbers language-ruby" data-language="ruby"><code class="language-ruby">server<span class="token punctuation">.</span>run rack_application<span class="token punctuation">,</span> options<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>Very straight forward! In short, rack config files are evaluated within the context of a Rack::Builder object. So if we convert infinity to a rack config file which rackup can understand :</p>
-<pre class="line-numbers language-ruby" data-language="ruby"><code class="language-ruby"><span class="token comment"># infinity.ru</span>
-
-infinity <span class="token operator">=</span> <span class="token builtin">Proc</span><span class="token punctuation">.</span><span class="token keyword">new</span> <span class="token punctuation">&#123;</span><span class="token operator">|</span>env<span class="token operator">|</span> <span class="token punctuation">[</span><span class="token number">200</span><span class="token punctuation">,</span> <span class="token punctuation">&#123;</span><span class="token string">"Content-Type"</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token string">"text/html"</span><span class="token punctuation">&#125;</span><span class="token punctuation">,</span> env<span class="token punctuation">.</span>inspect<span class="token punctuation">]</span><span class="token punctuation">&#125;</span>
-
-use <span class="token constant">Rack</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token constant">CommonLogger</span>
-
-map <span class="token string">'/'</span> <span class="token keyword">do</span>
-  run infinity
-<span class="token keyword">end</span>
-
-map <span class="token string">'/version'</span> <span class="token keyword">do</span>
-  map <span class="token string">'/'</span> <span class="token keyword">do</span>
-    run <span class="token builtin">Proc</span><span class="token punctuation">.</span><span class="token keyword">new</span> <span class="token punctuation">&#123;</span><span class="token operator">|</span>env<span class="token operator">|</span> <span class="token punctuation">[</span><span class="token number">200</span><span class="token punctuation">,</span> <span class="token punctuation">&#123;</span><span class="token string">"Content-Type"</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token string">"text/html"</span><span class="token punctuation">&#125;</span><span class="token punctuation">,</span> <span class="token string">"infinity 0.1"</span><span class="token punctuation">]</span> <span class="token punctuation">&#125;</span>
-  <span class="token keyword">end</span>
-
-  map <span class="token string">'/last'</span> <span class="token keyword">do</span>
-    run <span class="token builtin">Proc</span><span class="token punctuation">.</span><span class="token keyword">new</span> <span class="token punctuation">&#123;</span><span class="token operator">|</span>env<span class="token operator">|</span> <span class="token punctuation">[</span><span class="token number">200</span><span class="token punctuation">,</span> <span class="token punctuation">&#123;</span><span class="token string">"Content-Type"</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token string">"text/html"</span><span class="token punctuation">&#125;</span><span class="token punctuation">,</span> <span class="token string">"infinity beta 0.0"</span><span class="token punctuation">]</span> <span class="token punctuation">&#125;</span>
-  <span class="token keyword">end</span>
-<span class="token keyword">end</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>And now run it :<br><code>rackup infinity.ru</code></p>
-]]></content>
-      <categories>
-        <category>后端</category>
-      </categories>
-      <tags>
-        <tag>Ruby</tag>
-        <tag>rack</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>rails Rails::OrderedOptions</title>
     <url>/rails-railsorderedoptions/</url>
     <content><![CDATA[<pre class="line-numbers language-ruby" data-language="ruby"><code class="language-ruby"><span class="token keyword">class</span> <span class="token class-name">Rails</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token constant">OrderedOptions</span> <span class="token operator">&lt;</span> <span class="token builtin">Array</span> <span class="token comment">#:nodoc:</span>
@@ -10752,6 +10713,45 @@ map <span class="token string">'/version'</span> <span class="token keyword">do<
       </categories>
       <tags>
         <tag>Ruby</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Rack::Builder  rackup</title>
+    <url>/rackbuilder-rackup/</url>
+    <content><![CDATA[<p>rackup converts the supplied rack config file to an instance of Rack::Builder. This is how is happens under the hood ( just so you get an idea ) :</p>
+<pre class="line-numbers language-ruby" data-language="ruby"><code class="language-ruby">config_file <span class="token operator">=</span> <span class="token builtin">File</span><span class="token punctuation">.</span>read<span class="token punctuation">(</span>config<span class="token punctuation">)</span>
+rack_application <span class="token operator">=</span> eval<span class="token punctuation">(</span><span class="token string">"Rack::Builder.new &#123; <span class="token interpolation"><span class="token delimiter tag">#&#123;</span>config_file<span class="token delimiter tag">&#125;</span></span> &#125;"</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p>And then rackup supplies rack_application to the respective webserver :</p>
+<pre class="line-numbers language-ruby" data-language="ruby"><code class="language-ruby">server<span class="token punctuation">.</span>run rack_application<span class="token punctuation">,</span> options<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>Very straight forward! In short, rack config files are evaluated within the context of a Rack::Builder object. So if we convert infinity to a rack config file which rackup can understand :</p>
+<pre class="line-numbers language-ruby" data-language="ruby"><code class="language-ruby"><span class="token comment"># infinity.ru</span>
+
+infinity <span class="token operator">=</span> <span class="token builtin">Proc</span><span class="token punctuation">.</span><span class="token keyword">new</span> <span class="token punctuation">&#123;</span><span class="token operator">|</span>env<span class="token operator">|</span> <span class="token punctuation">[</span><span class="token number">200</span><span class="token punctuation">,</span> <span class="token punctuation">&#123;</span><span class="token string">"Content-Type"</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token string">"text/html"</span><span class="token punctuation">&#125;</span><span class="token punctuation">,</span> env<span class="token punctuation">.</span>inspect<span class="token punctuation">]</span><span class="token punctuation">&#125;</span>
+
+use <span class="token constant">Rack</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token constant">CommonLogger</span>
+
+map <span class="token string">'/'</span> <span class="token keyword">do</span>
+  run infinity
+<span class="token keyword">end</span>
+
+map <span class="token string">'/version'</span> <span class="token keyword">do</span>
+  map <span class="token string">'/'</span> <span class="token keyword">do</span>
+    run <span class="token builtin">Proc</span><span class="token punctuation">.</span><span class="token keyword">new</span> <span class="token punctuation">&#123;</span><span class="token operator">|</span>env<span class="token operator">|</span> <span class="token punctuation">[</span><span class="token number">200</span><span class="token punctuation">,</span> <span class="token punctuation">&#123;</span><span class="token string">"Content-Type"</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token string">"text/html"</span><span class="token punctuation">&#125;</span><span class="token punctuation">,</span> <span class="token string">"infinity 0.1"</span><span class="token punctuation">]</span> <span class="token punctuation">&#125;</span>
+  <span class="token keyword">end</span>
+
+  map <span class="token string">'/last'</span> <span class="token keyword">do</span>
+    run <span class="token builtin">Proc</span><span class="token punctuation">.</span><span class="token keyword">new</span> <span class="token punctuation">&#123;</span><span class="token operator">|</span>env<span class="token operator">|</span> <span class="token punctuation">[</span><span class="token number">200</span><span class="token punctuation">,</span> <span class="token punctuation">&#123;</span><span class="token string">"Content-Type"</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token string">"text/html"</span><span class="token punctuation">&#125;</span><span class="token punctuation">,</span> <span class="token string">"infinity beta 0.0"</span><span class="token punctuation">]</span> <span class="token punctuation">&#125;</span>
+  <span class="token keyword">end</span>
+<span class="token keyword">end</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>And now run it :<br><code>rackup infinity.ru</code></p>
+]]></content>
+      <categories>
+        <category>后端</category>
+      </categories>
+      <tags>
+        <tag>Ruby</tag>
+        <tag>rack</tag>
       </tags>
   </entry>
   <entry>
@@ -11738,6 +11738,18 @@ Deny from 192.187.126.42<span aria-hidden="true" class="line-numbers-rows"><span
       </tags>
   </entry>
   <entry>
+    <title>select()阻塞</title>
+    <url>/select-block-when-no-event-occur/</url>
+    <content><![CDATA[<p>调用select()后，select会一直阻塞，直到有事件发生（on ready）状态。如果没有事件on ready，则一直阻塞。</p>
+]]></content>
+      <categories>
+        <category>后端</category>
+      </categories>
+      <tags>
+        <tag>linux</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>重定向文件内容到标准错误</title>
     <url>/redirect-file-to-strerr/</url>
     <content><![CDATA[<pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h></span></span>
@@ -11766,18 +11778,6 @@ Deny from 192.187.126.42<span aria-hidden="true" class="line-numbers-rows"><span
       </categories>
       <tags>
         <tag>c-lang</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>select()阻塞</title>
-    <url>/select-block-when-no-event-occur/</url>
-    <content><![CDATA[<p>调用select()后，select会一直阻塞，直到有事件发生（on ready）状态。如果没有事件on ready，则一直阻塞。</p>
-]]></content>
-      <categories>
-        <category>后端</category>
-      </categories>
-      <tags>
-        <tag>linux</tag>
       </tags>
   </entry>
   <entry>
@@ -11977,6 +11977,18 @@ Deny from 192.187.126.42<span aria-hidden="true" class="line-numbers-rows"><span
       </tags>
   </entry>
   <entry>
+    <title>Multi-Range-Read优化的好处</title>
+    <url>/multi-range-read-optimize/</url>
+    <content><![CDATA[<p>Multi-Range-Read优化的好处,简称MRR，目的是减少磁盘的随机访问，把随机访问转化为比较顺序的访问，对于IO-bound类型的SQL有很大的性能提升。Multi-Range-Read优化适用于range/ref/eq_ref类型的查询。</p>
+]]></content>
+      <categories>
+        <category>数据库</category>
+      </categories>
+      <tags>
+        <tag>mysql</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Index Condition Pushdown（ICP）优化</title>
     <url>/index-condition-pushdown/</url>
     <content><![CDATA[<p>Index Condition Pushdown（ICP）优化,当不支持ICP时，先根据索引查记录取出记录，在根据where条件进行过滤。采用ICP时，会在索引中对where条件进行过滤，选出符合条件的，然后再取出记录。即把数据过滤在存储引擎层面完成</p>
@@ -11987,18 +11999,6 @@ Deny from 192.187.126.42<span aria-hidden="true" class="line-numbers-rows"><span
       <tags>
         <tag>mysql</tag>
         <tag>innodb</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Multi-Range-Read优化的好处</title>
-    <url>/multi-range-read-optimize/</url>
-    <content><![CDATA[<p>Multi-Range-Read优化的好处,简称MRR，目的是减少磁盘的随机访问，把随机访问转化为比较顺序的访问，对于IO-bound类型的SQL有很大的性能提升。Multi-Range-Read优化适用于range/ref/eq_ref类型的查询。</p>
-]]></content>
-      <categories>
-        <category>数据库</category>
-      </categories>
-      <tags>
-        <tag>mysql</tag>
       </tags>
   </entry>
   <entry>
@@ -13756,25 +13756,6 @@ task <span class="token symbol">:hello_world</span> <span class="token operator"
       </tags>
   </entry>
   <entry>
-    <title>method_missing 方法使用注意事项</title>
-    <url>/method-missing-be-careful-use/</url>
-    <content><![CDATA[<p>method_missing 方法使用注意事项，其实最要应该注意的就是不能在method_missing 方法中出现找不到的方法，否则程序将掉入无限循环中</p>
-<pre class="line-numbers language-ruby" data-language="ruby"><code class="language-ruby"><span class="token keyword">def</span> <span class="token method-definition"><span class="token function">method_missing</span></span><span class="token punctuation">(</span>method<span class="token punctuation">,</span> <span class="token operator">*</span>args<span class="token punctuation">)</span>
-  not_exist_method <span class="token comment">#一个不存在的方法</span>
-<span class="token keyword">end</span>
-
-<span class="token comment"># 当程序进入method_missing方法后，发现找不到not_exist_method方法，则又会掉入method_missing,然后又会发现找不到not_exist_method，然后又掉入method_missing,然后loop...</span>
-
-<span class="token comment"># 这种陷阱一般很难发现，所以在method_missing中编写代码时，一定要小心</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-]]></content>
-      <categories>
-        <category>后端</category>
-      </categories>
-      <tags>
-        <tag>Ruby</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>向Scope传递参数</title>
     <url>/pass-argument-to-scope/</url>
     <content><![CDATA[<p>向Scope传递参数</p>
@@ -13790,6 +13771,25 @@ task <span class="token symbol">:hello_world</span> <span class="token operator"
       </categories>
       <tags>
         <tag>Rails</tag>
+        <tag>Ruby</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>method_missing 方法使用注意事项</title>
+    <url>/method-missing-be-careful-use/</url>
+    <content><![CDATA[<p>method_missing 方法使用注意事项，其实最要应该注意的就是不能在method_missing 方法中出现找不到的方法，否则程序将掉入无限循环中</p>
+<pre class="line-numbers language-ruby" data-language="ruby"><code class="language-ruby"><span class="token keyword">def</span> <span class="token method-definition"><span class="token function">method_missing</span></span><span class="token punctuation">(</span>method<span class="token punctuation">,</span> <span class="token operator">*</span>args<span class="token punctuation">)</span>
+  not_exist_method <span class="token comment">#一个不存在的方法</span>
+<span class="token keyword">end</span>
+
+<span class="token comment"># 当程序进入method_missing方法后，发现找不到not_exist_method方法，则又会掉入method_missing,然后又会发现找不到not_exist_method，然后又掉入method_missing,然后loop...</span>
+
+<span class="token comment"># 这种陷阱一般很难发现，所以在method_missing中编写代码时，一定要小心</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+]]></content>
+      <categories>
+        <category>后端</category>
+      </categories>
+      <tags>
         <tag>Ruby</tag>
       </tags>
   </entry>
@@ -15028,6 +15028,18 @@ namespace <span class="token symbol">:hexo</span> <span class="token keyword">do
       </tags>
   </entry>
   <entry>
+    <title>换水龙头</title>
+    <url>/a-new-tap/</url>
+    <content><![CDATA[<p>终于把那个出水不痛快的水龙头给换了，原因是出水软管给堵了，再加上以前的水龙头也不环保，还不健康。有了上次疏通管道的经验，这次没有发大水。新龙头是单水的，出水泡沫很多，出水也痛快</p>
+]]></content>
+      <categories>
+        <category>日志</category>
+      </categories>
+      <tags>
+        <tag>随笔</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>self help</title>
     <url>/self-help/</url>
     <content><![CDATA[<blockquote>
@@ -15045,18 +15057,6 @@ namespace <span class="token symbol">:hexo</span> <span class="token keyword">do
 <blockquote>
 <p>How to release time: breathe ​​​​</p>
 </blockquote>
-]]></content>
-      <categories>
-        <category>日志</category>
-      </categories>
-      <tags>
-        <tag>随笔</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>换水龙头</title>
-    <url>/a-new-tap/</url>
-    <content><![CDATA[<p>终于把那个出水不痛快的水龙头给换了，原因是出水软管给堵了，再加上以前的水龙头也不环保，还不健康。有了上次疏通管道的经验，这次没有发大水。新龙头是单水的，出水泡沫很多，出水也痛快</p>
 ]]></content>
       <categories>
         <category>日志</category>
@@ -15984,47 +15984,6 @@ looooooooooong_path_name/index.html
       </tags>
   </entry>
   <entry>
-    <title>油焖笋烧鸡</title>
-    <url>/cook-you-men-sun-shao-ji/</url>
-    <content><![CDATA[<p>油焖笋烧鸡 #做滴菜# ​​​​</p>
-<p><img src="//img.gagahappy.cn/blog/2018/08/cook-you-men-sun-shao-ji.jpg_b1" alt="油焖笋烧鸡" title="油焖笋烧鸡"></p>
-]]></content>
-      <categories>
-        <category>做菜</category>
-      </categories>
-      <tags>
-        <tag>做滴菜</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>仔姜爆鸡块</title>
-    <url>/cook-zi-jiang-bao-ji-kuai/</url>
-    <content><![CDATA[<p>仔姜爆鸡块 #做滴菜# ​​</p>
-<p><img src="//img.gagahappy.cn/blog/2018/08/cook-zi-jiang-bao-ji-kuai.jpg_b1" alt="仔姜爆鸡块" title="仔姜爆鸡块"></p>
-]]></content>
-      <categories>
-        <category>做菜</category>
-      </categories>
-      <tags>
-        <tag>做滴菜</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>some little things</title>
-    <url>/some-little-things-2018-08-02/</url>
-    <content><![CDATA[<ul>
-<li>有时候退而求其次也是一种很好的选择</li>
-<li>今天就有一小时是属于我的，那就是跳操，然后就是一直在忙，直到现在终于把所有的网口都换成8根线的了，之前拿出2根做电话线真不是什么明智之举，网络的事情也算是都好了。可以享受200兆的宽带了。呀！还有一件事没有完成，就是给座机开通市内电话免费的业务 ​​​​</li>
-</ul>
-]]></content>
-      <categories>
-        <category>日志</category>
-      </categories>
-      <tags>
-        <tag>随笔</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>a special gift from you</title>
     <url>/a-special-gift-from-you/</url>
     <content><![CDATA[<p>你送我阿拉蕾我能理解，送阿拉蕾＋一只狗我也能理解，但你送我阿拉蕾＋6只狗是什么意思？是说加上我就凑够，阿拉蕾和7只单身汪了么？你以为这是白雪公主和七个小矮人呀？</p>
@@ -16055,6 +16014,47 @@ looooooooooong_path_name/index.html
     <url>/share-life-is-too-short/</url>
     <content><![CDATA[<p>Life is too short to wake up in the morning with regrets.</p>
 <p><img src="//img.gagahappy.cn/blog/2018/09/share-life-is-too-short.jpg_b1" alt="Life is too short to wake up" title="Life is too short to wake up"></p>
+]]></content>
+      <categories>
+        <category>日志</category>
+      </categories>
+      <tags>
+        <tag>随笔</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>仔姜爆鸡块</title>
+    <url>/cook-zi-jiang-bao-ji-kuai/</url>
+    <content><![CDATA[<p>仔姜爆鸡块 #做滴菜# ​​</p>
+<p><img src="//img.gagahappy.cn/blog/2018/08/cook-zi-jiang-bao-ji-kuai.jpg_b1" alt="仔姜爆鸡块" title="仔姜爆鸡块"></p>
+]]></content>
+      <categories>
+        <category>做菜</category>
+      </categories>
+      <tags>
+        <tag>做滴菜</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>油焖笋烧鸡</title>
+    <url>/cook-you-men-sun-shao-ji/</url>
+    <content><![CDATA[<p>油焖笋烧鸡 #做滴菜# ​​​​</p>
+<p><img src="//img.gagahappy.cn/blog/2018/08/cook-you-men-sun-shao-ji.jpg_b1" alt="油焖笋烧鸡" title="油焖笋烧鸡"></p>
+]]></content>
+      <categories>
+        <category>做菜</category>
+      </categories>
+      <tags>
+        <tag>做滴菜</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>some little things</title>
+    <url>/some-little-things-2018-08-02/</url>
+    <content><![CDATA[<ul>
+<li>有时候退而求其次也是一种很好的选择</li>
+<li>今天就有一小时是属于我的，那就是跳操，然后就是一直在忙，直到现在终于把所有的网口都换成8根线的了，之前拿出2根做电话线真不是什么明智之举，网络的事情也算是都好了。可以享受200兆的宽带了。呀！还有一件事没有完成，就是给座机开通市内电话免费的业务 ​​​​</li>
+</ul>
 ]]></content>
       <categories>
         <category>日志</category>
