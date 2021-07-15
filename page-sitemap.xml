@@ -10,8 +10,8 @@
     
     
     <url>
-        <loc>https://blog.gagahappy.cn/categories/</loc>
-        <lastmod>2021-07-15T14:45:51.138Z</lastmod>
+        <loc>https://blog.gagahappy.cn/about/</loc>
+        <lastmod>2021-07-15T14:50:56.875Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
@@ -19,8 +19,8 @@
     
     
     <url>
-        <loc>https://blog.gagahappy.cn/about/</loc>
-        <lastmod>2021-07-15T14:45:51.138Z</lastmod>
+        <loc>https://blog.gagahappy.cn/categories/</loc>
+        <lastmod>2021-07-15T14:50:56.875Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
@@ -29,7 +29,7 @@
     
     <url>
         <loc>https://blog.gagahappy.cn/tags/</loc>
-        <lastmod>2021-07-15T14:45:51.138Z</lastmod>
+        <lastmod>2021-07-15T14:50:56.875Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>

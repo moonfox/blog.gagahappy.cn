@@ -1400,6 +1400,18 @@ Ubuntu Dapper <span class="token punctuation">(</span><span class="token number"
       </tags>
   </entry>
   <entry>
+    <title>Virtual box 让主机与虚拟机通信</title>
+    <url>/virtual-box-connetc-host/</url>
+    <content><![CDATA[<p>Virtual box 原理：用软件模拟硬件设备，和共享硬件设备 一般而言，安装完VirtualBox设定网路时选择默认的NAT模式，Guest就可顺利联网了，而在主机产生一个地址为192.168.56.1的host-only vbox的网  卡，但是这时候虚拟机是不能与主机通信的。 通过把在网络连接1的NAT模式改为host-only 模式，就可以与主机通信了，但又出现问题，虚拟机不能上网。 这时候，可以在虚拟机里面增加一张网卡，网络连接2.改为NAT，然后让这张网卡自动获取一下IP，一般为10.0.2.2网段，重启，就可以上网了。</p>
+]]></content>
+      <categories>
+        <category>日志</category>
+      </categories>
+      <tags>
+        <tag>virtualbox</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Virtual Box 虚拟机共享主机文件</title>
     <url>/virtual-box-share-file/</url>
     <content><![CDATA[<p>先要安装“增强功能”</p>
@@ -1412,18 +1424,6 @@ Ubuntu Dapper <span class="token punctuation">(</span><span class="token number"
 ]]></content>
       <categories>
         <category>软件</category>
-      </categories>
-      <tags>
-        <tag>virtualbox</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Virtual box 让主机与虚拟机通信</title>
-    <url>/virtual-box-connetc-host/</url>
-    <content><![CDATA[<p>Virtual box 原理：用软件模拟硬件设备，和共享硬件设备 一般而言，安装完VirtualBox设定网路时选择默认的NAT模式，Guest就可顺利联网了，而在主机产生一个地址为192.168.56.1的host-only vbox的网  卡，但是这时候虚拟机是不能与主机通信的。 通过把在网络连接1的NAT模式改为host-only 模式，就可以与主机通信了，但又出现问题，虚拟机不能上网。 这时候，可以在虚拟机里面增加一张网卡，网络连接2.改为NAT，然后让这张网卡自动获取一下IP，一般为10.0.2.2网段，重启，就可以上网了。</p>
-]]></content>
-      <categories>
-        <category>日志</category>
       </categories>
       <tags>
         <tag>virtualbox</tag>
@@ -2594,6 +2594,19 @@ family:微软雅黑
       </tags>
   </entry>
   <entry>
+    <title>聚会前的准备</title>
+    <url>/prepare-party/</url>
+    <content><![CDATA[<p>明天就要宴请小团体了，希望能如期进行。现在还没有睡，正在复习明天要做的东西。刚才把蜜友们的相片全看了一遍，看完后竟想哭，天啊。我这是怎么了。难道人老了以后都爱激动是吗？</p>
+]]></content>
+      <categories>
+        <category>做菜</category>
+      </categories>
+      <tags>
+        <tag>微博</tag>
+        <tag>美食</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>秦怡 第27届金鸡奖 感动太多</title>
     <url>/qinyi/</url>
     <content><![CDATA[<p>刚才看电影频道的金鸡颁奖晚会，当电影老前辈秦怡缓缓的走上台时，全场居然全体起立，表达对老一代电影人深深的敬意之情，场面真是感人啊，在她老人家发表获奖感言时，场下有不少女演员热泪盈框的，真是感动。</p>
@@ -2626,19 +2639,6 @@ family:微软雅黑
       </categories>
       <tags>
         <tag>人物</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>聚会前的准备</title>
-    <url>/prepare-party/</url>
-    <content><![CDATA[<p>明天就要宴请小团体了，希望能如期进行。现在还没有睡，正在复习明天要做的东西。刚才把蜜友们的相片全看了一遍，看完后竟想哭，天啊。我这是怎么了。难道人老了以后都爱激动是吗？</p>
-]]></content>
-      <categories>
-        <category>做菜</category>
-      </categories>
-      <tags>
-        <tag>微博</tag>
-        <tag>美食</tag>
       </tags>
   </entry>
   <entry>
@@ -2768,19 +2768,6 @@ Device Boot      Start         End      Blocks   Id  System
       </tags>
   </entry>
   <entry>
-    <title>windows 2003 授权方式</title>
-    <url>/windows-2003-cal/</url>
-    <content><![CDATA[<p>windows 2003 授权方式有两种授权模式:</p>
-<p>每服务器:该许可证是为每一台服务器购买的许可证,许可证的数量由”同时”连接到服务器的用户的最大数量来决定；每服务器的许可证模式适合用于网络中拥有很多客户端,但在同一时间”同时”访问服务器的客户端数量不多时采用，并且每服务器的许可证模式也适用于网络中服务器的数量不多时采用.在“每服务器”模式许可中，每个连接到特定服务器的并发连接都需要一个单独的客户端访问许可证。</p>
-<span id="more"></span>
-<p>也就是说，这台服务器在任何时刻都只能支持固定数量的连接。例如，如果您选择具有 5 个许可证的每服务器客户端许可模式，那么这台服务器在任何时刻都只能拥有 5 个并发连接。使用这些连接的客户端不需要其他的许可证。如果组织的专用服务器只有一个用途，而大量不同的用户对其进行访问，那么它们通常偏好每服务器许可模式。例如，一台单独的专用 Extranet 服务器拥有 100 个授权访问该服务器的帐户，但是在任何时刻同时登录的用户都不超过 20 个；</p>
-<p>每客户:该许可证模式是为网络中每一个客户端购买一个许可证,这样网络中的客户端就可以合法地访问网络中的任何一台服务器,而不需要考虑”同时”有多少客户端访问服务器；该许可证模式适用于企业中有多台服务器,并且客户端”同时”访问服务器的情况较多时采用.在每设备或每用户模式中，每个访问或使用服务器的设备或用户都需要单独的客户端访问许可证。使用一个客户端访问许可证，特定的设备或用户可以连接到环境中任何数量的服务器。例如，如果您选择具有 5 个许可证的每设备或每用户模式，那么它将允许 5 个用户或设备访问任意数量的服务器，建立任意数量的并发连接。如果组织在环境中拥有承载多种服务的服务器，这就是它们最常用的许可模式</p>
-]]></content>
-      <categories>
-        <category>软件</category>
-      </categories>
-  </entry>
-  <entry>
     <title>什么是生粉</title>
     <url>/what-shengfe/</url>
     <content><![CDATA[<p>今儿看天下饮食里的大师徒说：“生粉说的就是地瓜粉”，天啊~我一直把生粉当成生姜粉。</p>
@@ -2792,6 +2779,19 @@ Device Boot      Start         End      Blocks   Id  System
       <tags>
         <tag>美食</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>windows 2003 授权方式</title>
+    <url>/windows-2003-cal/</url>
+    <content><![CDATA[<p>windows 2003 授权方式有两种授权模式:</p>
+<p>每服务器:该许可证是为每一台服务器购买的许可证,许可证的数量由”同时”连接到服务器的用户的最大数量来决定；每服务器的许可证模式适合用于网络中拥有很多客户端,但在同一时间”同时”访问服务器的客户端数量不多时采用，并且每服务器的许可证模式也适用于网络中服务器的数量不多时采用.在“每服务器”模式许可中，每个连接到特定服务器的并发连接都需要一个单独的客户端访问许可证。</p>
+<span id="more"></span>
+<p>也就是说，这台服务器在任何时刻都只能支持固定数量的连接。例如，如果您选择具有 5 个许可证的每服务器客户端许可模式，那么这台服务器在任何时刻都只能拥有 5 个并发连接。使用这些连接的客户端不需要其他的许可证。如果组织的专用服务器只有一个用途，而大量不同的用户对其进行访问，那么它们通常偏好每服务器许可模式。例如，一台单独的专用 Extranet 服务器拥有 100 个授权访问该服务器的帐户，但是在任何时刻同时登录的用户都不超过 20 个；</p>
+<p>每客户:该许可证模式是为网络中每一个客户端购买一个许可证,这样网络中的客户端就可以合法地访问网络中的任何一台服务器,而不需要考虑”同时”有多少客户端访问服务器；该许可证模式适用于企业中有多台服务器,并且客户端”同时”访问服务器的情况较多时采用.在每设备或每用户模式中，每个访问或使用服务器的设备或用户都需要单独的客户端访问许可证。使用一个客户端访问许可证，特定的设备或用户可以连接到环境中任何数量的服务器。例如，如果您选择具有 5 个许可证的每设备或每用户模式，那么它将允许 5 个用户或设备访问任意数量的服务器，建立任意数量的并发连接。如果组织在环境中拥有承载多种服务的服务器，这就是它们最常用的许可模式</p>
+]]></content>
+      <categories>
+        <category>软件</category>
+      </categories>
   </entry>
   <entry>
     <title>www域名终于被google收录</title>
@@ -9216,6 +9216,19 @@ nginx http scgi temporary files: <span class="token string">"scgi_temp"</span><s
       </tags>
   </entry>
   <entry>
+    <title>计划使用鲜果订阅</title>
+    <url>/planing-use-xianguo-for-rss/</url>
+    <content><![CDATA[<p>迫于google reader 不稳的无奈，打算使用鲜果订阅</p>
+<p><a href="//img.gagahappy.cn/blog/2011/03/20008113244848.gif"><img src="//img.gagahappy.cn/blog/2011/03/20008113244848.gif" title="RSS"></a></p>
+]]></content>
+      <categories>
+        <category>日志</category>
+      </categories>
+      <tags>
+        <tag>google</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>rewrite module requires the PCRE library</title>
     <url>/rewrite-module-requires-the-pcre-library/</url>
     <content><![CDATA[<p>在编译nginx时遇到rewrite module requires the PCRE library错误，提示需要PCRE库，解决方法：</p>
@@ -9711,19 +9724,6 @@ gem <span class="token function">install</span> mysql --no-rdoc --no-ri <span cl
       <tags>
         <tag>Rails</tag>
         <tag>Ruby</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>计划使用鲜果订阅</title>
-    <url>/planing-use-xianguo-for-rss/</url>
-    <content><![CDATA[<p>迫于google reader 不稳的无奈，打算使用鲜果订阅</p>
-<p><a href="//img.gagahappy.cn/blog/2011/03/20008113244848.gif"><img src="//img.gagahappy.cn/blog/2011/03/20008113244848.gif" title="RSS"></a></p>
-]]></content>
-      <categories>
-        <category>日志</category>
-      </categories>
-      <tags>
-        <tag>google</tag>
       </tags>
   </entry>
   <entry>
@@ -15553,19 +15553,6 @@ namespace <span class="token symbol">:hexo</span> <span class="token keyword">do
       </tags>
   </entry>
   <entry>
-    <title>千叶豆腐</title>
-    <url>/qian-ye-dou-fu/</url>
-    <content><![CDATA[<p>千叶豆腐 #做滴菜#</p>
-<p><img src="//img.gagahappy.cn/blog/2018/01/qian-ye-dou-fu.jpg_b1" alt="千叶豆腐" title="千叶豆腐"></p>
-]]></content>
-      <categories>
-        <category>做菜</category>
-      </categories>
-      <tags>
-        <tag>做滴菜</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>研究了下医保的大病统筹</title>
     <url>/research-freehealthcase/</url>
     <content><![CDATA[<p>研究了下医保的大病统筹，算了下除去自费部分和自付部分，以及起付费用，个人自付部分是4.5左右，不知道有没有规定具体报销比例的相关政策说明</p>
@@ -15590,6 +15577,19 @@ namespace <span class="token symbol">:hexo</span> <span class="token keyword">do
       </categories>
       <tags>
         <tag>docker</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>千叶豆腐</title>
+    <url>/qian-ye-dou-fu/</url>
+    <content><![CDATA[<p>千叶豆腐 #做滴菜#</p>
+<p><img src="//img.gagahappy.cn/blog/2018/01/qian-ye-dou-fu.jpg_b1" alt="千叶豆腐" title="千叶豆腐"></p>
+]]></content>
+      <categories>
+        <category>做菜</category>
+      </categories>
+      <tags>
+        <tag>做滴菜</tag>
       </tags>
   </entry>
   <entry>
