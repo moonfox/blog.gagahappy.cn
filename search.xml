@@ -357,6 +357,19 @@
       </tags>
   </entry>
   <entry>
+    <title>首页总算是基本完成</title>
+    <url>/finish-index/</url>
+    <content><![CDATA[<p>这几天一直忙着做首页。都没时间来这里了。经过N天的忙碌，首页终于算是基本完成了，目前在ubuntu 下的firefox，及windows下的firefox,IE6,IE8下都能正常显示。但个别地方还是有细微的差别，目前已经没有精力去解决了。是不是通过了W3C认证的页面均能在各个浏览器下显示正常（无个体差异）。</p>
+<p>在做首页的过程中。我简直是越来越“爱死”IE6了。痛并快乐着</p>
+]]></content>
+      <categories>
+        <category>后端</category>
+      </categories>
+      <tags>
+        <tag>css</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>让netbeans支持monaco字体</title>
     <url>/netbeans-monaco-fonts/</url>
     <content><![CDATA[<p>monaco字体是苹果操作系统下的一款字体，很艺术性，个人感觉比较接近手写。代码用这种字体显示相当漂亮。</p>
@@ -384,19 +397,6 @@
       </categories>
       <tags>
         <tag>netbeans</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>首页总算是基本完成</title>
-    <url>/finish-index/</url>
-    <content><![CDATA[<p>这几天一直忙着做首页。都没时间来这里了。经过N天的忙碌，首页终于算是基本完成了，目前在ubuntu 下的firefox，及windows下的firefox,IE6,IE8下都能正常显示。但个别地方还是有细微的差别，目前已经没有精力去解决了。是不是通过了W3C认证的页面均能在各个浏览器下显示正常（无个体差异）。</p>
-<p>在做首页的过程中。我简直是越来越“爱死”IE6了。痛并快乐着</p>
-]]></content>
-      <categories>
-        <category>后端</category>
-      </categories>
-      <tags>
-        <tag>css</tag>
       </tags>
   </entry>
   <entry>
@@ -3760,18 +3760,6 @@
       </tags>
   </entry>
   <entry>
-    <title>京东网-秒杀</title>
-    <url>/360buy-buy-1second/</url>
-    <content><![CDATA[<p>京东也出秒杀了，刚刚体验了把，结果页面显示 “server is too busy”。哎，这就是和淘宝网的差距啊!</p>
-]]></content>
-      <categories>
-        <category>日志</category>
-      </categories>
-      <tags>
-        <tag>购物</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>立春啦</title>
     <url>/beginning-spring/</url>
     <content><![CDATA[<p>立春啦，春天就要来啦，吼吼！</p>
@@ -3781,6 +3769,18 @@
       </categories>
       <tags>
         <tag>微博</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>京东网-秒杀</title>
+    <url>/360buy-buy-1second/</url>
+    <content><![CDATA[<p>京东也出秒杀了，刚刚体验了把，结果页面显示 “server is too busy”。哎，这就是和淘宝网的差距啊!</p>
+]]></content>
+      <categories>
+        <category>日志</category>
+      </categories>
+      <tags>
+        <tag>购物</tag>
       </tags>
   </entry>
   <entry>
@@ -7729,6 +7729,19 @@
       </tags>
   </entry>
   <entry>
+    <title>happy birthday to xiaomo</title>
+    <url>/happy-birthday-to-xiaomo-2011/</url>
+    <content><![CDATA[<p>祝小莫生日快乐！</p>
+]]></content>
+      <categories>
+        <category>日志</category>
+      </categories>
+      <tags>
+        <tag>微博</tag>
+        <tag>Ta们的我</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>irb中使用方向键</title>
     <url>/irb-cmd-use-fang-xiang-jian/</url>
     <content><![CDATA[<p>我们在irb中习惯使用方向键来重复输入过的命令行。</p>
@@ -7741,19 +7754,6 @@
       </categories>
       <tags>
         <tag>Ruby</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>happy birthday to xiaomo</title>
-    <url>/happy-birthday-to-xiaomo-2011/</url>
-    <content><![CDATA[<p>祝小莫生日快乐！</p>
-]]></content>
-      <categories>
-        <category>日志</category>
-      </categories>
-      <tags>
-        <tag>微博</tag>
-        <tag>Ta们的我</tag>
       </tags>
   </entry>
   <entry>
