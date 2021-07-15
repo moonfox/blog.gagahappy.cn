@@ -260,7 +260,8 @@
           <p>启动mysql失败，提示Manager of pid-file quit without updating file.错误。从网上直接搜索错误信息，感觉出错原因及解决方案都不适用于本机的情况。</p>
 <p>本着出错要查出其原因的原则，查看了mysql的出错日志（出错日志所在路径，请根据您自己机子的实际情况查找），发现错误信息：File ‘./mysql-bin.index’ not found (Errcode: 13)，查看数据库文件，mysql-bin.index确实存在。</p>
 <p>查看数据库文件的权限，发现全都变成了 drwx—— 2  1001 1001。突然想起之前重建过mysql用户，造成数据库文件的权限用户信息丢失。重新授权即可。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo chown -R  mysql var/</span><br><span class="line">sudo chgrp -R  mysql var/</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">chown</span> -R  mysql var/
+<span class="token function">sudo</span> <span class="token function">chgrp</span> -R  mysql var/<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <p>再次启动mysql，成功！</p>
 
       
@@ -488,7 +489,14 @@
     
     <div class="post-body" itemprop="articleBody">
           <p>rspec  检查类别方法</p>
-<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">target.should be_a_kind_of(Array)</span><br><span class="line"><span class="comment"># target.class.should == Array</span></span><br><span class="line"></span><br><span class="line">target.should be_an_instance_of(Array)</span><br><span class="line"><span class="comment"># target.class.should == Array</span></span><br><span class="line"></span><br><span class="line">target.should response_to(<span class="symbol">:foo</span>)</span><br><span class="line"><span class="comment"># target.response_to?(:foo).should == true</span></span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-ruby" data-language="ruby"><code class="language-ruby">target<span class="token punctuation">.</span>should be_a_kind_of<span class="token punctuation">(</span><span class="token builtin">Array</span><span class="token punctuation">)</span>
+<span class="token comment"># target.class.should == Array</span>
+
+target<span class="token punctuation">.</span>should be_an_instance_of<span class="token punctuation">(</span><span class="token builtin">Array</span><span class="token punctuation">)</span>
+<span class="token comment"># target.class.should == Array</span>
+
+target<span class="token punctuation">.</span>should response_to<span class="token punctuation">(</span><span class="token symbol">:foo</span><span class="token punctuation">)</span>
+<span class="token comment"># target.response_to?(:foo).should == true</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
       
     </div>
@@ -640,7 +648,10 @@
     
     <div class="post-body" itemprop="articleBody">
           <p>If you prefer to integrate views (a la rails functional testing) you can by including<br>the keyword/commmand “integrate_views”.</p>
-<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">describe ArticlesController <span class="keyword">do</span></span><br><span class="line">  integrate_views</span><br><span class="line">  ...</span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-ruby" data-language="ruby"><code class="language-ruby">describe <span class="token constant">ArticlesController</span> <span class="token keyword">do</span>
+  integrate_views
+  <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+<span class="token keyword">end</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 
       
     </div>
@@ -714,7 +725,9 @@
     
     <div class="post-body" itemprop="articleBody">
           <p>期望改变值或抛出异常</p>
-<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">expect &#123;&#125;.to change &#123;&#125;.from().to()</span><br><span class="line"></span><br><span class="line">expect &#123;&#125;.to raise_error(YourMenthodError)</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-ruby" data-language="ruby"><code class="language-ruby">expect <span class="token punctuation">&#123;</span><span class="token punctuation">&#125;</span><span class="token punctuation">.</span>to change <span class="token punctuation">&#123;</span><span class="token punctuation">&#125;</span><span class="token punctuation">.</span>from<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>to<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+expect <span class="token punctuation">&#123;</span><span class="token punctuation">&#125;</span><span class="token punctuation">.</span>to raise_error<span class="token punctuation">(</span><span class="token constant">YourMenthodError</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
       
     </div>
@@ -955,13 +968,16 @@
     
     <div class="post-body" itemprop="articleBody">
           <p>首先下载imagemagick， 进入安装目录</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> imagemagick</span><br><span class="line">./configure --prefix=/opt/imagemagick</span><br><span class="line">make</span><br><span class="line">sudo make install</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token builtin class-name">cd</span> imagemagick
+./configure --prefix<span class="token operator">=</span>/opt/imagemagick
+<span class="token function">make</span>
+<span class="token function">sudo</span> <span class="token function">make</span> <span class="token function">install</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>如果出现</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/usr/bin/ld: cannot find -lperl</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">/usr/bin/ld: cannot <span class="token function">find</span> -lperl<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>请安装</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install libperl-dev</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">apt-get</span> <span class="token function">install</span> libperl-dev<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
       
     </div>

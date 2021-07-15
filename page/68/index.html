@@ -322,7 +322,22 @@
     
     <div class="post-body" itemprop="articleBody">
           <p>apt-cache search package 搜索包</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">apt-cache show package 获取包的相关信息，如说明、大小、版本等</span><br><span class="line">sudo apt-get install package 安装包</span><br><span class="line">sudo apt-get install package - - reinstall 重新安装包</span><br><span class="line">sudo apt-get -f install 修复安装<span class="string">&quot;-f = ——fix-missing&quot;</span></span><br><span class="line">sudo apt-get remove package 删除包</span><br><span class="line">sudo apt-get remove package - - purge 删除包，包括删除配置文件等</span><br><span class="line">sudo apt-get update 更新源</span><br><span class="line">sudo apt-get upgrade 更新已安装的包</span><br><span class="line">sudo apt-get dist-upgrade 升级系统</span><br><span class="line">sudo apt-get dselect-upgrade 使用 dselect 升级</span><br><span class="line">apt-cache depends package 了解使用依赖</span><br><span class="line">apt-cache rdepends package 是查看该包被哪些包依赖</span><br><span class="line">sudo apt-get build-dep package 安装相关的编译环境</span><br><span class="line">apt-get <span class="built_in">source</span> package 下载该包的源代码</span><br><span class="line">sudo apt-get clean &amp;&amp; sudo apt-get autoclean 清理无用的包</span><br><span class="line">sudo apt-get check 检查是否有损坏的依赖</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">apt-cache</span> show package 获取包的相关信息，如说明、大小、版本等
+<span class="token function">sudo</span> <span class="token function">apt-get</span> <span class="token function">install</span> package 安装包
+<span class="token function">sudo</span> <span class="token function">apt-get</span> <span class="token function">install</span> package - - reinstall 重新安装包
+<span class="token function">sudo</span> <span class="token function">apt-get</span> -f <span class="token function">install</span> 修复安装<span class="token string">"-f = ——fix-missing"</span>
+<span class="token function">sudo</span> <span class="token function">apt-get</span> remove package 删除包
+<span class="token function">sudo</span> <span class="token function">apt-get</span> remove package - - purge 删除包，包括删除配置文件等
+<span class="token function">sudo</span> <span class="token function">apt-get</span> update 更新源
+<span class="token function">sudo</span> <span class="token function">apt-get</span> upgrade 更新已安装的包
+<span class="token function">sudo</span> <span class="token function">apt-get</span> dist-upgrade 升级系统
+<span class="token function">sudo</span> <span class="token function">apt-get</span> dselect-upgrade 使用 dselect 升级
+<span class="token function">apt-cache</span> depends package 了解使用依赖
+<span class="token function">apt-cache</span> rdepends package 是查看该包被哪些包依赖
+<span class="token function">sudo</span> <span class="token function">apt-get</span> build-dep package 安装相关的编译环境
+<span class="token function">apt-get</span> <span class="token builtin class-name">source</span> package 下载该包的源代码
+<span class="token function">sudo</span> <span class="token function">apt-get</span> clean <span class="token operator">&amp;&amp;</span> <span class="token function">sudo</span> <span class="token function">apt-get</span> autoclean 清理无用的包
+<span class="token function">sudo</span> <span class="token function">apt-get</span> check 检查是否有损坏的依赖<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/ubuntu-apt-get/#more" rel="contents">
@@ -701,7 +716,11 @@
           <p>升级gem提示 no such file to load zlib，按照以前的经验，马上安装了zlib1g-dev，运行后问题依旧存在，无奈。突然起ruby source中包含zlib文件，最终解决办法如下。</p>
 <ol>
 <li>进行ruby源码包</li>
-<li>安装ruby自身提供的zlib包<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> ext/zlib</span><br><span class="line">ruby ./extconf.rb</span><br><span class="line">make</span><br><span class="line">sudo make install</span><br><span class="line">sudo gem update --system</span><br></pre></td></tr></table></figure></li>
+<li>安装ruby自身提供的zlib包<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token builtin class-name">cd</span> ext/zlib
+ruby ./extconf.rb
+<span class="token function">make</span>
+<span class="token function">sudo</span> <span class="token function">make</span> <span class="token function">install</span>
+<span class="token function">sudo</span> gem update --system<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
 </ol>
 
       
@@ -854,7 +873,13 @@
     
     <div class="post-body" itemprop="articleBody">
           <p>安装scim输入法后，有时候会出现光标不能自动跟随录入框的现象，即没有开启动光标自动跟随的功能。解决办法如下。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 打开/etc/X11/xinit/xinput.d/scim文件，找到其中的</span></span><br><span class="line">GTK_IM_MODULE=xim</span><br><span class="line">QT_IM_MODULE=xim</span><br><span class="line"><span class="comment"># 把它们改成</span></span><br><span class="line">GTK_IM_MODULE=scim</span><br><span class="line">QT_IM_MODULE=scim</span><br><span class="line"><span class="comment">#即可。最后注销一下或者是重启X。</span></span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 打开/etc/X11/xinit/xinput.d/scim文件，找到其中的</span>
+<span class="token assign-left variable">GTK_IM_MODULE</span><span class="token operator">=</span>xim
+<span class="token assign-left variable">QT_IM_MODULE</span><span class="token operator">=</span>xim
+<span class="token comment"># 把它们改成</span>
+<span class="token assign-left variable">GTK_IM_MODULE</span><span class="token operator">=</span>scim
+<span class="token assign-left variable">QT_IM_MODULE</span><span class="token operator">=</span>scim
+<span class="token comment">#即可。最后注销一下或者是重启X。</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
       
     </div>

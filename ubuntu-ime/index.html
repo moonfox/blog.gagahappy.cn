@@ -27,7 +27,7 @@
 <meta property="og:description" content="如果你在安装Ubuntu9.04时选择的语言包是非英文的，那么当你切换成英文包时，而又想使用输入法。请在“使用输入法引擎（IEM）输入复杂字符”打勾，否则在切换后不能使用输入法。 网上还有一种解决方法，也可以实现在英文界面下，使用输入法。  sudo dpkg-reconfigure locales改默认locale为en_US.UTF-8，这个时候注销重启x的话应该还是中文界面。 sudo ge">
 <meta property="og:locale">
 <meta property="article:published_time" content="2009-06-10T22:51:16.000Z">
-<meta property="article:modified_time" content="2021-07-15T11:54:23.129Z">
+<meta property="article:modified_time" content="2021-07-15T12:08:10.368Z">
 <meta property="article:author" content="戛戛Happy">
 <meta property="article:tag" content="ubuntu">
 <meta name="twitter:card" content="summary">
@@ -269,7 +269,22 @@
 <span id="more"></span>
 
 <p>将其改为如下：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">LC_CTYPE=<span class="string">&quot;zh_CN.UTF-8&quot;</span></span><br><span class="line">LC_NUMERIC=<span class="string">&quot;en_US.UTF-8&quot;</span></span><br><span class="line">LC_TIME=<span class="string">&quot;en_US.UTF-8&quot;</span></span><br><span class="line">LC_COLLATE=<span class="string">&quot;en_US.UTF-8&quot;</span></span><br><span class="line">LC_MONETARY=<span class="string">&quot;en_US.UTF-8&quot;</span></span><br><span class="line">LC_MESSAGES=<span class="string">&quot;en_US.UTF-8&quot;</span></span><br><span class="line">LC_PAPER=<span class="string">&quot;en_US.UTF-8&quot;</span></span><br><span class="line">LC_NAME=<span class="string">&quot;en_US.UTF-8&quot;</span></span><br><span class="line">LC_ADDRESS=<span class="string">&quot;en_US.UTF-8&quot;</span></span><br><span class="line">LC_TELEPHONE=<span class="string">&quot;en_US.UTF-8&quot;</span></span><br><span class="line">LC_MEASUREMENT=<span class="string">&quot;en_US.UTF-8&quot;</span></span><br><span class="line">LC_IDENTIFICATION=<span class="string">&quot;en_US.UTF-8&quot;</span></span><br><span class="line">LC_ALL=</span><br><span class="line">LANGUAGE=<span class="string">&quot;zh_CN:zh:en_US:en&quot;</span></span><br><span class="line">GST_ID3_TAG_ENCODING=GBK</span><br><span class="line">LANG=zh_CN.UTF-8</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token assign-left variable">LC_CTYPE</span><span class="token operator">=</span><span class="token string">"zh_CN.UTF-8"</span>
+<span class="token assign-left variable"><span class="token environment constant">LC_NUMERIC</span></span><span class="token operator">=</span><span class="token string">"en_US.UTF-8"</span>
+<span class="token assign-left variable"><span class="token environment constant">LC_TIME</span></span><span class="token operator">=</span><span class="token string">"en_US.UTF-8"</span>
+<span class="token assign-left variable">LC_COLLATE</span><span class="token operator">=</span><span class="token string">"en_US.UTF-8"</span>
+<span class="token assign-left variable"><span class="token environment constant">LC_MONETARY</span></span><span class="token operator">=</span><span class="token string">"en_US.UTF-8"</span>
+<span class="token assign-left variable">LC_MESSAGES</span><span class="token operator">=</span><span class="token string">"en_US.UTF-8"</span>
+<span class="token assign-left variable"><span class="token environment constant">LC_PAPER</span></span><span class="token operator">=</span><span class="token string">"en_US.UTF-8"</span>
+<span class="token assign-left variable"><span class="token environment constant">LC_NAME</span></span><span class="token operator">=</span><span class="token string">"en_US.UTF-8"</span>
+<span class="token assign-left variable"><span class="token environment constant">LC_ADDRESS</span></span><span class="token operator">=</span><span class="token string">"en_US.UTF-8"</span>
+<span class="token assign-left variable"><span class="token environment constant">LC_TELEPHONE</span></span><span class="token operator">=</span><span class="token string">"en_US.UTF-8"</span>
+<span class="token assign-left variable"><span class="token environment constant">LC_MEASUREMENT</span></span><span class="token operator">=</span><span class="token string">"en_US.UTF-8"</span>
+<span class="token assign-left variable"><span class="token environment constant">LC_IDENTIFICATION</span></span><span class="token operator">=</span><span class="token string">"en_US.UTF-8"</span>
+<span class="token assign-left variable"><span class="token environment constant">LC_ALL</span></span><span class="token operator">=</span>
+<span class="token assign-left variable"><span class="token environment constant">LANGUAGE</span></span><span class="token operator">=</span><span class="token string">"zh_CN:zh:en_US:en"</span>
+<span class="token assign-left variable">GST_ID3_TAG_ENCODING</span><span class="token operator">=</span>GBK
+<span class="token assign-left variable"><span class="token environment constant">LANG</span></span><span class="token operator">=</span>zh_CN.UTF-8<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
     </div>
 

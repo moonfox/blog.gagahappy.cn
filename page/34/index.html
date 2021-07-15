@@ -646,7 +646,14 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">One</span></span></span><br><span class="line">  <span class="variable">@@var1</span> = <span class="number">1</span></span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Two</span> &lt; One</span></span><br><span class="line">  <span class="variable">@@var2</span> = <span class="number">2</span></span><br><span class="line"><span class="keyword">end</span></span><br><span class="line">One.class_variables   <span class="comment">#=&gt; [:@<span class="doctag">@var</span>1]</span></span><br><span class="line">Two.class_variables   <span class="comment">#=&gt; [:@<span class="doctag">@var</span>2]</span></span><br></pre></td></tr></table></figure>
+          <pre class="line-numbers language-ruby" data-language="ruby"><code class="language-ruby"><span class="token keyword">class</span> <span class="token class-name">One</span>
+  <span class="token variable">@@var1</span> <span class="token operator">=</span> <span class="token number">1</span>
+<span class="token keyword">end</span>
+<span class="token keyword">class</span> <span class="token class-name">Two</span> <span class="token operator">&lt;</span> <span class="token constant">One</span>
+  <span class="token variable">@@var2</span> <span class="token operator">=</span> <span class="token number">2</span>
+<span class="token keyword">end</span>
+<span class="token constant">One</span><span class="token punctuation">.</span>class_variables   <span class="token comment">#=> [:@@var1]</span>
+<span class="token constant">Two</span><span class="token punctuation">.</span>class_variables   <span class="token comment">#=> [:@@var2]</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
       
     </div>
@@ -792,7 +799,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">alter table &#96;user&#96; drop column dep;</span><br></pre></td></tr></table></figure>
+          <pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">alter table &#96;user&#96; drop column dep;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
       
     </div>
@@ -938,7 +945,19 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">config.gem <span class="string">&quot;cached_model&quot;</span></span><br><span class="line"><span class="keyword">require</span> <span class="string">&#x27;memcache&#x27;</span></span><br><span class="line">memcache_options = &#123;</span><br><span class="line"><span class="symbol">:c_threshold</span> =&gt; <span class="number">10_000</span>,</span><br><span class="line"><span class="symbol">:compression</span> =&gt; <span class="literal">true</span>,</span><br><span class="line"><span class="symbol">:debug</span> =&gt;<span class="literal">false</span>,</span><br><span class="line"><span class="symbol">:namespace</span> =&gt; <span class="string">&#x27;my_rails_app&#x27;</span>,</span><br><span class="line"><span class="symbol">:readonly</span> =&gt; <span class="literal">false</span>,</span><br><span class="line"><span class="symbol">:urlencode</span> =&gt;<span class="literal">false</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">CACHE = MemCache.new memcache_options</span><br><span class="line">CACHE.servers = [<span class="string">&#x27;localhost:11211&#x27;</span>, <span class="string">&#x27;localhost:11212&#x27;</span>]</span><br></pre></td></tr></table></figure>
+          <pre class="line-numbers language-ruby" data-language="ruby"><code class="language-ruby">config<span class="token punctuation">.</span>gem <span class="token string">"cached_model"</span>
+<span class="token keyword">require</span> <span class="token string">'memcache'</span>
+memcache_options <span class="token operator">=</span> <span class="token punctuation">&#123;</span>
+<span class="token symbol">:c_threshold</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token number">10</span>_000<span class="token punctuation">,</span>
+<span class="token symbol">:compression</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+<span class="token symbol">:debug</span> <span class="token operator">=</span><span class="token operator">></span><span class="token boolean">false</span><span class="token punctuation">,</span>
+<span class="token symbol">:namespace</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token string">'my_rails_app'</span><span class="token punctuation">,</span>
+<span class="token symbol">:readonly</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+<span class="token symbol">:urlencode</span> <span class="token operator">=</span><span class="token operator">></span><span class="token boolean">false</span>
+<span class="token punctuation">&#125;</span>
+
+<span class="token constant">CACHE</span> <span class="token operator">=</span> <span class="token constant">MemCache</span><span class="token punctuation">.</span><span class="token keyword">new</span> memcache_options
+<span class="token constant">CACHE</span><span class="token punctuation">.</span>servers <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'localhost:11211'</span><span class="token punctuation">,</span> <span class="token string">'localhost:11212'</span><span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
       
     </div>

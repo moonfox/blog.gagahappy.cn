@@ -625,9 +625,9 @@
     
     <div class="post-body" itemprop="articleBody">
           <p>使用ri查看Rails的API，首先要进行安装</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo gem install fastri</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> gem <span class="token function">install</span> fastri<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>生成索引</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fastri-server -b</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">fastri-server -b<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>文档还显示彩色。</p>
 
@@ -875,7 +875,9 @@
     
     <div class="post-body" itemprop="articleBody">
           <p>编译安装mysql后，用chkconfig令命将其加入随机启动</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cp mysql.server /etc/init.d/mysql</span><br><span class="line">chmod +x /etc/init.d/mysql</span><br><span class="line">chkconfig --add mysql</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">cp</span> mysql.server /etc/init.d/mysql
+<span class="token function">chmod</span> +x /etc/init.d/mysql
+<span class="token function">chkconfig</span> --add mysql<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 <p>出现下面的错误</p>
           <!--noindex-->
             <div class="post-button">

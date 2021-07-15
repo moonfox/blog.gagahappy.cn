@@ -258,10 +258,10 @@
     
     <div class="post-body" itemprop="articleBody">
           <p>在启动nginx之前还需要添加nginx用户组，否则会提示</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[emerg]: getpwnam(“nginx”) failed</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token punctuation">[</span>emerg<span class="token punctuation">]</span>: getpwnam<span class="token punctuation">(</span>“nginx”<span class="token punctuation">)</span> failed<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>添加用户组</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo adduser --system --no-create-home --disabled-password --group nginx</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> adduser --system --no-create-home --disabled-password --group nginx<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
       
     </div>

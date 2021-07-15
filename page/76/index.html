@@ -259,10 +259,17 @@
     <div class="post-body" itemprop="articleBody">
           <p>如果是ubuntu桌面环境的话，不用mount，接入的U盘就可以直接被系统识别，访问起来非常方便，但如果没有桌面环境呢，比如在ubuntu server端，如何访问U盘呢？</p>
 <p>第一步：查看U盘信息</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">sudo fdisk -l 得到类似下面这样的信息</span><br><span class="line"></span><br><span class="line">Disk /dev/sdb: 8027 MB, 8027897856 bytes</span><br><span class="line">14 heads, 22 sectors/track, 50907 cylinders</span><br><span class="line">Units = cylinders of 308 * 512 = 157696 bytes</span><br><span class="line"></span><br><span class="line">Device Boot      Start         End      Blocks   Id  System</span><br><span class="line">/dev/sdb1               8       50908     7838628    7  HPFS/NTFS</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">fdisk</span> -l 得到类似下面这样的信息
+
+Disk /dev/sdb: <span class="token number">8027</span> MB, <span class="token number">8027897856</span> bytes
+<span class="token number">14</span> heads, <span class="token number">22</span> sectors/track, <span class="token number">50907</span> cylinders
+Units <span class="token operator">=</span> cylinders of <span class="token number">308</span> * <span class="token number">512</span> <span class="token operator">=</span> <span class="token number">157696</span> bytes
+
+Device Boot      Start         End      Blocks   Id  System
+/dev/sdb1               <span class="token number">8</span>       <span class="token number">50908</span>     <span class="token number">7838628</span>    <span class="token number">7</span>  HPFS/NTFS<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>很容易看出来，这是一块U盘，并且只有一个分区 sdb1，且文件系统为NTFS</p>
 <p>第二步：挂载U盘到指定节点</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo mount -t ntfs-3g &#x2F;dev&#x2F;sdb1 &#x2F;mnt&#x2F;windows&#x2F;u （／mnt&#x2F;windows&#x2F;u为你要挂载到的节点，这个你可以随便指定。）</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-bsh" data-language="bsh"><code class="language-bsh">sudo mount -t ntfs-3g &#x2F;dev&#x2F;sdb1 &#x2F;mnt&#x2F;windows&#x2F;u （／mnt&#x2F;windows&#x2F;u为你要挂载到的节点，这个你可以随便指定。）<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>然后你就可以通过 cd /mnt/windows/u 对U盘上的内容进行访问了。</p>
 

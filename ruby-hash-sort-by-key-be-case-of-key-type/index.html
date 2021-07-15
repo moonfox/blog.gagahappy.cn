@@ -19,15 +19,15 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/all.min.css" integrity="sha256-2H3fkXt6FEmrReK448mDVGKb3WW2ZZw35gI7vqHOE4Y=" crossorigin="anonymous">
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"blog.gagahappy.cn","root":"/","images":"/images","scheme":"Gemini","version":"8.6.1","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
-<meta name="description" content="12345678910# 如果key的数据类型不一致，会导致异常，其实这种情况已经不是第一次遇上了# ArgumentError: comparison of Array with Array failedhash &#x3D; &amp;#123;c: 3, &quot;a&quot; &#x3D;&gt; 1, b:2&amp;#125;# 可以用hash#sort_by解决,把key统一成一致的数据类型hash.sort_by">
+<meta name="description" content="# 如果key的数据类型不一致，会导致异常，其实这种情况已经不是第一次遇上了 # ArgumentError: comparison of Array with Array failed hash &#x3D; &amp;#123;c: 3, &quot;a&quot; &#x3D;&gt; 1, b:2&amp;#125;  # 可以用hash#sort_by解决,把key统一成一致的数据类型 hash.sort_by&amp;#123;|k,v|k.to_s&amp;#">
 <meta property="og:type" content="article">
 <meta property="og:title" content="ruby 哈希排序注意事项">
 <meta property="og:url" content="https://blog.gagahappy.cn/ruby-hash-sort-by-key-be-case-of-key-type/">
 <meta property="og:site_name" content="睡月花儿">
-<meta property="og:description" content="12345678910# 如果key的数据类型不一致，会导致异常，其实这种情况已经不是第一次遇上了# ArgumentError: comparison of Array with Array failedhash &#x3D; &amp;#123;c: 3, &quot;a&quot; &#x3D;&gt; 1, b:2&amp;#125;# 可以用hash#sort_by解决,把key统一成一致的数据类型hash.sort_by">
+<meta property="og:description" content="# 如果key的数据类型不一致，会导致异常，其实这种情况已经不是第一次遇上了 # ArgumentError: comparison of Array with Array failed hash &#x3D; &amp;#123;c: 3, &quot;a&quot; &#x3D;&gt; 1, b:2&amp;#125;  # 可以用hash#sort_by解决,把key统一成一致的数据类型 hash.sort_by&amp;#123;|k,v|k.to_s&amp;#">
 <meta property="og:locale">
 <meta property="article:published_time" content="2015-05-20T23:22:43.000Z">
-<meta property="article:modified_time" content="2021-07-15T11:54:23.149Z">
+<meta property="article:modified_time" content="2021-07-15T12:08:10.388Z">
 <meta property="article:author" content="戛戛Happy">
 <meta property="article:tag" content="Ruby">
 <meta name="twitter:card" content="summary">
@@ -260,7 +260,16 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 如果key的数据类型不一致，会导致异常，其实这种情况已经不是第一次遇上了</span></span><br><span class="line"><span class="comment"># ArgumentError: comparison of Array with Array failed</span></span><br><span class="line">hash = &#123;<span class="symbol">c:</span> <span class="number">3</span>, <span class="string">&quot;a&quot;</span> =&gt; <span class="number">1</span>, <span class="symbol">b:</span><span class="number">2</span>&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment"># 可以用hash#sort_by解决,把key统一成一致的数据类型</span></span><br><span class="line">hash.sort_by&#123;<span class="params">|k,v|</span>k.to_s&#125;</span><br><span class="line"><span class="comment"># 等效于</span></span><br><span class="line">hash.sort_by&#123;<span class="params">|h|</span>h[<span class="number">0</span>].to_s&#125;</span><br><span class="line"><span class="comment"># 最终的输出结果为</span></span><br><span class="line"><span class="comment">#=&gt; [[&quot;a&quot;, 1], [:b, 2], [:c, 3]]</span></span><br></pre></td></tr></table></figure>
+        <pre class="line-numbers language-ruby" data-language="ruby"><code class="language-ruby"><span class="token comment"># 如果key的数据类型不一致，会导致异常，其实这种情况已经不是第一次遇上了</span>
+<span class="token comment"># ArgumentError: comparison of Array with Array failed</span>
+hash <span class="token operator">=</span> <span class="token punctuation">&#123;</span>c<span class="token punctuation">:</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token string">"a"</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token number">1</span><span class="token punctuation">,</span> b<span class="token punctuation">:</span><span class="token number">2</span><span class="token punctuation">&#125;</span>
+
+<span class="token comment"># 可以用hash#sort_by解决,把key统一成一致的数据类型</span>
+hash<span class="token punctuation">.</span>sort_by<span class="token punctuation">&#123;</span><span class="token operator">|</span>k<span class="token punctuation">,</span>v<span class="token operator">|</span>k<span class="token punctuation">.</span>to_s<span class="token punctuation">&#125;</span>
+<span class="token comment"># 等效于</span>
+hash<span class="token punctuation">.</span>sort_by<span class="token punctuation">&#123;</span><span class="token operator">|</span>h<span class="token operator">|</span>h<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span>to_s<span class="token punctuation">&#125;</span>
+<span class="token comment"># 最终的输出结果为</span>
+<span class="token comment">#=> [["a", 1], [:b, 2], [:c, 3]]</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
     </div>
 

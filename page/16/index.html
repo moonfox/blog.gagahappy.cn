@@ -563,7 +563,12 @@
     
     <div class="post-body" itemprop="articleBody">
           <p>其实是一个比较简单的问题，但搞了1小时，也是挺坑的，在<code>_config.yml</code>文件修改后，一定要执行一下<code>hexo clean</code>，不然skip_render可能不会生效。</p>
-<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 路径是相对source目录的</span></span><br><span class="line"><span class="comment"># 不对google7caf449f9ab0f94b.html与your-other-ignore-file进行渲染，保持文件原有内容</span></span><br><span class="line"></span><br><span class="line"><span class="symbol">skip_render:</span></span><br><span class="line">  - <span class="string">&quot;google7caf449f9ab0f94b.html&quot;</span></span><br><span class="line">  - <span class="string">&quot;your-other-ignore-file&quot;</span></span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-ruby" data-language="ruby"><code class="language-ruby"><span class="token comment"># 路径是相对source目录的</span>
+<span class="token comment"># 不对google7caf449f9ab0f94b.html与your-other-ignore-file进行渲染，保持文件原有内容</span>
+
+skip_render<span class="token punctuation">:</span>
+  <span class="token operator">-</span> <span class="token string">"google7caf449f9ab0f94b.html"</span>
+  <span class="token operator">-</span> <span class="token string">"your-other-ignore-file"</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>对整个目录要跳过的同学，还请自行google</p>
 

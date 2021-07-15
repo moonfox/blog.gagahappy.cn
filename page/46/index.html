@@ -431,7 +431,27 @@
           <p>ubuntu从9.10起开始使用grub2.0，修复方法与grub1.5有较大不同，所以就不能用修复ubuntu 9.04的grub方法去修复ubuntu9.10以后的版本了。</p>
 <p>修复ubuntu 10.10 grub 的方法如下</p>
 <p>使用10.10的live CD 引导系统，进入live 模式，即试用ubuntu模式</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">sudo su</span><br><span class="line"></span><br><span class="line">fdisk -l <span class="comment">#查看你的linux所在分区，如果你把/boot单独分了区，请查看/boot所在分区，本人没有将/boot单独分区，所以查看的是linux所在分区，被安装在了sda10上（实际操作中请以你的为准）</span></span><br><span class="line"></span><br><span class="line">mount /dev/sda10 /mnt</span><br><span class="line">mount /dev/sda10 /mnt/boot  <span class="comment">#/boot单独分区，没有单独分区的请跳过这一步</span></span><br><span class="line"></span><br><span class="line">mount –<span class="built_in">bind</span> /proc /mnt/proc  <span class="comment">#（bind前面是两个减号）</span></span><br><span class="line">mount –<span class="built_in">bind</span> /dev /mnt/dev</span><br><span class="line"><span class="comment">#以上这两步很重要，如果不挂载，系统会找不到proc无法顺利重新安装Grub</span></span><br><span class="line"></span><br><span class="line">chroot /mnt  <span class="comment">#进入虚拟系统，如果不行请尝试 chroot /mnt /bin/bash</span></span><br><span class="line">update-grub2 <span class="comment">#可以省略</span></span><br><span class="line">grub-install /dev/sda <span class="comment">#如果看到Installation finished.No Error Reported.说明已经成功啦</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">exit</span> <span class="comment">#这里是退出虚拟系统</span></span><br><span class="line"></span><br><span class="line">umount /mnt/sys</span><br><span class="line">umount /mnt/dev</span><br><span class="line"></span><br><span class="line">reboot</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">su</span>
+
+<span class="token function">fdisk</span> -l <span class="token comment">#查看你的linux所在分区，如果你把/boot单独分了区，请查看/boot所在分区，本人没有将/boot单独分区，所以查看的是linux所在分区，被安装在了sda10上（实际操作中请以你的为准）</span>
+
+<span class="token function">mount</span> /dev/sda10 /mnt
+<span class="token function">mount</span> /dev/sda10 /mnt/boot  <span class="token comment">#/boot单独分区，没有单独分区的请跳过这一步</span>
+
+<span class="token function">mount</span> –bind /proc /mnt/proc  <span class="token comment">#（bind前面是两个减号）</span>
+<span class="token function">mount</span> –bind /dev /mnt/dev
+<span class="token comment">#以上这两步很重要，如果不挂载，系统会找不到proc无法顺利重新安装Grub</span>
+
+<span class="token function">chroot</span> /mnt  <span class="token comment">#进入虚拟系统，如果不行请尝试 chroot /mnt /bin/bash</span>
+update-grub2 <span class="token comment">#可以省略</span>
+grub-install /dev/sda <span class="token comment">#如果看到Installation finished.No Error Reported.说明已经成功啦</span>
+
+<span class="token builtin class-name">exit</span> <span class="token comment">#这里是退出虚拟系统</span>
+
+<span class="token function">umount</span> /mnt/sys
+<span class="token function">umount</span> /mnt/dev
+
+<span class="token function">reboot</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>重新启动后就可以看到grub菜单了</p>
 
@@ -653,7 +673,64 @@
     
     <div class="post-body" itemprop="articleBody">
           <p>ssh出于安全考虑，设置了闲置后自动断开功能，这给长时间进行远程操作及利用ssh穿qiang的同学带来了极大的不便，参考了网上的N种方法，实现如下</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/usr/bin/expect</span></span><br><span class="line"><span class="comment"># Auto login ssh</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">set</span> user <span class="string">&quot;username&quot;</span>;</span><br><span class="line"><span class="built_in">set</span> passwd <span class="string">&quot;password&quot;</span>;</span><br><span class="line"><span class="built_in">set</span> host <span class="string">&quot;ip&quot;</span>;</span><br><span class="line"><span class="built_in">set</span> id1 1;</span><br><span class="line"></span><br><span class="line"><span class="keyword">while</span> (1) &#123;</span><br><span class="line">        <span class="built_in">set</span> isconnected 0;</span><br><span class="line">        spawn /usr/bin/ssh -D7070 <span class="variable">$user</span>@<span class="variable">$host</span>;</span><br><span class="line">        <span class="built_in">set</span> id1 <span class="variable">$spawn_id</span></span><br><span class="line">        match_max 100000;</span><br><span class="line">        <span class="built_in">set</span> timeout 60;</span><br><span class="line">        expect &#123;</span><br><span class="line">                <span class="string">&quot;password:&quot;</span> &#123;</span><br><span class="line">                        send <span class="string">&quot;<span class="variable">$passwd</span>\r&quot;</span>;</span><br><span class="line">                        expect <span class="string">&quot;jailshell&quot;</span> &#123;</span><br><span class="line">                                <span class="built_in">set</span> isconnected 1;</span><br><span class="line">                                puts <span class="string">&quot;connected to <span class="variable">$host</span> succeed&quot;</span>;</span><br><span class="line">                                puts <span class="variable">$spawn_id</span>;</span><br><span class="line">                        &#125;</span><br><span class="line">                 &#125;</span><br><span class="line"></span><br><span class="line">                <span class="string">&quot;closed&quot;</span> &#123;</span><br><span class="line">                        <span class="built_in">set</span> isconnected 0;</span><br><span class="line">                        <span class="comment">#puts &quot;connected to $host fail&quot;</span></span><br><span class="line"></span><br><span class="line">                &#125;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> &#123; <span class="variable">$isconnected</span> == 0 &#125; &#123;</span><br><span class="line">                close;</span><br><span class="line">                puts <span class="string">&quot;SSH server connect fail,retrying...&quot;</span>;</span><br><span class="line">                <span class="built_in">continue</span>;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">while</span> (1) &#123;</span><br><span class="line">                <span class="built_in">set</span> isconnected 0;</span><br><span class="line">                interact &#123;</span><br><span class="line">                        timeout 22 &#123;</span><br><span class="line">                                <span class="built_in">set</span> timeout 10;</span><br><span class="line">                                send <span class="string">&quot;echo im active\r&quot;</span>;</span><br><span class="line">                                expect <span class="string">&quot;*im active*&quot;</span> &#123; <span class="built_in">set</span> isconnected 1 &#125;</span><br><span class="line">                                <span class="keyword">if</span> &#123; <span class="variable">$isconnected</span> == 1 &#125; &#123;</span><br><span class="line">                                        puts <span class="string">&quot;on line\r&quot;</span>;</span><br><span class="line">                                        <span class="built_in">continue</span>;</span><br><span class="line">                                &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                                        puts <span class="string">&quot;off line\r&quot;</span></span><br><span class="line">                                        <span class="built_in">break</span>;</span><br><span class="line">                                &#125;</span><br><span class="line">                        &#125;</span><br><span class="line">        close;</span><br><span class="line">        puts <span class="string">&quot;SSH server connect fails,retrying...&quot;</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token shebang important">#!/usr/bin/expect</span>
+<span class="token comment"># Auto login ssh</span>
+
+<span class="token builtin class-name">set</span> user <span class="token string">"username"</span><span class="token punctuation">;</span>
+<span class="token builtin class-name">set</span> <span class="token function">passwd</span> <span class="token string">"password"</span><span class="token punctuation">;</span>
+<span class="token builtin class-name">set</span> <span class="token function">host</span> <span class="token string">"ip"</span><span class="token punctuation">;</span>
+<span class="token builtin class-name">set</span> id1 <span class="token number">1</span><span class="token punctuation">;</span>
+
+<span class="token keyword">while</span> <span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        <span class="token builtin class-name">set</span> isconnected <span class="token number">0</span><span class="token punctuation">;</span>
+        spawn /usr/bin/ssh -D7070 <span class="token variable">$user</span>@<span class="token variable">$host</span><span class="token punctuation">;</span>
+        <span class="token builtin class-name">set</span> id1 <span class="token variable">$spawn_id</span>
+        match_max <span class="token number">100000</span><span class="token punctuation">;</span>
+        <span class="token builtin class-name">set</span> <span class="token function">timeout</span> <span class="token number">60</span><span class="token punctuation">;</span>
+        <span class="token function">expect</span> <span class="token punctuation">&#123;</span>
+                <span class="token string">"password:"</span> <span class="token punctuation">&#123;</span>
+                        send <span class="token string">"<span class="token variable">$passwd</span><span class="token entity" title="\r">\r</span>"</span><span class="token punctuation">;</span>
+                        <span class="token function">expect</span> <span class="token string">"jailshell"</span> <span class="token punctuation">&#123;</span>
+                                <span class="token builtin class-name">set</span> isconnected <span class="token number">1</span><span class="token punctuation">;</span>
+                                puts <span class="token string">"connected to <span class="token variable">$host</span> succeed"</span><span class="token punctuation">;</span>
+                                puts <span class="token variable">$spawn_id</span><span class="token punctuation">;</span>
+                        <span class="token punctuation">&#125;</span>
+                 <span class="token punctuation">&#125;</span>
+
+                <span class="token string">"closed"</span> <span class="token punctuation">&#123;</span>
+                        <span class="token builtin class-name">set</span> isconnected <span class="token number">0</span><span class="token punctuation">;</span>
+                        <span class="token comment">#puts "connected to $host fail"</span>
+
+                <span class="token punctuation">&#125;</span>
+
+        <span class="token punctuation">&#125;</span>
+
+        <span class="token keyword">if</span> <span class="token punctuation">&#123;</span> <span class="token variable">$isconnected</span> <span class="token operator">==</span> <span class="token number">0</span> <span class="token punctuation">&#125;</span> <span class="token punctuation">&#123;</span>
+                close<span class="token punctuation">;</span>
+                puts <span class="token string">"SSH server connect fail,retrying..."</span><span class="token punctuation">;</span>
+                <span class="token builtin class-name">continue</span><span class="token punctuation">;</span>
+
+        <span class="token punctuation">&#125;</span>
+
+        <span class="token keyword">while</span> <span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+                <span class="token builtin class-name">set</span> isconnected <span class="token number">0</span><span class="token punctuation">;</span>
+                interact <span class="token punctuation">&#123;</span>
+                        <span class="token function">timeout</span> <span class="token number">22</span> <span class="token punctuation">&#123;</span>
+                                <span class="token builtin class-name">set</span> <span class="token function">timeout</span> <span class="token number">10</span><span class="token punctuation">;</span>
+                                send <span class="token string">"echo im active<span class="token entity" title="\r">\r</span>"</span><span class="token punctuation">;</span>
+                                <span class="token function">expect</span> <span class="token string">"*im active*"</span> <span class="token punctuation">&#123;</span> <span class="token builtin class-name">set</span> isconnected <span class="token number">1</span> <span class="token punctuation">&#125;</span>
+                                <span class="token keyword">if</span> <span class="token punctuation">&#123;</span> <span class="token variable">$isconnected</span> <span class="token operator">==</span> <span class="token number">1</span> <span class="token punctuation">&#125;</span> <span class="token punctuation">&#123;</span>
+                                        puts <span class="token string">"on line<span class="token entity" title="\r">\r</span>"</span><span class="token punctuation">;</span>
+                                        <span class="token builtin class-name">continue</span><span class="token punctuation">;</span>
+                                <span class="token punctuation">&#125;</span> <span class="token keyword">else</span> <span class="token punctuation">&#123;</span>
+                                        puts <span class="token string">"off line<span class="token entity" title="\r">\r</span>"</span>
+                                        <span class="token builtin class-name">break</span><span class="token punctuation">;</span>
+                                <span class="token punctuation">&#125;</span>
+                        <span class="token punctuation">&#125;</span>
+        close<span class="token punctuation">;</span>
+        puts <span class="token string">"SSH server connect fails,retrying..."</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
       
     </div>

@@ -335,7 +335,15 @@
     
     <div class="post-body" itemprop="articleBody">
           <p>Ubuntu的命令行是可以定制的，可以使用下面的命令来显示当前的提示符设置：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span> <span class="variable">$PS1</span></span><br><span class="line"><span class="built_in">echo</span> <span class="variable">$PS2</span></span><br><span class="line">修改~/.bashrc文件中的PS1行即可,默认为<span class="variable">$&#123;debian_chroot:+($debian_chroot)&#125;</span>\u@\h:\w\$</span><br><span class="line"></span><br><span class="line"><span class="variable">$PS1</span>是主要的提示符设置，在ubuntu一般为：</span><br><span class="line"></span><br><span class="line"><span class="variable">$&#123;debian_chroot:+($debian_chroot)&#125;</span>\u@\h:\w\$</span><br><span class="line"></span><br><span class="line"><span class="variable">$PS2</span>是次要提示符，一般为“&gt;”。</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token builtin class-name">echo</span> <span class="token environment constant">$PS1</span>
+<span class="token builtin class-name">echo</span> <span class="token environment constant">$PS2</span>
+修改~/.bashrc文件中的<span class="token environment constant">PS1</span>行即可,默认为<span class="token variable">$&#123;debian_chroot<span class="token operator">:+</span>($debian_chroot)&#125;</span><span class="token punctuation">\</span>u@<span class="token punctuation">\</span>h:<span class="token punctuation">\</span>w<span class="token punctuation">\</span>$
+
+<span class="token environment constant">$PS1</span>是主要的提示符设置，在ubuntu一般为：
+
+<span class="token variable">$&#123;debian_chroot<span class="token operator">:+</span>($debian_chroot)&#125;</span><span class="token punctuation">\</span>u@<span class="token punctuation">\</span>h:<span class="token punctuation">\</span>w<span class="token punctuation">\</span>$
+
+<span class="token environment constant">$PS2</span>是次要提示符，一般为“<span class="token operator">></span>”。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/ubuntu-cmd-shell-args/#more" rel="contents">

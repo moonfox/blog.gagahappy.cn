@@ -258,7 +258,19 @@
     
     <div class="post-body" itemprop="articleBody">
           <p>ruby中的条件判断语句case我们都不应该陌生吧，在view层使用时出现了这样一个怪现象。</p>
-<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 如果这样写</span></span><br><span class="line">&lt;% <span class="keyword">case</span> 条件表达示 %&gt;</span><br><span class="line">&lt;% <span class="keyword">when</span> <span class="string">&quot;条件1&quot;</span>%&gt;</span><br><span class="line">标题</span><br><span class="line">&lt;% <span class="keyword">when</span> <span class="string">&quot;条件2&quot;</span>%&gt;</span><br><span class="line">标题</span><br><span class="line">&lt;% <span class="keyword">end</span> %&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment"># 被告知有语法错误。 如果写成</span></span><br><span class="line">&lt;%</span><br><span class="line"><span class="keyword">case</span> 条件表达示</span><br><span class="line"><span class="keyword">when</span> <span class="string">&quot;条件1&quot;</span></span><br><span class="line">%&gt;</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-ruby" data-language="ruby"><code class="language-ruby"><span class="token comment"># 如果这样写</span>
+<span class="token operator">&lt;</span><span class="token operator">%</span> <span class="token keyword">case</span> 条件表达示 <span class="token string">%>
+&lt;% when "条件1"%></span>
+标题
+<span class="token operator">&lt;</span><span class="token operator">%</span> <span class="token keyword">when</span> <span class="token string">"条件2"</span><span class="token string">%>
+标题
+&lt;% end %></span>
+
+<span class="token comment"># 被告知有语法错误。 如果写成</span>
+<span class="token operator">&lt;</span><span class="token operator">%</span>
+<span class="token keyword">case</span> 条件表达示
+<span class="token keyword">when</span> <span class="token string">"条件1"</span>
+<span class="token operator">%</span><span class="token operator">></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>程序顺利通过。即将case 与第一个when写在一起，这时程序不会出错。难道分开放在<code>&lt;%%&gt;</code>里会出错。差点被这个bug折腾死！ORG</p>
 
@@ -903,7 +915,16 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">deb http://mirrors.sohu.com/ubuntu/ lucid main restricted universe multiverse</span><br><span class="line">deb http://mirrors.sohu.com/ubuntu/ lucid-security main restricted universe multiverse</span><br><span class="line">deb http://mirrors.sohu.com/ubuntu/ lucid-updates main restricted universe multiverse</span><br><span class="line">deb http://mirrors.sohu.com/ubuntu/ lucid-proposed main restricted universe multiverse</span><br><span class="line">deb http://mirrors.sohu.com/ubuntu/ lucid-backports main restricted universe multiverse</span><br><span class="line">deb-src http://mirrors.sohu.com/ubuntu/ lucid main restricted universe multiverse</span><br><span class="line">deb-src http://mirrors.sohu.com/ubuntu/ lucid-security main restricted universe multiverse</span><br><span class="line">deb-src http://mirrors.sohu.com/ubuntu/ lucid-updates main restricted universe multiverse</span><br><span class="line">deb-src http://mirrors.sohu.com/ubuntu/ lucid-proposed main restricted universe multiverse</span><br><span class="line">deb-src http://mirrors.sohu.com/ubuntu/ lucid-backports main restricted universe multiverse</span><br></pre></td></tr></table></figure>
+          <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">deb http://mirrors.sohu.com/ubuntu/ lucid main restricted universe multiverse
+deb http://mirrors.sohu.com/ubuntu/ lucid-security main restricted universe multiverse
+deb http://mirrors.sohu.com/ubuntu/ lucid-updates main restricted universe multiverse
+deb http://mirrors.sohu.com/ubuntu/ lucid-proposed main restricted universe multiverse
+deb http://mirrors.sohu.com/ubuntu/ lucid-backports main restricted universe multiverse
+deb-src http://mirrors.sohu.com/ubuntu/ lucid main restricted universe multiverse
+deb-src http://mirrors.sohu.com/ubuntu/ lucid-security main restricted universe multiverse
+deb-src http://mirrors.sohu.com/ubuntu/ lucid-updates main restricted universe multiverse
+deb-src http://mirrors.sohu.com/ubuntu/ lucid-proposed main restricted universe multiverse
+deb-src http://mirrors.sohu.com/ubuntu/ lucid-backports main restricted universe multiverse<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
       
     </div>

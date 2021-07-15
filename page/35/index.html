@@ -257,7 +257,13 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">shared_examples_for <span class="string">&quot;a measurable object&quot;</span> <span class="keyword">do</span> <span class="params">|measurement, measurement_methods|</span></span><br><span class="line">  measurement_methods.each <span class="keyword">do</span> <span class="params">|measurement_method|</span></span><br><span class="line">    it <span class="string">&quot;should return <span class="subst">#&#123;measurement&#125;</span> from #<span class="subst">#&#123;measurement_method&#125;</span>&quot;</span> <span class="keyword">do</span></span><br><span class="line">      subject.send(measurement_method).should == measurement</span><br><span class="line">    <span class="keyword">end</span></span><br><span class="line">  <span class="keyword">end</span></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+          <pre class="line-numbers language-ruby" data-language="ruby"><code class="language-ruby">shared_examples_for <span class="token string">"a measurable object"</span> <span class="token keyword">do</span> <span class="token operator">|</span>measurement<span class="token punctuation">,</span> measurement_methods<span class="token operator">|</span>
+  measurement_methods<span class="token punctuation">.</span><span class="token keyword">each</span> <span class="token keyword">do</span> <span class="token operator">|</span>measurement_method<span class="token operator">|</span>
+    it <span class="token string">"should return <span class="token interpolation"><span class="token delimiter tag">#&#123;</span>measurement<span class="token delimiter tag">&#125;</span></span> from #<span class="token interpolation"><span class="token delimiter tag">#&#123;</span>measurement_method<span class="token delimiter tag">&#125;</span></span>"</span> <span class="token keyword">do</span>
+      subject<span class="token punctuation">.</span>send<span class="token punctuation">(</span>measurement_method<span class="token punctuation">)</span><span class="token punctuation">.</span>should <span class="token operator">==</span> measurement
+    <span class="token keyword">end</span>
+  <span class="token keyword">end</span>
+<span class="token keyword">end</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
       
     </div>
@@ -331,7 +337,21 @@
     
     <div class="post-body" itemprop="articleBody">
           <p>wc命令用来打印文件的文本行数、单词数、字节数等（print the number of newlines, words, and bytes in files）</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">格式：wc -l &lt;file&gt;</span><br><span class="line"></span><br><span class="line">打印指定文件的文本行数。（l=小写L）</span><br><span class="line"></span><br><span class="line">参数：-c, --bytes</span><br><span class="line">打印字节数（<span class="built_in">print</span> the byte counts）</span><br><span class="line"></span><br><span class="line">参数：-m, --chars</span><br><span class="line">打印字符数（<span class="built_in">print</span> the character counts）</span><br><span class="line"></span><br><span class="line">参数：-l, --lines</span><br><span class="line">打印行数（<span class="built_in">print</span> the newline counts）</span><br><span class="line"></span><br><span class="line">参数：-w, --words</span><br><span class="line">打印单词数（<span class="built_in">print</span> the word counts）</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">格式：wc -l <span class="token operator">&lt;</span>file<span class="token operator">></span>
+
+打印指定文件的文本行数。（l<span class="token operator">=</span>小写L）
+
+参数：-c, --bytes
+打印字节数（print the byte counts）
+
+参数：-m, --chars
+打印字符数（print the character counts）
+
+参数：-l, --lines
+打印行数（print the newline counts）
+
+参数：-w, --words
+打印单词数（print the word counts）<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
       
     </div>
@@ -405,7 +425,13 @@
     
     <div class="post-body" itemprop="articleBody">
           <p>启动参数</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">-p memcached监听的TCP端口</span><br><span class="line">-l 监听的ip地址</span><br><span class="line">-d 以daemon方式运行，将程序放入后台</span><br><span class="line">-u memcached的运行用户</span><br><span class="line">-P memcached的pid文件路径</span><br><span class="line">-m memcached可以使用的最大内存数量</span><br><span class="line">-c memcached同时可以接受的最大的连接数</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">-p memcached监听的TCP端口
+-l 监听的ip地址
+-d 以daemon方式运行，将程序放入后台
+-u memcached的运行用户
+-P memcached的pid文件路径
+-m memcached可以使用的最大内存数量
+-c memcached同时可以接受的最大的连接数<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>如果你希望以socket方式来访问memcached，那么在启动的时候就必须去掉 -l和-p参数，并加上-s参数：</p>
 
@@ -765,7 +791,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">id yourname</span><br></pre></td></tr></table></figure>
+          <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">id</span> yourname<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
       
     </div>
@@ -838,7 +864,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo gpasswd -a &lt;账号&gt; &lt;组名&gt;</span><br></pre></td></tr></table></figure>
+          <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> gpasswd -a <span class="token operator">&lt;</span>账号<span class="token operator">></span> <span class="token operator">&lt;</span>组名<span class="token operator">></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
       
     </div>

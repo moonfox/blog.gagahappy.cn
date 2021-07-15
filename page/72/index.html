@@ -940,7 +940,7 @@
     
     <div class="post-body" itemprop="articleBody">
           <p>查找 包含alias字符串的*.conf的文件</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">find / -name <span class="string">&quot;*.conf&quot;</span> | xargs grep <span class="string">&quot;alias&quot;</span></span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">find</span> / -name <span class="token string">"*.conf"</span> <span class="token operator">|</span> <span class="token function">xargs</span> <span class="token function">grep</span> <span class="token string">"alias"</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <ol>
 <li>grep -R -l 一些也可以实现，但是通过管道 | 比单纯用grep 复杂的参数更有效率。</li>

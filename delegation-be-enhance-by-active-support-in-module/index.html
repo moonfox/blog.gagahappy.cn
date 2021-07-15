@@ -19,15 +19,15 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/all.min.css" integrity="sha256-2H3fkXt6FEmrReK448mDVGKb3WW2ZZw35gI7vqHOE4Y=" crossorigin="anonymous">
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"blog.gagahappy.cn","root":"/","images":"/images","scheme":"Gemini","version":"8.6.1","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
-<meta name="description" content="基本思想是:   当访问一个对象的方法时，如果这个方法不存，则转发这个方法给委托的对象 Delegation is particularly useful with Active Record associations:   123456789101112131415161718class Greeter &lt; ActiveRecord::Base  def hello    &amp;#x27;he">
+<meta name="description" content="基本思想是:   当访问一个对象的方法时，如果这个方法不存，则转发这个方法给委托的对象 Delegation is particularly useful with Active Record associations:   class Greeter &lt; ActiveRecord::Base   def hello     &#39;hello&#39;   end    def goodbye">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Delegation be enhance by active support in module">
 <meta property="og:url" content="https://blog.gagahappy.cn/delegation-be-enhance-by-active-support-in-module/">
 <meta property="og:site_name" content="睡月花儿">
-<meta property="og:description" content="基本思想是:   当访问一个对象的方法时，如果这个方法不存，则转发这个方法给委托的对象 Delegation is particularly useful with Active Record associations:   123456789101112131415161718class Greeter &lt; ActiveRecord::Base  def hello    &amp;#x27;he">
+<meta property="og:description" content="基本思想是:   当访问一个对象的方法时，如果这个方法不存，则转发这个方法给委托的对象 Delegation is particularly useful with Active Record associations:   class Greeter &lt; ActiveRecord::Base   def hello     &#39;hello&#39;   end    def goodbye">
 <meta property="og:locale">
 <meta property="article:published_time" content="2015-04-24T23:54:33.000Z">
-<meta property="article:modified_time" content="2021-07-15T11:54:23.149Z">
+<meta property="article:modified_time" content="2021-07-15T12:08:10.384Z">
 <meta property="article:author" content="戛戛Happy">
 <meta property="article:tag" content="后端, 操作系统, 互联网, 程序开发, Linux, 数据库, MySql, Golang, Ruby">
 <meta name="twitter:card" content="summary">
@@ -258,7 +258,24 @@
 <li>Delegation is particularly useful with Active Record associations:</li>
 </ul>
 </blockquote>
-<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Greeter</span> &lt; ActiveRecord::Base</span></span><br><span class="line">  <span class="function"><span class="keyword">def</span> <span class="title">hello</span></span></span><br><span class="line">    <span class="string">&#x27;hello&#x27;</span></span><br><span class="line">  <span class="keyword">end</span></span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">def</span> <span class="title">goodbye</span></span></span><br><span class="line">    <span class="string">&#x27;goodbye&#x27;</span></span><br><span class="line">  <span class="keyword">end</span></span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Foo</span> &lt; ActiveRecord::Base</span></span><br><span class="line">  belongs_to <span class="symbol">:greeter</span></span><br><span class="line">  delegate <span class="symbol">:hello</span>, <span class="symbol">to:</span> <span class="symbol">:greeter</span></span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"></span><br><span class="line">Foo.new.hello   <span class="comment"># =&gt; &quot;hello&quot;</span></span><br><span class="line">Foo.new.goodbye <span class="comment"># =&gt; NoMethodError: undefined method `goodbye&#x27; for #&lt;Foo:0x1af30c&gt;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-ruby" data-language="ruby"><code class="language-ruby"><span class="token keyword">class</span> <span class="token class-name">Greeter</span> <span class="token operator">&lt;</span> <span class="token constant">ActiveRecord</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token constant">Base</span>
+  <span class="token keyword">def</span> <span class="token method-definition"><span class="token function">hello</span></span>
+    <span class="token string">'hello'</span>
+  <span class="token keyword">end</span>
+
+  <span class="token keyword">def</span> <span class="token method-definition"><span class="token function">goodbye</span></span>
+    <span class="token string">'goodbye'</span>
+  <span class="token keyword">end</span>
+<span class="token keyword">end</span>
+
+<span class="token keyword">class</span> <span class="token class-name">Foo</span> <span class="token operator">&lt;</span> <span class="token constant">ActiveRecord</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token constant">Base</span>
+  belongs_to <span class="token symbol">:greeter</span>
+  delegate <span class="token symbol">:hello</span><span class="token punctuation">,</span> to<span class="token punctuation">:</span> <span class="token symbol">:greeter</span>
+<span class="token keyword">end</span>
+
+<span class="token constant">Foo</span><span class="token punctuation">.</span><span class="token keyword">new</span><span class="token punctuation">.</span>hello   <span class="token comment"># => "hello"</span>
+<span class="token constant">Foo</span><span class="token punctuation">.</span><span class="token keyword">new</span><span class="token punctuation">.</span>goodbye <span class="token comment"># => NoMethodError: undefined method `goodbye' for #&lt;Foo:0x1af30c></span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
     </div>
 

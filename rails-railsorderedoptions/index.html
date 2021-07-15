@@ -19,15 +19,15 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/all.min.css" integrity="sha256-2H3fkXt6FEmrReK448mDVGKb3WW2ZZw35gI7vqHOE4Y=" crossorigin="anonymous">
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"blog.gagahappy.cn","root":"/","images":"/images","scheme":"Gemini","version":"8.6.1","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
-<meta name="description" content="1234567891011121314151617181920212223242526272829303132class Rails::OrderedOptions &lt; Array #:nodoc:  def []&#x3D;(key, value)    key &#x3D; key.to_sym    if pair &#x3D; find_pair(key)      pair.pop      pair &lt;">
+<meta name="description" content="class Rails::OrderedOptions &lt; Array #:nodoc:   def []&#x3D;(key, value)     key &#x3D; key.to_sym      if pair &#x3D; find_pair(key)       pair.pop       pair &lt;&lt; value     else       self &lt;&lt; [key, val">
 <meta property="og:type" content="article">
 <meta property="og:title" content="rails Rails::OrderedOptions">
 <meta property="og:url" content="https://blog.gagahappy.cn/rails-railsorderedoptions/">
 <meta property="og:site_name" content="睡月花儿">
-<meta property="og:description" content="1234567891011121314151617181920212223242526272829303132class Rails::OrderedOptions &lt; Array #:nodoc:  def []&#x3D;(key, value)    key &#x3D; key.to_sym    if pair &#x3D; find_pair(key)      pair.pop      pair &lt;">
+<meta property="og:description" content="class Rails::OrderedOptions &lt; Array #:nodoc:   def []&#x3D;(key, value)     key &#x3D; key.to_sym      if pair &#x3D; find_pair(key)       pair.pop       pair &lt;&lt; value     else       self &lt;&lt; [key, val">
 <meta property="og:locale">
 <meta property="article:published_time" content="2012-02-07T18:19:21.000Z">
-<meta property="article:modified_time" content="2021-07-15T11:54:23.145Z">
+<meta property="article:modified_time" content="2021-07-15T12:08:10.384Z">
 <meta property="article:author" content="戛戛Happy">
 <meta property="article:tag" content="Ruby">
 <meta name="twitter:card" content="summary">
@@ -260,7 +260,38 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Rails::OrderedOptions</span> &lt; Array <span class="comment">#:nodoc:</span></span></span><br><span class="line">  <span class="function"><span class="keyword">def</span> <span class="title">[]=</span><span class="params">(key, value)</span></span></span><br><span class="line">    key = key.to_sym</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> pair = find_pair(key)</span><br><span class="line">      pair.pop</span><br><span class="line">      pair &lt;&lt; value</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">      <span class="keyword">self</span> &lt;&lt; [key, value]</span><br><span class="line">    <span class="keyword">end</span></span><br><span class="line">  <span class="keyword">end</span></span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">def</span> <span class="title">[]</span><span class="params">(key)</span></span></span><br><span class="line">    pair = find_pair(key.to_sym)</span><br><span class="line">    pair ? pair.last : <span class="literal">nil</span></span><br><span class="line">  <span class="keyword">end</span></span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">def</span> <span class="title">method_missing</span><span class="params">(name, *args)</span></span></span><br><span class="line">    <span class="keyword">if</span> name.to_s =~ <span class="regexp">/(.*)=$/</span></span><br><span class="line">      <span class="keyword">self</span>[<span class="variable">$1</span>.to_sym] = args.first</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">      <span class="keyword">self</span>[name]</span><br><span class="line">    <span class="keyword">end</span></span><br><span class="line">  <span class="keyword">end</span></span><br><span class="line"></span><br><span class="line">  private</span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">find_pair</span><span class="params">(key)</span></span></span><br><span class="line">      <span class="keyword">self</span>.each &#123; <span class="params">|i|</span> <span class="keyword">return</span> i <span class="keyword">if</span> i.first == key &#125;</span><br><span class="line">      <span class="keyword">return</span> <span class="literal">false</span></span><br><span class="line">    <span class="keyword">end</span></span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+        <pre class="line-numbers language-ruby" data-language="ruby"><code class="language-ruby"><span class="token keyword">class</span> <span class="token class-name">Rails</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token constant">OrderedOptions</span> <span class="token operator">&lt;</span> <span class="token builtin">Array</span> <span class="token comment">#:nodoc:</span>
+  <span class="token keyword">def</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token operator">=</span><span class="token punctuation">(</span>key<span class="token punctuation">,</span> value<span class="token punctuation">)</span>
+    key <span class="token operator">=</span> key<span class="token punctuation">.</span>to_sym
+
+    <span class="token keyword">if</span> pair <span class="token operator">=</span> find_pair<span class="token punctuation">(</span>key<span class="token punctuation">)</span>
+      pair<span class="token punctuation">.</span>pop
+      pair <span class="token operator">&lt;</span><span class="token operator">&lt;</span> value
+    <span class="token keyword">else</span>
+      <span class="token keyword">self</span> <span class="token operator">&lt;</span><span class="token operator">&lt;</span> <span class="token punctuation">[</span>key<span class="token punctuation">,</span> value<span class="token punctuation">]</span>
+    <span class="token keyword">end</span>
+  <span class="token keyword">end</span>
+
+  <span class="token keyword">def</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">(</span>key<span class="token punctuation">)</span>
+    pair <span class="token operator">=</span> find_pair<span class="token punctuation">(</span>key<span class="token punctuation">.</span>to_sym<span class="token punctuation">)</span>
+    pair <span class="token operator">?</span> pair<span class="token punctuation">.</span>last <span class="token punctuation">:</span> <span class="token keyword">nil</span>
+  <span class="token keyword">end</span>
+
+  <span class="token keyword">def</span> <span class="token method-definition"><span class="token function">method_missing</span></span><span class="token punctuation">(</span>name<span class="token punctuation">,</span> <span class="token operator">*</span>args<span class="token punctuation">)</span>
+    <span class="token keyword">if</span> name<span class="token punctuation">.</span>to_s <span class="token operator">=</span><span class="token operator">~</span> <span class="token regex">/(.*)=$/</span>
+      <span class="token keyword">self</span><span class="token punctuation">[</span>$<span class="token number">1.</span>to_sym<span class="token punctuation">]</span> <span class="token operator">=</span> args<span class="token punctuation">.</span>first
+    <span class="token keyword">else</span>
+      <span class="token keyword">self</span><span class="token punctuation">[</span>name<span class="token punctuation">]</span>
+    <span class="token keyword">end</span>
+  <span class="token keyword">end</span>
+
+  <span class="token keyword">private</span>
+    <span class="token keyword">def</span> <span class="token method-definition"><span class="token function">find_pair</span></span><span class="token punctuation">(</span>key<span class="token punctuation">)</span>
+      <span class="token keyword">self</span><span class="token punctuation">.</span><span class="token keyword">each</span> <span class="token punctuation">&#123;</span> <span class="token operator">|</span>i<span class="token operator">|</span> <span class="token keyword">return</span> i <span class="token keyword">if</span> i<span class="token punctuation">.</span>first <span class="token operator">==</span> key <span class="token punctuation">&#125;</span>
+      <span class="token keyword">return</span> <span class="token boolean">false</span>
+    <span class="token keyword">end</span>
+<span class="token keyword">end</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
     </div>
 

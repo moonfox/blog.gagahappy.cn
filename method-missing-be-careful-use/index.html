@@ -19,15 +19,15 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/all.min.css" integrity="sha256-2H3fkXt6FEmrReK448mDVGKb3WW2ZZw35gI7vqHOE4Y=" crossorigin="anonymous">
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"blog.gagahappy.cn","root":"/","images":"/images","scheme":"Gemini","version":"8.6.1","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
-<meta name="description" content="method_missing 方法使用注意事项，其实最要应该注意的就是不能在method_missing 方法中出现找不到的方法，否则程序将掉入无限循环中 1234567def method_missing(method, *args)  not_exist_method #一个不存在的方法end# 当程序进入method_missing方法后，发现找不到not_exist_method方法，则又">
+<meta name="description" content="method_missing 方法使用注意事项，其实最要应该注意的就是不能在method_missing 方法中出现找不到的方法，否则程序将掉入无限循环中 def method_missing(method, *args)   not_exist_method #一个不存在的方法 end  # 当程序进入method_missing方法后，发现找不到not_exist_method方法，则又会掉入">
 <meta property="og:type" content="article">
 <meta property="og:title" content="method_missing 方法使用注意事项">
 <meta property="og:url" content="https://blog.gagahappy.cn/method-missing-be-careful-use/">
 <meta property="og:site_name" content="睡月花儿">
-<meta property="og:description" content="method_missing 方法使用注意事项，其实最要应该注意的就是不能在method_missing 方法中出现找不到的方法，否则程序将掉入无限循环中 1234567def method_missing(method, *args)  not_exist_method #一个不存在的方法end# 当程序进入method_missing方法后，发现找不到not_exist_method方法，则又">
+<meta property="og:description" content="method_missing 方法使用注意事项，其实最要应该注意的就是不能在method_missing 方法中出现找不到的方法，否则程序将掉入无限循环中 def method_missing(method, *args)   not_exist_method #一个不存在的方法 end  # 当程序进入method_missing方法后，发现找不到not_exist_method方法，则又会掉入">
 <meta property="og:locale">
 <meta property="article:published_time" content="2015-05-14T23:18:31.000Z">
-<meta property="article:modified_time" content="2021-07-15T11:54:23.149Z">
+<meta property="article:modified_time" content="2021-07-15T12:08:10.388Z">
 <meta property="article:author" content="戛戛Happy">
 <meta property="article:tag" content="Ruby">
 <meta name="twitter:card" content="summary">
@@ -261,7 +261,13 @@
     
     <div class="post-body" itemprop="articleBody">
         <p>method_missing 方法使用注意事项，其实最要应该注意的就是不能在method_missing 方法中出现找不到的方法，否则程序将掉入无限循环中</p>
-<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">method_missing</span><span class="params">(method, *args)</span></span></span><br><span class="line">  not_exist_method <span class="comment">#一个不存在的方法</span></span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 当程序进入method_missing方法后，发现找不到not_exist_method方法，则又会掉入method_missing,然后又会发现找不到not_exist_method，然后又掉入method_missing,然后loop...</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 这种陷阱一般很难发现，所以在method_missing中编写代码时，一定要小心</span></span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-ruby" data-language="ruby"><code class="language-ruby"><span class="token keyword">def</span> <span class="token method-definition"><span class="token function">method_missing</span></span><span class="token punctuation">(</span>method<span class="token punctuation">,</span> <span class="token operator">*</span>args<span class="token punctuation">)</span>
+  not_exist_method <span class="token comment">#一个不存在的方法</span>
+<span class="token keyword">end</span>
+
+<span class="token comment"># 当程序进入method_missing方法后，发现找不到not_exist_method方法，则又会掉入method_missing,然后又会发现找不到not_exist_method，然后又掉入method_missing,然后loop...</span>
+
+<span class="token comment"># 这种陷阱一般很难发现，所以在method_missing中编写代码时，一定要小心</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
     </div>
 

@@ -422,9 +422,9 @@
     
     <div class="post-body" itemprop="articleBody">
           <p>发现mysql对于处理这样相同的查询，居然有两种截然不同的结果</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SELECT *,slug FROM wp_terms;</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">SELECT *,slug FROM wp_terms;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>执行正确</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SELECT slug,* FROM wp_terms;</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">SELECT slug,* FROM wp_terms;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>执行错误：You have an error in your SQL syntax</p>
 <p>费解啊~~~，在MSSQL中不会出现此现象</p>
 
