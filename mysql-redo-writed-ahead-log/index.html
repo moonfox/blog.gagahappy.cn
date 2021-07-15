@@ -27,7 +27,7 @@
 <meta property="og:description" content="redo日志应首先持久化在磁盘上，然后事务的操作结果才写入db buffer，（此时，内存中的数据和data file对应的数据不同，我们认为内存中的数据是脏数据），db buffer再选择合适的时机将数据持久化到data file中。这种顺序可以保证在需要故障恢复时恢复最后的修改操作。先持久化日志的策略叫做Write Ahead Log，即预写日志,也叫日志先行。">
 <meta property="og:locale">
 <meta property="article:published_time" content="2015-03-22T17:33:11.000Z">
-<meta property="article:modified_time" content="2021-07-15T14:54:16.742Z">
+<meta property="article:modified_time" content="2021-07-15T15:02:02.759Z">
 <meta property="article:author" content="戛戛Happy">
 <meta property="article:tag" content="mysql">
 <meta property="article:tag" content="innodb">
