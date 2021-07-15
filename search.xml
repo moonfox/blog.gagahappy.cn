@@ -1400,18 +1400,6 @@ Ubuntu Dapper <span class="token punctuation">(</span><span class="token number"
       </tags>
   </entry>
   <entry>
-    <title>Virtual box 让主机与虚拟机通信</title>
-    <url>/virtual-box-connetc-host/</url>
-    <content><![CDATA[<p>Virtual box 原理：用软件模拟硬件设备，和共享硬件设备 一般而言，安装完VirtualBox设定网路时选择默认的NAT模式，Guest就可顺利联网了，而在主机产生一个地址为192.168.56.1的host-only vbox的网  卡，但是这时候虚拟机是不能与主机通信的。 通过把在网络连接1的NAT模式改为host-only 模式，就可以与主机通信了，但又出现问题，虚拟机不能上网。 这时候，可以在虚拟机里面增加一张网卡，网络连接2.改为NAT，然后让这张网卡自动获取一下IP，一般为10.0.2.2网段，重启，就可以上网了。</p>
-]]></content>
-      <categories>
-        <category>日志</category>
-      </categories>
-      <tags>
-        <tag>virtualbox</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Virtual Box 虚拟机共享主机文件</title>
     <url>/virtual-box-share-file/</url>
     <content><![CDATA[<p>先要安装“增强功能”</p>
@@ -1424,6 +1412,18 @@ Ubuntu Dapper <span class="token punctuation">(</span><span class="token number"
 ]]></content>
       <categories>
         <category>软件</category>
+      </categories>
+      <tags>
+        <tag>virtualbox</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Virtual box 让主机与虚拟机通信</title>
+    <url>/virtual-box-connetc-host/</url>
+    <content><![CDATA[<p>Virtual box 原理：用软件模拟硬件设备，和共享硬件设备 一般而言，安装完VirtualBox设定网路时选择默认的NAT模式，Guest就可顺利联网了，而在主机产生一个地址为192.168.56.1的host-only vbox的网  卡，但是这时候虚拟机是不能与主机通信的。 通过把在网络连接1的NAT模式改为host-only 模式，就可以与主机通信了，但又出现问题，虚拟机不能上网。 这时候，可以在虚拟机里面增加一张网卡，网络连接2.改为NAT，然后让这张网卡自动获取一下IP，一般为10.0.2.2网段，重启，就可以上网了。</p>
+]]></content>
+      <categories>
+        <category>日志</category>
       </categories>
       <tags>
         <tag>virtualbox</tag>
@@ -2594,19 +2594,6 @@ family:微软雅黑
       </tags>
   </entry>
   <entry>
-    <title>聚会前的准备</title>
-    <url>/prepare-party/</url>
-    <content><![CDATA[<p>明天就要宴请小团体了，希望能如期进行。现在还没有睡，正在复习明天要做的东西。刚才把蜜友们的相片全看了一遍，看完后竟想哭，天啊。我这是怎么了。难道人老了以后都爱激动是吗？</p>
-]]></content>
-      <categories>
-        <category>做菜</category>
-      </categories>
-      <tags>
-        <tag>微博</tag>
-        <tag>美食</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>秦怡 第27届金鸡奖 感动太多</title>
     <url>/qinyi/</url>
     <content><![CDATA[<p>刚才看电影频道的金鸡颁奖晚会，当电影老前辈秦怡缓缓的走上台时，全场居然全体起立，表达对老一代电影人深深的敬意之情，场面真是感人啊，在她老人家发表获奖感言时，场下有不少女演员热泪盈框的，真是感动。</p>
@@ -2639,6 +2626,19 @@ family:微软雅黑
       </categories>
       <tags>
         <tag>人物</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>聚会前的准备</title>
+    <url>/prepare-party/</url>
+    <content><![CDATA[<p>明天就要宴请小团体了，希望能如期进行。现在还没有睡，正在复习明天要做的东西。刚才把蜜友们的相片全看了一遍，看完后竟想哭，天啊。我这是怎么了。难道人老了以后都爱激动是吗？</p>
+]]></content>
+      <categories>
+        <category>做菜</category>
+      </categories>
+      <tags>
+        <tag>微博</tag>
+        <tag>美食</tag>
       </tags>
   </entry>
   <entry>
@@ -2768,19 +2768,6 @@ Device Boot      Start         End      Blocks   Id  System
       </tags>
   </entry>
   <entry>
-    <title>什么是生粉</title>
-    <url>/what-shengfe/</url>
-    <content><![CDATA[<p>今儿看天下饮食里的大师徒说：“生粉说的就是地瓜粉”，天啊~我一直把生粉当成生姜粉。</p>
-<p>到网上搜索了一下，生粉在中餐里就是指淀粉 ，炒菜时用于勾芡、上浆等， 有多种多样，比如红薯淀粉，川菜中使用的水豆粉，以及玉米淀粉等。</p>
-]]></content>
-      <categories>
-        <category>做菜</category>
-      </categories>
-      <tags>
-        <tag>美食</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>windows 2003 授权方式</title>
     <url>/windows-2003-cal/</url>
     <content><![CDATA[<p>windows 2003 授权方式有两种授权模式:</p>
@@ -2792,6 +2779,19 @@ Device Boot      Start         End      Blocks   Id  System
       <categories>
         <category>软件</category>
       </categories>
+  </entry>
+  <entry>
+    <title>什么是生粉</title>
+    <url>/what-shengfe/</url>
+    <content><![CDATA[<p>今儿看天下饮食里的大师徒说：“生粉说的就是地瓜粉”，天啊~我一直把生粉当成生姜粉。</p>
+<p>到网上搜索了一下，生粉在中餐里就是指淀粉 ，炒菜时用于勾芡、上浆等， 有多种多样，比如红薯淀粉，川菜中使用的水豆粉，以及玉米淀粉等。</p>
+]]></content>
+      <categories>
+        <category>做菜</category>
+      </categories>
+      <tags>
+        <tag>美食</tag>
+      </tags>
   </entry>
   <entry>
     <title>www域名终于被google收录</title>
@@ -9216,19 +9216,6 @@ nginx http scgi temporary files: <span class="token string">"scgi_temp"</span><s
       </tags>
   </entry>
   <entry>
-    <title>计划使用鲜果订阅</title>
-    <url>/planing-use-xianguo-for-rss/</url>
-    <content><![CDATA[<p>迫于google reader 不稳的无奈，打算使用鲜果订阅</p>
-<p><a href="//img.gagahappy.cn/blog/2011/03/20008113244848.gif"><img src="//img.gagahappy.cn/blog/2011/03/20008113244848.gif" title="RSS"></a></p>
-]]></content>
-      <categories>
-        <category>日志</category>
-      </categories>
-      <tags>
-        <tag>google</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>rewrite module requires the PCRE library</title>
     <url>/rewrite-module-requires-the-pcre-library/</url>
     <content><![CDATA[<p>在编译nginx时遇到rewrite module requires the PCRE library错误，提示需要PCRE库，解决方法：</p>
@@ -9724,6 +9711,19 @@ gem <span class="token function">install</span> mysql --no-rdoc --no-ri <span cl
       <tags>
         <tag>Rails</tag>
         <tag>Ruby</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>计划使用鲜果订阅</title>
+    <url>/planing-use-xianguo-for-rss/</url>
+    <content><![CDATA[<p>迫于google reader 不稳的无奈，打算使用鲜果订阅</p>
+<p><a href="//img.gagahappy.cn/blog/2011/03/20008113244848.gif"><img src="//img.gagahappy.cn/blog/2011/03/20008113244848.gif" title="RSS"></a></p>
+]]></content>
+      <categories>
+        <category>日志</category>
+      </categories>
+      <tags>
+        <tag>google</tag>
       </tags>
   </entry>
   <entry>
