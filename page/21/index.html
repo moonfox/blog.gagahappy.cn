@@ -211,7 +211,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/instance-variate-in-toplevel/">
+    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/cherish-our-love-forever/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/apple-touch-icon.png">
@@ -224,7 +224,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/instance-variate-in-toplevel/" class="post-title-link" itemprop="url">测试顶级上下文中定义的实例变量的作用域</a>
+          <a href="/cherish-our-love-forever/" class="post-title-link" itemprop="url">将爱情进行到底</a>
         </h2>
 
         <div class="post-meta-container">
@@ -235,7 +235,7 @@
       </span>
       <span class="post-meta-item-text">Posted on</span>
 
-      <time title="Created: 2015-04-03 21:02:35" itemprop="dateCreated datePublished" datetime="2015-04-03T21:02:35+00:00">2015-04-03</time>
+      <time title="Created: 2011-02-22 19:25:12" itemprop="dateCreated datePublished" datetime="2011-02-22T19:25:12+00:00">2011-02-22</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -243,7 +243,7 @@
       </span>
       <span class="post-meta-item-text">In</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/tags/ruby/" itemprop="url" rel="index"><span itemprop="name">Ruby</span></a>
+          <a href="/tags/movie/" itemprop="url" rel="index"><span itemprop="name">电影</span></a>
         </span>
     </span>
 
@@ -257,34 +257,8 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <pre class="line-numbers language-ruby" data-language="ruby"><code class="language-ruby"><span class="token comment"># =============================</span>
-<span class="token comment"># 目标1:</span>
-<span class="token comment"># 1、测试顶级上下文中定义的实例变量的作用域</span>
-<span class="token comment"># =============================</span>
-<span class="token comment"># 结论</span>
-<span class="token comment"># 1、顶级上下文中定义的实例变量只能被main对象访问，因为实例变量暴露在toplevel的context中，self为main</span>
-<span class="token comment">#    相当于运行main.instance_eval&#123;@toplevel_variate="toplevel variate"&#125;</span>
-<span class="token comment"># 2、私有方法不属于instance_methods的集合，它属于private_instance_methods</span>
-<span class="token comment"># =============================</span>
-
-<span class="token variable">@toplevel_variate</span> <span class="token operator">=</span> <span class="token string">"toplevel variate"</span>
-
-<span class="token keyword">def</span> <span class="token method-definition"><span class="token function">my_method</span></span>
-  <span class="token string">"@toplevel_variate in my_method which define in toplevel:<span class="token interpolation"><span class="token delimiter tag">#&#123;</span><span class="token variable">@toplevel_variate</span><span class="token delimiter tag">&#125;</span></span>"</span>
-<span class="token keyword">end</span>
-
-<span class="token builtin">Object</span><span class="token punctuation">.</span>class_eval <span class="token keyword">do</span> <span class="token operator">|</span>variable<span class="token operator">|</span>
-  puts <span class="token string">"Object can acccess @toplevel_variate:<span class="token interpolation"><span class="token delimiter tag">#&#123;</span><span class="token variable">@var</span><span class="token delimiter tag">&#125;</span></span>"</span> <span class="token comment"># nil</span>
-<span class="token keyword">end</span>
-
-<span class="token keyword">self</span><span class="token punctuation">.</span>instance_eval <span class="token keyword">do</span>
-  puts <span class="token string">"@toplevel_variate in self object:<span class="token interpolation"><span class="token delimiter tag">#&#123;</span><span class="token variable">@toplevel_variate</span><span class="token delimiter tag">&#125;</span></span>"</span> <span class="token comment"># toplevel variate</span>
-<span class="token keyword">end</span>
-
-puts my_method
-puts <span class="token string">"Object.private_instance_methods:"</span> <span class="token operator">+</span> <span class="token builtin">Object</span><span class="token punctuation">.</span>private_instance_methods<span class="token punctuation">(</span><span class="token boolean">false</span><span class="token punctuation">)</span><span class="token punctuation">.</span>grep<span class="token punctuation">(</span><span class="token symbol">:my_method</span><span class="token punctuation">)</span><span class="token punctuation">.</span>to_s <span class="token comment"># :my_method</span>
-puts <span class="token string">"Object.instance_methods:"</span> <span class="token operator">+</span> <span class="token builtin">Object</span><span class="token punctuation">.</span>instance_methods<span class="token punctuation">(</span><span class="token boolean">false</span><span class="token punctuation">)</span><span class="token punctuation">.</span>grep<span class="token punctuation">(</span><span class="token symbol">:my_method</span><span class="token punctuation">)</span><span class="token punctuation">.</span>to_s <span class="token comment">#nil</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+          <p>看了将爱，感觉适合那些已经结了婚的人一起去看，应该会有非常大的感触。本博反正是没看有懂，太有深度了，感觉整个逻辑就和盗梦空间一样。男主角李亚鹏演的太屎了。老徐演得不错。哈哈。</p>
+<p><a target="_blank" rel="noopener" href="//img.gagahappy.cn/blog/2011/02/16386845_6361911.jpg"><img src="//img.gagahappy.cn/blog/2011/02/16386845_6361911.jpg" title="将爱情进行到底"></a></p>
 
       
     </div>
@@ -311,7 +285,7 @@ puts <span class="token string">"Object.instance_methods:"</span> <span class="t
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/extend-class-method-by-module/">
+    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/logitech-m50/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/apple-touch-icon.png">
@@ -324,7 +298,7 @@ puts <span class="token string">"Object.instance_methods:"</span> <span class="t
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/extend-class-method-by-module/" class="post-title-link" itemprop="url">使用include,让模块中定义的方法分别插入类方法与实例方法</a>
+          <a href="/logitech-m50/" class="post-title-link" itemprop="url">罗技logitech M505 黑色</a>
         </h2>
 
         <div class="post-meta-container">
@@ -335,7 +309,7 @@ puts <span class="token string">"Object.instance_methods:"</span> <span class="t
       </span>
       <span class="post-meta-item-text">Posted on</span>
 
-      <time title="Created: 2015-03-31 23:55:43" itemprop="dateCreated datePublished" datetime="2015-03-31T23:55:43+00:00">2015-03-31</time>
+      <time title="Created: 2011-02-21 20:55:17" itemprop="dateCreated datePublished" datetime="2011-02-21T20:55:17+00:00">2011-02-21</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -343,7 +317,7 @@ puts <span class="token string">"Object.instance_methods:"</span> <span class="t
       </span>
       <span class="post-meta-item-text">In</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/tags/ruby/" itemprop="url" rel="index"><span itemprop="name">Ruby</span></a>
+          <a href="/tags/shopping/" itemprop="url" rel="index"><span itemprop="name">购物</span></a>
         </span>
     </span>
 
@@ -357,77 +331,8 @@ puts <span class="token string">"Object.instance_methods:"</span> <span class="t
     
     
     <div class="post-body" itemprop="articleBody">
-          <pre class="line-numbers language-ruby" data-language="ruby"><code class="language-ruby">
-<span class="token comment"># =============================</span>
-<span class="token comment"># 目标1:</span>
-<span class="token comment"># 1、类扩展:使用include,让模块中定义的方法分别插入类方法与实例方法中</span>
-<span class="token comment"># 2、obj实例对象调用extend,则模块中定义的方法为？</span>
-<span class="token comment"># 3、在模块中定义的实例变量能否被包含它的类的实例对象看到</span>
-<span class="token comment"># =============================</span>
-<span class="token comment"># 结论</span>
-<span class="token comment"># 1、通过重定义横块中的self.included方法，并对参数(receiver),使用关键字extend/include,分别向包含它的类中插入了</span>
-<span class="token comment">#    类方法(定义在ClassMethods模块中的方法)和实例方法(定义在InstanceMethod模块中)</span>
-<span class="token comment"># 2、obj实例对象调用extend,则模块中定义的方法为这个obj的单例方法，可以通过把方法定义在module中，让实例对象调用extend</span>
-<span class="token comment">#    来方便快速的增加自身的单例方法</span>
-<span class="token comment"># 3、可以。在模块中定义的实例变量可以被包含它的类的实例对象看到,因为被include的模块相当于当前类的父类，当前对象的</span>
-<span class="token comment">#    实例变量对其所有实例方法可见</span>
-<span class="token comment"># 4、extend方法的实质就是把module中定义的方法插入到对象的单件类中</span>
-<span class="token comment"># 5、调用MyClass.instance_methods(false)可以发现，在它的实例方法中并不包含实例方法instance_method，而MyClass</span>
-<span class="token comment">#    的实例对象可以调用这个方法，这正说明了类中include的模块(被代理类封装)充当这个类的父类。也验证了结论4</span>
-<span class="token comment"># =============================</span>
-lambda <span class="token punctuation">&#123;</span>
-  <span class="token keyword">module</span> <span class="token constant">M</span>
-    <span class="token keyword">module</span> <span class="token constant">ClassMethods</span>
-      <span class="token keyword">def</span> <span class="token method-definition"><span class="token function">class_method</span></span>
-        <span class="token string">"i am a class method"</span>
-      <span class="token keyword">end</span>
-    <span class="token keyword">end</span>
-
-    <span class="token keyword">module</span> <span class="token constant">InstanceMethods</span>
-      <span class="token keyword">def</span> <span class="token method-definition"><span class="token function">instance_method</span></span><span class="token punctuation">(</span>from<span class="token punctuation">)</span>
-        <span class="token variable">@instance_variate</span> <span class="token operator">=</span> <span class="token string">"i am a instance variate in M"</span>
-        <span class="token string">"i am a instance method from:<span class="token interpolation"><span class="token delimiter tag">#&#123;</span>from<span class="token delimiter tag">&#125;</span></span>"</span>
-      <span class="token keyword">end</span>
-    <span class="token keyword">end</span>
-
-    <span class="token keyword">def</span> <span class="token method-definition"><span class="token keyword">self</span><span class="token punctuation">.</span><span class="token function">included</span></span><span class="token punctuation">(</span>receiver<span class="token punctuation">)</span>
-      receiver<span class="token punctuation">.</span><span class="token keyword">extend</span>         <span class="token constant">ClassMethods</span>
-      receiver<span class="token punctuation">.</span>send <span class="token symbol">:include</span><span class="token punctuation">,</span> <span class="token constant">InstanceMethods</span>
-    <span class="token keyword">end</span>
-  <span class="token keyword">end</span>
-
-  <span class="token comment">#&lt;!-- more --></span>
-  <span class="token keyword">class</span> <span class="token class-name">MyClass</span>
-    <span class="token keyword">include</span> <span class="token constant">M</span>
-
-    <span class="token keyword">def</span> <span class="token method-definition"><span class="token function">get_instance_variate_from_module</span></span><span class="token punctuation">(</span>from<span class="token punctuation">)</span>
-      <span class="token string">"<span class="token interpolation"><span class="token delimiter tag">#&#123;</span><span class="token variable">@instance_variate</span><span class="token delimiter tag">&#125;</span></span> from: <span class="token interpolation"><span class="token delimiter tag">#&#123;</span>from<span class="token delimiter tag">&#125;</span></span>"</span>
-    <span class="token keyword">end</span>
-  <span class="token keyword">end</span>
-
-  obj <span class="token operator">=</span> <span class="token builtin">Object</span><span class="token punctuation">.</span><span class="token keyword">new</span>
-  obj<span class="token punctuation">.</span><span class="token keyword">extend</span> <span class="token constant">M</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token constant">InstanceMethods</span>
-  my <span class="token operator">=</span> <span class="token constant">MyClass</span><span class="token punctuation">.</span><span class="token keyword">new</span>
-
-  puts <span class="token string">"================test1 OUTPUT================"</span>
-  puts <span class="token constant">MyClass</span><span class="token punctuation">.</span>class_method
-  puts my<span class="token punctuation">.</span>instance_method<span class="token punctuation">(</span><span class="token string">"MyClass.new obj"</span><span class="token punctuation">)</span>
-  puts my<span class="token punctuation">.</span>get_instance_variate_from_module<span class="token punctuation">(</span><span class="token string">"MyClass.new"</span><span class="token punctuation">)</span>
-  puts obj<span class="token punctuation">.</span>instance_method<span class="token punctuation">(</span><span class="token string">"Object.new"</span><span class="token punctuation">)</span>
-  puts obj<span class="token punctuation">.</span>instance_eval<span class="token punctuation">(</span><span class="token string">"@instance_variate"</span><span class="token punctuation">)</span>
-  puts <span class="token string">"MyClass.instance_methods:"</span><span class="token operator">+</span><span class="token constant">MyClass</span><span class="token punctuation">.</span>instance_methods<span class="token punctuation">(</span><span class="token boolean">false</span><span class="token punctuation">)</span><span class="token punctuation">.</span>to_s
-  puts <span class="token string">"================test1 OUTPUT================"</span>
-
-  <span class="token comment"># ================test1 OUTPUT================</span>
-  <span class="token comment"># i am a class method</span>
-  <span class="token comment"># i am a instance method from:MyClass.new obj</span>
-  <span class="token comment"># i am a instance variate in M from: MyClass.new</span>
-  <span class="token comment"># i am a instance method from:Object.new</span>
-  <span class="token comment"># i am a instance variate in M</span>
-  <span class="token comment"># MyClass.instance_methods:[:get_instance_variate_from_module]</span>
-  <span class="token comment"># ================test1 OUTPUT================</span>
-
-<span class="token punctuation">&#125;</span><span class="token punctuation">.</span>call<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+          <p>发现京东上有的商品的价格比卓越上的要贵些，如罗技logitech M505(黑色)，京东上的价格是159，而卓越上的价格是139，从卓越上下单，期待新鼠标快些送来~~~</p>
+<p><a target="_blank" rel="noopener" href="//img.gagahappy.cn/blog/2011/02/41JMyiuP9DL._AA280_.jpg"><img src="//img.gagahappy.cn/blog/2011/02/41JMyiuP9DL._AA280_.jpg" title="罗技logitech M505(黑色)"></a></p>
 
       
     </div>
@@ -454,7 +359,7 @@ lambda <span class="token punctuation">&#123;</span>
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/define-method-in-kernel-module/">
+    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/phone-costs-lower-to-11-rmb/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/apple-touch-icon.png">
@@ -467,7 +372,7 @@ lambda <span class="token punctuation">&#123;</span>
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/define-method-in-kernel-module/" class="post-title-link" itemprop="url">测试在kernel中定义的方法的作用对象</a>
+          <a href="/phone-costs-lower-to-11-rmb/" class="post-title-link" itemprop="url">迫于此处省略n个字</a>
         </h2>
 
         <div class="post-meta-container">
@@ -478,7 +383,7 @@ lambda <span class="token punctuation">&#123;</span>
       </span>
       <span class="post-meta-item-text">Posted on</span>
 
-      <time title="Created: 2015-03-30 22:46:08" itemprop="dateCreated datePublished" datetime="2015-03-30T22:46:08+00:00">2015-03-30</time>
+      <time title="Created: 2011-02-20 21:23:54" itemprop="dateCreated datePublished" datetime="2011-02-20T21:23:54+00:00">2011-02-20</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -486,7 +391,7 @@ lambda <span class="token punctuation">&#123;</span>
       </span>
       <span class="post-meta-item-text">In</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/tags/ruby/" itemprop="url" rel="index"><span itemprop="name">Ruby</span></a>
+          <a href="/tags/weibo/" itemprop="url" rel="index"><span itemprop="name">微博</span></a>
         </span>
     </span>
 
@@ -500,47 +405,8 @@ lambda <span class="token punctuation">&#123;</span>
     
     
     <div class="post-body" itemprop="articleBody">
-          <pre class="line-numbers language-ruby" data-language="ruby"><code class="language-ruby"><span class="token comment"># =============================</span>
-<span class="token comment"># 目标1:</span>
-<span class="token comment"># 1、Kernel模块内定义实例方法，哪些对象可以使用</span>
-<span class="token comment"># 2、Kernel的单件方法哪些对象可以使用</span>
-<span class="token comment"># =============================</span>
-<span class="token comment"># 结论</span>
-<span class="token comment"># 1、Kernel模块内定义实例方法,ruby的所有对象都可以使用，因为Kernel会被Mixin入Object,其实例方法(用def定义的),可以</span>
-<span class="token comment">#    被所有ruby对象使用(MyClass/"string")</span>
-<span class="token comment"># 2、Kernel的单件方法只能被其自己使用,其它类和方法都不能使用(MyClass/MyClass.new)</span>
-<span class="token comment"># =============================</span>
-lambda <span class="token punctuation">&#123;</span>
-  <span class="token keyword">module</span> <span class="token constant">Kernel</span>
-    <span class="token keyword">def</span> <span class="token method-definition"><span class="token keyword">self</span><span class="token punctuation">.</span><span class="token function">im_singleton_method</span></span>
-      <span class="token string">"i'm a singleton method of Kernel define in Kernel"</span>
-    <span class="token keyword">end</span>
-
-    <span class="token keyword">def</span> <span class="token method-definition"><span class="token function">im_instance_method</span></span><span class="token punctuation">(</span>from<span class="token operator">=</span><span class="token string">"Kernel"</span><span class="token punctuation">)</span>
-      <span class="token string">"i'm a instance method define in Kernel and call from <span class="token interpolation"><span class="token delimiter tag">#&#123;</span>from<span class="token delimiter tag">&#125;</span></span>"</span>
-    <span class="token keyword">end</span>
-  <span class="token keyword">end</span>
-
-  <span class="token keyword">class</span> <span class="token class-name">MyClass</span><span class="token punctuation">;</span> <span class="token keyword">end</span>
-  puts <span class="token constant">Kernel</span><span class="token punctuation">.</span>im_singleton_method
-  puts <span class="token string">"Kernel.singleton_methods:"</span> <span class="token operator">+</span> <span class="token constant">Kernel</span><span class="token punctuation">.</span>singleton_methods<span class="token punctuation">(</span><span class="token boolean">false</span><span class="token punctuation">)</span><span class="token punctuation">.</span>grep<span class="token punctuation">(</span><span class="token regex">/im_singleton_method/</span><span class="token punctuation">)</span><span class="token punctuation">.</span>to_s
-  puts <span class="token string">"Kernel.im_instance_method:"</span> <span class="token operator">+</span> <span class="token constant">Kernel</span><span class="token punctuation">.</span>instance_methods<span class="token punctuation">(</span><span class="token boolean">false</span><span class="token punctuation">)</span><span class="token punctuation">.</span>grep<span class="token punctuation">(</span><span class="token regex">/im_instance_method/</span><span class="token punctuation">)</span><span class="token punctuation">.</span>to_s
-  puts <span class="token constant">MyClass</span><span class="token punctuation">.</span><span class="token keyword">new</span><span class="token punctuation">.</span>im_instance_method<span class="token punctuation">(</span><span class="token string">"obj"</span><span class="token punctuation">)</span>
-  puts <span class="token constant">MyClass</span><span class="token punctuation">.</span>im_instance_method<span class="token punctuation">(</span><span class="token string">"MyClass"</span><span class="token punctuation">)</span>
-  puts <span class="token keyword">begin</span> <span class="token constant">MyClass</span><span class="token punctuation">.</span>im_singleton_method <span class="token keyword">rescue</span> <span class="token string">"undefined method `im_singleton_method' for MyClass:Class"</span> <span class="token keyword">end</span>
-  puts <span class="token keyword">begin</span> <span class="token constant">MyClass</span><span class="token punctuation">.</span><span class="token keyword">new</span><span class="token punctuation">.</span>im_singleton_method <span class="token keyword">rescue</span> <span class="token string">"undefined method `im_singleton_method' for #&lt;MyClass:0x007fbb22813640>"</span> <span class="token keyword">end</span>
-
-  <span class="token comment"># ================test1 OUTPUT================</span>
-  <span class="token comment"># i'm a singleton method of Kernel define in Kernel</span>
-  <span class="token comment"># Kernel.singleton_methods:[:im_singleton_method]</span>
-  <span class="token comment"># Kernel.im_instance_method:[:im_instance_method]</span>
-  <span class="token comment"># i'm a instance method define in Kernel and call from obj</span>
-  <span class="token comment"># i'm a instance method define in Kernel and call from MyClass</span>
-  <span class="token comment"># undefined method `im_singleton_method' for MyClass:Class</span>
-  <span class="token comment"># undefined method `im_singleton_method' for #&lt;MyClass:0x007fbb22813640></span>
-  <span class="token comment"># ================test1 OUTPUT================</span>
-<span class="token punctuation">&#125;</span><span class="token punctuation">.</span>call
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+          <p>迫于目前只有10086给我发短信，迫于目前没有什么电话，同时也为了达到省钱的目的，把手机上的所有业务全部取消，只开通11元的套餐计划。呃~~~</p>
+<p><a target="_blank" rel="noopener" href="//img.gagahappy.cn/blog/2011/02/31.jpg"><img src="//img.gagahappy.cn/blog/2011/02/31.jpg" title="动感套餐"></a></p>
 
       
     </div>
@@ -567,7 +433,7 @@ lambda <span class="token punctuation">&#123;</span>
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/sublime-text-load-rvm-ruby-version/">
+    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/deposit-reserve/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/apple-touch-icon.png">
@@ -580,7 +446,7 @@ lambda <span class="token punctuation">&#123;</span>
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/sublime-text-load-rvm-ruby-version/" class="post-title-link" itemprop="url">sublime text 加载 rvm 指定的ruby版本</a>
+          <a href="/deposit-reserve/" class="post-title-link" itemprop="url">什么是存款准备金</a>
         </h2>
 
         <div class="post-meta-container">
@@ -591,7 +457,7 @@ lambda <span class="token punctuation">&#123;</span>
       </span>
       <span class="post-meta-item-text">Posted on</span>
 
-      <time title="Created: 2015-03-28 21:32:08" itemprop="dateCreated datePublished" datetime="2015-03-28T21:32:08+00:00">2015-03-28</time>
+      <time title="Created: 2011-02-19 21:54:29" itemprop="dateCreated datePublished" datetime="2011-02-19T21:54:29+00:00">2011-02-19</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -599,525 +465,11 @@ lambda <span class="token punctuation">&#123;</span>
       </span>
       <span class="post-meta-item-text">In</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/tags/sublime/" itemprop="url" rel="index"><span itemprop="name">sublime</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>在sublime中用cmd+b运行代码时，其运行环境往往和你正在使用的rvm指定的ruby版本不一样，安装RVM switch for sublime插件可以较好的解决这个问题。</p>
-<p>在安装后，你可以选择</p>
-<ul>
-<li>RVM Auto Ruby:设置当前环境和你的RVM一致（最好在cmd下先用rvm指定ruby版本,再用cmd打开sublime）</li>
-<li>RVM Default Ruby</li>
-<li>RVM System Ruby</li>
-</ul>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/when-run-of-block-in-mehtod/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/apple-touch-icon.png">
-      <meta itemprop="name" content="戛戛Happy">
-      <meta itemprop="description" content="后端, 操作系统, 互联网, 程序开发, Linux, 数据库, MySql, Golang, Ruby">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="睡月花儿">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/when-run-of-block-in-mehtod/" class="post-title-link" itemprop="url">测试块中的代码什么时候被执行</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2015-03-27 21:52:04" itemprop="dateCreated datePublished" datetime="2015-03-27T21:52:04+00:00">2015-03-27</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="fa fa-tag"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/tags/ruby/" itemprop="url" rel="index"><span itemprop="name">Ruby</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <pre class="line-numbers language-ruby" data-language="ruby"><code class="language-ruby"><span class="token comment"># =============================</span>
-<span class="token comment"># 目标1:</span>
-<span class="token comment"># 1、测试块中的代码什么时候被执行</span>
-<span class="token comment"># =============================</span>
-<span class="token comment"># 结论</span>
-<span class="token comment"># 1、只有在块被真正调用的时候才会被执行:对块调用方法yield/call</span>
-<span class="token comment"># 说明: 一般方法中都会用yield去调用块，使得传入方法的块中的代码马上执行,这难免会让人产生代码只要被放在do..end或&#123;&#125;</span>
-<span class="token comment"># 就会被马上执行的错觉。</span>
-<span class="token comment"># 下面的代码只有当去掉注释时，块中的代码才会被执行</span>
-<span class="token comment"># 2、调用yield后，就一定要传入块，否则就产生错误，除非在加入了block_given?判断</span>
-<span class="token comment"># =============================</span>
-lambda <span class="token punctuation">&#123;</span>
-  <span class="token keyword">def</span> <span class="token method-definition"><span class="token function">my_method</span></span><span class="token punctuation">(</span><span class="token operator">&amp;</span>block<span class="token punctuation">)</span>
-    <span class="token comment"># yield</span>
-    <span class="token comment"># block.call</span>
-  <span class="token keyword">end</span>
-
-  my_method <span class="token keyword">do</span>
-    lastname <span class="token operator">=</span> <span class="token string">"Caroline"</span>
-    puts lastname <span class="token comment"># =>这里不会有输出，除非去掉方法中的注释</span>
-  <span class="token keyword">end</span>
-<span class="token punctuation">&#125;</span><span class="token punctuation">.</span>call
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/thoughtful-ruby-block-and-variable/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/apple-touch-icon.png">
-      <meta itemprop="name" content="戛戛Happy">
-      <meta itemprop="description" content="后端, 操作系统, 互联网, 程序开发, Linux, 数据库, MySql, Golang, Ruby">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="睡月花儿">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/thoughtful-ruby-block-and-variable/" class="post-title-link" itemprop="url">ruby 块与局部变量绑定的思考</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2015-03-26 20:56:48" itemprop="dateCreated datePublished" datetime="2015-03-26T20:56:48+00:00">2015-03-26</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="fa fa-tag"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/tags/ruby/" itemprop="url" rel="index"><span itemprop="name">Ruby</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>文章已经修改，之前的结论有误，现已经修改</p>
-<pre class="line-numbers language-ruby" data-language="ruby"><code class="language-ruby"><span class="token comment"># =============================</span>
-<span class="token comment"># 重要结论:</span>
-<span class="token comment"># 1、块绑定局部变量的时间:在块被定义的时开始绑定的,绑定局部变量只是名子绑定,块内绑定的同名局部变量的值还可以在块外被修改</span>
-<span class="token comment">#（在块绑定局部变量后，如果块外部的同名局部变量改变了其值，则块中绑定的同名变量的值会被改变）</span>
-<span class="token comment"># 以下测试的局部绑定都证明了绑定是从块被定义时开始的</span>
-<span class="token comment"># 2、注意那些在块中初始化的变量，是否这些变量也出现在块定义外部的前后，不同位置的同名局部变量会对块内的变量产生不同的影响</span>
-<span class="token comment"># =============================</span>
-
-<span class="token comment"># =============================</span>
-<span class="token comment"># 目标1:</span>
-<span class="token comment"># 测试方法中的局部变量firstname,lastname是否会影响到块中的被绑定的同名变量的值</span>
-<span class="token comment"># =============================</span>
-<span class="token comment"># 结论</span>
-<span class="token comment"># 1、块会绑定局部变量firstname,lastname,把它们以块的方式传到my_method方法</span>
-<span class="token comment"># 它们的值不会受到方法中同名变量的影响（闭包特性）</span>
-<span class="token comment"># =============================</span>
-lambda <span class="token punctuation">&#123;</span>
-  <span class="token keyword">def</span> <span class="token method-definition"><span class="token function">my_method</span></span>
-    firstname <span class="token operator">=</span> <span class="token string">"Maria"</span>
-    lastname <span class="token operator">=</span> <span class="token string">"Sharapova"</span>
-    <span class="token keyword">yield</span> <span class="token string">"Hi! I'm"</span>
-  <span class="token keyword">end</span>
-  firstname <span class="token operator">=</span> <span class="token string">"Max"</span>
-  lastname <span class="token operator">=</span> <span class="token string">"Black"</span>
-  myname <span class="token operator">=</span> lambda <span class="token punctuation">&#123;</span> <span class="token operator">|</span>say<span class="token operator">|</span> puts <span class="token string">"test1: <span class="token interpolation"><span class="token delimiter tag">#&#123;</span>say<span class="token delimiter tag">&#125;</span></span> <span class="token interpolation"><span class="token delimiter tag">#&#123;</span>firstname<span class="token delimiter tag">&#125;</span></span> <span class="token interpolation"><span class="token delimiter tag">#&#123;</span>lastname<span class="token delimiter tag">&#125;</span></span>"</span> <span class="token punctuation">&#125;</span>
-  my_method <span class="token operator">&amp;</span>myname <span class="token comment">#＝> Hi! I'm Max Black</span>
-<span class="token punctuation">&#125;</span><span class="token punctuation">.</span>call
-
-<span class="token comment"># &lt;!-- more --></span>
-
-<span class="token comment"># =============================</span>
-<span class="token comment"># 目标2:</span>
-<span class="token comment"># 1、测试块可以绑定局部变量的范围</span>
-<span class="token comment"># 2、在块后面出现的局部变量是否会覆盖其块内已经绑定的同名局部变量的值（块中已经绑定的局部变量的值是否会被改变）</span>
-<span class="token comment"># =============================</span>
-<span class="token comment"># 结论</span>
-<span class="token comment"># 1、块会绑定在它定义时出现在它前面的局部变量firstname,lastname.</span>
-<span class="token comment"># 2、块中last变量的值为lastname="wang"，因为块在定义时绑定了lastname,块中同名的lastname对上下文中的其它成员</span>
-<span class="token comment"># 是可见的，所以对局部变量赋值lastname="Wang"，也就改变了块内lastname的值。它覆盖了前面lastname="Black"的值。</span>
-<span class="token comment"># 3、局部变量lastname＝"Green"出现在块被调用以后，块调用在赋值语句之前执行，对lastname="Green"的赋值不会影响到</span>
-<span class="token comment"># 块内部的同名变量lastname,此时块内部的lastname＝"wang"</span>
-<span class="token comment"># =============================</span>
-lambda <span class="token punctuation">&#123;</span>
-  <span class="token keyword">def</span> <span class="token method-definition"><span class="token function">my_method</span></span>
-    firstname <span class="token operator">=</span> <span class="token string">"Maria"</span>
-    lastname <span class="token operator">=</span> <span class="token string">"Sharapova"</span>
-    <span class="token keyword">yield</span> <span class="token string">"Hi! I'm"</span>
-  <span class="token keyword">end</span>
-  firstname <span class="token operator">=</span> <span class="token string">"Max"</span>
-  lastname <span class="token operator">=</span> <span class="token string">"Black"</span>
-  myname <span class="token operator">=</span> lambda <span class="token punctuation">&#123;</span> <span class="token operator">|</span>say<span class="token operator">|</span> puts <span class="token string">"test2: <span class="token interpolation"><span class="token delimiter tag">#&#123;</span>say<span class="token delimiter tag">&#125;</span></span> <span class="token interpolation"><span class="token delimiter tag">#&#123;</span>firstname<span class="token delimiter tag">&#125;</span></span> <span class="token interpolation"><span class="token delimiter tag">#&#123;</span>lastname<span class="token delimiter tag">&#125;</span></span>"</span> <span class="token punctuation">&#125;</span>
-  lastname <span class="token operator">=</span> <span class="token string">"Wang"</span>
-  my_method <span class="token operator">&amp;</span>myname <span class="token comment">#＝> Hi! I'm Max Wang</span>
-  lastname <span class="token operator">=</span> <span class="token string">"Green"</span>
-<span class="token punctuation">&#125;</span><span class="token punctuation">.</span>call
-
-<span class="token comment"># =============================</span>
-<span class="token comment"># 目标3:</span>
-<span class="token comment"># 测试在块中定义的已经初始化的变量的值是否受外部的同名局部变量值的影响:(局部变量的定义在块定义的前面)</span>
-<span class="token comment"># =============================</span>
-<span class="token comment"># 结论</span>
-<span class="token comment"># 1、局部变量不能影响块中同名变量的值</span>
-<span class="token comment"># 2、局部变量的值会随块中同名变量的值在执行过程中的改变而改变,day_changed的值为被改变的值:Mon</span>
-<span class="token comment"># 3、发生1、2情况的原因是，在块被执行时，它会先看到块内的say="Mon"，而不再去看被绑定的局部变量say的值("Sun")</span>
-<span class="token comment"># 因为局部变量day已经被绑定到块，块中的day对其上下文可见，在块执行后，块中同名变量day的值会改变局部</span>
-<span class="token comment"># 变量day的值，此时局部变量day的值为"Mon"</span>
-<span class="token comment"># =============================</span>
-lambda <span class="token punctuation">&#123;</span>
-  <span class="token keyword">def</span> <span class="token method-definition"><span class="token function">my_method</span></span>
-    firstname <span class="token operator">=</span> <span class="token string">"Maria"</span>
-    lastname <span class="token operator">=</span> <span class="token string">"Sharapova"</span>
-    <span class="token keyword">yield</span> <span class="token string">"Hi! I'm"</span>
-  <span class="token keyword">end</span>
-  firstname <span class="token operator">=</span> <span class="token string">"Max"</span>
-  lastname <span class="token operator">=</span> <span class="token string">"Black"</span>
-  day <span class="token operator">=</span> <span class="token string">"Sun"</span>
-  myname <span class="token operator">=</span> lambda <span class="token punctuation">&#123;</span> <span class="token operator">|</span>say<span class="token operator">|</span> day <span class="token operator">=</span> <span class="token string">"Mon"</span><span class="token punctuation">;</span> puts <span class="token string">"test3: <span class="token interpolation"><span class="token delimiter tag">#&#123;</span>say<span class="token delimiter tag">&#125;</span></span> <span class="token interpolation"><span class="token delimiter tag">#&#123;</span>firstname<span class="token delimiter tag">&#125;</span></span> <span class="token interpolation"><span class="token delimiter tag">#&#123;</span>lastname<span class="token delimiter tag">&#125;</span></span> at <span class="token interpolation"><span class="token delimiter tag">#&#123;</span>day<span class="token delimiter tag">&#125;</span></span>"</span><span class="token punctuation">&#125;</span>
-  <span class="token comment">#day = "Sun"</span>
-  my_method <span class="token operator">&amp;</span>myname <span class="token comment">#＝> Hi! I'm Max Black at Mon</span>
-  day_changed <span class="token operator">=</span> day
-  puts <span class="token string">"test3: day:<span class="token interpolation"><span class="token delimiter tag">#&#123;</span>day_changed<span class="token delimiter tag">&#125;</span></span>"</span>
-  <span class="token comment"># day = "Wed"</span>
-  <span class="token comment"># my_method &amp;myname #＝> Hi! I'm Max Black at Mon</span>
-  <span class="token comment"># day_changed = day</span>
-  <span class="token comment"># puts "test3: day:#&#123;day_changed&#125;"</span>
-<span class="token punctuation">&#125;</span><span class="token punctuation">.</span>call
-
-<span class="token comment"># =============================</span>
-<span class="token comment"># 目标4:</span>
-<span class="token comment"># 测试在块中定义的已经初始化的变量的值是否受外部的同名局部变量值的影响:(局部变量的定义在块定义的后面)</span>
-<span class="token comment"># =============================</span>
-<span class="token comment"># 结论</span>
-<span class="token comment"># 1、最终的值是块中变量的值，局部变量不能影响块中同名变量的值</span>
-<span class="token comment"># 2、局部变量的值会不随块中同名变量的值在执行过程中的改变而改变,day_changed的值:Sun</span>
-<span class="token comment"># 3、发生1、2情况的原因是：因为day局部变量的定义出现在块定义的后面，这就导致了块根本没有绑定day这个局部变量</span>
-<span class="token comment"># 块内的变量day是块内部附加的变量，此时块内部的day与块外部的day没有任何关系</span>
-<span class="token comment"># =============================</span>
-lambda <span class="token punctuation">&#123;</span>
-  <span class="token keyword">def</span> <span class="token method-definition"><span class="token function">my_method</span></span>
-    firstname <span class="token operator">=</span> <span class="token string">"Maria"</span>
-    lastname <span class="token operator">=</span> <span class="token string">"Sharapova"</span>
-    <span class="token keyword">yield</span> <span class="token string">"Hi! I'm"</span>
-  <span class="token keyword">end</span>
-  firstname <span class="token operator">=</span> <span class="token string">"Max"</span>
-  lastname <span class="token operator">=</span> <span class="token string">"Black"</span>
-  <span class="token comment"># day = "Sun"</span>
-  myname <span class="token operator">=</span> lambda <span class="token punctuation">&#123;</span> <span class="token operator">|</span>say<span class="token operator">|</span> day <span class="token operator">=</span> <span class="token string">"Mon"</span><span class="token punctuation">;</span> puts <span class="token string">"test4: <span class="token interpolation"><span class="token delimiter tag">#&#123;</span>say<span class="token delimiter tag">&#125;</span></span> <span class="token interpolation"><span class="token delimiter tag">#&#123;</span>firstname<span class="token delimiter tag">&#125;</span></span> <span class="token interpolation"><span class="token delimiter tag">#&#123;</span>lastname<span class="token delimiter tag">&#125;</span></span> at <span class="token interpolation"><span class="token delimiter tag">#&#123;</span>day<span class="token delimiter tag">&#125;</span></span>"</span><span class="token punctuation">&#125;</span>
-  day <span class="token operator">=</span> <span class="token string">"Sun"</span>
-  my_method <span class="token operator">&amp;</span>myname <span class="token comment">#＝> Hi! I'm Max Black at Mon</span>
-  day_changed <span class="token operator">=</span> day
-  puts <span class="token string">"test4: day:<span class="token interpolation"><span class="token delimiter tag">#&#123;</span>day_changed<span class="token delimiter tag">&#125;</span></span>"</span>
-  <span class="token comment"># day = "Wed"</span>
-  <span class="token comment"># my_method &amp;myname #＝> Hi! I'm Max Black at Mon</span>
-  <span class="token comment"># day_changed = day</span>
-  <span class="token comment"># puts "test5: day:#&#123;day_changed&#125;" # => Web</span>
-<span class="token punctuation">&#125;</span><span class="token punctuation">.</span>call
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/redo-log-record-type-and-function/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/apple-touch-icon.png">
-      <meta itemprop="name" content="戛戛Happy">
-      <meta itemprop="description" content="后端, 操作系统, 互联网, 程序开发, Linux, 数据库, MySql, Golang, Ruby">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="睡月花儿">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/redo-log-record-type-and-function/" class="post-title-link" itemprop="url">redo log record type and function</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2015-03-24 20:30:28" itemprop="dateCreated datePublished" datetime="2015-03-24T20:30:28+00:00">2015-03-24</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="fa fa-tag"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/tags/mysql/" itemprop="url" rel="index"><span itemprop="name">mysql</span></a>
+          <a href="/tags/youknow/" itemprop="url" rel="index"><span itemprop="name">小知识</span></a>
         </span>
           , 
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/tags/innodb/" itemprop="url" rel="index"><span itemprop="name">innodb</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>So each redo log record has a type. A redo log record type helps to identify the function that will be used to apply or execute the redo log during recovery. The contents of the redo log record must then contain all the arguments or parameters needed by the function</p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/mysql-mac-auto-attempt-restart-when-start-fail/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/apple-touch-icon.png">
-      <meta itemprop="name" content="戛戛Happy">
-      <meta itemprop="description" content="后端, 操作系统, 互联网, 程序开发, Linux, 数据库, MySql, Golang, Ruby">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="睡月花儿">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/mysql-mac-auto-attempt-restart-when-start-fail/" class="post-title-link" itemprop="url">mysql  mac 环境启动失败后会自动尝试多次启动</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2015-03-23 23:27:00" itemprop="dateCreated datePublished" datetime="2015-03-23T23:27:00+00:00">2015-03-23</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="fa fa-tag"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/tags/mysql/" itemprop="url" rel="index"><span itemprop="name">mysql</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>mysql mac 环境下启动失败后会自动尝试多次启动，mysql是用brew安装的，启动命令用的是launchctl，不知道是不是和launchctl命令有关，还是说mysql本身启动就是这样的。</p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/mysql-redo-writed-ahead-log/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/apple-touch-icon.png">
-      <meta itemprop="name" content="戛戛Happy">
-      <meta itemprop="description" content="后端, 操作系统, 互联网, 程序开发, Linux, 数据库, MySql, Golang, Ruby">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="睡月花儿">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/mysql-redo-writed-ahead-log/" class="post-title-link" itemprop="url">mysql redo日志先行</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2015-03-22 17:33:11" itemprop="dateCreated datePublished" datetime="2015-03-22T17:33:11+00:00">2015-03-22</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="fa fa-tag"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/tags/mysql/" itemprop="url" rel="index"><span itemprop="name">mysql</span></a>
-        </span>
-          , 
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/tags/innodb/" itemprop="url" rel="index"><span itemprop="name">innodb</span></a>
+          <a href="/tags/finance/" itemprop="url" rel="index"><span itemprop="name">财经</span></a>
         </span>
     </span>
 
@@ -1132,7 +484,260 @@ lambda <span class="token punctuation">&#123;</span>
     
     <div class="post-body" itemprop="articleBody">
           <blockquote>
-<p><strong>redo日志应首先持久化在磁盘上，然后事务的操作结果才写入db buffer，（此时，内存中的数据和data file对应的数据不同，我们认为内存中的数据是脏数据），db buffer再选择合适的时机将数据持久化到data file中。这种顺序可以保证在需要故障恢复时恢复最后的修改操作。先持久化日志的策略叫做Write Ahead Log，即预写日志,也叫日志先行。</strong></p>
+<p>存款准备金是指金融机构为保证客户提取存款和资金清算需要而准备的在中央银行的存款。中央银行要求的存款准备金占其存款总额的比例就是存款准备金率。中央银行通过调整存款准备金率，可以影响金融机构的信贷扩张能力，从而间接调控货币供应量。</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="//img.gagahappy.cn/blog/2011/02/201101120829437681.jpg"><img src="//img.gagahappy.cn/blog/2011/02/201101120829437681.jpg" title="存款准备金"></a></p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/deposit-reserve/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/cpi/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/apple-touch-icon.png">
+      <meta itemprop="name" content="戛戛Happy">
+      <meta itemprop="description" content="后端, 操作系统, 互联网, 程序开发, Linux, 数据库, MySql, Golang, Ruby">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="睡月花儿">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/cpi/" class="post-title-link" itemprop="url">什么是CPI</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2011-02-18 22:05:25" itemprop="dateCreated datePublished" datetime="2011-02-18T22:05:25+00:00">2011-02-18</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-tag"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/tags/youknow/" itemprop="url" rel="index"><span itemprop="name">小知识</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/tags/finance/" itemprop="url" rel="index"><span itemprop="name">财经</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <blockquote>
+<p>消费者物价指数(Consumer Price Index)，英文缩写为CPI，是反映与居民生活有关的商品及劳务价格统计出来的物价变动指标，通常作为观察通货膨胀水平的重要指标。一般说来当CPI&gt;3%的增幅时我们称为Inflation，就是通货膨胀；而当CPI&gt;5%的增幅时，我们把它称为Serious Inflation，就是严重的通货膨胀。</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="//img.gagahappy.cn/blog/2011/02/1e71f7247b16ed124c088d8011.jpg"><img src="//img.gagahappy.cn/blog/2011/02/1e71f7247b16ed124c088d8011.jpg" title="CPI"></a></p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/cpi/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/rechargeable-prepaid-card/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/apple-touch-icon.png">
+      <meta itemprop="name" content="戛戛Happy">
+      <meta itemprop="description" content="后端, 操作系统, 互联网, 程序开发, Linux, 数据库, MySql, Golang, Ruby">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="睡月花儿">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/rechargeable-prepaid-card/" class="post-title-link" itemprop="url">复活充值卡</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2011-02-17 22:37:53" itemprop="dateCreated datePublished" datetime="2011-02-17T22:37:53+00:00">2011-02-17</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-tag"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/tags/weibo/" itemprop="url" rel="index"><span itemprop="name">微博</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>在收拾抽屉的时候突然发现一张500元面值的充值卡，上面的密码条还没有刮，兴奋不已，真是一笔意外的财富啊。突然看到右下角写着什么，仔细端详，上面赫然写着“有效期截止到：2010-12-31”，当场石化</p>
+<p><a target="_blank" rel="noopener" href="//img.gagahappy.cn/blog/2011/02/T1V4tTXaRFXXbFARA9_104407.jpg_310x3101.jpg"><img src="//img.gagahappy.cn/blog/2011/02/T1V4tTXaRFXXbFARA9_104407.jpg_310x3101.jpg" title="充值卡"></a></p>
+<p>难道这么一笔巨款就这么流失了？气得真想把卡给撕了，面对这个事实，本博的邪恶本性被暴露了出来~~~~不甘心啊。给10086打电话说明了此事，被告知在过期95天内，可以把卡重新激活，真是天无绝人之路啊！马上到移动营业厅去办理，顺利激活，充值成功。</p>
+<p>所以说啊，这件事可以理解为遇到的坏事不一定是坏事哦，它也可能在你的努力之下转变成一件好事！</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/gdp/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/apple-touch-icon.png">
+      <meta itemprop="name" content="戛戛Happy">
+      <meta itemprop="description" content="后端, 操作系统, 互联网, 程序开发, Linux, 数据库, MySql, Golang, Ruby">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="睡月花儿">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/gdp/" class="post-title-link" itemprop="url">什么是GDP</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2011-02-16 22:19:39" itemprop="dateCreated datePublished" datetime="2011-02-16T22:19:39+00:00">2011-02-16</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-tag"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/tags/youknow/" itemprop="url" rel="index"><span itemprop="name">小知识</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/tags/finance/" itemprop="url" rel="index"><span itemprop="name">财经</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>国内生产总值(Gross Domestic Product,简称GDP)国内生产总值是指在一定时期内(一个季度或一年)，一个国家或地区的经济中所生产出的全部最终产品和劳务的价值</p>
+<p><a target="_blank" rel="noopener" href="//img.gagahappy.cn/blog/2011/02/013000001627471210248671607521.jpg"><img src="//img.gagahappy.cn/blog/2011/02/013000001627471210248671607521.jpg" title="GDP"></a></p>
+<p>常被公认为衡量国家经济状况的最佳指标。它不但可反映一个国家的经济表现，更可以反映一国的国力与财富。一般来说，国内生产总值共有四个不同的组成部分，其中包括消费、私人投资、政府支出和净出口额。用公式表示为：GDP = CA + I + CB + X 式中：CA为消费、I为私人投资、 CB为政府支出、X为净出口额。</p>
+<blockquote>
+<p>转自：<a target="_blank" rel="noopener" href="http://baike.baidu.com/view/97.htm">http://baike.baidu.com/view/97.htm</a></p>
 </blockquote>
 
       
@@ -1160,7 +765,7 @@ lambda <span class="token punctuation">&#123;</span>
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/the-record-donst-be-actually-detete/">
+    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/kristen-stewart-and-robert-pattinson-in-love/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/apple-touch-icon.png">
@@ -1173,7 +778,7 @@ lambda <span class="token punctuation">&#123;</span>
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/the-record-donst-be-actually-detete/" class="post-title-link" itemprop="url">数据不会被删除，除非page中的数据被重新组织</a>
+          <a href="/kristen-stewart-and-robert-pattinson-in-love/" class="post-title-link" itemprop="url">《暮光之城》情侣被曝今夏完婚 结为现实夫妻</a>
         </h2>
 
         <div class="post-meta-container">
@@ -1184,7 +789,7 @@ lambda <span class="token punctuation">&#123;</span>
       </span>
       <span class="post-meta-item-text">Posted on</span>
 
-      <time title="Created: 2015-03-21 00:13:51" itemprop="dateCreated datePublished" datetime="2015-03-21T00:13:51+00:00">2015-03-21</time>
+      <time title="Created: 2011-02-15 18:52:17" itemprop="dateCreated datePublished" datetime="2011-02-15T18:52:17+00:00">2011-02-15</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1192,11 +797,7 @@ lambda <span class="token punctuation">&#123;</span>
       </span>
       <span class="post-meta-item-text">In</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/tags/mysql/" itemprop="url" rel="index"><span itemprop="name">mysql</span></a>
-        </span>
-          , 
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/tags/innodb/" itemprop="url" rel="index"><span itemprop="name">innodb</span></a>
+          <a href="/tags/entertainment/" itemprop="url" rel="index"><span itemprop="name">娱乐</span></a>
         </span>
     </span>
 
@@ -1210,10 +811,952 @@ lambda <span class="token punctuation">&#123;</span>
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>数据不会被删除，除非page中的数据被重新组织</p>
-<blockquote>
-<p>Of course actually deleting the record still doesn’t actually delete it — it just links the record into a “garbage” list, where record space may be reused. However nothing is guaranteed to be really removed from a page until the page is re-organized.</p>
+          <p>据英国媒体披露，电影《暮光之城》情侣罗伯特·帕丁森（Robert Pattinson）和克里斯汀·斯图尔特（Kristen Stewart）准备在今夏完婚，正式结为现实夫妇。</p>
+<p><a target="_blank" rel="noopener" href="//img.gagahappy.cn/blog/2011/02/12.jpg"><img src="//img.gagahappy.cn/blog/2011/02/12.jpg" title="暮光之城"></a></p>
+<p>据报道，这对《暮光之城》情侣结婚的计划，是罗伯特·帕丁森提出的。知情人披露，两人今年早些时候在英国南部岛屿怀特岛度假时，罗伯特·帕丁森向克里斯汀·斯图尔特求婚，后者点头应许。</p>
+<p>知情人还透露，罗伯特·帕丁森和克里斯汀·斯图尔特对于两人的这次婚礼，颇为低调。他们近期已经联系了一位加州婚礼策划者，准备在拍摄完电影《暮光之城4：破晓》（The Twilight Saga: Breaking Dawn）后，就在当地纳帕山谷举行结婚仪式。</p>
+<p>而对于两人选择的结婚地点，知情人表示，“纳帕山谷是加州有名的旅游胜地，那里风景优美，民风朴实。这非常符合两人的个性。”</p>
+<p>现年24岁的罗伯特·帕丁森与20岁的克里斯汀·斯图尔特，2008年因拍摄电影《暮光之城》相识，随即确立恋情。此后，两人相继参演了《暮光之城》续集。在《暮光之城4》中，两人扮演的角色，修成正果，结为夫妇，而在现实中，两人也将互定终身。</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/2011-valentines-day/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/apple-touch-icon.png">
+      <meta itemprop="name" content="戛戛Happy">
+      <meta itemprop="description" content="后端, 操作系统, 互联网, 程序开发, Linux, 数据库, MySql, Golang, Ruby">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="睡月花儿">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2011-valentines-day/" class="post-title-link" itemprop="url"> 情人那个节</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2011-02-14 20:59:47" itemprop="dateCreated datePublished" datetime="2011-02-14T20:59:47+00:00">2011-02-14</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-tag"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/tags/weibo/" itemprop="url" rel="index"><span itemprop="name">微博</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>羡慕嫉妒恨</p>
+<p><a target="_blank" rel="noopener" href="//img.gagahappy.cn/blog/2011/02/11.jpg"><img src="//img.gagahappy.cn/blog/2011/02/11.jpg" title="情人节"></a></p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/no-say-o/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/apple-touch-icon.png">
+      <meta itemprop="name" content="戛戛Happy">
+      <meta itemprop="description" content="后端, 操作系统, 互联网, 程序开发, Linux, 数据库, MySql, Golang, Ruby">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="睡月花儿">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/no-say-o/" class="post-title-link" itemprop="url">不要说“哦” </a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2011-02-12 21:07:12" itemprop="dateCreated datePublished" datetime="2011-02-12T21:07:12+00:00">2011-02-12</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-tag"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/tags/weibo/" itemprop="url" rel="index"><span itemprop="name">微博</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/tags/taandme/" itemprop="url" rel="index"><span itemprop="name">Ta们的我</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>“哦” – 我们不要再说这个字好吗？其实我们都知道：在你和心爱的人聊天时，对方回复你“哦”时，你心里的五味瓶一定打碎，滋味都乱了，对吧？难道你不觉得“哦”是最无奈、最苦、最冷的表达方式吗？如果我对你“哦”， 那一定是我真的生气了 .不要对你在乎的人说“哦”， 真的会伤到他/她。</p>
+<p><a target="_blank" rel="noopener" href="//img.gagahappy.cn/blog/2011/02/2.jpg"><img src="//img.gagahappy.cn/blog/2011/02/2.jpg" title="哦"></a></p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/2011-02-10-micro-fiction/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/apple-touch-icon.png">
+      <meta itemprop="name" content="戛戛Happy">
+      <meta itemprop="description" content="后端, 操作系统, 互联网, 程序开发, Linux, 数据库, MySql, Golang, Ruby">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="睡月花儿">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2011-02-10-micro-fiction/" class="post-title-link" itemprop="url">很有内涵的微小说</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2011-02-10 23:28:54" itemprop="dateCreated datePublished" datetime="2011-02-10T23:28:54+00:00">2011-02-10</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-tag"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/tags/weibo/" itemprop="url" rel="index"><span itemprop="name">微博</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <blockquote>
+<p>我在一个高层上班，他在我对面的窗户里办公，我们隔着一条街。</p>
 </blockquote>
+<p>每天偷偷看着他，猜测他的快乐忧伤，写在微博上。</p>
+<blockquote>
+<p>他应该不知道吧，因为我总是很小心。</p>
+</blockquote>
+<p>某天他突然消失了。</p>
+<blockquote>
+<p>心里一空，发了新微博：“他走了，我想他，他不知道”。</p>
+</blockquote>
+<p>立刻弹出一条新评论：“傻孩子，我搬到上面那层了。”</p>
+<p>##嗯,我开始喜欢微博了</p>
+<p><a target="_blank" rel="noopener" href="//img.gagahappy.cn/blog/2011/02/1.jpg"><img src="//img.gagahappy.cn/blog/2011/02/1.jpg" title="连它们都恋爱了"></a></p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/phpmyadmin-need-a-phrase-password/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/apple-touch-icon.png">
+      <meta itemprop="name" content="戛戛Happy">
+      <meta itemprop="description" content="后端, 操作系统, 互联网, 程序开发, Linux, 数据库, MySql, Golang, Ruby">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="睡月花儿">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/phpmyadmin-need-a-phrase-password/" class="post-title-link" itemprop="url">phpMyAdmin 配置文件现在需要一个短语密码</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2011-02-08 10:27:14" itemprop="dateCreated datePublished" datetime="2011-02-08T10:27:14+00:00">2011-02-08</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-tag"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/tags/mysql/" itemprop="url" rel="index"><span itemprop="name">mysql</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>上传安装phpMyAdmin后，出现”配置文件现在需要一个短语密码“的错误提示，上网查找，解决方法如下</p>
+<p>修改phpmyadmin/libraries/config.default.php中的$cfg[‘blowfish_secret’]的值为任意字符串</p>
+<pre class="line-numbers language-php" data-language="php"><code class="language-php"><span class="token comment">/**
+ * The 'cookie' auth_type uses blowfish algorithm to encrypt the password. If
+ * at least one server configuration uses 'cookie' auth_type, enter here a
+ * pass phrase that will be used by blowfish. The maximum length seems to be 46
+ * characters.
+ *
+ * @global string $cfg['blowfish_secret']
+ */</span>
+<span class="token variable">$cfg</span><span class="token punctuation">[</span><span class="token string single-quoted-string">'blowfish_secret'</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string single-quoted-string">'yourpassword'</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/git-bash-on-windows/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/apple-touch-icon.png">
+      <meta itemprop="name" content="戛戛Happy">
+      <meta itemprop="description" content="后端, 操作系统, 互联网, 程序开发, Linux, 数据库, MySql, Golang, Ruby">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="睡月花儿">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/git-bash-on-windows/" class="post-title-link" itemprop="url">Git Bash on windows</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2011-02-06 23:12:42" itemprop="dateCreated datePublished" datetime="2011-02-06T23:12:42+00:00">2011-02-06</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-tag"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/tags/ubuntu/" itemprop="url" rel="index"><span itemprop="name">ubuntu</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>在shell下完全可以使用linux中的命令，并且支持色彩输出</p>
+<p><a target="_blank" rel="noopener" href="//img.gagahappy.cn/blog/2011/02/21.jpg"><img src="//img.gagahappy.cn/blog/2011/02/21.jpg" title="Git Bash on windows"></a></p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/life-in-a-flash-to-touched/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/apple-touch-icon.png">
+      <meta itemprop="name" content="戛戛Happy">
+      <meta itemprop="description" content="后端, 操作系统, 互联网, 程序开发, Linux, 数据库, MySql, Golang, Ruby">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="睡月花儿">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/life-in-a-flash-to-touched/" class="post-title-link" itemprop="url">生命，就在一瞬间，真让人感动</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2011-02-05 21:33:43" itemprop="dateCreated datePublished" datetime="2011-02-05T21:33:43+00:00">2011-02-05</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-tag"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/tags/weibo/" itemprop="url" rel="index"><span itemprop="name">微博</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>【生命的奇迹】只有21周大的 Samue患上胎儿脊髓病变,必需开刀为胎儿医治,没想到在手术过程中,子宫竟伸出了一只婴儿的小手,并紧紧握住医生的大手!通常在胎儿先天有疾病的情况下,父母都会选择流产,但Samue的父母选择了在怀孕期间为其治疗…手术很成功,Samuel顺利降生,重5磅11盎司</p>
+<p><a target="_blank" rel="noopener" href="//img.gagahappy.cn/blog/2011/02/620626d0jw6de9qxlif2mj.jpg"><img src="//img.gagahappy.cn/blog/2011/02/620626d0jw6de9qxlif2mj.jpg" title="620626d0jw6de9qxlif2mj"></a></p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/foot-in-the-door-effect/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/apple-touch-icon.png">
+      <meta itemprop="name" content="戛戛Happy">
+      <meta itemprop="description" content="后端, 操作系统, 互联网, 程序开发, Linux, 数据库, MySql, Golang, Ruby">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="睡月花儿">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/foot-in-the-door-effect/" class="post-title-link" itemprop="url">留面子效应</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2011-02-03 21:15:33" itemprop="dateCreated datePublished" datetime="2011-02-03T21:15:33+00:00">2011-02-03</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-tag"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/tags/funny/" itemprop="url" rel="index"><span itemprop="name">有趣</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/tags/weibo/" itemprop="url" rel="index"><span itemprop="name">微博</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>【留面子效应】在向别人提出自己真正要求之前，先提出一个大要求。被拒绝后，再提出自己相对小的要求，别人接受这要求的可能性会大大增加。这就是心理学中的“留面子效应”</p>
+<p><a target="_blank" rel="noopener" href="//img.gagahappy.cn/blog/2011/02/3.jpg"><img src="//img.gagahappy.cn/blog/2011/02/3.jpg" title="留面子效应"></a>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/foot-in-the-door-effect/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/guan-dong-tang/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/apple-touch-icon.png">
+      <meta itemprop="name" content="戛戛Happy">
+      <meta itemprop="description" content="后端, 操作系统, 互联网, 程序开发, Linux, 数据库, MySql, Golang, Ruby">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="睡月花儿">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/guan-dong-tang/" class="post-title-link" itemprop="url">过小年，不但要吃饺子，还要吃关东糖</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2011-01-26 22:49:56" itemprop="dateCreated datePublished" datetime="2011-01-26T22:49:56+00:00">2011-01-26</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-tag"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/tags/youknow/" itemprop="url" rel="index"><span itemprop="name">小知识</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>关东糖又称灶王糖、大块糖。一年之中，只有在小年前后才有出售。关东糖是用麦芽、小米熬制而成的糖制品，它是祭灶神用的，也有人说它是用白糖加淀粉加水加淀粉酶酿熬而成。清人写的《燕京岁时记》中记载：清代祭灶，供品中就有“关东糖”、“糖饼”。</p>
+<p>关东糖在东北的农村、城市里，大街小巷、街市上，都有小贩叫卖：“大块糖，大块糖，又酥又香的大块糖。”乳白色的大块糖，放在方盘上，一般有三寸长，一寸宽，扁平，呈丝条状。新做的大块糖，放在嘴里一咬，又酥又香，有粘性，有一种特殊风味，是关东男女老少都十分喜爱的一种糖。</p>
+<p><a target="_blank" rel="noopener" href="//img.gagahappy.cn/blog/2011/01/1265433644177.jpg"><img src="//img.gagahappy.cn/blog/2011/01/1265433644177.jpg" title="关东糖"></a></p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/python-tiobe-award/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/apple-touch-icon.png">
+      <meta itemprop="name" content="戛戛Happy">
+      <meta itemprop="description" content="后端, 操作系统, 互联网, 程序开发, Linux, 数据库, MySql, Golang, Ruby">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="睡月花儿">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/python-tiobe-award/" class="post-title-link" itemprop="url">Python赢得Tiobe 2010年度语言大奖</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2011-01-23 00:43:10" itemprop="dateCreated datePublished" datetime="2011-01-23T00:43:10+00:00">2011-01-23</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-tag"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/tags/news/" itemprop="url" rel="index"><span itemprop="name">新闻</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <blockquote>
+<p>过去50年的软件工程已经证明各种语言的起起伏伏终归是由业界要解决的问题类型（Fortran、COBOL）或是时代的技术领导者所决定的。2010年，Python赢得了最多的市场份额：</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="//img.gagahappy.cn/blog/2011/01/language.jpg"><img src="//img.gagahappy.cn/blog/2011/01/language.jpg" title="language"></a></p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/python-tiobe-award/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/animated-film/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/apple-touch-icon.png">
+      <meta itemprop="name" content="戛戛Happy">
+      <meta itemprop="description" content="后端, 操作系统, 互联网, 程序开发, Linux, 数据库, MySql, Golang, Ruby">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="睡月花儿">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/animated-film/" class="post-title-link" itemprop="url">那些动画片啊</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2011-01-22 13:20:29" itemprop="dateCreated datePublished" datetime="2011-01-22T13:20:29+00:00">2011-01-22</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-tag"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/tags/weibo/" itemprop="url" rel="index"><span itemprop="name">微博</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>儿时的记忆，感觉那会有好多好看的的动画片《圣斗士》、《变形金刚》、《希端》。。。但都是国外的。</p>
+<p>虽然现在国产动画片也不少，但要说能看的本博感觉也就只有《喜洋洋与灰太狼》了，在众多国产动画片里影响力算是比较大的，可以说是老中青都爱看。</p>
+<p><a target="_blank" rel="noopener" href="//img.gagahappy.cn/blog/2011/01/1.png"><img src="//img.gagahappy.cn/blog/2011/01/1.png" title="动画片"></a></p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/what-is-highest-state-of-love/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/apple-touch-icon.png">
+      <meta itemprop="name" content="戛戛Happy">
+      <meta itemprop="description" content="后端, 操作系统, 互联网, 程序开发, Linux, 数据库, MySql, Golang, Ruby">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="睡月花儿">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/what-is-highest-state-of-love/" class="post-title-link" itemprop="url">爱的最高境界</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2011-01-21 22:43:13" itemprop="dateCreated datePublished" datetime="2011-01-21T22:43:13+00:00">2011-01-21</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-tag"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/tags/weibo/" itemprop="url" rel="index"><span itemprop="name">微博</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>爱的最高境界是经得起平淡的流年</p>
+<p><a target="_blank" rel="noopener" href="//img.gagahappy.cn/blog/2011/01/62f4cb1fjw6ddk65148j4j-.jpg"><img src="//img.gagahappy.cn/blog/2011/01/62f4cb1fjw6ddk65148j4j-.jpg" title="爱的最高境界"></a></p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/shortcut-of-fold-clothes/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/apple-touch-icon.png">
+      <meta itemprop="name" content="戛戛Happy">
+      <meta itemprop="description" content="后端, 操作系统, 互联网, 程序开发, Linux, 数据库, MySql, Golang, Ruby">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="睡月花儿">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/shortcut-of-fold-clothes/" class="post-title-link" itemprop="url">折衣服窍门</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2011-01-19 11:37:11" itemprop="dateCreated datePublished" datetime="2011-01-19T11:37:11+00:00">2011-01-19</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-tag"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/tags/weibo/" itemprop="url" rel="index"><span itemprop="name">微博</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/tags/youknow/" itemprop="url" rel="index"><span itemprop="name">小知识</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>教你一秒钟快速叠衣服！这招整齐还快捷！不管男孩女孩都学着点儿，留着将来露一手！</p>
+<p><a target="_blank" rel="noopener" href="//img.gagahappy.cn/blog/2011/01/11.jpg"><img src="//img.gagahappy.cn/blog/2011/01/11.jpg" title="折衣服窍门"></a></p>
+<p><a target="_blank" rel="noopener" href="//img.gagahappy.cn/blog/2011/01/21.jpg"><img src="//img.gagahappy.cn/blog/2011/01/21.jpg" title="折衣服窍门"></a></p>
 
       
     </div>
@@ -1233,7 +1776,7 @@ lambda <span class="token punctuation">&#123;</span>
 
 
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/20/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/20/">20</a><span class="page-number current">21</span><a class="page-number" href="/page/22/">22</a><span class="space">&hellip;</span><a class="page-number" href="/page/87/">87</a><a class="extend next" rel="next" href="/page/22/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
+    <a class="extend prev" rel="prev" href="/page/20/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/20/">20</a><span class="page-number current">21</span><a class="page-number" href="/page/22/">22</a><span class="space">&hellip;</span><a class="page-number" href="/page/44/">44</a><a class="extend next" rel="next" href="/page/22/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
   </nav>
 
 </div>

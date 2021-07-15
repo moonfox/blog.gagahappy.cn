@@ -211,7 +211,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/sqwhat-2017-06-30/">
+    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/second-key-not-save-primary-add/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/apple-touch-icon.png">
@@ -224,7 +224,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/sqwhat-2017-06-30/" class="post-title-link" itemprop="url">喜欢这张，素颜，珠宝，锁骨，疤痕，真我，舒淇</a>
+          <a href="/second-key-not-save-primary-add/" class="post-title-link" itemprop="url">辅助索引为何不直接保存主键地址</a>
         </h2>
 
         <div class="post-meta-container">
@@ -235,7 +235,7 @@
       </span>
       <span class="post-meta-item-text">Posted on</span>
 
-      <time title="Created: 2017-06-30 18:07:20" itemprop="dateCreated datePublished" datetime="2017-06-30T18:07:20+00:00">2017-06-30</time>
+      <time title="Created: 2015-03-09 15:48:02" itemprop="dateCreated datePublished" datetime="2015-03-09T15:48:02+00:00">2015-03-09</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -243,7 +243,11 @@
       </span>
       <span class="post-meta-item-text">In</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/tags/people/" itemprop="url" rel="index"><span itemprop="name">人物</span></a>
+          <a href="/tags/mysql/" itemprop="url" rel="index"><span itemprop="name">mysql</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/tags/innodb/" itemprop="url" rel="index"><span itemprop="name">innodb</span></a>
         </span>
     </span>
 
@@ -257,7 +261,8 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p><img src="//img.gagahappy.cn/blog/2017/06/sqwhat-2017-06-30.jpg_b1" alt="喜欢这张，素颜，珠宝，锁骨，疤痕，真我，舒淇" title="喜欢这张，素颜，珠宝，锁骨，疤痕，真我，舒淇"></p>
+          <p>辅助索引为何不直接保存主键地址，如果保存了主键的地址，就可以不很快的找到记录，而不用再进行二次查找。被这个问题困扰了一阵。答案来了</p>
+<p>辅助索引使用主键作为”指针” 而不是使用地址值作为指针的好处是，减少了当出现行移动或者数据页分裂时辅助索引的维护工作，使用主键值当作指针会让辅助索引占用更多的空间，换来的好处是InnoDB在移动行时无须更新辅助索引中的这个”指针”。也就是说行的位置（实现中通过16K的Page来定位，后面会涉及）会随着数据库里数据的修改而发生变化（前面的B+树节点分裂以及Page的分裂），使用聚簇索引就可以保证不管这个主键B+树的节点如何变化，辅助索引树都不受影响。</p>
 
       
     </div>
@@ -284,7 +289,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/improve-on-plank/">
+    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/innodb-page-heap-allocation/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/apple-touch-icon.png">
@@ -297,7 +302,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/improve-on-plank/" class="post-title-link" itemprop="url">平板支撑有进步了居然</a>
+          <a href="/innodb-page-heap-allocation/" class="post-title-link" itemprop="url">innodb使用记录数据空间分配</a>
         </h2>
 
         <div class="post-meta-container">
@@ -308,7 +313,7 @@
       </span>
       <span class="post-meta-item-text">Posted on</span>
 
-      <time title="Created: 2017-06-24 22:35:54" itemprop="dateCreated datePublished" datetime="2017-06-24T22:35:54+00:00">2017-06-24</time>
+      <time title="Created: 2015-03-08 18:12:48" itemprop="dateCreated datePublished" datetime="2015-03-08T18:12:48+00:00">2015-03-08</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -316,7 +321,7 @@
       </span>
       <span class="post-meta-item-text">In</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/tags/journal/" itemprop="url" rel="index"><span itemprop="name">随笔</span></a>
+          <a href="/tags/mysql/" itemprop="url" rel="index"><span itemprop="name">mysql</span></a>
         </span>
     </span>
 
@@ -330,7 +335,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p> ​<br><img src="//img.gagahappy.cn/blog/2017/06/improve-on-plank.jpg_b1" alt="平板支撑有进步了居然" title="平板支撑有进步了居然"></p>
+          <p>innodb使用记录数据空间分配，根据文件结构，在插入新数据时，heap是由上而下分配空间的，即向记录尾部追加数据，而对slot分配，是由下向上分配的。</p>
 
       
     </div>
@@ -357,7 +362,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/first-teeth-cleaning/">
+    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/innodb-page-header-page-n-heap/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/apple-touch-icon.png">
@@ -370,7 +375,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/first-teeth-cleaning/" class="post-title-link" itemprop="url">洗牙</a>
+          <a href="/innodb-page-header-page-n-heap/" class="post-title-link" itemprop="url">innodb-page-header 结构</a>
         </h2>
 
         <div class="post-meta-container">
@@ -381,7 +386,7 @@
       </span>
       <span class="post-meta-item-text">Posted on</span>
 
-      <time title="Created: 2017-06-23 17:29:27" itemprop="dateCreated datePublished" datetime="2017-06-23T17:29:27+00:00">2017-06-23</time>
+      <time title="Created: 2015-03-07 21:21:31" itemprop="dateCreated datePublished" datetime="2015-03-07T21:21:31+00:00">2015-03-07</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -389,7 +394,11 @@
       </span>
       <span class="post-meta-item-text">In</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/tags/journal/" itemprop="url" rel="index"><span itemprop="name">随笔</span></a>
+          <a href="/tags/mysql/" itemprop="url" rel="index"><span itemprop="name">mysql</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/tags/innodb/" itemprop="url" rel="index"><span itemprop="name">innodb</span></a>
         </span>
     </span>
 
@@ -403,7 +412,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>第一次洗牙，激动，高兴，就像买了新鞋一样。其实早就想洗，一直没去。医生说后槽牙长了一颗智齿，挤到前面的牙，建议拔掉，我一直以为这颗牙要坏了，刷牙时流血，有时候还疼，原来是智齿闹的。也刚知道正常情况下有28颗牙，上下左右各7颗。多出来的叫智齿，长在最后一颗牙的后面，所以最多有32颗牙齿</p>
+          <p>page-header 结构中<br>page-n-heap:表示页面中记录数，包括已经删除的记录，,page-n-heap的初始为x8002，那么<br>page-n-heap=x8031，那么页中的记录数为x8031-x8002=x2f，即47，页中有47条记录。</p>
 
       
     </div>
@@ -430,7 +439,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/enjoy-every-moment-of-this-precious-life/">
+    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/the-supremum-record-in-index-page/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/apple-touch-icon.png">
@@ -443,7 +452,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/enjoy-every-moment-of-this-precious-life/" class="post-title-link" itemprop="url">enjoy every moment of this precious life</a>
+          <a href="/the-supremum-record-in-index-page/" class="post-title-link" itemprop="url">The supremum record in index page</a>
         </h2>
 
         <div class="post-meta-container">
@@ -454,7 +463,7 @@
       </span>
       <span class="post-meta-item-text">Posted on</span>
 
-      <time title="Created: 2017-06-18 09:51:55" itemprop="dateCreated datePublished" datetime="2017-06-18T09:51:55+00:00">2017-06-18</time>
+      <time title="Created: 2015-03-06 23:25:20" itemprop="dateCreated datePublished" datetime="2015-03-06T23:25:20+00:00">2015-03-06</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -462,7 +471,11 @@
       </span>
       <span class="post-meta-item-text">In</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/tags/journal/" itemprop="url" rel="index"><span itemprop="name">随笔</span></a>
+          <a href="/tags/mysql/" itemprop="url" rel="index"><span itemprop="name">mysql</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/tags/innodb/" itemprop="url" rel="index"><span itemprop="name">innodb</span></a>
         </span>
     </span>
 
@@ -476,7 +489,8 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>You are amazing,<br>Unique &amp; beautiful.<br>There is nothing<br>more you need to be,<br>Do or have in<br>order to be happy.<br>You are perfect<br>just as you are.<br>Yes, really. So smile,<br>Give love &amp; enjoy<br>every moment of<br>this precious life. ​​​</p>
+          <p>The supremum record represents a key higher than any possible key in the page. Its “next record” pointer is always zero (which represents NULL, and is always an invalid position for an actual record, due to the page headers). The “next record” pointer of the user record with the highest key on the page always points to supremum.</p>
+<p>PS:在index page中，最大key值的next record总是指向supermum.</p>
 
       
     </div>
@@ -503,7 +517,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/cook-pig-claw/">
+    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/the-infimum-record-in-index-page/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/apple-touch-icon.png">
@@ -516,7 +530,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/cook-pig-claw/" class="post-title-link" itemprop="url">茶香猪手</a>
+          <a href="/the-infimum-record-in-index-page/" class="post-title-link" itemprop="url">The infimum record in index page</a>
         </h2>
 
         <div class="post-meta-container">
@@ -527,7 +541,7 @@
       </span>
       <span class="post-meta-item-text">Posted on</span>
 
-      <time title="Created: 2017-06-17 19:49:08" itemprop="dateCreated datePublished" datetime="2017-06-17T19:49:08+00:00">2017-06-17</time>
+      <time title="Created: 2015-03-05 23:11:08" itemprop="dateCreated datePublished" datetime="2015-03-05T23:11:08+00:00">2015-03-05</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -535,7 +549,11 @@
       </span>
       <span class="post-meta-item-text">In</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/tags/mycook/" itemprop="url" rel="index"><span itemprop="name">做滴菜</span></a>
+          <a href="/tags/mysql/" itemprop="url" rel="index"><span itemprop="name">mysql</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/tags/innodb/" itemprop="url" rel="index"><span itemprop="name">innodb</span></a>
         </span>
     </span>
 
@@ -549,8 +567,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>茶香猪手 #做滴菜# ​​</p>
-<p><img src="//img.gagahappy.cn/blog/2017/06/cook-pig-claw.jpg_b1" alt="茶香猪手" title="茶香猪手"></p>
+          <p>The infimum record represents a value lower than any possible key in the page. Its “next record” pointer points to the user record with the lowest key in the page. Infimum serves as a fixed entry point for sequentially scanning user records.</p>
 
       
     </div>
@@ -577,7 +594,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/reset-kindle-firmware/">
+    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/transaction-acid-rule/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/apple-touch-icon.png">
@@ -590,7 +607,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/reset-kindle-firmware/" class="post-title-link" itemprop="url">Kindle降级</a>
+          <a href="/transaction-acid-rule/" class="post-title-link" itemprop="url">ACID原则</a>
         </h2>
 
         <div class="post-meta-container">
@@ -601,7 +618,7 @@
       </span>
       <span class="post-meta-item-text">Posted on</span>
 
-      <time title="Created: 2017-06-16 23:22:15" itemprop="dateCreated datePublished" datetime="2017-06-16T23:22:15+00:00">2017-06-16</time>
+      <time title="Created: 2015-03-04 11:06:33" itemprop="dateCreated datePublished" datetime="2015-03-04T11:06:33+00:00">2015-03-04</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -609,7 +626,7 @@
       </span>
       <span class="post-meta-item-text">In</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/tags/journal/" itemprop="url" rel="index"><span itemprop="name">随笔</span></a>
+          <a href="/tags/mysql/" itemprop="url" rel="index"><span itemprop="name">mysql</span></a>
         </span>
     </span>
 
@@ -623,44 +640,1006 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>把Kindle降级了，降到刚入手时的版本，果然恢复神速了！付出的代价就是不能使用Amazon的服务了～简单说就是你不能再为设备添加新书了，原因是Amazon不为低版本固件提供服务。解决方法是先发送到电脑（需要先选择注册的设备，当然是选Kindle），再USB到设备，所以千万不要把你的设备注销或登出账号</p>
-<h2 id="开始降级"><a href="#开始降级" class="headerlink" title="开始降级"></a>开始降级</h2><p>准备工作</p>
+          <p>ACID原则</p>
 <ul>
-<li>设备: kindle Pagewhite 一代</li>
-<li>固件: update_kindle_5.3.5.bin</li>
-<li><strong>备份:</strong> documents文件夹</li>
+<li>原子性(Atomicity): 要进行的操作一般为一系列的操作，这些操作要么都被完成，要么都不被完成。这些操作是不可被分割的。<br>如果事务是是执行一系列的操作，其中的一条sql执行失败，那么其它那些执行成功的sql要进行撤消操作。</li>
+<li>一致性(consistency):数据库从一种一致的状态变成下一种一致的状态。</li>
+<li>隔离性(isolation):这个事务中操作的对象，在这个事务提交前，对其它事物都不可见。</li>
+<li>持久性(durability):数据被写入磁盘</li>
 </ul>
-<p>降级过程</p>
-<ol>
-<li>kindle连接电脑，update_kindle_5.3.5.bin复制到kindle设备的根目录下</li>
-<li>按住电源键30秒，直到出现重启画面。这个过程保持数据线连接电脑，不要拔掉。如果30秒后还没有反应，可以松开手，或观察电源指示灯是否息灭，如果息灭，可以松手，这时应该也可以进入重启画面</li>
-<li>等待自动更新完毕，查看固件版本为5.3.5，降级成功</li>
-</ol>
-<p>关于固件</p>
-<p>在网上搜索你要降级到的版本即可，本博降级的版本是刚入手时的 5.3.5，目前一代最新是5.6.1.1版，KP一代运行起来很卡</p>
-<p><strong>关于降级</strong><br>网上有说降级后变砖的，无法降级，本博没有遇到，本博只在kindle Pagewhite 一代上进行了降级，尚不清楚其它版本能否成功降级</p>
-<p>如何查看固件版本</p>
-<ol>
-<li>在主页点击右上角三个横线图标</li>
-<li>在弹出窗口点击设备信息</li>
-<li>弹出窗口上显示有固件版本号</li>
-</ol>
-<h2 id="降级后可能遇到的问题"><a href="#降级后可能遇到的问题" class="headerlink" title="降级后可能遇到的问题"></a>降级后可能遇到的问题</h2><ol>
-<li>Amazon的服务不能使用了</li>
-</ol>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/innodb-new-record-use-old-record-space/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/apple-touch-icon.png">
+      <meta itemprop="name" content="戛戛Happy">
+      <meta itemprop="description" content="后端, 操作系统, 互联网, 程序开发, Linux, 数据库, MySql, Golang, Ruby">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="睡月花儿">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/innodb-new-record-use-old-record-space/" class="post-title-link" itemprop="url">innodb 新增数据使用已删除数据空间</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2015-03-03 23:37:57" itemprop="dateCreated datePublished" datetime="2015-03-03T23:37:57+00:00">2015-03-03</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-tag"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/tags/mysql/" itemprop="url" rel="index"><span itemprop="name">mysql</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/tags/innodb/" itemprop="url" rel="index"><span itemprop="name">innodb</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>如果被删除的数据的空间可以被新数据使用，则新数据占用这个空间，而不是从heap_top中申请空间（其实就是追加数据）。如果新数据不能使用已删除数据的空间，则追加数据（从heap_top中申请空间）。注意：这时数据的排序不再按PK key的顺序存放。</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/explain-using-where-should-be/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/apple-touch-icon.png">
+      <meta itemprop="name" content="戛戛Happy">
+      <meta itemprop="description" content="后端, 操作系统, 互联网, 程序开发, Linux, 数据库, MySql, Golang, Ruby">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="睡月花儿">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/explain-using-where-should-be/" class="post-title-link" itemprop="url">explain using where 含意</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2015-03-02 17:59:31" itemprop="dateCreated datePublished" datetime="2015-03-02T17:59:31+00:00">2015-03-02</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-tag"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/tags/mysql/" itemprop="url" rel="index"><span itemprop="name">mysql</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/tags/innodb/" itemprop="url" rel="index"><span itemprop="name">innodb</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>using where：这说明服务器在存储引擎收到行后将进行过滤,效率不是最高的。</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/mysql-innodb-ft-cache-size/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/apple-touch-icon.png">
+      <meta itemprop="name" content="戛戛Happy">
+      <meta itemprop="description" content="后端, 操作系统, 互联网, 程序开发, Linux, 数据库, MySql, Golang, Ruby">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="睡月花儿">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/mysql-innodb-ft-cache-size/" class="post-title-link" itemprop="url">参数innodb_ft_cache_size</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2015-02-28 16:22:47" itemprop="dateCreated datePublished" datetime="2015-02-28T16:22:47+00:00">2015-02-28</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-tag"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/tags/mysql/" itemprop="url" rel="index"><span itemprop="name">mysql</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/tags/innodb/" itemprop="url" rel="index"><span itemprop="name">innodb</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>参数innodb_ft_cache_size用来控制FTS index Cache的大小，默认为32M，当缓存满时，会将其中的(word,ilist)分词信息同步到磁盘的Auxiliary table中。增大此参数可以提高全文索引的性能，但在宕机时可能需要更长的时间进行恢复。</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/multi-range-read-optimize/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/apple-touch-icon.png">
+      <meta itemprop="name" content="戛戛Happy">
+      <meta itemprop="description" content="后端, 操作系统, 互联网, 程序开发, Linux, 数据库, MySql, Golang, Ruby">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="睡月花儿">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/multi-range-read-optimize/" class="post-title-link" itemprop="url">Multi-Range-Read优化的好处</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2015-02-27 10:39:15" itemprop="dateCreated datePublished" datetime="2015-02-27T10:39:15+00:00">2015-02-27</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-tag"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/tags/mysql/" itemprop="url" rel="index"><span itemprop="name">mysql</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>Multi-Range-Read优化的好处,简称MRR，目的是减少磁盘的随机访问，把随机访问转化为比较顺序的访问，对于IO-bound类型的SQL有很大的性能提升。Multi-Range-Read优化适用于range/ref/eq_ref类型的查询。</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/mysql-force-index/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/apple-touch-icon.png">
+      <meta itemprop="name" content="戛戛Happy">
+      <meta itemprop="description" content="后端, 操作系统, 互联网, 程序开发, Linux, 数据库, MySql, Golang, Ruby">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="睡月花儿">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/mysql-force-index/" class="post-title-link" itemprop="url">mysql 强制指定索引</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2015-02-26 22:21:23" itemprop="dateCreated datePublished" datetime="2015-02-26T22:21:23+00:00">2015-02-26</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-tag"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/tags/mysql/" itemprop="url" rel="index"><span itemprop="name">mysql</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/tags/innodb/" itemprop="url" rel="index"><span itemprop="name">innodb</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>mysql 强制指定索引</p>
+<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">select * from t_a_index force index(a_b) where a &#x3D; 1 and b &#x3D; 1  order by a desc;
+select * from t_a_index ignore index(a_b) where a &#x3D; 1 and b &#x3D; 1  order by a desc;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/mysql-index-hint/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/apple-touch-icon.png">
+      <meta itemprop="name" content="戛戛Happy">
+      <meta itemprop="description" content="后端, 操作系统, 互联网, 程序开发, Linux, 数据库, MySql, Golang, Ruby">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="睡月花儿">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/mysql-index-hint/" class="post-title-link" itemprop="url">索引提示</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2015-02-25 10:36:18" itemprop="dateCreated datePublished" datetime="2015-02-25T10:36:18+00:00">2015-02-25</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-tag"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/tags/mysql/" itemprop="url" rel="index"><span itemprop="name">mysql</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/tags/innodb/" itemprop="url" rel="index"><span itemprop="name">innodb</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>索引提示<br>（1）优化器错误的选择了索引（这种情况很少发生）<br>（2）查询有多个索引可以使用，使得优化器选择索引的时间大大超过了SQL语句的执行时间</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/cardinality-count/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/apple-touch-icon.png">
+      <meta itemprop="name" content="戛戛Happy">
+      <meta itemprop="description" content="后端, 操作系统, 互联网, 程序开发, Linux, 数据库, MySql, Golang, Ruby">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="睡月花儿">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/cardinality-count/" class="post-title-link" itemprop="url">Cardinality的统计</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2015-02-24 09:32:52" itemprop="dateCreated datePublished" datetime="2015-02-24T09:32:52+00:00">2015-02-24</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-tag"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/tags/mysql/" itemprop="url" rel="index"><span itemprop="name">mysql</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/tags/innodb/" itemprop="url" rel="index"><span itemprop="name">innodb</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>数据库都是通过采样(sample)的方法，来完成Cardinality的统计。<br>对Cardinality的统计是在存储引擎层面进行的，所以不同的引擎用各自的方法实现。</p>
+<p>innodb在进行insert/update操作时，进行Cardinality的统计，但不是每次都进行统计，因为会增加数据库负担。对于数据非常大的表，更不可能进行实时统计，因为那样会影响执行时间，带来非常长的执行时间。</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/fulltext-auxiliary-table/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/apple-touch-icon.png">
+      <meta itemprop="name" content="戛戛Happy">
+      <meta itemprop="description" content="后端, 操作系统, 互联网, 程序开发, Linux, 数据库, MySql, Golang, Ruby">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="睡月花儿">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/fulltext-auxiliary-table/" class="post-title-link" itemprop="url">全文索引表auxiliary table</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2015-02-23 10:44:23" itemprop="dateCreated datePublished" datetime="2015-02-23T10:44:23+00:00">2015-02-23</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-tag"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/tags/mysql/" itemprop="url" rel="index"><span itemprop="name">mysql</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>全文索引要借助辅助表auxiliary table，它是持久性的（文件形式），其使用倒排索引inverted index来存储单词及单词所在文档的位置信息</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/use-with-query-expansion-be-careful/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/apple-touch-icon.png">
+      <meta itemprop="name" content="戛戛Happy">
+      <meta itemprop="description" content="后端, 操作系统, 互联网, 程序开发, Linux, 数据库, MySql, Golang, Ruby">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="睡月花儿">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/use-with-query-expansion-be-careful/" class="post-title-link" itemprop="url">慎用With query expansion</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2015-02-22 10:45:45" itemprop="dateCreated datePublished" datetime="2015-02-22T10:45:45+00:00">2015-02-22</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-tag"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/tags/mysql/" itemprop="url" rel="index"><span itemprop="name">mysql</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>With query expansion, 支持扩展查询（相关性查询）。如查询database，同时也会把含有mysql但不含database的记录也找到。但此功能可能会带来诸多非相关性的查询，要谨慎使用。</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/select-count-second-index/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/apple-touch-icon.png">
+      <meta itemprop="name" content="戛戛Happy">
+      <meta itemprop="description" content="后端, 操作系统, 互联网, 程序开发, Linux, 数据库, MySql, Golang, Ruby">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="睡月花儿">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/select-count-second-index/" class="post-title-link" itemprop="url">select count 使用的索引</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2015-02-21 09:58:47" itemprop="dateCreated datePublished" datetime="2015-02-21T09:58:47+00:00">2015-02-21</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-tag"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/tags/mysql/" itemprop="url" rel="index"><span itemprop="name">mysql</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/tags/innodb/" itemprop="url" rel="index"><span itemprop="name">innodb</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>在查询select count(*)时，优化器不会使用聚集索引，而是使用辅助索引，因为体积要比聚集索引小，需要的IO操作更少。</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/index-condition-pushdown/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/apple-touch-icon.png">
+      <meta itemprop="name" content="戛戛Happy">
+      <meta itemprop="description" content="后端, 操作系统, 互联网, 程序开发, Linux, 数据库, MySql, Golang, Ruby">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="睡月花儿">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/index-condition-pushdown/" class="post-title-link" itemprop="url">Index Condition Pushdown（ICP）优化</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2015-02-19 10:04:02" itemprop="dateCreated datePublished" datetime="2015-02-19T10:04:02+00:00">2015-02-19</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-tag"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/tags/mysql/" itemprop="url" rel="index"><span itemprop="name">mysql</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/tags/innodb/" itemprop="url" rel="index"><span itemprop="name">innodb</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>Index Condition Pushdown（ICP）优化,当不支持ICP时，先根据索引查记录取出记录，在根据where条件进行过滤。采用ICP时，会在索引中对where条件进行过滤，选出符合条件的，然后再取出记录。即把数据过滤在存储引擎层面完成</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/mysql-slow-query-log/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/apple-touch-icon.png">
+      <meta itemprop="name" content="戛戛Happy">
+      <meta itemprop="description" content="后端, 操作系统, 互联网, 程序开发, Linux, 数据库, MySql, Golang, Ruby">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="睡月花儿">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/mysql-slow-query-log/" class="post-title-link" itemprop="url">慢查询日志</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2015-02-18 10:31:09" itemprop="dateCreated datePublished" datetime="2015-02-18T10:31:09+00:00">2015-02-18</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-tag"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/tags/mysql/" itemprop="url" rel="index"><span itemprop="name">mysql</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>慢查询日志:long_query_time：默认值为10s，即超过10s的sql会被记录，但不过记录等于10s的记录。可以以微秒设置时间</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/full-text-order-by-relative/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/apple-touch-icon.png">
+      <meta itemprop="name" content="戛戛Happy">
+      <meta itemprop="description" content="后端, 操作系统, 互联网, 程序开发, Linux, 数据库, MySql, Golang, Ruby">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="睡月花儿">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/full-text-order-by-relative/" class="post-title-link" itemprop="url">全文索引排序相关性</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2015-02-17 10:06:39" itemprop="dateCreated datePublished" datetime="2015-02-17T10:06:39+00:00">2015-02-17</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-tag"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/tags/mysql/" itemprop="url" rel="index"><span itemprop="name">mysql</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/tags/innodb/" itemprop="url" rel="index"><span itemprop="name">innodb</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>相关性的计算依据有四点：</p>
 <ul>
-<li>带来的影响是你不能为设备添加新书了（所以降级前最好把你要看的书都下载)，解决方法前文已经提到</li>
-<li>要是你不小心把账号从设备上注销或是Reset了设备，是没有办法从降级的设备绑定账号的，Amazon会拒绝注册你的账号，这样也就无法使用上文提到的USB大法了，唯一解决的方法是你只能先升级到最新版，绑定账号后再降回来。</li>
+<li>word是否同现在文档中</li>
+<li>word在文档中出现的次数</li>
+<li>word在索引列中的数量</li>
+<li>多个少文档包含此word</li>
 </ul>
-<ol start="2">
-<li><p>又自动升级了<br>网上说是在kindle根目录建立update.bin.tmp.partial文件夹，可以起到禁止自动更新的作用，本博没有试</p>
-</li>
-<li><p>书的封面不显示<br>可能你没有连网，连网后过一会就会更新</p>
-</li>
-<li><p>书中的图片不显示<br>只能重新下载这本书了</p>
-</li>
-</ol>
-<p><img src="//img.gagahappy.cn/blog/2017/06/reset-kindle-firmware.jpg_b1" alt="Kindle降级" title="Kindle降级"></p>
 
       
     </div>
@@ -687,7 +1666,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/get-back-my-favourate-theme-of-phone/">
+    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/mysql-bin-log/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/apple-touch-icon.png">
@@ -700,7 +1679,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/get-back-my-favourate-theme-of-phone/" class="post-title-link" itemprop="url">终于把喜欢的主题找回来了</a>
+          <a href="/mysql-bin-log/" class="post-title-link" itemprop="url">二进制日志文件</a>
         </h2>
 
         <div class="post-meta-container">
@@ -711,7 +1690,7 @@
       </span>
       <span class="post-meta-item-text">Posted on</span>
 
-      <time title="Created: 2017-06-15 15:11:33" itemprop="dateCreated datePublished" datetime="2017-06-15T15:11:33+00:00">2017-06-15</time>
+      <time title="Created: 2015-02-16 10:27:44" itemprop="dateCreated datePublished" datetime="2015-02-16T10:27:44+00:00">2015-02-16</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -719,7 +1698,7 @@
       </span>
       <span class="post-meta-item-text">In</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/tags/journal/" itemprop="url" rel="index"><span itemprop="name">随笔</span></a>
+          <a href="/tags/mysql/" itemprop="url" rel="index"><span itemprop="name">mysql</span></a>
         </span>
     </span>
 
@@ -733,236 +1712,16 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>之前喜欢的主题忘记备份找不见了，是一个游戏的截图，之后去网上找了半天也没有找到一摸一样的，毕竟是截图，不好找到一样的，最终找到两张差不多的，又PS了一下，终于满意了，请原谅我的强迫症 #纪念碑谷# ​​​​</p>
-<p><img src="//img.gagahappy.cn/blog/2017/06/get-back-my-favourate-theme-of-phone.jpg_b1" alt="终于把喜欢的主题找回来了" title="终于把喜欢的主题找回来了"></p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/first-output-device/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/apple-touch-icon.png">
-      <meta itemprop="name" content="戛戛Happy">
-      <meta itemprop="description" content="后端, 操作系统, 互联网, 程序开发, Linux, 数据库, MySql, Golang, Ruby">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="睡月花儿">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/first-output-device/" class="post-title-link" itemprop="url">打孔纸带是计算机终端输出设备的鼻祖</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2017-06-11 23:09:20" itemprop="dateCreated datePublished" datetime="2017-06-11T23:09:20+00:00">2017-06-11</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="fa fa-tag"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/tags/computer/" itemprop="url" rel="index"><span itemprop="name">计算机</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>可以认为，打孔纸带是计算机终端输出设备的鼻祖。那时打印机都少的可怜，更不要说是显示屏幕了 ​​​</p>
-<p><img src="//img.gagahappy.cn/blog/2017/06/first-output-device.jpg_b1" alt="打孔纸带是计算机终端输出设备的鼻祖" title="打孔纸带是计算机终端输出设备的鼻祖"></p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/jelena-ostapenko-win-first-grand-slam-title-at-french-open/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/apple-touch-icon.png">
-      <meta itemprop="name" content="戛戛Happy">
-      <meta itemprop="description" content="后端, 操作系统, 互联网, 程序开发, Linux, 数据库, MySql, Golang, Ruby">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="睡月花儿">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/jelena-ostapenko-win-first-grand-slam-title-at-french-open/" class="post-title-link" itemprop="url">Jelena Ostapenko  win first Grand Slam title at French Open</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2017-06-11 00:09:36" itemprop="dateCreated datePublished" datetime="2017-06-11T00:09:36+00:00">2017-06-11</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="fa fa-tag"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/tags/people/" itemprop="url" rel="index"><span itemprop="name">人物</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>Jelena Ostapenko produced one of the great Grand Slam upsets as she beat third seed Simona Halep to win the French Open and claim her first major title.</p>
-<p>The unseeded 20-year-old was a set and 3-0 down at one stage with Halep cruising, before she staged a remarkable recovery to claim the title at Roland Garros, 4-6 6-4 6-3, becoming the first Latvian ever to win a Grand Slam.</p>
-<p>恭喜年仅20岁零2天的Jelena Ostapenko（世界排名第47）首夺大满贯女单冠军，也是她的首个法网冠军（逆转击败Simona Halep，世界排名第2），成为1997年的库尔滕后，又一位以非种子球手身份在法网拿到个人首冠的球手，世界排名升至第12位，成为目前女子网坛TOP20中最年轻的球手。 ​​​​</p>
-<p><img src="//img.gagahappy.cn/blog/2017/06/jelena-ostapenko-win-first-grand-slam-title-at-french-open.jpg_b1" alt="Jelena Ostapenko" title="Jelena Ostapenko"></p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/unstoppable-my-life-so-far/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/apple-touch-icon.png">
-      <meta itemprop="name" content="戛戛Happy">
-      <meta itemprop="description" content="后端, 操作系统, 互联网, 程序开发, Linux, 数据库, MySql, Golang, Ruby">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="睡月花儿">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/unstoppable-my-life-so-far/" class="post-title-link" itemprop="url">Unstoppable - My Life So Far</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2017-05-03 20:00:55" itemprop="dateCreated datePublished" datetime="2017-05-03T20:00:55+00:00">2017-05-03</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="fa fa-tag"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/tags/journal/" itemprop="url" rel="index"><span itemprop="name">随笔</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>Author: Maria Sharapova</p>
+          <p>二进制日志文件</p>
 <blockquote>
-<p>At the end of 2015, I decided to write a memoir. This September, those pages will finally be published. It’s not easy to be the judge of your own work, but I can proudly say I have poured everything into it. It’s strong, yet it’s filled with vulnerability I didn’t know I was willing to share. Life is a tricky thing! There’s no right or wrong answer to any of it…best exam ever! All the things I share inside the pages of my book. I can’t believe how many of you have already preordered the book. Thank you so much!!</p>
+<p>记录了对数据库的更改操作，但不包括select和show这类操作，因为它们对数据本身没有进行修改。</p>
 </blockquote>
-<p><img src="//img.gagahappy.cn/blog/2017/05/unstoppable-my-life-so-far.jpg_b1" alt="Unstoppable - My Life So Far" title="Unstoppable - My Life So Far"></p>
-<p>Preorder now:<br>Amazon - <a target="_blank" rel="noopener" href="http://amzn.to/2oc7elf">http://amzn.to/2oc7elf</a><br>B&amp;N - <a target="_blank" rel="noopener" href="http://bit.ly/2ouCqx9">http://bit.ly/2ouCqx9</a><br>iBooks - <a target="_blank" rel="noopener" href="http://apple.co/2nN0aiV">http://apple.co/2nN0aiV</a><br>Google Play - <a target="_blank" rel="noopener" href="http://bit.ly/2oeYs5s">http://bit.ly/2oeYs5s</a><br>BAM - <a target="_blank" rel="noopener" href="http://bit.ly/2ouCDQX">http://bit.ly/2ouCDQX</a><br>Indiebound - <a target="_blank" rel="noopener" href="http://bit.ly/2ofjLE1">http://bit.ly/2ofjLE1</a><br>Read more about Unstoppable: <a target="_blank" rel="noopener" href="http://bit.ly/SharapovaUnstoppableFB">http://bit.ly/SharapovaUnstoppableFB</a></p>
+<blockquote>
+<p>日志格式ROW：采用ROW格式会大大增加日志文件的体积，在主从复制时，复制是采用二进制格式传输的，因此会增加对带宽的占用。</p>
+</blockquote>
+<blockquote>
+<p>其体积增大的原因是其记录了每一行的所有信息（所有列信息），所以日志体积会增长很大，而STATEMENT格式只记录基本的SQL语句信息，所以日志文件体积增长较小。</p>
+</blockquote>
 
       
     </div>
@@ -982,7 +1741,7 @@
 
 
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/11/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/11/">11</a><span class="page-number current">12</span><a class="page-number" href="/page/13/">13</a><span class="space">&hellip;</span><a class="page-number" href="/page/87/">87</a><a class="extend next" rel="next" href="/page/13/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
+    <a class="extend prev" rel="prev" href="/page/11/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/11/">11</a><span class="page-number current">12</span><a class="page-number" href="/page/13/">13</a><span class="space">&hellip;</span><a class="page-number" href="/page/44/">44</a><a class="extend next" rel="next" href="/page/13/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
   </nav>
 
 </div>

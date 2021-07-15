@@ -211,7 +211,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/how-to-use-crontab-in-your-xos/">
+    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/passing-parameters-to-a-shared-example-group/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/apple-touch-icon.png">
@@ -224,7 +224,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/how-to-use-crontab-in-your-xos/" class="post-title-link" itemprop="url">苹果系统 xos 使用crontab定时任务</a>
+          <a href="/passing-parameters-to-a-shared-example-group/" class="post-title-link" itemprop="url">Passing parameters to a shared example group</a>
         </h2>
 
         <div class="post-meta-container">
@@ -235,7 +235,7 @@
       </span>
       <span class="post-meta-item-text">Posted on</span>
 
-      <time title="Created: 2015-07-21 10:20:04" itemprop="dateCreated datePublished" datetime="2015-07-21T10:20:04+00:00">2015-07-21</time>
+      <time title="Created: 2011-09-05 14:41:49" itemprop="dateCreated datePublished" datetime="2011-09-05T14:41:49+00:00">2011-09-05</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -243,7 +243,7 @@
       </span>
       <span class="post-meta-item-text">In</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/tags/linux/" itemprop="url" rel="index"><span itemprop="name">linux</span></a>
+          <a href="/tags/rspec/" itemprop="url" rel="index"><span itemprop="name">rspec</span></a>
         </span>
     </span>
 
@@ -257,10 +257,257 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>在苹果系统 xos 使用crontab定时任务时，出现<code>/usr/bin/vi exited with status 1</code></p>
-<p>解决方法</p>
-<blockquote>
-<p>The issue turned out to be vi and nothing to do with cron. Doing <code>export EDITOR=vim</code> fixed it</p>
+          <pre class="line-numbers language-ruby" data-language="ruby"><code class="language-ruby">shared_examples_for <span class="token string">"a measurable object"</span> <span class="token keyword">do</span> <span class="token operator">|</span>measurement<span class="token punctuation">,</span> measurement_methods<span class="token operator">|</span>
+  measurement_methods<span class="token punctuation">.</span><span class="token keyword">each</span> <span class="token keyword">do</span> <span class="token operator">|</span>measurement_method<span class="token operator">|</span>
+    it <span class="token string">"should return <span class="token interpolation"><span class="token delimiter tag">#&#123;</span>measurement<span class="token delimiter tag">&#125;</span></span> from #<span class="token interpolation"><span class="token delimiter tag">#&#123;</span>measurement_method<span class="token delimiter tag">&#125;</span></span>"</span> <span class="token keyword">do</span>
+      subject<span class="token punctuation">.</span>send<span class="token punctuation">(</span>measurement_method<span class="token punctuation">)</span><span class="token punctuation">.</span>should <span class="token operator">==</span> measurement
+    <span class="token keyword">end</span>
+  <span class="token keyword">end</span>
+<span class="token keyword">end</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/linux-wc-command/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/apple-touch-icon.png">
+      <meta itemprop="name" content="戛戛Happy">
+      <meta itemprop="description" content="后端, 操作系统, 互联网, 程序开发, Linux, 数据库, MySql, Golang, Ruby">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="睡月花儿">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/linux-wc-command/" class="post-title-link" itemprop="url">wc命令</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2011-09-03 17:08:41" itemprop="dateCreated datePublished" datetime="2011-09-03T17:08:41+00:00">2011-09-03</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-tag"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/tags/ubuntu/" itemprop="url" rel="index"><span itemprop="name">ubuntu</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>wc命令用来打印文件的文本行数、单词数、字节数等（print the number of newlines, words, and bytes in files）</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">格式：wc -l <span class="token operator">&lt;</span>file<span class="token operator">></span>
+
+打印指定文件的文本行数。（l<span class="token operator">=</span>小写L）
+
+参数：-c, --bytes
+打印字节数（print the byte counts）
+
+参数：-m, --chars
+打印字符数（print the character counts）
+
+参数：-l, --lines
+打印行数（print the newline counts）
+
+参数：-w, --words
+打印单词数（print the word counts）<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/memcached-setup-config/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/apple-touch-icon.png">
+      <meta itemprop="name" content="戛戛Happy">
+      <meta itemprop="description" content="后端, 操作系统, 互联网, 程序开发, Linux, 数据库, MySql, Golang, Ruby">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="睡月花儿">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/memcached-setup-config/" class="post-title-link" itemprop="url">memcached 启动参数</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2011-09-02 23:41:57" itemprop="dateCreated datePublished" datetime="2011-09-02T23:41:57+00:00">2011-09-02</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-tag"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/tags/memcached/" itemprop="url" rel="index"><span itemprop="name">memcached</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>启动参数</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">-p memcached监听的TCP端口
+-l 监听的ip地址
+-d 以daemon方式运行，将程序放入后台
+-u memcached的运行用户
+-P memcached的pid文件路径
+-m memcached可以使用的最大内存数量
+-c memcached同时可以接受的最大的连接数<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>如果你希望以socket方式来访问memcached，那么在启动的时候就必须去掉 -l和-p参数，并加上-s参数：</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/mock-receive-counts/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/apple-touch-icon.png">
+      <meta itemprop="name" content="戛戛Happy">
+      <meta itemprop="description" content="后端, 操作系统, 互联网, 程序开发, Linux, 数据库, MySql, Golang, Ruby">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="睡月花儿">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/mock-receive-counts/" class="post-title-link" itemprop="url">Mock Receive Counts</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2011-08-25 11:06:44" itemprop="dateCreated datePublished" datetime="2011-08-25T11:06:44+00:00">2011-08-25</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-tag"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/tags/rspec/" itemprop="url" rel="index"><span itemprop="name">rspec</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <blockquote>
+<p>my_mock.should_receive(:sym).once<br>my_mock.should_receive(:sym).twice<br>my_mock.should_receive(:sym).exactly(n).times<br>my_mock.should_receive(:sym).at_least(:once)<br>my_mock.should_receive(:sym).at_least(:twice)<br>my_mock.should_receive(:sym).at_least(n).times<br>my_mock.should_receive(:sym).at_most(:once)<br>my_mock.should_receive(:sym).at_most(:twice)<br>my_mock.should_receive(:sym).at_most(n).times<br>my_mock.should_receive(:sym).any_number_of_times</p>
 </blockquote>
 
       
@@ -288,7 +535,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/postgis-install-issues/">
+    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/ubuntu-sshfs/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/apple-touch-icon.png">
@@ -301,7 +548,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/postgis-install-issues/" class="post-title-link" itemprop="url">PostGIS安装问题</a>
+          <a href="/ubuntu-sshfs/" class="post-title-link" itemprop="url">ubuntu 映射远程目录</a>
         </h2>
 
         <div class="post-meta-container">
@@ -312,7 +559,7 @@
       </span>
       <span class="post-meta-item-text">Posted on</span>
 
-      <time title="Created: 2015-05-31 22:03:37" itemprop="dateCreated datePublished" datetime="2015-05-31T22:03:37+00:00">2015-05-31</time>
+      <time title="Created: 2011-08-18 22:02:34" itemprop="dateCreated datePublished" datetime="2011-08-18T22:02:34+00:00">2011-08-18</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -320,7 +567,7 @@
       </span>
       <span class="post-meta-item-text">In</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/tags/postgresql/" itemprop="url" rel="index"><span itemprop="name">postgresql</span></a>
+          <a href="/tags/ubuntu/" itemprop="url" rel="index"><span itemprop="name">ubuntu</span></a>
         </span>
     </span>
 
@@ -334,9 +581,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>用brew 安装 postgis （环境：postgre用的是mac版的postgre.app，psql用的是brew版的)</p>
-<p>这样问题就来了，在安装postgis时，会查找psql，由于psql在/usr/sbin下，即用的是brew的，安装postgis时总是报错（具体错误大概是说不能解释postgre sql）。搞了半天没弄好。</p>
-<p>决定把postgre.app的路径放到加载路径的最前面，/Applications/Postgres93.app/Contents/MacOS,放到路径最前面，再次安装postgis，一切安好。但undefined method `point’ for #&lt;ActiveRecord::ConnectionAdapters::PostgreSQLAdapter::TableDefinition:错误还是没有解决</p>
+          <p>sshfs 用户名@远程服务器名:远程目录 映射至本地的目录</p>
 
       
     </div>
@@ -363,7 +608,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/ruby-hash-sort-by-key-be-case-of-key-type/">
+    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/nginx-405-not-allowed/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/apple-touch-icon.png">
@@ -376,7 +621,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/ruby-hash-sort-by-key-be-case-of-key-type/" class="post-title-link" itemprop="url">ruby 哈希排序注意事项</a>
+          <a href="/nginx-405-not-allowed/" class="post-title-link" itemprop="url">nginx 405 Not Allowed</a>
         </h2>
 
         <div class="post-meta-container">
@@ -387,7 +632,7 @@
       </span>
       <span class="post-meta-item-text">Posted on</span>
 
-      <time title="Created: 2015-05-20 23:22:43" itemprop="dateCreated datePublished" datetime="2015-05-20T23:22:43+00:00">2015-05-20</time>
+      <time title="Created: 2011-08-04 23:32:42" itemprop="dateCreated datePublished" datetime="2011-08-04T23:32:42+00:00">2011-08-04</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -395,7 +640,7 @@
       </span>
       <span class="post-meta-item-text">In</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/tags/ruby/" itemprop="url" rel="index"><span itemprop="name">Ruby</span></a>
+          <a href="/tags/nginx/" itemprop="url" rel="index"><span itemprop="name">nginx</span></a>
         </span>
     </span>
 
@@ -409,16 +654,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <pre class="line-numbers language-ruby" data-language="ruby"><code class="language-ruby"><span class="token comment"># 如果key的数据类型不一致，会导致异常，其实这种情况已经不是第一次遇上了</span>
-<span class="token comment"># ArgumentError: comparison of Array with Array failed</span>
-hash <span class="token operator">=</span> <span class="token punctuation">&#123;</span>c<span class="token punctuation">:</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token string">"a"</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token number">1</span><span class="token punctuation">,</span> b<span class="token punctuation">:</span><span class="token number">2</span><span class="token punctuation">&#125;</span>
-
-<span class="token comment"># 可以用hash#sort_by解决,把key统一成一致的数据类型</span>
-hash<span class="token punctuation">.</span>sort_by<span class="token punctuation">&#123;</span><span class="token operator">|</span>k<span class="token punctuation">,</span>v<span class="token operator">|</span>k<span class="token punctuation">.</span>to_s<span class="token punctuation">&#125;</span>
-<span class="token comment"># 等效于</span>
-hash<span class="token punctuation">.</span>sort_by<span class="token punctuation">&#123;</span><span class="token operator">|</span>h<span class="token operator">|</span>h<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span>to_s<span class="token punctuation">&#125;</span>
-<span class="token comment"># 最终的输出结果为</span>
-<span class="token comment">#=> [["a", 1], [:b, 2], [:c, 3]]</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+          <p>nginx 405 Not Allowed<br>这个错误的原因是：Apache、IIS、Nginx等绝大多数web服务器，都不允许静态文件响应POST请求，否则会返回“HTTP/1.1 405 Method not allowed”错误。</p>
 
       
     </div>
@@ -445,7 +681,7 @@ hash<span class="token punctuation">.</span>sort_by<span class="token punctuatio
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/method-missing-be-careful-use/">
+    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/happy-birthday-to-leader-2011/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/apple-touch-icon.png">
@@ -458,7 +694,7 @@ hash<span class="token punctuation">.</span>sort_by<span class="token punctuatio
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/method-missing-be-careful-use/" class="post-title-link" itemprop="url">method_missing 方法使用注意事项</a>
+          <a href="/happy-birthday-to-leader-2011/" class="post-title-link" itemprop="url">happy birthday to leader</a>
         </h2>
 
         <div class="post-meta-container">
@@ -469,16 +705,7 @@ hash<span class="token punctuation">.</span>sort_by<span class="token punctuatio
       </span>
       <span class="post-meta-item-text">Posted on</span>
 
-      <time title="Created: 2015-05-14 23:18:31" itemprop="dateCreated datePublished" datetime="2015-05-14T23:18:31+00:00">2015-05-14</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="fa fa-tag"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/tags/ruby/" itemprop="url" rel="index"><span itemprop="name">Ruby</span></a>
-        </span>
+      <time title="Created: 2011-08-04 22:17:37" itemprop="dateCreated datePublished" datetime="2011-08-04T22:17:37+00:00">2011-08-04</time>
     </span>
 
   
@@ -491,14 +718,7 @@ hash<span class="token punctuation">.</span>sort_by<span class="token punctuatio
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>method_missing 方法使用注意事项，其实最要应该注意的就是不能在method_missing 方法中出现找不到的方法，否则程序将掉入无限循环中</p>
-<pre class="line-numbers language-ruby" data-language="ruby"><code class="language-ruby"><span class="token keyword">def</span> <span class="token method-definition"><span class="token function">method_missing</span></span><span class="token punctuation">(</span>method<span class="token punctuation">,</span> <span class="token operator">*</span>args<span class="token punctuation">)</span>
-  not_exist_method <span class="token comment">#一个不存在的方法</span>
-<span class="token keyword">end</span>
-
-<span class="token comment"># 当程序进入method_missing方法后，发现找不到not_exist_method方法，则又会掉入method_missing,然后又会发现找不到not_exist_method，然后又掉入method_missing,然后loop...</span>
-
-<span class="token comment"># 这种陷阱一般很难发现，所以在method_missing中编写代码时，一定要小心</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+          <p>领导生日，祝生日快乐~！</p>
 
       
     </div>
@@ -525,7 +745,7 @@ hash<span class="token punctuation">.</span>sort_by<span class="token punctuatio
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/active-record-transmit-to-sql/">
+    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/ubuntu-user-in-groups/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/apple-touch-icon.png">
@@ -538,7 +758,7 @@ hash<span class="token punctuation">.</span>sort_by<span class="token punctuatio
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/active-record-transmit-to-sql/" class="post-title-link" itemprop="url">查看ORM实际生成的sql</a>
+          <a href="/ubuntu-user-in-groups/" class="post-title-link" itemprop="url">ubuntu 查看用户所在组</a>
         </h2>
 
         <div class="post-meta-container">
@@ -549,7 +769,153 @@ hash<span class="token punctuation">.</span>sort_by<span class="token punctuatio
       </span>
       <span class="post-meta-item-text">Posted on</span>
 
-      <time title="Created: 2015-05-06 23:51:18" itemprop="dateCreated datePublished" datetime="2015-05-06T23:51:18+00:00">2015-05-06</time>
+      <time title="Created: 2011-08-04 19:44:14" itemprop="dateCreated datePublished" datetime="2011-08-04T19:44:14+00:00">2011-08-04</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-tag"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/tags/ubuntu/" itemprop="url" rel="index"><span itemprop="name">ubuntu</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">id</span> yourname<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/ubuntu-add-users-to-group/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/apple-touch-icon.png">
+      <meta itemprop="name" content="戛戛Happy">
+      <meta itemprop="description" content="后端, 操作系统, 互联网, 程序开发, Linux, 数据库, MySql, Golang, Ruby">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="睡月花儿">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/ubuntu-add-users-to-group/" class="post-title-link" itemprop="url">ubuntu 添加用户到指定组</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2011-08-03 19:35:19" itemprop="dateCreated datePublished" datetime="2011-08-03T19:35:19+00:00">2011-08-03</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-tag"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/tags/ubuntu/" itemprop="url" rel="index"><span itemprop="name">ubuntu</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> gpasswd -a <span class="token operator">&lt;</span>账号<span class="token operator">></span> <span class="token operator">&lt;</span>组名<span class="token operator">></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/how-rails-caches-page-work/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/apple-touch-icon.png">
+      <meta itemprop="name" content="戛戛Happy">
+      <meta itemprop="description" content="后端, 操作系统, 互联网, 程序开发, Linux, 数据库, MySql, Golang, Ruby">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="睡月花儿">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/how-rails-caches-page-work/" class="post-title-link" itemprop="url">rails 页面缓存路径</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2011-08-02 00:01:36" itemprop="dateCreated datePublished" datetime="2011-08-02T00:01:36+00:00">2011-08-02</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -559,10 +925,6 @@ hash<span class="token punctuation">.</span>sort_by<span class="token punctuatio
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
           <a href="/tags/rails/" itemprop="url" rel="index"><span itemprop="name">Rails</span></a>
         </span>
-          , 
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/tags/ruby/" itemprop="url" rel="index"><span itemprop="name">Ruby</span></a>
-        </span>
     </span>
 
   
@@ -575,9 +937,8 @@ hash<span class="token punctuation">.</span>sort_by<span class="token punctuatio
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>可以调用to_sql方法察看实际ORM输出出來的SQL，例如Event.open_public.recent_three_days.to_sql</p>
-<pre class="line-numbers language-ruby" data-language="ruby"><code class="language-ruby"><span class="token constant">Post</span><span class="token punctuation">.</span>where<span class="token punctuation">(</span>author_id<span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">.</span>order<span class="token punctuation">(</span><span class="token string">"id desc"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>limit<span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">.</span>to_sql
-<span class="token comment"># SELECT  `posts`.* FROM `posts`  WHERE `posts`.`author_id` = 1 ORDER BY id desc LIMIT 3</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+          <p>如果使用默认页面缓存设置，在生产环境下，web服务器可以直接访问生成的缓存页面，不再去调用rails。</p>
+<p>但是如果修改了默认页面缓的存放位置，又没对web服务器设置相应的规则，web服务器会因找不到页面而再次把请求转发给rails。从而使缓存变得没有意义。</p>
 
       
     </div>
@@ -604,7 +965,7 @@ hash<span class="token punctuation">.</span>sort_by<span class="token punctuatio
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/pass-argument-to-scope/">
+    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/mysql-manager-of-pid-file-quit-without-updating-file/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/apple-touch-icon.png">
@@ -617,7 +978,7 @@ hash<span class="token punctuation">.</span>sort_by<span class="token punctuatio
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/pass-argument-to-scope/" class="post-title-link" itemprop="url">向Scope传递参数</a>
+          <a href="/mysql-manager-of-pid-file-quit-without-updating-file/" class="post-title-link" itemprop="url">mysql不能启动 Manager of pid-file quit without updating file.</a>
         </h2>
 
         <div class="post-meta-container">
@@ -628,7 +989,7 @@ hash<span class="token punctuation">.</span>sort_by<span class="token punctuatio
       </span>
       <span class="post-meta-item-text">Posted on</span>
 
-      <time title="Created: 2015-05-05 23:56:43" itemprop="dateCreated datePublished" datetime="2015-05-05T23:56:43+00:00">2015-05-05</time>
+      <time title="Created: 2011-08-01 12:34:10" itemprop="dateCreated datePublished" datetime="2011-08-01T12:34:10+00:00">2011-08-01</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -636,11 +997,7 @@ hash<span class="token punctuation">.</span>sort_by<span class="token punctuatio
       </span>
       <span class="post-meta-item-text">In</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/tags/rails/" itemprop="url" rel="index"><span itemprop="name">Rails</span></a>
-        </span>
-          , 
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/tags/ruby/" itemprop="url" rel="index"><span itemprop="name">Ruby</span></a>
+          <a href="/tags/mysql/" itemprop="url" rel="index"><span itemprop="name">mysql</span></a>
         </span>
     </span>
 
@@ -654,13 +1011,12 @@ hash<span class="token punctuation">.</span>sort_by<span class="token punctuatio
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>向Scope传递参数</p>
-<pre class="line-numbers language-ruby" data-language="ruby"><code class="language-ruby"><span class="token keyword">class</span> <span class="token class-name">Event</span> <span class="token operator">&lt;</span> <span class="token constant">ActiveRecord</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token constant">Base</span>
-    scope <span class="token symbol">:recent</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token operator">></span> <span class="token punctuation">&#123;</span> <span class="token operator">|</span>date<span class="token operator">|</span> where<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token string">"created_at > ? "</span><span class="token punctuation">,</span> date <span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">&#125;</span>
-    <span class="token comment"># 等同于 scope :recent, lambda&#123; |date| where(["created_at > ? ", date ]) &#125;</span>
-    <span class="token comment"># 或 scope :recent, Proc.new&#123; |t| where(["created_at > ? ", t ]) &#125;</span>
-<span class="token keyword">end</span>
-<span class="token constant">Event</span><span class="token punctuation">.</span>recent<span class="token punctuation">(</span> <span class="token builtin">Time</span><span class="token punctuation">.</span>now <span class="token operator">-</span> <span class="token number">7.</span>days <span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+          <p>启动mysql失败，提示Manager of pid-file quit without updating file.错误。从网上直接搜索错误信息，感觉出错原因及解决方案都不适用于本机的情况。</p>
+<p>本着出错要查出其原因的原则，查看了mysql的出错日志（出错日志所在路径，请根据您自己机子的实际情况查找），发现错误信息：File ‘./mysql-bin.index’ not found (Errcode: 13)，查看数据库文件，mysql-bin.index确实存在。</p>
+<p>查看数据库文件的权限，发现全都变成了 drwx—— 2  1001 1001。突然想起之前重建过mysql用户，造成数据库文件的权限用户信息丢失。重新授权即可。</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">chown</span> -R  mysql var/
+<span class="token function">sudo</span> <span class="token function">chgrp</span> -R  mysql var/<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p>再次启动mysql，成功！</p>
 
       
     </div>
@@ -687,7 +1043,7 @@ hash<span class="token punctuation">.</span>sort_by<span class="token punctuatio
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/pry-outline/">
+    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/rspec-it-describe-same-and-run/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/apple-touch-icon.png">
@@ -700,7 +1056,7 @@ hash<span class="token punctuation">.</span>sort_by<span class="token punctuatio
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/pry-outline/" class="post-title-link" itemprop="url">Pry Outline</a>
+          <a href="/rspec-it-describe-same-and-run/" class="post-title-link" itemprop="url">rspec it 描述相同也可以正常执行测试</a>
         </h2>
 
         <div class="post-meta-container">
@@ -711,7 +1067,7 @@ hash<span class="token punctuation">.</span>sort_by<span class="token punctuatio
       </span>
       <span class="post-meta-item-text">Posted on</span>
 
-      <time title="Created: 2015-05-03 21:08:51" itemprop="dateCreated datePublished" datetime="2015-05-03T21:08:51+00:00">2015-05-03</time>
+      <time title="Created: 2011-07-30 01:17:17" itemprop="dateCreated datePublished" datetime="2011-07-30T01:17:17+00:00">2011-07-30</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -719,11 +1075,84 @@ hash<span class="token punctuation">.</span>sort_by<span class="token punctuatio
       </span>
       <span class="post-meta-item-text">In</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/tags/ruby/" itemprop="url" rel="index"><span itemprop="name">Ruby</span></a>
+          <a href="/tags/rspec/" itemprop="url" rel="index"><span itemprop="name">rspec</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>目前实践的环境是:同样的it描述在不同的context分组中可以执行各自的测试。如果换成是rails自带的test_开头的方法测试，如果同名肯定会异常。通过这一点又证明了rspec比test更好用的另一个方面。</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/tdd-and-bdd/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/apple-touch-icon.png">
+      <meta itemprop="name" content="戛戛Happy">
+      <meta itemprop="description" content="后端, 操作系统, 互联网, 程序开发, Linux, 数据库, MySql, Golang, Ruby">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="睡月花儿">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/tdd-and-bdd/" class="post-title-link" itemprop="url">TDD 和 BDD</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2011-07-29 00:27:39" itemprop="dateCreated datePublished" datetime="2011-07-29T00:27:39+00:00">2011-07-29</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-tag"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/tags/bdd/" itemprop="url" rel="index"><span itemprop="name">BDD</span></a>
         </span>
           , 
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/tags/pry/" itemprop="url" rel="index"><span itemprop="name">pry</span></a>
+          <a href="/tags/tdd/" itemprop="url" rel="index"><span itemprop="name">TDD</span></a>
         </span>
     </span>
 
@@ -738,40 +1167,9 @@ hash<span class="token punctuation">.</span>sort_by<span class="token punctuatio
     
     <div class="post-body" itemprop="articleBody">
           <ul>
-<li>如果你用<code>gem install rake</code>安装了10.1.0版本的rake（假设是最新的），当你直接使用调用rake时，使用的会是这个最新版本的rake。</li>
-<li>如果项目的Gemfile中指定的版本是0.9.6（或者是Gemfile.lock中是0.9.6）的话，你如果不加bundle exec，将会用rake 10.1.0的版本去执行本来应该由0.9.6版本的rake写出的Rake task。</li>
-<li>会不会出问题？可能会，可能不会。因为很有可能原作者使用0.9.6版本的rake写的Rake task中没有什么被废弃的部分，10.1.10也能正确执行。但是不兼容的情况也会发生。</li>
+<li>TDD 用 test 思維,測試程式的結果</li>
+<li>BDD 用 spec 思維,描述程式應該有什麼行為</li>
 </ul>
-<blockquote>
-<p><strong>bundle exec就是为了解决这样的问题而存在的：在目前的Bundle环境里执行某个操作，这样对于不同的人来说，不论系统里是什么版本的Gem，总是会使用该项目Gemfile中指定的版本来执行某个操作</strong></p>
-</blockquote>
-<p>其他<br><code>pry plugins</code> 也可以裝一下，包括：</p>
-<ol>
-<li><p>pry-stack_explorer 輸入 show-stack 的話可以看到 call stack</p>
-</li>
-<li><p>pry-debugger 可以加上 step, next, finish 和 continue 的控制</p>
-</li>
-<li><p>pry-nav:也因為 binding.pry 太好用。</p>
-<blockquote>
-<p>社群也基於 Pry 繼續做了其他的 pry 的 plugin。最 killling 的就是 pry-nav。pry-nav 做的就是可以讓你在 binding.pry 的攔節點前後，作 next、step。直接一行一行的逐一 debug。相信我，如果你在寫通訊交涉的 Library，或者是正在改複雜的 Rails View</p>
-</blockquote>
-</li>
-<li><p>pry-remote</p>
-<blockquote>
-<p>Pry 搭配 Rails，在往常的作法只有 rails s 可以叫出 debug console 而已。但很多人實際上是使用 Pow 作為開發用 HTTP Server。這樣的需求可以用 pry-remote 解決。pry-remote 的作法是把原本的 bindig.pry 改成 binding.remote_pry。而 binding.remote_pry 會開一支 DRb 起來，開發者再用 pry-remote 連到 debug console</p>
-</blockquote>
-</li>
-<li><p>sinatra使用Pry</p>
-<blockquote>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">pry -r ./application.rb <span class="token comment">#sinatra project, require  application.rb</span>
-rails c <span class="token comment"># rails project</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre></blockquote>
-</li>
-<li><p>pry 用法</p>
-<blockquote>
-<p><code>show-method</code> 显示当前对象的源码<br><code>show-method Author#hi</code> 显示Author#hi方法的源码<br><code>.pwd</code>前面的<code>.</code>是调用shell的命令，而非pry的本身的方法</p>
-</blockquote>
-</li>
-</ol>
 
       
     </div>
@@ -798,7 +1196,7 @@ rails c <span class="token comment"># rails project</span><span aria-hidden="tru
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/scope-of-instance-variable-in-rake-block/">
+    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/rspec-check-kind-of-and-method/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/apple-touch-icon.png">
@@ -811,7 +1209,7 @@ rails c <span class="token comment"># rails project</span><span aria-hidden="tru
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/scope-of-instance-variable-in-rake-block/" class="post-title-link" itemprop="url">rake 实例变量作用范围</a>
+          <a href="/rspec-check-kind-of-and-method/" class="post-title-link" itemprop="url">rspec  检查类别方法</a>
         </h2>
 
         <div class="post-meta-container">
@@ -822,13 +1220,329 @@ rails c <span class="token comment"># rails project</span><span aria-hidden="tru
       </span>
       <span class="post-meta-item-text">Posted on</span>
 
-      <time title="Created: 2015-04-30 13:20:05" itemprop="dateCreated datePublished" datetime="2015-04-30T13:20:05+00:00">2015-04-30</time>
+      <time title="Created: 2011-07-28 17:07:54" itemprop="dateCreated datePublished" datetime="2011-07-28T17:07:54+00:00">2011-07-28</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="fa fa-tag"></i>
       </span>
       <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/tags/rspec/" itemprop="url" rel="index"><span itemprop="name">rspec</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>rspec  检查类别方法</p>
+<pre class="line-numbers language-ruby" data-language="ruby"><code class="language-ruby">target<span class="token punctuation">.</span>should be_a_kind_of<span class="token punctuation">(</span><span class="token builtin">Array</span><span class="token punctuation">)</span>
+<span class="token comment"># target.class.should == Array</span>
+
+target<span class="token punctuation">.</span>should be_an_instance_of<span class="token punctuation">(</span><span class="token builtin">Array</span><span class="token punctuation">)</span>
+<span class="token comment"># target.class.should == Array</span>
+
+target<span class="token punctuation">.</span>should response_to<span class="token punctuation">(</span><span class="token symbol">:foo</span><span class="token punctuation">)</span>
+<span class="token comment"># target.response_to?(:foo).should == true</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/rspec-controller-erro/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/apple-touch-icon.png">
+      <meta itemprop="name" content="戛戛Happy">
+      <meta itemprop="description" content="后端, 操作系统, 互联网, 程序开发, Linux, 数据库, MySql, Golang, Ruby">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="睡月花儿">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/rspec-controller-erro/" class="post-title-link" itemprop="url">rspec controller 出错</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2011-07-25 23:39:12" itemprop="dateCreated datePublished" datetime="2011-07-25T23:39:12+00:00">2011-07-25</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-tag"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/tags/rspec/" itemprop="url" rel="index"><span itemprop="name">rspec</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>运行 spec/controller下的测试时，如果进入到spec/controller 目录下运行相关的spec，会出现undefined method <code>get for #&lt;ActiveSupport::TestCase::Subclass_1::Subclass_1:0xb6ec8cd4&gt;</code>这样类似的错误，解决方法居然是从项目的根目录运行，即<code>spec spec/controller/action_controller_spec.rb</code>。然后everything is ok.</p>
+<p>解决方法是从一个老外的网站上找到，这里引用一下他的原话，看着这英文真是解气啊！</p>
+<blockquote>
+<p>The problem was exactly in the path. I run my tests from spec/controllers folder where they didn’t work. From root folder everything goes right.</p>
+<p>I found the solution, but i still don’t understand why, especially that my models tests works fine from user@user:~/application_folder/spec/models$ path</p>
+</blockquote>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/rspec-in-controller-integration-with-views/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/apple-touch-icon.png">
+      <meta itemprop="name" content="戛戛Happy">
+      <meta itemprop="description" content="后端, 操作系统, 互联网, 程序开发, Linux, 数据库, MySql, Golang, Ruby">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="睡月花儿">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/rspec-in-controller-integration-with-views/" class="post-title-link" itemprop="url">rspec in controller integration with views</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2011-07-25 21:37:52" itemprop="dateCreated datePublished" datetime="2011-07-25T21:37:52+00:00">2011-07-25</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-tag"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/tags/rspec/" itemprop="url" rel="index"><span itemprop="name">rspec</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>If you prefer to integrate views (a la rails functional testing) you can by including<br>the keyword/commmand “integrate_views”.</p>
+<pre class="line-numbers language-ruby" data-language="ruby"><code class="language-ruby">describe <span class="token constant">ArticlesController</span> <span class="token keyword">do</span>
+  integrate_views
+  <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+<span class="token keyword">end</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/rspec-expect-to-change-value-or-raise-error/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/apple-touch-icon.png">
+      <meta itemprop="name" content="戛戛Happy">
+      <meta itemprop="description" content="后端, 操作系统, 互联网, 程序开发, Linux, 数据库, MySql, Golang, Ruby">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="睡月花儿">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/rspec-expect-to-change-value-or-raise-error/" class="post-title-link" itemprop="url">rspec expect to </a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2011-07-19 17:16:58" itemprop="dateCreated datePublished" datetime="2011-07-19T17:16:58+00:00">2011-07-19</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-tag"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/tags/rspec/" itemprop="url" rel="index"><span itemprop="name">rspec</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>期望改变值或抛出异常</p>
+<pre class="line-numbers language-ruby" data-language="ruby"><code class="language-ruby">expect <span class="token punctuation">&#123;</span><span class="token punctuation">&#125;</span><span class="token punctuation">.</span>to change <span class="token punctuation">&#123;</span><span class="token punctuation">&#125;</span><span class="token punctuation">.</span>from<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>to<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+expect <span class="token punctuation">&#123;</span><span class="token punctuation">&#125;</span><span class="token punctuation">.</span>to raise_error<span class="token punctuation">(</span><span class="token constant">YourMenthodError</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/the-different-between-include-and-extend-in-ruby/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/apple-touch-icon.png">
+      <meta itemprop="name" content="戛戛Happy">
+      <meta itemprop="description" content="后端, 操作系统, 互联网, 程序开发, Linux, 数据库, MySql, Golang, Ruby">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="睡月花儿">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/the-different-between-include-and-extend-in-ruby/" class="post-title-link" itemprop="url">ruby 中 include 与 extend 区别</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2011-07-18 23:36:38" itemprop="dateCreated datePublished" datetime="2011-07-18T23:36:38+00:00">2011-07-18</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-tag"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/tags/rails/" itemprop="url" rel="index"><span itemprop="name">Rails</span></a>
+        </span>
+          , 
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
           <a href="/tags/ruby/" itemprop="url" rel="index"><span itemprop="name">Ruby</span></a>
         </span>
@@ -844,21 +1558,93 @@ rails c <span class="token comment"># rails project</span><span aria-hidden="tru
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>rake 实例变量作用范围,可以看到在task的block中，当前self为main，所以@people可以在say方法中访问。</p>
-<pre class="line-numbers language-ruby" data-language="ruby"><code class="language-ruby">desc <span class="token string">"test instance variable"</span>
-task <span class="token symbol">:hello_world</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token symbol">:environment</span> <span class="token keyword">do</span>
-  <span class="token variable">@people</span> <span class="token operator">=</span> <span class="token string">"Jone"</span>
-  puts <span class="token keyword">self</span> <span class="token comment">#=>main</span>
-  <span class="token keyword">def</span> <span class="token method-definition"><span class="token function">say</span></span>
-    puts <span class="token keyword">self</span> <span class="token comment">#=>main</span>
-    puts <span class="token variable">@people</span>
-  <span class="token keyword">end</span>
-  say
-<span class="token keyword">end</span>
+          <p>那么include和extend究竟有什么区别的？</p>
+<p>引用如下</p>
+<blockquote>
+<p>include : mixes in specified module methods as instance methods in the target class<br>extend : mixes in specified module methods as class methods in the target class</p>
+</blockquote>
+<p>记得有看过的，被用到的时候居然忘记了。杯具啊！</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/the-different-between-include-and-extend-in-ruby/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
 
-<span class="token comment">#=>main</span>
-<span class="token comment">#=>main</span>
-<span class="token comment">#=>Jone</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/install-openssh/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/apple-touch-icon.png">
+      <meta itemprop="name" content="戛戛Happy">
+      <meta itemprop="description" content="后端, 操作系统, 互联网, 程序开发, Linux, 数据库, MySql, Golang, Ruby">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="睡月花儿">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/install-openssh/" class="post-title-link" itemprop="url">安装OpenSSH</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2011-07-15 20:22:45" itemprop="dateCreated datePublished" datetime="2011-07-15T20:22:45+00:00">2011-07-15</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-tag"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/tags/ubuntu/" itemprop="url" rel="index"><span itemprop="name">ubuntu</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>安装OpenSSH<br>Ubuntu缺省没有安装SSH Server，使用以下命令安装：</p>
+<p>sudo apt-get install openssh-server openssh-client</p>
 
       
     </div>
@@ -885,7 +1671,7 @@ task <span class="token symbol">:hello_world</span> <span class="token operator"
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/issues-of-install-memcached-reds-postgresql/">
+    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/rmagick-install/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/apple-touch-icon.png">
@@ -898,7 +1684,7 @@ task <span class="token symbol">:hello_world</span> <span class="token operator"
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/issues-of-install-memcached-reds-postgresql/" class="post-title-link" itemprop="url">安装memcached、redis、postgresql问题总结</a>
+          <a href="/rmagick-install/" class="post-title-link" itemprop="url">安装Rmagick</a>
         </h2>
 
         <div class="post-meta-container">
@@ -909,7 +1695,7 @@ task <span class="token symbol">:hello_world</span> <span class="token operator"
       </span>
       <span class="post-meta-item-text">Posted on</span>
 
-      <time title="Created: 2015-04-29 23:53:38" itemprop="dateCreated datePublished" datetime="2015-04-29T23:53:38+00:00">2015-04-29</time>
+      <time title="Created: 2011-07-14 20:21:21" itemprop="dateCreated datePublished" datetime="2011-07-14T20:21:21+00:00">2011-07-14</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -917,11 +1703,11 @@ task <span class="token symbol">:hello_world</span> <span class="token operator"
       </span>
       <span class="post-meta-item-text">In</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/tags/redis/" itemprop="url" rel="index"><span itemprop="name">redis</span></a>
+          <a href="/tags/rails/" itemprop="url" rel="index"><span itemprop="name">Rails</span></a>
         </span>
           , 
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/tags/postgresql/" itemprop="url" rel="index"><span itemprop="name">postgresql</span></a>
+          <a href="/tags/ruby/" itemprop="url" rel="index"><span itemprop="name">Ruby</span></a>
         </span>
     </span>
 
@@ -935,147 +1721,17 @@ task <span class="token symbol">:hello_world</span> <span class="token operator"
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>编译 <code>./configure --prefix=/srv/memcached/memcached145 --with-libevent=/usr/</code><br>需要安装 libevent ，安装时要确保知道安装路径</p>
-<p>启动memcached<br><code>memcached -d -u root -m 200 -P /tmp/memcached.pid</code></p>
-<p>安装redis<br><code>make PREFIX=/srv/redis/redis2815 install</code></p>
-<p>启动:daemonize yes: Make redis run as a daemon<br><code>redis-server /usr/etc/redis.conf</code></p>
-<p>安装postgresql，遇到问题:Can’t find the ‘libpq-fe.h header<br>解决方法:</p>
-<ol>
-<li>`gem install pg -v ‘0.18.1’ – –with-pg-config=/path/config</li>
-</ol>
-<p>–with-pg=/path/pg –with-pg-lib=/path/<code>2.</code>yum install postgresql-devel<code>最终用方法2解决</code>yum list installed | grep postgres`</p>
+          <p>首先下载imagemagick， 进入安装目录</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token builtin class-name">cd</span> imagemagick
+./configure --prefix<span class="token operator">=</span>/opt/imagemagick
+<span class="token function">make</span>
+<span class="token function">sudo</span> <span class="token function">make</span> <span class="token function">install</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 
-      
-    </div>
+<p>如果出现</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">/usr/bin/ld: cannot <span class="token function">find</span> -lperl<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/deploy-nginx-thin/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/apple-touch-icon.png">
-      <meta itemprop="name" content="戛戛Happy">
-      <meta itemprop="description" content="后端, 操作系统, 互联网, 程序开发, Linux, 数据库, MySql, Golang, Ruby">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="睡月花儿">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/deploy-nginx-thin/" class="post-title-link" itemprop="url">部署thin + nginx</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2015-04-28 13:46:16" itemprop="dateCreated datePublished" datetime="2015-04-28T13:46:16+00:00">2015-04-28</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="fa fa-tag"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/tags/nginx/" itemprop="url" rel="index"><span itemprop="name">nginx</span></a>
-        </span>
-          , 
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/tags/thin/" itemprop="url" rel="index"><span itemprop="name">thin</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>部署thin + nginx<br>生成配置文件</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">thin config -C /etc/thin/<span class="token operator">&lt;</span>config-name<span class="token operator">></span>.yml -c <span class="token operator">&lt;</span>rails-app-root-path<span class="token operator">></span> --servers <span class="token operator">&lt;</span>number-of-threads<span class="token operator">></span> -e <span class="token operator">&lt;</span>environment<span class="token operator">></span>
-
-thin config -C /etc/thin/myapp.yml -c /var/rails/myapp --servers <span class="token number">5</span> --socket /tmp/thin.myapp.sock -e development
-
-替换<span class="token operator">&lt;</span>config-name<span class="token operator">></span>为自己的应用名称，替换<span class="token operator">&lt;</span>rails-app-root-path<span class="token operator">></span>为应用的根目录，替换<span class="token operator">&lt;</span>number-of-threads<span class="token operator">></span>为启动的线程数，也就是启动多少个Thin服务，替换<span class="token operator">&lt;</span>environment<span class="token operator">></span>为运行环境。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<pre class="line-numbers language-ruby" data-language="ruby"><code class="language-ruby">thin<span class="token punctuation">:</span>
-environment<span class="token punctuation">:</span> development
-address<span class="token punctuation">:</span> <span class="token number">0.0</span><span class="token number">.0</span><span class="token number">.0</span>
-port<span class="token punctuation">:</span> <span class="token number">3001</span>
-timeout<span class="token punctuation">:</span> <span class="token number">30</span>
-log<span class="token punctuation">:</span> log<span class="token operator">/</span>thin<span class="token punctuation">.</span>log
-pid<span class="token punctuation">:</span> tmp<span class="token operator">/</span>pids<span class="token operator">/</span>thin<span class="token punctuation">.</span>pid
-max_conns<span class="token punctuation">:</span> <span class="token number">1024</span>
-max_persistent_conns<span class="token punctuation">:</span> <span class="token number">512</span>
-wait<span class="token punctuation">:</span> <span class="token number">30</span>
-servers<span class="token punctuation">:</span> <span class="token number">2</span>
-daemonize<span class="token punctuation">:</span> <span class="token boolean">true</span>
-<span class="token comment"># require: []</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>启动: <code>thin start -C config/thin.yml</code><br>停止: <code>thin stop -C config/thin.yml</code></p>
-<p>nginx:</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">server <span class="token punctuation">&#123;</span>
-     listen <span class="token number">3001</span><span class="token punctuation">;</span>
-     charset utf-8<span class="token punctuation">;</span>
-     root /var/rails/mysapp/public<span class="token punctuation">;</span>
-     access_log logs/access.log<span class="token punctuation">;</span>
-     error_log  logs/error.log<span class="token punctuation">;</span>
-
-     location / <span class="token punctuation">&#123;</span>
-         <span class="token comment"># proxy_pass          http://rails_servers;</span>
-         <span class="token comment"># proxy_redirect      default;</span>
-         proxy_redirect      <span class="token boolean">false</span><span class="token punctuation">;</span>
-         proxy_set_header    X-Forwarded-For <span class="token variable">$proxy_add_x_forwarded_for</span><span class="token punctuation">;</span>
-         proxy_set_header    X-Real-IP <span class="token variable">$remote_addr</span><span class="token punctuation">;</span>
-         proxy_set_header    Host <span class="token variable">$http_host</span><span class="token punctuation">;</span>
-         proxy_next_upstream http_502 http_504 error <span class="token function">timeout</span> invalid_header<span class="token punctuation">;</span>
-         proxy_pass <span class="token boolean">false</span><span class="token punctuation">;</span>
-
-        <span class="token keyword">if</span> <span class="token punctuation">(</span>-f <span class="token variable">$request_filename</span>/index.html<span class="token punctuation">)</span>
-        <span class="token punctuation">&#123;</span>
-          rewrite <span class="token punctuation">(</span>.*<span class="token punctuation">)</span> <span class="token variable">$1</span>/index.html <span class="token builtin class-name">break</span><span class="token punctuation">;</span>
-        <span class="token punctuation">&#125;</span>
-        <span class="token keyword">if</span> <span class="token punctuation">(</span>-f <span class="token variable">$request_filename</span>.html<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
-          rewrite <span class="token punctuation">(</span>.*<span class="token punctuation">)</span> <span class="token variable">$1</span>.html <span class="token builtin class-name">break</span><span class="token punctuation">;</span>
-        <span class="token punctuation">&#125;</span>
-        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>-f <span class="token variable">$request_filename</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
-          proxy_pass http://rails_servers<span class="token punctuation">;</span>
-          <span class="token builtin class-name">break</span><span class="token punctuation">;</span>
-        <span class="token punctuation">&#125;</span>
-    <span class="token punctuation">&#125;</span>
- <span class="token punctuation">&#125;</span>
- upstream rails_servers<span class="token punctuation">&#123;</span>
-        server <span class="token number">127.0</span>.0.1:3002<span class="token punctuation">;</span>
-        server <span class="token number">127.0</span>.0.1:3003<span class="token punctuation">;</span>
- <span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>请安装</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">apt-get</span> <span class="token function">install</span> libperl-dev<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
       
     </div>
@@ -1095,7 +1751,7 @@ daemonize<span class="token punctuation">:</span> <span class="token boolean">tr
 
 
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/17/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/17/">17</a><span class="page-number current">18</span><a class="page-number" href="/page/19/">19</a><span class="space">&hellip;</span><a class="page-number" href="/page/87/">87</a><a class="extend next" rel="next" href="/page/19/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
+    <a class="extend prev" rel="prev" href="/page/17/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/17/">17</a><span class="page-number current">18</span><a class="page-number" href="/page/19/">19</a><span class="space">&hellip;</span><a class="page-number" href="/page/44/">44</a><a class="extend next" rel="next" href="/page/19/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
   </nav>
 
 </div>

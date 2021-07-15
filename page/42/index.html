@@ -211,7 +211,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/2011-02-10-micro-fiction/">
+    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/virtualbox-vis-host/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/apple-touch-icon.png">
@@ -224,7 +224,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2011-02-10-micro-fiction/" class="post-title-link" itemprop="url">很有内涵的微小说</a>
+          <a href="/virtualbox-vis-host/" class="post-title-link" itemprop="url">virtualbox  host 连接虚拟机</a>
         </h2>
 
         <div class="post-meta-container">
@@ -235,7 +235,790 @@
       </span>
       <span class="post-meta-item-text">Posted on</span>
 
-      <time title="Created: 2011-02-10 23:28:54" itemprop="dateCreated datePublished" datetime="2011-02-10T23:28:54+00:00">2011-02-10</time>
+      <time title="Created: 2009-08-24 22:45:30" itemprop="dateCreated datePublished" datetime="2009-08-24T22:45:30+00:00">2009-08-24</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-tag"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/tags/virtualbox/" itemprop="url" rel="index"><span itemprop="name">virtualbox</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>virtualbox host 连接虚拟机，以ADSL方式上网时。貌似要先连上ADSL，再开启虚拟机，否则虚拟机无法找到网络。</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/virtual-box-share-file/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/apple-touch-icon.png">
+      <meta itemprop="name" content="戛戛Happy">
+      <meta itemprop="description" content="后端, 操作系统, 互联网, 程序开发, Linux, 数据库, MySql, Golang, Ruby">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="睡月花儿">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/virtual-box-share-file/" class="post-title-link" itemprop="url">Virtual Box 虚拟机共享主机文件</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2009-08-22 21:21:57" itemprop="dateCreated datePublished" datetime="2009-08-22T21:21:57+00:00">2009-08-22</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-tag"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/tags/virtualbox/" itemprop="url" rel="index"><span itemprop="name">virtualbox</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>先要安装“增强功能”</p>
+<p><code>cd /cdrom sudo ./VboxLinuxAdditions.run</code></p>
+<p>安装完毕后重启。重启完成后依然点击设备菜单，选择共享文件夹。然后添加共享文件夹。注意注意，下面便是要注意的问题所在了。</p>
+<p>一定要自己手动填写一个共享文件夹的名称，千万不要用默认的名称！比如，你选择的文件夹名字是sharedfolder，其默认的共享文件夹名称也是这个，这时候一定要改掉成别的名字，否则在Ubuntu里不能使用。</p>
+<p>接下来在Ubuntu系统里运行类似的命令，替换成你的共享文件夹名称和挂载点即可。</p>
+<p><code>sudo mount -t vboxsf Your_folder_name Your_mount_point</code></p>
+<p>OK，现在ubuntu和主机可以互传文件了。</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/virtual-box-connetc-host/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/apple-touch-icon.png">
+      <meta itemprop="name" content="戛戛Happy">
+      <meta itemprop="description" content="后端, 操作系统, 互联网, 程序开发, Linux, 数据库, MySql, Golang, Ruby">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="睡月花儿">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/virtual-box-connetc-host/" class="post-title-link" itemprop="url">Virtual box 让主机与虚拟机通信</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2009-08-22 21:19:42" itemprop="dateCreated datePublished" datetime="2009-08-22T21:19:42+00:00">2009-08-22</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-tag"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/tags/virtualbox/" itemprop="url" rel="index"><span itemprop="name">virtualbox</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>Virtual box 原理：用软件模拟硬件设备，和共享硬件设备 一般而言，安装完VirtualBox设定网路时选择默认的NAT模式，Guest就可顺利联网了，而在主机产生一个地址为192.168.56.1的host-only vbox的网  卡，但是这时候虚拟机是不能与主机通信的。 通过把在网络连接1的NAT模式改为host-only 模式，就可以与主机通信了，但又出现问题，虚拟机不能上网。 这时候，可以在虚拟机里面增加一张网卡，网络连接2.改为NAT，然后让这张网卡自动获取一下IP，一般为10.0.2.2网段，重启，就可以上网了。</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/s60-twitter-gravity/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/apple-touch-icon.png">
+      <meta itemprop="name" content="戛戛Happy">
+      <meta itemprop="description" content="后端, 操作系统, 互联网, 程序开发, Linux, 数据库, MySql, Golang, Ruby">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="睡月花儿">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/s60-twitter-gravity/" class="post-title-link" itemprop="url">S60最强Twitter客户端 Gravity</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2009-08-17 23:49:19" itemprop="dateCreated datePublished" datetime="2009-08-17T23:49:19+00:00">2009-08-17</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-tag"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/tags/twitter/" itemprop="url" rel="index"><span itemprop="name">twitter</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>S60最强Twitter客户端 Gravity，官方网址<a target="_blank" rel="noopener" href="http://mobileways.de/">http://mobileways.de/</a></p>
+<p><img src="//img.gagahappy.cn/blog/2009/08/914695395a3ceb08db19a3a392ed4dbd.jpg" alt="914695395a3ceb08db19a3a392ed4dbd" title="914695395a3ceb08db19a3a392ed4dbd"></p>
+<p>Gravity提供的主要功能包括:</p>
+<ul>
+<li>多账户管理和完美的界面图片上传预览功能；API调整设置；短信邮件转发</li>
+<li>对Tweet中的链接的多样处理</li>
+<li>搜索tag的定义，保存与自动更新</li>
+<li>自动更新 Timeline ， Reply ， DMs ，并可定义更新间隔</li>
+<li>多类别消息的声音、振动提醒</li>
+<li>支持 wifi , gprs 的无缝自动切换！</li>
+<li>命令行操作的支持；延时（scheduled）发推 等等</li>
+</ul>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/s60-twitter-gravity/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/hula-hoop-two/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/apple-touch-icon.png">
+      <meta itemprop="name" content="戛戛Happy">
+      <meta itemprop="description" content="后端, 操作系统, 互联网, 程序开发, Linux, 数据库, MySql, Golang, Ruby">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="睡月花儿">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/hula-hoop-two/" class="post-title-link" itemprop="url">呼啦圈2</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2009-08-17 00:09:59" itemprop="dateCreated datePublished" datetime="2009-08-17T00:09:59+00:00">2009-08-17</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-tag"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/tags/shopping/" itemprop="url" rel="index"><span itemprop="name">购物</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>话说前天买了呼拉圈，由于太沉（里面有铁圈），加之质量又不好（二元店购入，入手太急了），居然给身体造成伤害，除当天发现的腰处受伤外，今天又发现腿上还有二处伤，全都青了。</p>
+<p>网上淘了一下才知道，现在比较流行的是那种韩式的软的呼拉圈，除了给腰部做运动，其他部位也可以。对于那种里面加了铁圈的那种加重版的，据说由于太重，长时间练的话会伤害到身体~~。像这种软件的呼拉圈，一般一次练个10-30分钟就OK了。</p>
+<p>期待可以把小肚子减下去。</p>
+<p>1、外观</p>
+<p><img src="//img.gagahappy.cn/blog/2009/08/T1H4RhXd3DadQZhvg9_103304.jpg_310x310.jpg" alt="T1H4RhXd3DadQZhvg9_103304.jpg_310x310" title="T1H4RhXd3DadQZhvg9_103304.jpg_310x310"></p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/hula-hoop-two/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/hula-hoop-one/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/apple-touch-icon.png">
+      <meta itemprop="name" content="戛戛Happy">
+      <meta itemprop="description" content="后端, 操作系统, 互联网, 程序开发, Linux, 数据库, MySql, Golang, Ruby">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="睡月花儿">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/hula-hoop-one/" class="post-title-link" itemprop="url">呼拉圈1</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2009-08-15 22:23:26" itemprop="dateCreated datePublished" datetime="2009-08-15T22:23:26+00:00">2009-08-15</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-tag"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/tags/shopping/" itemprop="url" rel="index"><span itemprop="name">购物</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>首先感谢莫莫同学送的小礼物，在路上的时候就挂到手机上啦。很是喜欢！（穿线的时候向路边修鞋的大爷借了个图钉！）</p>
+<p>在二元店买了个呼啦圈（事后证明，绝对不能从二元店买），用来减小肚子，从电视上看到转呼啦圈的MM腰是超细啊。于是产生了用这东西减小肚子的念头。回家后马上投入到操练中，还真别说啊，虽然每次连10个都没转 到（还没学会怎么转呢），就已经满身大汗了。本人平时是相当的不爱出汗的。看来还是挺管作用的啊。转这个东西全身都处于运动之中，应该有点效果吧。由于这东西里面是根铁管子，加上本人又瘦，愣是让呼拉圈在腰的部位给碰青了一块。惊人～～，明天打算从网上再买个好点的，在单位休息的时候就用的上了。</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/happy-birthday-to-leader/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/apple-touch-icon.png">
+      <meta itemprop="name" content="戛戛Happy">
+      <meta itemprop="description" content="后端, 操作系统, 互联网, 程序开发, Linux, 数据库, MySql, Golang, Ruby">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="睡月花儿">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/happy-birthday-to-leader/" class="post-title-link" itemprop="url">happy birthday to leader</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2009-08-04 20:33:48" itemprop="dateCreated datePublished" datetime="2009-08-04T20:33:48+00:00">2009-08-04</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-tag"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/tags/taandme/" itemprop="url" rel="index"><span itemprop="name">Ta们的我</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>这一天是领导的生日，祝生日快乐~！</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/quiet-gladder-twitter/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/apple-touch-icon.png">
+      <meta itemprop="name" content="戛戛Happy">
+      <meta itemprop="description" content="后端, 操作系统, 互联网, 程序开发, Linux, 数据库, MySql, Golang, Ruby">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="睡月花儿">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/quiet-gladder-twitter/" class="post-title-link" itemprop="url">低调翻墙吧</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2009-08-01 11:26:21" itemprop="dateCreated datePublished" datetime="2009-08-01T11:26:21+00:00">2009-08-01</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-tag"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/tags/twitter/" itemprop="url" rel="index"><span itemprop="name">twitter</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>这两个地址目前已经不行了，被墙了</p>
+<blockquote>
+<p>128.121.146.228 twitter.com<br>128.121.146.228 <a target="_blank" rel="noopener" href="http://www.twitter.com/">www.twitter.com</a></p>
+</blockquote>
+<p>最新的可以翻墙的地址如下：</p>
+<blockquote>
+<p>168.143.161.20? twitter.com<br>168.143.161.20? <a target="_blank" rel="noopener" href="http://www.twitter.com/">www.twitter.com</a><br>128.121.146.101 assets0.twitter.com<br>128.121.146.101 assets1.twitter.com<br>128.121.146.101 static.twitter.com<br>128.121.146.229 assets2.twitter.com<br>128.121.146.229 assets3.twitter.com<br>65.74.185.41 twitter.zendesk.com<br>65.74.185.41 help.twitter.com</p>
+</blockquote>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/ued/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/apple-touch-icon.png">
+      <meta itemprop="name" content="戛戛Happy">
+      <meta itemprop="description" content="后端, 操作系统, 互联网, 程序开发, Linux, 数据库, MySql, Golang, Ruby">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="睡月花儿">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/ued/" class="post-title-link" itemprop="url">UED</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2009-07-28 23:08:29" itemprop="dateCreated datePublished" datetime="2009-07-28T23:08:29+00:00">2009-07-28</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>简介：UED是进行产品策划的主力之一，他们用自己的知识、经验、设计能力拿出设计方案。ED不只是互联网专家，还是行业专家。能够用自己的互联网知识来设计出行业专家想实现的操作，而付诸以商业营销。<br>用户体验设计师的职责主要有哪些？</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/ued/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/ice-age-dawn-of-the-dinosaurs/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/apple-touch-icon.png">
+      <meta itemprop="name" content="戛戛Happy">
+      <meta itemprop="description" content="后端, 操作系统, 互联网, 程序开发, Linux, 数据库, MySql, Golang, Ruby">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="睡月花儿">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/ice-age-dawn-of-the-dinosaurs/" class="post-title-link" itemprop="url">冰川时代3全场乐翻天</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2009-07-26 17:48:26" itemprop="dateCreated datePublished" datetime="2009-07-26T17:48:26+00:00">2009-07-26</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-tag"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/tags/movie/" itemprop="url" rel="index"><span itemprop="name">电影</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>看点</p>
+<p>1、全场下来整个都是3D的，建议去大屏幕的影院看。选位子 的时候不要太靠后了。中间的就好。3D效果明显。</p>
+<p>2、一定要看国语配音的，超级逗，全场老少齐笑翻天。</p>
+<p>3、里面的恐龙宝宝好可爱啊。要是有玩具公仔的话一定买。</p>
+<p>他们的爱情是相当的浪漫</p>
+<p><img src="//img.gagahappy.cn/blog/2009/07/20090707032906631.jpg" alt="20090707032906631" title="20090707032906631"></p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/ice-age-dawn-of-the-dinosaurs/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/beijingopenparty-2009-06/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/apple-touch-icon.png">
+      <meta itemprop="name" content="戛戛Happy">
+      <meta itemprop="description" content="后端, 操作系统, 互联网, 程序开发, Linux, 数据库, MySql, Golang, Ruby">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="睡月花儿">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/beijingopenparty-2009-06/" class="post-title-link" itemprop="url">BeijingOpenParty2009年6月</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2009-07-26 00:35:52" itemprop="dateCreated datePublished" datetime="2009-07-26T00:35:52+00:00">2009-07-26</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -257,21 +1040,16 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <blockquote>
-<p>我在一个高层上班，他在我对面的窗户里办公，我们隔着一条街。</p>
-</blockquote>
-<p>每天偷偷看着他，猜测他的快乐忧伤，写在微博上。</p>
-<blockquote>
-<p>他应该不知道吧，因为我总是很小心。</p>
-</blockquote>
-<p>某天他突然消失了。</p>
-<blockquote>
-<p>心里一空，发了新微博：“他走了，我想他，他不知道”。</p>
-</blockquote>
-<p>立刻弹出一条新评论：“傻孩子，我搬到上面那层了。”</p>
-<p>##嗯,我开始喜欢微博了</p>
-<p><a target="_blank" rel="noopener" href="//img.gagahappy.cn/blog/2011/02/1.jpg"><img src="//img.gagahappy.cn/blog/2011/02/1.jpg" title="连它们都恋爱了"></a></p>
-
+          <p>在BeijingOpenParty2009年6月 “Looking fish at Willowy bank（柳岸寻鱼）”的活动中。看到了几个熟悉的身影。</p>
+<p><img src="//img.gagahappy.cn/blog/2009/07/3676361231_a086171bc4.jpg" alt="3676361231_a086171bc4" title="3676361231_a086171bc4"></p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/beijingopenparty-2009-06/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -297,7 +1075,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/phpmyadmin-need-a-phrase-password/">
+    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/well-being-of-ants/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/apple-touch-icon.png">
@@ -310,7 +1088,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/phpmyadmin-need-a-phrase-password/" class="post-title-link" itemprop="url">phpMyAdmin 配置文件现在需要一个短语密码</a>
+          <a href="/well-being-of-ants/" class="post-title-link" itemprop="url">蚂蚁的幸福</a>
         </h2>
 
         <div class="post-meta-container">
@@ -321,7 +1099,7 @@
       </span>
       <span class="post-meta-item-text">Posted on</span>
 
-      <time title="Created: 2011-02-08 10:27:14" itemprop="dateCreated datePublished" datetime="2011-02-08T10:27:14+00:00">2011-02-08</time>
+      <time title="Created: 2009-07-25 23:48:46" itemprop="dateCreated datePublished" datetime="2009-07-25T23:48:46+00:00">2009-07-25</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -329,7 +1107,7 @@
       </span>
       <span class="post-meta-item-text">In</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/tags/mysql/" itemprop="url" rel="index"><span itemprop="name">mysql</span></a>
+          <a href="/tags/tv/" itemprop="url" rel="index"><span itemprop="name">电视剧</span></a>
         </span>
     </span>
 
@@ -343,17 +1121,11 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>上传安装phpMyAdmin后，出现”配置文件现在需要一个短语密码“的错误提示，上网查找，解决方法如下</p>
-<p>修改phpmyadmin/libraries/config.default.php中的$cfg[‘blowfish_secret’]的值为任意字符串</p>
-<pre class="line-numbers language-php" data-language="php"><code class="language-php"><span class="token comment">/**
- * The 'cookie' auth_type uses blowfish algorithm to encrypt the password. If
- * at least one server configuration uses 'cookie' auth_type, enter here a
- * pass phrase that will be used by blowfish. The maximum length seems to be 46
- * characters.
- *
- * @global string $cfg['blowfish_secret']
- */</span>
-<span class="token variable">$cfg</span><span class="token punctuation">[</span><span class="token string single-quoted-string">'blowfish_secret'</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string single-quoted-string">'yourpassword'</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+          <p>你知道蚂蚁的幸福是什么吗</p>
+<p>知道，胃口小，不贪婪</p>
+<p>我们知足，别人吃一碗还不饱，咱俩有一粒就乐半年</p>
+<p>走。我们找米去</p>
+<p>两只蚂蚁，两只蚂蚁，找米去，找米去，一只找到大米，一只找到小米，真高兴，真高兴</p>
 
       
     </div>
@@ -380,7 +1152,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/git-bash-on-windows/">
+    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/cube-sub30/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/apple-touch-icon.png">
@@ -393,7 +1165,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/git-bash-on-windows/" class="post-title-link" itemprop="url">Git Bash on windows</a>
+          <a href="/cube-sub30/" class="post-title-link" itemprop="url">亲眼见的sub30</a>
         </h2>
 
         <div class="post-meta-container">
@@ -404,7 +1176,153 @@
       </span>
       <span class="post-meta-item-text">Posted on</span>
 
-      <time title="Created: 2011-02-06 23:12:42" itemprop="dateCreated datePublished" datetime="2011-02-06T23:12:42+00:00">2011-02-06</time>
+      <time title="Created: 2009-07-20 23:05:29" itemprop="dateCreated datePublished" datetime="2009-07-20T23:05:29+00:00">2009-07-20</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-tag"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/tags/rubik/" itemprop="url" rel="index"><span itemprop="name">魔方</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>地铁上见一帅哥30秒就把魔方还原了，那不是我的目标吗？受刺激！</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/bare-feet/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/apple-touch-icon.png">
+      <meta itemprop="name" content="戛戛Happy">
+      <meta itemprop="description" content="后端, 操作系统, 互联网, 程序开发, Linux, 数据库, MySql, Golang, Ruby">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="睡月花儿">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/bare-feet/" class="post-title-link" itemprop="url">这也能被看到</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2009-07-18 00:43:13" itemprop="dateCreated datePublished" datetime="2009-07-18T00:43:13+00:00">2009-07-18</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-tag"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/tags/weibo/" itemprop="url" rel="index"><span itemprop="name">微博</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>在单位光着脚在办公室里窜来窜去。被同事说道：“指甲够长的了啊”。炫晕中</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/install-wine/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/apple-touch-icon.png">
+      <meta itemprop="name" content="戛戛Happy">
+      <meta itemprop="description" content="后端, 操作系统, 互联网, 程序开发, Linux, 数据库, MySql, Golang, Ruby">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="睡月花儿">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/install-wine/" class="post-title-link" itemprop="url">安装 wine</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2009-07-15 23:41:02" itemprop="dateCreated datePublished" datetime="2009-07-15T23:41:02+00:00">2009-07-15</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -426,163 +1344,12 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>在shell下完全可以使用linux中的命令，并且支持色彩输出</p>
-<p><a target="_blank" rel="noopener" href="//img.gagahappy.cn/blog/2011/02/21.jpg"><img src="//img.gagahappy.cn/blog/2011/02/21.jpg" title="Git Bash on windows"></a></p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/life-in-a-flash-to-touched/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/apple-touch-icon.png">
-      <meta itemprop="name" content="戛戛Happy">
-      <meta itemprop="description" content="后端, 操作系统, 互联网, 程序开发, Linux, 数据库, MySql, Golang, Ruby">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="睡月花儿">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/life-in-a-flash-to-touched/" class="post-title-link" itemprop="url">生命，就在一瞬间，真让人感动</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2011-02-05 21:33:43" itemprop="dateCreated datePublished" datetime="2011-02-05T21:33:43+00:00">2011-02-05</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="fa fa-tag"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/tags/weibo/" itemprop="url" rel="index"><span itemprop="name">微博</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>【生命的奇迹】只有21周大的 Samue患上胎儿脊髓病变,必需开刀为胎儿医治,没想到在手术过程中,子宫竟伸出了一只婴儿的小手,并紧紧握住医生的大手!通常在胎儿先天有疾病的情况下,父母都会选择流产,但Samue的父母选择了在怀孕期间为其治疗…手术很成功,Samuel顺利降生,重5磅11盎司</p>
-<p><a target="_blank" rel="noopener" href="//img.gagahappy.cn/blog/2011/02/620626d0jw6de9qxlif2mj.jpg"><img src="//img.gagahappy.cn/blog/2011/02/620626d0jw6de9qxlif2mj.jpg" title="620626d0jw6de9qxlif2mj"></a></p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/foot-in-the-door-effect/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/apple-touch-icon.png">
-      <meta itemprop="name" content="戛戛Happy">
-      <meta itemprop="description" content="后端, 操作系统, 互联网, 程序开发, Linux, 数据库, MySql, Golang, Ruby">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="睡月花儿">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/foot-in-the-door-effect/" class="post-title-link" itemprop="url">留面子效应</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2011-02-03 21:15:33" itemprop="dateCreated datePublished" datetime="2011-02-03T21:15:33+00:00">2011-02-03</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="fa fa-tag"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/tags/funny/" itemprop="url" rel="index"><span itemprop="name">有趣</span></a>
-        </span>
-          , 
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/tags/weibo/" itemprop="url" rel="index"><span itemprop="name">微博</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>【留面子效应】在向别人提出自己真正要求之前，先提出一个大要求。被拒绝后，再提出自己相对小的要求，别人接受这要求的可能性会大大增加。这就是心理学中的“留面子效应”</p>
-<p><a target="_blank" rel="noopener" href="//img.gagahappy.cn/blog/2011/02/3.jpg"><img src="//img.gagahappy.cn/blog/2011/02/3.jpg" title="留面子效应"></a>
+          <h4 id="安装-wine"><a href="#安装-wine" class="headerlink" title="安装 wine"></a>安装 wine</h4><p>Ubuntu 官方自带了 wine ， 但是推荐用 winehq 官方提供的最新版本 wine ， 新版本解决了很多以前显得麻烦的问题， 请照下边说的来安装</p>
+<p>先增加签名::</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">wget</span> -q http://wine.budgetdedicated.com/apt/387EE263.gpg? -O- <span class="token operator">|</span> <span class="token function">sudo</span> apt-key <span class="token function">add</span> -<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/foot-in-the-door-effect/#more" rel="contents">
+              <a class="btn" href="/install-wine/#more" rel="contents">
                 Read more &raquo;
               </a>
             </div>
@@ -613,7 +1380,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/guan-dong-tang/">
+    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/vis-kaixin001/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/apple-touch-icon.png">
@@ -626,7 +1393,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/guan-dong-tang/" class="post-title-link" itemprop="url">过小年，不但要吃饺子，还要吃关东糖</a>
+          <a href="/vis-kaixin001/" class="post-title-link" itemprop="url">窜上开心网</a>
         </h2>
 
         <div class="post-meta-container">
@@ -637,7 +1404,7 @@
       </span>
       <span class="post-meta-item-text">Posted on</span>
 
-      <time title="Created: 2011-01-26 22:49:56" itemprop="dateCreated datePublished" datetime="2011-01-26T22:49:56+00:00">2011-01-26</time>
+      <time title="Created: 2009-07-15 00:45:33" itemprop="dateCreated datePublished" datetime="2009-07-15T00:45:33+00:00">2009-07-15</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -645,7 +1412,7 @@
       </span>
       <span class="post-meta-item-text">In</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/tags/youknow/" itemprop="url" rel="index"><span itemprop="name">小知识</span></a>
+          <a href="/tags/weibo/" itemprop="url" rel="index"><span itemprop="name">微博</span></a>
         </span>
     </span>
 
@@ -659,9 +1426,8 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>关东糖又称灶王糖、大块糖。一年之中，只有在小年前后才有出售。关东糖是用麦芽、小米熬制而成的糖制品，它是祭灶神用的，也有人说它是用白糖加淀粉加水加淀粉酶酿熬而成。清人写的《燕京岁时记》中记载：清代祭灶，供品中就有“关东糖”、“糖饼”。</p>
-<p>关东糖在东北的农村、城市里，大街小巷、街市上，都有小贩叫卖：“大块糖，大块糖，又酥又香的大块糖。”乳白色的大块糖，放在方盘上，一般有三寸长，一寸宽，扁平，呈丝条状。新做的大块糖，放在嘴里一咬，又酥又香，有粘性，有一种特殊风味，是关东男女老少都十分喜爱的一种糖。</p>
-<p><a target="_blank" rel="noopener" href="//img.gagahappy.cn/blog/2011/01/1265433644177.jpg"><img src="//img.gagahappy.cn/blog/2011/01/1265433644177.jpg" title="关东糖"></a></p>
+          <p>已经好久不玩开心网了，今儿不知怎么的就窜了上来，看到最近来访里排在前几位的居然全是我的密友大人们，心中无限的感动啊！于是赶紧到各位大人的空间访问了一番，留下自己的小脚印儿。</p>
+<p>哦。亲爱的们，我怎么就那么的爱你们啊。</p>
 
       
     </div>
@@ -688,7 +1454,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/python-tiobe-award/">
+    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/mozilla-firefox-35/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/apple-touch-icon.png">
@@ -701,7 +1467,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/python-tiobe-award/" class="post-title-link" itemprop="url">Python赢得Tiobe 2010年度语言大奖</a>
+          <a href="/mozilla-firefox-35/" class="post-title-link" itemprop="url">Mozilla FireFox 3.5正式版发布</a>
         </h2>
 
         <div class="post-meta-container">
@@ -712,7 +1478,7 @@
       </span>
       <span class="post-meta-item-text">Posted on</span>
 
-      <time title="Created: 2011-01-23 00:43:10" itemprop="dateCreated datePublished" datetime="2011-01-23T00:43:10+00:00">2011-01-23</time>
+      <time title="Created: 2009-07-12 23:57:22" itemprop="dateCreated datePublished" datetime="2009-07-12T23:57:22+00:00">2009-07-12</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -720,7 +1486,7 @@
       </span>
       <span class="post-meta-item-text">In</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/tags/news/" itemprop="url" rel="index"><span itemprop="name">新闻</span></a>
+          <a href="/tags/firefox/" itemprop="url" rel="index"><span itemprop="name">firefox</span></a>
         </span>
     </span>
 
@@ -734,13 +1500,90 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <blockquote>
-<p>过去50年的软件工程已经证明各种语言的起起伏伏终归是由业界要解决的问题类型（Fortran、COBOL）或是时代的技术领导者所决定的。2010年，Python赢得了最多的市场份额：</p>
-</blockquote>
-<p><a target="_blank" rel="noopener" href="//img.gagahappy.cn/blog/2011/01/language.jpg"><img src="//img.gagahappy.cn/blog/2011/01/language.jpg" title="language"></a></p>
+          <ul>
+<li>Mozilla FireFox 3.5正式版发布,在启动速度方面有所提高，支持 HTML5_的嵌入式视频，支持嵌入JavaScript的图形或视频（看视频时不会占用太多CPU？）</li>
+<li>偶在ubuntu下的启动速度的确挺快。但网上说在windows下好像是相当的慢啊。</li>
+<li>3.5在关闭的时候居然还有声音提示，当时真是吓了我一跳</li>
+</ul>
+<p><img src="//img.gagahappy.cn/blog/2009/07/performance-chart.png" alt="performance-chart" title="performance-chart"></p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/what-is-wumao/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/apple-touch-icon.png">
+      <meta itemprop="name" content="戛戛Happy">
+      <meta itemprop="description" content="后端, 操作系统, 互联网, 程序开发, Linux, 数据库, MySql, Golang, Ruby">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="睡月花儿">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/what-is-wumao/" class="post-title-link" itemprop="url">什么是五毛</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2009-07-12 23:19:52" itemprop="dateCreated datePublished" datetime="2009-07-12T23:19:52+00:00">2009-07-12</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-tag"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/tags/youknow/" itemprop="url" rel="index"><span itemprop="name">小知识</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>在网上经常看到有些网民被称为五毛.什么是五毛(WM)?</p>
+<p>五毛就是在以“网上舆论导向”为职业者。据说每发一个“舆论导向”的帖子可以领取5毛钱的奖金，所以被广大网民称为五毛。</p>
+<p>通过发帖获取利益的人,跟5美分的相比，5MAO是维护中国稳定的专门发正面消息的，5美分则是专门反华的意思。5M也是掩盖真相、歌功颂德拍马屁的无良心奴才。</p>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/python-tiobe-award/#more" rel="contents">
+              <a class="btn" href="/what-is-wumao/#more" rel="contents">
                 Read more &raquo;
               </a>
             </div>
@@ -771,7 +1614,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/animated-film/">
+    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/chromeos/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/apple-touch-icon.png">
@@ -784,7 +1627,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/animated-film/" class="post-title-link" itemprop="url">那些动画片啊</a>
+          <a href="/chromeos/" class="post-title-link" itemprop="url">Chrome操作系统的官方博客全文</a>
         </h2>
 
         <div class="post-meta-container">
@@ -795,7 +1638,7 @@
       </span>
       <span class="post-meta-item-text">Posted on</span>
 
-      <time title="Created: 2011-01-22 13:20:29" itemprop="dateCreated datePublished" datetime="2011-01-22T13:20:29+00:00">2011-01-22</time>
+      <time title="Created: 2009-07-12 00:41:25" itemprop="dateCreated datePublished" datetime="2009-07-12T00:41:25+00:00">2009-07-12</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -803,7 +1646,7 @@
       </span>
       <span class="post-meta-item-text">In</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/tags/weibo/" itemprop="url" rel="index"><span itemprop="name">微博</span></a>
+          <a href="/tags/google/" itemprop="url" rel="index"><span itemprop="name">google</span></a>
         </span>
     </span>
 
@@ -817,9 +1660,8 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>儿时的记忆，感觉那会有好多好看的的动画片《圣斗士》、《变形金刚》、《希端》。。。但都是国外的。</p>
-<p>虽然现在国产动画片也不少，但要说能看的本博感觉也就只有《喜洋洋与灰太狼》了，在众多国产动画片里影响力算是比较大的，可以说是老中青都爱看。</p>
-<p><a target="_blank" rel="noopener" href="//img.gagahappy.cn/blog/2011/01/1.png"><img src="//img.gagahappy.cn/blog/2011/01/1.png" title="动画片"></a></p>
+          <p><img src="//img.gagahappy.cn/blog/2009/07/bj.jpg" alt="bj" title="bj"></p>
+<p>以上内容转自互联网</p>
 
       
     </div>
@@ -846,7 +1688,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/what-is-highest-state-of-love/">
+    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/website-revenue/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/apple-touch-icon.png">
@@ -859,7 +1701,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/what-is-highest-state-of-love/" class="post-title-link" itemprop="url">爱的最高境界</a>
+          <a href="/website-revenue/" class="post-title-link" itemprop="url">牛X网站每秒所得</a>
         </h2>
 
         <div class="post-meta-container">
@@ -870,16 +1712,7 @@
       </span>
       <span class="post-meta-item-text">Posted on</span>
 
-      <time title="Created: 2011-01-21 22:43:13" itemprop="dateCreated datePublished" datetime="2011-01-21T22:43:13+00:00">2011-01-21</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="fa fa-tag"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/tags/weibo/" itemprop="url" rel="index"><span itemprop="name">微博</span></a>
-        </span>
+      <time title="Created: 2009-07-12 00:24:15" itemprop="dateCreated datePublished" datetime="2009-07-12T00:24:15+00:00">2009-07-12</time>
     </span>
 
   
@@ -892,87 +1725,228 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>爱的最高境界是经得起平淡的流年</p>
-<p><a target="_blank" rel="noopener" href="//img.gagahappy.cn/blog/2011/01/62f4cb1fjw6ddk65148j4j-.jpg"><img src="//img.gagahappy.cn/blog/2011/01/62f4cb1fjw6ddk65148j4j-.jpg" title="爱的最高境界"></a></p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://blog.gagahappy.cn/shortcut-of-fold-clothes/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/apple-touch-icon.png">
-      <meta itemprop="name" content="戛戛Happy">
-      <meta itemprop="description" content="后端, 操作系统, 互联网, 程序开发, Linux, 数据库, MySql, Golang, Ruby">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="睡月花儿">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/shortcut-of-fold-clothes/" class="post-title-link" itemprop="url">折衣服窍门</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2011-01-19 11:37:11" itemprop="dateCreated datePublished" datetime="2011-01-19T11:37:11+00:00">2011-01-19</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="fa fa-tag"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/tags/weibo/" itemprop="url" rel="index"><span itemprop="name">微博</span></a>
-        </span>
-          , 
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/tags/youknow/" itemprop="url" rel="index"><span itemprop="name">小知识</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>教你一秒钟快速叠衣服！这招整齐还快捷！不管男孩女孩都学着点儿，留着将来露一手！</p>
-<p><a target="_blank" rel="noopener" href="//img.gagahappy.cn/blog/2011/01/11.jpg"><img src="//img.gagahappy.cn/blog/2011/01/11.jpg" title="折衣服窍门"></a></p>
-<p><a target="_blank" rel="noopener" href="//img.gagahappy.cn/blog/2011/01/21.jpg"><img src="//img.gagahappy.cn/blog/2011/01/21.jpg" title="折衣服窍门"></a></p>
+          <p>以下内容转自互联网</p>
+<table>
+<thead>
+<tr>
+<th>Rank</th>
+<th>Website</th>
+<th>Founders</th>
+<th>Annual Revenue</th>
+<th>Per Second</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td><a target="_blank" rel="noopener" href="http://www.google.com/">Google</a></td>
+<td>Larry Page and Sergey Brin</td>
+<td>$21,800,000,000</td>
+<td>$691.27</td>
+</tr>
+<tr>
+<td>2</td>
+<td><a target="_blank" rel="noopener" href="http://www.amazon.com/">Amazon</a></td>
+<td><a target="_blank" rel="noopener" href="http://en.wikipedia.org/wiki/Jeff_Bezos" title="Jeff Bezos">Jeff Bezos</a></td>
+<td>$19,166,000,000</td>
+<td>$607.75</td>
+</tr>
+<tr>
+<td>3</td>
+<td><a target="_blank" rel="noopener" href="http://www.yahoo.com/">Yahoo</a></td>
+<td>Jerry Yang and David Filo</td>
+<td>$7,200,000,000</td>
+<td>$228.31</td>
+</tr>
+<tr>
+<td>4</td>
+<td><a target="_blank" rel="noopener" href="http://www.ebay.com/">eBay</a></td>
+<td>Pierre Omidyar</td>
+<td>$6,290,000,000</td>
+<td>$199.45</td>
+</tr>
+<tr>
+<td>5</td>
+<td><a target="_blank" rel="noopener" href="http://www.msn.com/">MSN/Live</a></td>
+<td><a target="_blank" rel="noopener" href="http://en.wikipedia.org/wiki/Nathan_Myhrvold" title="Nathan Myhrvold">Nathan Myhrvold.</a></td>
+<td>$3,214,000,000</td>
+<td>$101.92</td>
+</tr>
+<tr>
+<td>6</td>
+<td><a target="_blank" rel="noopener" href="http://www.paypal.com/">PayPal</a></td>
+<td>Max Levchin, Peter Thiel, and Luke Nosek,</td>
+<td>$2,250,000,000</td>
+<td>$71.35</td>
+</tr>
+<tr>
+<td>7</td>
+<td><a target="_blank" rel="noopener" href="http://www.apple.com/itunes/">iTunes</a></td>
+<td><a target="_blank" rel="noopener" href="http://en.wikipedia.org/wiki/Jeff_Robbin" title="Jeff Robbin">Jeff Robbin</a></td>
+<td>$1,900,000,000</td>
+<td>$60.25</td>
+</tr>
+<tr>
+<td>8</td>
+<td><a target="_blank" rel="noopener" href="http://www.reuters.com/">Reuters</a></td>
+<td>Marshal Vace</td>
+<td>$1,892,000,000</td>
+<td>$59.99</td>
+</tr>
+<tr>
+<td>9</td>
+<td><a target="_blank" rel="noopener" href="http://www.priceline.com/">Priceline</a></td>
+<td><a target="_blank" rel="noopener" href="http://en.wikipedia.org/w/index.php?title=Jesse_Fink&action=edit&redlink=1" title="Jesse Fink (page does not exist)">Jesse Fink</a></td>
+<td>$1,884,000,000</td>
+<td>$59.74</td>
+</tr>
+<tr>
+<td>10</td>
+<td><a target="_blank" rel="noopener" href="http://www.expedia.com/">Expedia</a></td>
+<td>Added Mark Schroeder</td>
+<td>$1,447,000,000</td>
+<td>$45.88</td>
+</tr>
+<tr>
+<td>11</td>
+<td><a target="_blank" rel="noopener" href="http://www.netflix.com/">NetFlix</a></td>
+<td>Reed Hastings</td>
+<td>$1,200,000,000</td>
+<td>$38.05</td>
+</tr>
+<tr>
+<td>12</td>
+<td><a target="_blank" rel="noopener" href="http://www.travelocity.com/">Travelocity</a></td>
+<td>Terry Jones</td>
+<td>$1,100,000,000</td>
+<td>$34.88</td>
+</tr>
+<tr>
+<td>13</td>
+<td><a target="_blank" rel="noopener" href="http://www.zappos.com/">Zappos</a></td>
+<td>Nick Swinmurn</td>
+<td>$1,000,000,000</td>
+<td>$31.71</td>
+</tr>
+<tr>
+<td>14</td>
+<td><a target="_blank" rel="noopener" href="http://www.hotels.com/">Hotels.com</a></td>
+<td>David Litman</td>
+<td>$1,000,000,000</td>
+<td>$31.71</td>
+</tr>
+<tr>
+<td>15</td>
+<td><a target="_blank" rel="noopener" href="http://www.aol.com/">AOL</a></td>
+<td>Erik Prince</td>
+<td>$968,000,000</td>
+<td>$30.70</td>
+</tr>
+<tr>
+<td>16</td>
+<td><a target="_blank" rel="noopener" href="http://www.orbitz.com/">Orbitz</a></td>
+<td>Jeff Katz</td>
+<td>$870,000,000</td>
+<td>$27.59</td>
+</tr>
+<tr>
+<td>17</td>
+<td><a target="_blank" rel="noopener" href="http://www.overstock.com/">Overstock</a></td>
+<td>Robert Brazell</td>
+<td>$834,000,000</td>
+<td>$26.45</td>
+</tr>
+<tr>
+<td>18</td>
+<td><a target="_blank" rel="noopener" href="http://www.myspace.com/">MySpace</a></td>
+<td>Tom Anderson</td>
+<td>$800,000,000</td>
+<td>$25.37</td>
+</tr>
+<tr>
+<td>19</td>
+<td><a target="_blank" rel="noopener" href="http://www.skype.com/">Skype</a></td>
+<td>Niklas Zennstrom</td>
+<td>$550,841,000</td>
+<td>$17.47</td>
+</tr>
+<tr>
+<td>20</td>
+<td><a target="_blank" rel="noopener" href="http://www.sohu.com/">Sohu</a></td>
+<td>Zhang Chaoyang</td>
+<td>$429,000,000</td>
+<td>$13.60</td>
+</tr>
+<tr>
+<td>21</td>
+<td><a target="_blank" rel="noopener" href="http://www.buy.com/">Buy.com</a></td>
+<td>Robb Brock</td>
+<td>$400,000,000</td>
+<td>$12.68</td>
+</tr>
+<tr>
+<td>22</td>
+<td><a target="_blank" rel="noopener" href="http://www.stubhub.com/">StubHub</a></td>
+<td>Eric Baker</td>
+<td>$400,000,000</td>
+<td>$12.68</td>
+</tr>
+<tr>
+<td>23</td>
+<td><a target="_blank" rel="noopener" href="http://www.alibaba.com/">Alibaba</a></td>
+<td>Jack Ma</td>
+<td>$316,000,000</td>
+<td>$10.02</td>
+</tr>
+<tr>
+<td>24</td>
+<td><a target="_blank" rel="noopener" href="http://www.facebook.com/">Facebook</a></td>
+<td>Mark Zuckerberg</td>
+<td>$300,000,000</td>
+<td>$9.51</td>
+</tr>
+<tr>
+<td>25</td>
+<td><a target="_blank" rel="noopener" href="http://www.youtube.com/">YouTube</a></td>
+<td>Chad Hurley, Steve Chen and Jawed Karim,</td>
+<td>$300,000,000</td>
+<td>$9.51</td>
+</tr>
+<tr>
+<td>26</td>
+<td><a target="_blank" rel="noopener" href="http://www.bluenile.com/">Blue Nile</a></td>
+<td>Mark Vadon</td>
+<td>$295,000,000</td>
+<td>$9.35</td>
+</tr>
+<tr>
+<td>27</td>
+<td><a target="_blank" rel="noopener" href="http://www.tripadvisor.com/">Tripadvisor</a></td>
+<td>Stephen Kaufer</td>
+<td>$260,000,000</td>
+<td>$8.24</td>
+</tr>
+<tr>
+<td>28</td>
+<td><a target="_blank" rel="noopener" href="http://www.gettyimages.com/">Getty Images</a></td>
+<td>Mark Getty</td>
+<td>$233,200,000</td>
+<td>$7.39</td>
+</tr>
+<tr>
+<td>29</td>
+<td><a target="_blank" rel="noopener" href="http://www.bidz.com/">Bidz</a></td>
+<td>Garry Itkin</td>
+<td>$207,000,000</td>
+<td>$6.56</td>
+</tr>
+<tr>
+<td>30</td>
+<td><a target="_blank" rel="noopener" href="http://www.nytimes.com/">NYTimes</a></td>
+<td>Henry Jarvis Raymond</td>
+<td>$175,000,000</td>
+<td>$5.55</td>
+</tr>
+</tbody></table>
 
       
     </div>
@@ -992,7 +1966,7 @@
 
 
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/41/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/41/">41</a><span class="page-number current">42</span><a class="page-number" href="/page/43/">43</a><span class="space">&hellip;</span><a class="page-number" href="/page/87/">87</a><a class="extend next" rel="next" href="/page/43/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
+    <a class="extend prev" rel="prev" href="/page/41/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/41/">41</a><span class="page-number current">42</span><a class="page-number" href="/page/43/">43</a><a class="page-number" href="/page/44/">44</a><a class="extend next" rel="next" href="/page/43/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
   </nav>
 
 </div>

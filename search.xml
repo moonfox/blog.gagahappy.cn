@@ -5328,6 +5328,21 @@ grant select,insert,update,delete on *.* to test1@<span class="token string">"%"
       </tags>
   </entry>
   <entry>
+    <title>ruby 安装 rmagick</title>
+    <url>/ruby-install-rmagick/</url>
+    <content><![CDATA[<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">apt-get</span> <span class="token function">install</span> libmagick9-dev ruby1.8-dev
+<span class="token function">sudo</span> <span class="token function">apt-get</span> <span class="token function">install</span> imagemagick
+<span class="token function">sudo</span> gem <span class="token function">install</span> rmagick<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+]]></content>
+      <categories>
+        <category>后端</category>
+      </categories>
+      <tags>
+        <tag>Rails</tag>
+        <tag>Ruby</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>ubuntu 10 source.list</title>
     <url>/ubuntu-10-04-source-list/</url>
     <content><![CDATA[<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">deb http://mirrors.sohu.com/ubuntu/ lucid main restricted universe multiverse
@@ -5358,21 +5373,6 @@ deb-src http://mirrors.sohu.com/ubuntu/ lucid-backports main restricted universe
       </categories>
       <tags>
         <tag>VMware</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>ruby 安装 rmagick</title>
-    <url>/ruby-install-rmagick/</url>
-    <content><![CDATA[<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">apt-get</span> <span class="token function">install</span> libmagick9-dev ruby1.8-dev
-<span class="token function">sudo</span> <span class="token function">apt-get</span> <span class="token function">install</span> imagemagick
-<span class="token function">sudo</span> gem <span class="token function">install</span> rmagick<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-]]></content>
-      <categories>
-        <category>后端</category>
-      </categories>
-      <tags>
-        <tag>Rails</tag>
-        <tag>Ruby</tag>
       </tags>
   </entry>
   <entry>
