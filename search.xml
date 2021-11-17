@@ -2220,6 +2220,23 @@ DEPENDS&#x3D;&quot;fcitx&quot;<span aria-hidden="true" class="line-numbers-rows"
       </tags>
   </entry>
   <entry>
+    <title>ubuntu 输入法 光标跟随</title>
+    <url>/ubuntu-scim-follow/</url>
+    <content><![CDATA[<p>在scim输入法中进行如下设定：</p>
+<p>scim设置－&gt;全局设置－&gt;将预编辑字符串嵌入到客户端中 前的勾去掉</p>
+<p>scim设置-&gt;gtk-&gt;嵌入式候选词标的勾去掉</p>
+<p>重启scim</p>
+<p>打开终端,输入 pkill scim</p>
+<p>然后输入 scim -d </p>
+]]></content>
+      <categories>
+        <category>操作系统</category>
+      </categories>
+      <tags>
+        <tag>ubuntu</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>ubuntu opera 中文 字体</title>
     <url>/ubuntu-opera-font-set/</url>
     <content><![CDATA[<p>opera10默认设置的中文字体在显示时忽大忽小，而且还有些模糊，极其难看，需要将其美化一下。</p>
@@ -2256,23 +2273,6 @@ family:微软雅黑
       </categories>
       <tags>
         <tag>opera</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>ubuntu 输入法 光标跟随</title>
-    <url>/ubuntu-scim-follow/</url>
-    <content><![CDATA[<p>在scim输入法中进行如下设定：</p>
-<p>scim设置－&gt;全局设置－&gt;将预编辑字符串嵌入到客户端中 前的勾去掉</p>
-<p>scim设置-&gt;gtk-&gt;嵌入式候选词标的勾去掉</p>
-<p>重启scim</p>
-<p>打开终端,输入 pkill scim</p>
-<p>然后输入 scim -d </p>
-]]></content>
-      <categories>
-        <category>操作系统</category>
-      </categories>
-      <tags>
-        <tag>ubuntu</tag>
       </tags>
   </entry>
   <entry>
