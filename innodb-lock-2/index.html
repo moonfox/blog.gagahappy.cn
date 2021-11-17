@@ -27,7 +27,7 @@
 <meta property="og:description" content="innodb 锁处理当两个事务对同一资源时行修改操作时，会对这一资源加上X锁。b的原始值为1140 T1: update t_lock set b &#x3D; 1143 where id &#x3D; 1;没有执行commit T2: update t_lock set b &#x3D; 1145 where id &#x3D; 1;操作会因为执行超时而抛出异常：  Lock wait time">
 <meta property="og:locale">
 <meta property="article:published_time" content="2015-03-13T00:05:46.000Z">
-<meta property="article:modified_time" content="2021-11-17T12:36:06.989Z">
+<meta property="article:modified_time" content="2021-11-17T12:44:23.020Z">
 <meta property="article:author" content="戛戛Happy">
 <meta property="article:tag" content="mysql">
 <meta name="twitter:card" content="summary">
