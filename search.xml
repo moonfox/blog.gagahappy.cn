@@ -15028,18 +15028,6 @@ namespace <span class="token symbol">:hexo</span> <span class="token keyword">do
       </tags>
   </entry>
   <entry>
-    <title>换水龙头</title>
-    <url>/a-new-tap/</url>
-    <content><![CDATA[<p>终于把那个出水不痛快的水龙头给换了，原因是出水软管给堵了，再加上以前的水龙头也不环保，还不健康。有了上次疏通管道的经验，这次没有发大水。新龙头是单水的，出水泡沫很多，出水也痛快</p>
-]]></content>
-      <categories>
-        <category>日志</category>
-      </categories>
-      <tags>
-        <tag>随笔</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>self help</title>
     <url>/self-help/</url>
     <content><![CDATA[<blockquote>
@@ -15057,6 +15045,18 @@ namespace <span class="token symbol">:hexo</span> <span class="token keyword">do
 <blockquote>
 <p>How to release time: breathe ​​​​</p>
 </blockquote>
+]]></content>
+      <categories>
+        <category>日志</category>
+      </categories>
+      <tags>
+        <tag>随笔</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>换水龙头</title>
+    <url>/a-new-tap/</url>
+    <content><![CDATA[<p>终于把那个出水不痛快的水龙头给换了，原因是出水软管给堵了，再加上以前的水龙头也不环保，还不健康。有了上次疏通管道的经验，这次没有发大水。新龙头是单水的，出水泡沫很多，出水也痛快</p>
 ]]></content>
       <categories>
         <category>日志</category>
@@ -15091,10 +15091,10 @@ namespace <span class="token symbol">:hexo</span> <span class="token keyword">do
       </tags>
   </entry>
   <entry>
-    <title>Cooking dinner for family</title>
-    <url>/cooking-dinner-for-family/</url>
-    <content><![CDATA[<p>Cooking dinner for family #做滴菜# ​​​​</p>
-<p><img src="//img.gagahappy.cn/blog/2017/07/cooking-dinner-for-family.jpg_b1" alt="Cooking dinner for family" title="Cooking dinner for family"></p>
+    <title>妙香羊排</title>
+    <url>/cook-yang-pai/</url>
+    <content><![CDATA[<p>妙香羊排 #做滴菜# ​​​​</p>
+<p><img src="//img.gagahappy.cn/blog/2017/07/cook-yang-pai.jpg_b1" alt="妙香羊排" title="妙香羊排"></p>
 ]]></content>
       <categories>
         <category>做菜</category>
@@ -15104,10 +15104,10 @@ namespace <span class="token symbol">:hexo</span> <span class="token keyword">do
       </tags>
   </entry>
   <entry>
-    <title>妙香羊排</title>
-    <url>/cook-yang-pai/</url>
-    <content><![CDATA[<p>妙香羊排 #做滴菜# ​​​​</p>
-<p><img src="//img.gagahappy.cn/blog/2017/07/cook-yang-pai.jpg_b1" alt="妙香羊排" title="妙香羊排"></p>
+    <title>Cooking dinner for family</title>
+    <url>/cooking-dinner-for-family/</url>
+    <content><![CDATA[<p>Cooking dinner for family #做滴菜# ​​​​</p>
+<p><img src="//img.gagahappy.cn/blog/2017/07/cooking-dinner-for-family.jpg_b1" alt="Cooking dinner for family" title="Cooking dinner for family"></p>
 ]]></content>
       <categories>
         <category>做菜</category>
@@ -15677,6 +15677,20 @@ namespace <span class="token symbol">:hexo</span> <span class="token keyword">do
       </tags>
   </entry>
   <entry>
+    <title>Pi Day</title>
+    <url>/pi-day/</url>
+    <content><![CDATA[<p>3月14日，国际圆周率日The π Day，爱因斯坦的诞辰日，霍金去世的日子</p>
+<p><img src="//img.gagahappy.cn/blog/2018/03/pi-day-01.jpg_b1" alt="Pi Day" title="Pi Day"></p>
+<p><img src="//img.gagahappy.cn/blog/2018/03/pi-day-02.jpg_b1" alt="Pi Day" title="Pi Day"></p>
+]]></content>
+      <categories>
+        <category>资娱</category>
+      </categories>
+      <tags>
+        <tag>人物</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>关于减肥的一些注意事项</title>
     <url>/some-stuff-about-lose-weight/</url>
     <content><![CDATA[<ol>
@@ -15697,20 +15711,6 @@ namespace <span class="token symbol">:hexo</span> <span class="token keyword">do
       </categories>
       <tags>
         <tag>随笔</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Pi Day</title>
-    <url>/pi-day/</url>
-    <content><![CDATA[<p>3月14日，国际圆周率日The π Day，爱因斯坦的诞辰日，霍金去世的日子</p>
-<p><img src="//img.gagahappy.cn/blog/2018/03/pi-day-01.jpg_b1" alt="Pi Day" title="Pi Day"></p>
-<p><img src="//img.gagahappy.cn/blog/2018/03/pi-day-02.jpg_b1" alt="Pi Day" title="Pi Day"></p>
-]]></content>
-      <categories>
-        <category>资娱</category>
-      </categories>
-      <tags>
-        <tag>人物</tag>
       </tags>
   </entry>
   <entry>
@@ -16514,18 +16514,6 @@ looooooooooong_path_name/index.html
       </tags>
   </entry>
   <entry>
-    <title>恢复短信息</title>
-    <url>/luckily-recovered-text/</url>
-    <content><![CDATA[<p>之前总是觉得系统自动备份功就是在侵犯个人隐私，比如访问通话记录，短信之类，所以给关闭了，直到刚才通过这个功能恢复了一条误删除且有用的短信，简直庆幸这个功能又被系统默默的打开了，突然觉得这个功能简直太重要了</p>
-]]></content>
-      <categories>
-        <category>日志</category>
-      </categories>
-      <tags>
-        <tag>随笔</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>790 consecutive weeks</title>
     <url>/790-consecutive-weeks/</url>
     <content><![CDATA[<p>790 consecutive weeks in the APT Rankings TOP 10</p>
@@ -16536,6 +16524,18 @@ looooooooooong_path_name/index.html
       </categories>
       <tags>
         <tag>人物</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>恢复短信息</title>
+    <url>/luckily-recovered-text/</url>
+    <content><![CDATA[<p>之前总是觉得系统自动备份功就是在侵犯个人隐私，比如访问通话记录，短信之类，所以给关闭了，直到刚才通过这个功能恢复了一条误删除且有用的短信，简直庆幸这个功能又被系统默默的打开了，突然觉得这个功能简直太重要了</p>
+]]></content>
+      <categories>
+        <category>日志</category>
+      </categories>
+      <tags>
+        <tag>随笔</tag>
       </tags>
   </entry>
   <entry>
