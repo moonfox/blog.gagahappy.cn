@@ -7703,26 +7703,6 @@ add_filter<span class="token punctuation">(</span><span class="token string">'th
       </tags>
   </entry>
   <entry>
-    <title>Ubuntu 10.10(Maverick Meerkat) RC</title>
-    <url>/ubuntu-10-10maverick-meerkat-rc/</url>
-    <content><![CDATA[<p>Ubuntu 10.10(Maverick Meerkat) RC 于当地时间9.30晚/北京时间10.1发布。</p>
-<p>相比 10.04，Ubuntu Desktop Edition (GNOME 版) 带来以下新特性：</p>
-<ul>
-<li>为 Ubuntu 设计的 Ubuntu font；正式发布时可能会被用作默认字体。</li>
-<li>GNOME 升级到刚刚发布的 2.32；Evolution 升级到 2.30，相比 10.4 中的版本性能明显提升；Shotwell 代替 F-Spot 成为默认照片管理器；Gwibber 升级到最新版以支持 Twitter 新的身份验证系统。</li>
-<li>现在可以点开通知区域的小喇叭(Sound Indicator)控制音乐播放器。</li>
-<li>Ubuntu 软件中心大幅改进：主界面增加“Feature 和 What’s New”两栏，推介优秀的和最新的软件；可以通过软件中心购买付费软件 (Get Software-&gt;For Purchase，不过目前只有一个用于测试的包)；</li>
-<li>Ubunto One: Ubuntu One 的登入登出集成到了桌面右上角的 Indicator Applet Session；增加了 Ubuntu SSO 的集成度；Nautilus 中管理文件夹同步的选项得到改进；文件同步速度提升；现在可以在 Ubuntu One 音乐商店中分享音乐链接。</li>
-</ul>
-]]></content>
-      <categories>
-        <category>操作系统</category>
-      </categories>
-      <tags>
-        <tag>ubuntu</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>wordpress feed设置</title>
     <url>/wordpress-feed-config/</url>
     <content><![CDATA[<p>wordpress的feed的设置默认是只显示文章摘要，而不是全文。而做为feed应该显示文章的全部内容，只显示摘要会造成文章在feed中无排版、图片、视频、相关文章都等不能显示。</p>
@@ -7772,6 +7752,26 @@ add_filter<span class="token punctuation">(</span><span class="token string">'th
       </categories>
       <tags>
         <tag>Ta们的我</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Ubuntu 10.10(Maverick Meerkat) RC</title>
+    <url>/ubuntu-10-10maverick-meerkat-rc/</url>
+    <content><![CDATA[<p>Ubuntu 10.10(Maverick Meerkat) RC 于当地时间9.30晚/北京时间10.1发布。</p>
+<p>相比 10.04，Ubuntu Desktop Edition (GNOME 版) 带来以下新特性：</p>
+<ul>
+<li>为 Ubuntu 设计的 Ubuntu font；正式发布时可能会被用作默认字体。</li>
+<li>GNOME 升级到刚刚发布的 2.32；Evolution 升级到 2.30，相比 10.4 中的版本性能明显提升；Shotwell 代替 F-Spot 成为默认照片管理器；Gwibber 升级到最新版以支持 Twitter 新的身份验证系统。</li>
+<li>现在可以点开通知区域的小喇叭(Sound Indicator)控制音乐播放器。</li>
+<li>Ubuntu 软件中心大幅改进：主界面增加“Feature 和 What’s New”两栏，推介优秀的和最新的软件；可以通过软件中心购买付费软件 (Get Software-&gt;For Purchase，不过目前只有一个用于测试的包)；</li>
+<li>Ubunto One: Ubuntu One 的登入登出集成到了桌面右上角的 Indicator Applet Session；增加了 Ubuntu SSO 的集成度；Nautilus 中管理文件夹同步的选项得到改进；文件同步速度提升；现在可以在 Ubuntu One 音乐商店中分享音乐链接。</li>
+</ul>
+]]></content>
+      <categories>
+        <category>操作系统</category>
+      </categories>
+      <tags>
+        <tag>ubuntu</tag>
       </tags>
   </entry>
   <entry>
