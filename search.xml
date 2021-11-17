@@ -8980,6 +8980,19 @@ build-essential<span aria-hidden="true" class="line-numbers-rows"><span></span><
       </tags>
   </entry>
   <entry>
+    <title>整理wordpress标签</title>
+    <url>/sort-out-wordpress-tags/</url>
+    <content><![CDATA[<p>整理网站的标签，发现要改的太多了，不得不数据库一下了，无奈之下硬着头皮把wordpress的数据库的相关表研究了下~~呃~~~~</p>
+<p><a href="//img.gagahappy.cn/blog/2011/02/wordpress.jpg"><img src="//img.gagahappy.cn/blog/2011/02/wordpress.jpg" title="wordpress"></a></p>
+]]></content>
+      <categories>
+        <category>软件</category>
+      </categories>
+      <tags>
+        <tag>wordpress</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>wordpress 3.1 分类链接不正确</title>
     <url>/wordpress-3-1-category-url-bug/</url>
     <content><![CDATA[<p>怀着激动的心情把wordpress升级到了3.1，新的变化是在首页顶部为登录用户添加了后台工具栏，可以让用户在前台快速访问后台经常要使用的操作。</p>
@@ -12093,19 +12106,6 @@ select * from t_a_index ignore index(a_b) where a &#x3D; 1 and b &#x3D; 1  order
       <tags>
         <tag>mysql</tag>
         <tag>innodb</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>整理wordpress标签</title>
-    <url>/sort-out-wordpress-tags/</url>
-    <content><![CDATA[<p>整理网站的标签，发现要改的太多了，不得不数据库一下了，无奈之下硬着头皮把wordpress的数据库的相关表研究了下~~呃~~~~</p>
-<p><a href="//img.gagahappy.cn/blog/2011/02/wordpress.jpg"><img src="//img.gagahappy.cn/blog/2011/02/wordpress.jpg" title="wordpress"></a></p>
-]]></content>
-      <categories>
-        <category>软件</category>
-      </categories>
-      <tags>
-        <tag>wordpress</tag>
       </tags>
   </entry>
   <entry>
