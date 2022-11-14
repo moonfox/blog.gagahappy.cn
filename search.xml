@@ -13442,6 +13442,41 @@ puts
       </tags>
   </entry>
   <entry>
+    <title>redis HyperLogLog 命令</title>
+    <url>/redis-hyperloglog-command/</url>
+    <content><![CDATA[<ol>
+<li>返回储存在给定键的 HyperLogLog 的近似基数</li>
+<li>通过 HyperLogLog 数据结构， 用户可以使用少量固定大小的内存， 来储存集合中的唯一元素 （每个 HyperLogLog 只需使用 12k 字节内存，以及几个字节的内存来储存键本身）。<pre class="line-numbers language-redis" data-language="redis"><code class="language-redis">
+redis&gt; PFADD  databases  &quot;Redis&quot;  &quot;MongoDB&quot;  &quot;MySQL&quot;
+(integer) 1
+
+redis&gt; PFCOUNT  databases
+(integer) 3
+
+redis&gt; PFADD  databases  &quot;Redis&quot;    # Redis 已经存在，不必对估计数量进行更新
+(integer) 0
+
+redis&gt; PFCOUNT  databases    # 元素估计数量没有变化
+(integer) 3
+
+redis&gt; PFADD  databases  &quot;PostgreSQL&quot;    # 添加一个不存在的元素
+(integer) 1
+
+redis&gt; PFCOUNT  databases    # 估计数量增一
+4<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
+</ol>
+<blockquote>
+<p>问题思考：<br>这个是如何实现的，不存储元素的话，如何知道这个元素已经存在了。</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>后端</category>
+      </categories>
+      <tags>
+        <tag>redis</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Redis::HashRing source code</title>
     <url>/redis-hashring/</url>
     <content><![CDATA[<pre class="line-numbers language-ruby" data-language="ruby"><code class="language-ruby"><span class="token keyword">require</span> <span class="token string">'zlib'</span>
@@ -13576,41 +13611,6 @@ puts
   <span class="token keyword">end</span>
 <span class="token keyword">end</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-]]></content>
-      <categories>
-        <category>后端</category>
-      </categories>
-      <tags>
-        <tag>redis</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>redis HyperLogLog 命令</title>
-    <url>/redis-hyperloglog-command/</url>
-    <content><![CDATA[<ol>
-<li>返回储存在给定键的 HyperLogLog 的近似基数</li>
-<li>通过 HyperLogLog 数据结构， 用户可以使用少量固定大小的内存， 来储存集合中的唯一元素 （每个 HyperLogLog 只需使用 12k 字节内存，以及几个字节的内存来储存键本身）。<pre class="line-numbers language-redis" data-language="redis"><code class="language-redis">
-redis&gt; PFADD  databases  &quot;Redis&quot;  &quot;MongoDB&quot;  &quot;MySQL&quot;
-(integer) 1
-
-redis&gt; PFCOUNT  databases
-(integer) 3
-
-redis&gt; PFADD  databases  &quot;Redis&quot;    # Redis 已经存在，不必对估计数量进行更新
-(integer) 0
-
-redis&gt; PFCOUNT  databases    # 元素估计数量没有变化
-(integer) 3
-
-redis&gt; PFADD  databases  &quot;PostgreSQL&quot;    # 添加一个不存在的元素
-(integer) 1
-
-redis&gt; PFCOUNT  databases    # 估计数量增一
-4<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
-</ol>
-<blockquote>
-<p>问题思考：<br>这个是如何实现的，不存储元素的话，如何知道这个元素已经存在了。</p>
-</blockquote>
 ]]></content>
       <categories>
         <category>后端</category>
